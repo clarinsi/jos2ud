@@ -1,0 +1,7 @@
+nohup.*
+*.diff
+*.log
+*.old
+*.zip
+tmp
+Data

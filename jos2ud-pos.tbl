@@ -1,0 +1,134 @@
+# Mapping from JOS PoS to UD 2.0 PoS
+# Kaja Dobrovoljc, Tomaž Erjavec, Simon Krek
+# 2017-01-06
+#
+#Prio	Lemma	Category	Feats				Deps	->PoS-UD	#Comment
+#-------------------------------------------------------------------------------------------------------
+3	*	Abbreviation	*				*	X
+3	*	Adjective	*				*	ADJ
+1	drug	Numeral		Form=letter|Type=pronominal	*	ADJ	
+1	*en	Numeral		Form=letter|Type=special	*	ADJ		#enojen, dvojen
+2	*	Numeral		Form=letter|Type=ordinal	*	ADJ
+
+3	*	Preposition	*				*	ADP
+
+3	*	Adverb		*				*	ADV
+
+2	*	Verb		Type=auxiliary		PPart/Verb	AUX
+###Spodnje verjetno niso v redu, ker bi morala biti referenca na "NOUN, PROPN, ADJ, PRON, NUM ali X" 
+#2	*	Verb		Type=auxiliary		Atr/Adjective	AUX
+#2	*	Verb		Type=auxiliary		Atr/Pronoun	AUX
+#2	*	Verb		Type=auxiliary		Atr/Residual	AUX
+
+3	*	Conjunction	Type=coordinating		*	CCONJ
+
+1	nekaj	Adverb		*	*	DET
+1	več	Adverb		*	*	DET
+1	veliko	Adverb		*	*	DET
+1	manj	Adverb		*	*	DET
+1	dovolj	Adverb		*	*	DET
+1	pol	Adverb		*	*	DET
+1	malo	Adverb		*	*	DET
+1	toliko	Adverb		*	*	DET
+1	največ	Adverb		*	*	DET
+1	mnogo	Adverb		*	*	DET
+1	preveč	Adverb		*	*	DET
+1	par	Adverb		*	*	DET
+1	koliko	Adverb		*	*	DET
+1	dosti	Adverb		*	*	DET
+1	nešteto	Adverb		*	*	DET
+1	četrt	Adverb		*	*	DET
+1	ogromno	Adverb		*	*	DET
+1	čimveč	Adverb		*	*	DET
+
+1	*	Pronoun	Type=demonstrative	*	DET
+1	*	Pronoun	Type=possessive		*	DET
+1	vsakdo	Pronoun	Type=general		*	PRON
+1	oboj	Pronoun	Type=general		*	DET
+1	ves	Pronoun	Type=general		*	DET
+1	vsak	Pronoun	Type=general		*	DET
+1	oba	Pronoun	Type=general		*	DET
+1	vsakršen	Pronoun	Type=general	*	DET
+1	nihče	Pronoun	Type=negative		*	PRON
+1	nič	Pronoun	Type=negative		*	PRON
+1	nobeden	Pronoun	Type=negative		*	PRON
+1	noben	Pronoun	Type=negative		*	DET
+1	nikakršen	Pronoun	Type=negative	*	DET
+1	kar	Pronoun	Type=relative		*	PRON
+1	kdor	Pronoun	Type=relative		*	PRON
+1	karkoli	Pronoun	Type=relative		*	PRON
+1	kdorkoli	Pronoun	Type=relative	*	PRON
+1	kakršen	Pronoun	Type=relative		*	DET
+1	čigar	Pronoun	Type=relative		*	DET
+1	katerikoli	Pronoun	Type=relative	*	DET
+1	kakršenkoli	Pronoun	Type=relative	*	DET
+1	se	Pronoun	Type=reflexive		*	PRON
+1	zase	Pronoun	Type=reflexive		*	PRON
+1	nase	Pronoun	Type=reflexive		*	PRON
+1	vase	Pronoun	Type=reflexive		*	PRON
+1	svoj	Pronoun	Type=reflexive		*	DET
+1	kaj	Pronoun	Type=interrogative	*	PRON
+1	kdo	Pronoun	Type=interrogative	*	PRON
+1	kakšen	Pronoun	Type=interrogative	*	DET
+1	kateri	Pronoun	Type=interrogative	*	DET
+1	kolikšen	Pronoun	Type=interrogative	*	DET
+1	čigav	Pronoun	Type=interrogative	*	DET
+1	kak	Pronoun	Type=interrogative	*	DET
+1	nekaj	Pronoun	Type=indefinite		*	PRON
+1	nekdo	Pronoun	Type=indefinite		*	PRON
+1	marsikaj	Pronoun	Type=indefinite	*	PRON
+1	marsikdo	Pronoun	Type=indefinite	*	PRON
+1	malokdo	Pronoun	Type=indefinite		*	PRON
+1	mnogokaj	Pronoun	Type=indefinite	*	PRON
+1	nekateri	Pronoun	Type=indefinite	*	DET
+1	nek	Pronoun	Type=indefinite		*	DET
+1	isti	Pronoun	Type=indefinite		*	DET
+1	mnog	Pronoun	Type=indefinite		*	DET
+1	enak	Pronoun	Type=indefinite		*	DET
+1	nekakšen	Pronoun	Type=indefinite	*	DET
+1	neki	Pronoun	Type=indefinite	*	DET
+1	marsikateri	Pronoun	Type=indefinite	*	DET
+1	nekak	Pronoun	Type=indefinite	*	DET
+1	premnog	Pronoun	Type=indefinite	*	DET
+1	malokateri	Pronoun	Type=indefinite	*	DET
+1	prenekateri	Pronoun	Type=indefinite	*	DET
+1	marsikakšen	Pronoun	Type=indefinite	*	DET
+
+3	*	Interjection	*				*	INTJ
+
+3	*	Noun		Type=common			*	NOUN
+
+3	*	Numeral		Form=digit			*	NUM
+3	*	Numeral		Form=roman			*	NUM
+1	en	Numeral		Form=letter|Type=pronominal	*	NUM
+1	eden	Numeral		Form=letter|Type=pronominal	*	NUM	#Dodal E.T.
+3	*	Numeral		Form=letter|Type=special	*	NUM
+3	*	Numeral		Form=letter|Type=cardinal	*	NUM
+
+3	*	Particle	*				*	PART
+
+3	*	Pronoun		*				*	PRON
+
+3	*	Noun		Type=proper			*	PROPN
+
+3	*	Punctuation	*				*	PUNCT
+
+3	*	Conjunction	Type=subordinating		*	SCONJ
+
+1	\#	Punctuation	*			*	SYM
+1	%	Punctuation	*			*	SYM
+1	<	Punctuation	*			*	SYM
+1	&	Punctuation	*			*	SYM
+1	>	Punctuation	*			*	SYM
+1	+	Punctuation	*			*	SYM
+1	=	Punctuation	*			*	SYM
+1	°	Punctuation	*			*	SYM
+1	×	Punctuation	*			*	SYM
+1	$	Punctuation	*			*	SYM
+1	@	Punctuation	*			*	SYM
+1	µ	Punctuation	*			*	SYM
+1	©	Punctuation	*			*	SYM
+
+3	*	Verb		*			*	VERB
+
+3	*	Residual	*			*	X

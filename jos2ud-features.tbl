@@ -1,0 +1,119 @@
+# Mapping from JOS features to UD features
+# Kaja Dobrovoljc, Tomaž Erjavec, Simon Krek
+# 2017-01-08
+#
+#Prio	Lemma	Category	Feats			PoS-UD	->Feature-UD		#Comment
+----------------------------------------------------------------------------------------------------
+1	*	Punctuation	*			*	-
+1	*	Particle	*			*	-
+1	*	Interjection	*			*	-
+1	*	Abbreviation	*			*	Abbr=Yes
+1	*	*		Animate=no		*	Animacy=Inan
+1	*	*		Animate=yes		*	Animacy=Anim
+1	*	*		Aspect=perfective	*	Aspect=Perf
+1	*	*		Aspect=progressive	*	Aspect=Imp
+1	*	*		Aspect=biaspectual	*	-
+1	*	*		Case=nominative		*	Case=Nom
+1	*	*		Case=genitive		*	Case=Gen
+1	*	*		Case=dative		*	Case=Dat
+1	*	*		Case=accusative		*	Case=Acc
+1	*	*		Case=locative		*	Case=Loc
+1	*	*		Case=instrumental	*	Case=Ins
+1	*	*		Definiteness=no		*	Definite=Ind
+1	*	*		Definiteness=yes	*	Definite=Def
+1	*	*		Degree=positive		DET	-
+1	*	*		Degree=comparative	DET	-
+1	*	*		Degree=superlative	DET	-
+2	*	*		Degree=positive		*	Degree=Pos
+2	*	*		Degree=comparative	*	Degree=Cmp
+2	*	*		Degree=superlative	*	Degree=Sup
+1	*	Residual	Type=foreign		*	Foreign=Yes
+2	*	Residual	*			*	-
+1	*	*		Gender=masculine	*	Gender=Masc
+1	*	*		Gender=feminine		*	Gender=Fem
+1	*	*		Gender=neuter		*	Gender=Neut
+1	*	Pronoun		Owner_Gender=masculine	*	Gender[psor]=Masc	#lg.spec.feature
+1	*	Pronoun		Owner_Gender=feminine	*	Gender[psor]=Fem	#lg.spec.feature
+1	*	Pronoun		Owner_Gender=neuter	*	Gender[psor]=Neut	#lg.spec.feature
+1	*	Verb		Negative=no		*	Polarity=Pos
+1	*	Verb		Negative=yes		*	Polarity=Neg
+1	*	Numeral		Form=digit		NUM	NumForm=Digit		#lg.spec.feature
+1	*	Numeral		Form=roman		NUM	NumForm=Roman		#lg.spec.feature
+1	*	Numeral		Form=letter		NUM	NumForm=Word		#lg.spec.feature
+2	*	Numeral		Form=letter		*	-
+1	*	Adjective	Type=general		*	-
+1	*	Adjective	Type=possessive		*	Poss=Yes
+1	*	Conjunction	Type=subordinating	*	-
+1	*	Conjunction	Type=coordinating	*	-
+1	*	Noun		Type=common		*	-
+1	*	Noun		Type=proper		*	-
+1	en	Numeral		Type=pronominal		*	NumType=Card
+1	eden	Numeral		Type=pronominal		*	NumType=Card
+2	*	Numeral		Type=cardinal		NUM	NumType=Card
+1	*	Numeral		Type=ordinal		*	NumType=Ord
+1	*	Numeral		Type=special		ADJ	NumType=Mult
+1	*	Numeral		Type=special		NUM	NumType=Sets
+2	*	Numeral		Type=pronominal		*	-
+1	*	Verb		Type=auxiliary		*	-
+1	*	Verb		Type=main		*	-
+1	*	*		Number=singular		*	Number=Sing
+1	*	*		Number=plural		*	Number=Plur
+1	*	*		Number=dual		*	Number=Dual
+1	*	Pronoun		Owner_Number=singular	*	Number[psor]=Sing	#lg.spec.feature
+1	*	Pronoun		Owner_Number=plural	*	Number[psor]=Plur	#lg.spec.feature
+1	*	Pronoun		Owner_Number=dual	*	Number[psor]=Dual	#lg.spec.feature
+1	*	*		Person=first		*	Person=1
+1	*	*		Person=second		*	Person=2
+1	*	*		Person=third		*	Person=3
+
+1	nekaj	Adverb		Type=general		DET	PronType=Ind
+1	več	Adverb		Type=general		DET	PronType=Ind
+1	veliko	Adverb		Type=general		DET	PronType=Ind
+1	manj	Adverb		Type=general		DET	PronType=Ind
+1	dovolj	Adverb		Type=general		DET	PronType=Ind
+1	pol	Adverb		Type=general		DET	PronType=Ind
+1	malo	Adverb		Type=general		DET	PronType=Ind
+1	toliko	Adverb		Type=general		DET	PronType=Dem
+1	največ	Adverb		Type=general		DET	PronType=Ind
+1	mnogo	Adverb		Type=general		DET	PronType=Ind
+1	preveč	Adverb		Type=general		DET	PronType=Ind
+1	par	Adverb		Type=general		DET	PronType=Ind
+1	koliko	Adverb		Type=general		DET	PronType=Int
+1	dosti	Adverb		Type=general		DET	PronType=Ind
+1	nešteto	Adverb		Type=general		DET	PronType=Ind
+1	četrt	Adverb		Type=general		DET	PronType=Ind
+1	ogromno	Adverb		Type=general		DET	PronType=Ind
+1	čimveč	Adverb		Type=general		DET	PronType=Ind
+2	*	Adverb		Type=general		*	-
+
+#All Types Pronoun -> DET go to Personal pronouns (so says Kaja)
+1	svoj	Pronoun		Type=reflexive		*	PronType=Prs|Reflex=Yes|Poss=Yes
+2	*	Pronoun		Type=reflexive		DET	PronType=Prs|Reflex=Yes
+3	*	Pronoun		Type=reflexive		*	PronType=Prs|Reflex=Yes
+
+1	*	Pronoun		Type=personal		DET	PronType=Prs
+2	*	Pronoun		Type=personal		*	PronType=Prs
+1	*	Pronoun		Type=possessive		DET	PronType=Prs|Poss=Yes
+2	*	Pronoun		Type=possessive		*	PronType=Prs|Poss=Yes
+
+2	*	Pronoun		Type=interrogative	*	PronType=Int
+2	*	Pronoun		Type=relative		*	PronType=Rel
+2	*	Pronoun		Type=demonstrative	*	PronType=Dem
+2	*	Pronoun		Type=general		*	PronType=Tot
+2	*	Pronoun		Type=negative		*	PronType=Neg
+2	*	Pronoun		Type=indefinite		*	PronType=Ind
+
+1	*	Pronoun		Clitic=yes		*	Variant=Short	#lg.spec.feature
+1	*	Pronoun		Clitic=bound		*	Variant=Bound	#lg.spec.feature
+
+1	*	Verb		VForm=present		*	VerbForm=Fin|Mood=Ind|Tense=Pres
+1	*	Verb		VForm=future		*	VerbForm=Fin|Mood=Ind|Tense=Fut
+1	*	Verb		VForm=conditional	*	VerbForm=Fin|Mood=Cnd
+1	*	Verb		VForm=imperative	*	VerbForm=Fin|Mood=Imp
+1	*	Verb		VForm=infinitive	*	VerbForm=Inf
+1	*	Verb		VForm=supine		*	VerbForm=Sup
+1	*	Verb		VForm=participle	*	VerbForm=Part
+1	*	Adjective	Type=participle		*	VerbForm=Part
+1	*	Adverb		Type=participle		*	VerbForm=Conv
+1	*	Residual	Type=typo		*	-
+1	*	Residual	Type=program		*	-

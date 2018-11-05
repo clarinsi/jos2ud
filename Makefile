@@ -1,11 +1,14 @@
 test:
 	$s -xsl:bin/tei2ud.xsl Data/test.xml > Data/test.tbl
 	LC_ALL=C bin/jos2ud.pl jos2ud-pos.tbl jos2ud-features.tbl < Data/test.tbl > Data/test.ud.tbl
-	bin/convert_dependencies.py Data/test.ud.tbl
+	cd UD; ../bin/convert_dependencies.py ../Data/test.ud.tbl 2.2
 nohup:
 	nohup time make all > nohup.all &
-all:	get format ud
-ud:
+all:	get format ud-mor ud-syn
+ud-syn:
+	rm -fr UD; mkdir UD
+	cd UD; ../bin/convert_dependencies.py ../Data/ssj500k-en.ud.tbl 2.2
+ud-mor:
 	LC_ALL=C bin/jos2ud.pl jos2ud-pos.tbl jos2ud-features.tbl \
 	< Data/ssj500k-en.tbl > Data/ssj500k-en.ud.tbl
 format:

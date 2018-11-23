@@ -40,6 +40,27 @@
 1	četrt	Adverb		*	*	DET
 1	ogromno	Adverb		*	*	DET
 1	čimveč	Adverb		*	*	DET
+1	čimmanj	Adverb		*	*	DET
+1	enako	Adverb		*	*	DET
+1	enormno	Adverb		*	*	DET
+1	ful	Adverb		*	*	DET
+1	majčkeno	Adverb		*	*	DET
+1	maksimalno	Adverb		*	*	DET
+1	malce	Adverb		*	*	DET
+1	minimalno	Adverb		*	*	DET
+1	najmanj	Adverb		*	*	DET
+1	nekoliko	Adverb		*	*	DET
+1	nemalo	Adverb		*	*	DET
+1	nič	Adverb		*	*	DET
+1	ničkoliko	Adverb		*	*	DET
+1	obilo	Adverb		*	*	DET
+1	polno	Adverb		*	*	DET
+1	precej	Adverb		*	*	DET
+1	premalo	Adverb		*	*	DET
+1	večidel	Adverb		*	*	DET
+1	vse	Adverb		*	*	DET
+1	zadosti	Adverb		*	*	DET
+1	premnogo	Adverb		*	*	DET
 
 1	*	Pronoun	Type=demonstrative	*	DET
 1	*	Pronoun	Type=possessive		*	DET

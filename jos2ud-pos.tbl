@@ -8,11 +8,9 @@
 3	*	Noun		Type=proper	*	PROPN
 
 3	*	Verb		*			*		VERB
+###This is the only one that still needs synt. dependency for mapping
+###Get rid of it in next iteration!
 2	*	Verb		Type=auxiliary		PPart/Verb	AUX
-###Spodnje verjetno niso v redu, ker bi morala biti referenca na "NOUN, PROPN, ADJ, PRON, NUM ali X" 
-#2	*	Verb		Type=auxiliary		Atr/Adjective	AUX
-#2	*	Verb		Type=auxiliary		Atr/Pronoun	AUX
-#2	*	Verb		Type=auxiliary		Atr/Residual	AUX
 
 3	*	Adjective	*	*	ADJ
 

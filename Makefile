@@ -4,7 +4,8 @@ test:
 	cd UD; ../bin/convert_dependencies.py ../Data/test.ud.tbl 2.2
 nohup:
 	nohup time make all > nohup.all &
-all:	get format ud-mor ud-syn
+all:	format ud-mor ud-syn
+xall:	get format ud-mor ud-syn
 ud-syn:
 	rm -fr UD; mkdir UD
 	cd UD; ../bin/convert_dependencies.py ../Data/ssj500k-en.ud.tbl 2.2

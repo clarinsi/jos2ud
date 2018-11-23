@@ -21,7 +21,6 @@ while (<POS>) {
 close POS;
 #mapping table priority sorted
 @pos_map = sort @tmp;
-$pos_map = scalar @pos_map;
 undef @tmp;
 
 open FEAT, $featFile or die "Can't open $featFile!\n";
@@ -37,7 +36,6 @@ while (<FEAT>) {
 close FEAT;
 #mapping table priority sorted
 @feat_map = sort @tmp;
-$feat_map = scalar @feat_map;
 undef @tmp;
 
 $/ = "\n\n";
@@ -54,85 +52,29 @@ while (<>){
 	    print $line, "\n";
 	    next;
 	}
-	my ($n,$tok,$lemma,$cat,$msd,$feats,$dep,$rel,$deps,$misc) = split /\t/, $line;
+	my ($n, $tok, $lemma, $cat, $msd, 
+	    $feats, $dep, $rel, $deps, $misc) = split /\t/, $line;
 	if ($dep) {
 	    $head = $lines[$dep+$comments-1];
 	}
 	else {$head = ''}
 	if ($feats eq '_') {$feats = ''};
 	#Convert PoS
-	$cont = 1;
-	$i = 0;
-	while ($cont) {
-	    if ($i >= $pos_map) {
-		print STDERR "ERROR: Out of cat array in:\n$line\n\n";
-		$cont = 0;
-	    }
-	    else {
-		my ($prio,$m_lemma,$m_cat,$m_feats,$m_deps,$m_cat_ud) = split /\t+/, $pos_map[$i];
-		#print STDERR join("\t", $n, $tok, $cat, $dep, $rel, '->', $m_cat_ud), "\n";
-		if (match_re($lemma, $m_lemma) && match_re($cat, $m_cat) 
-		    && match_feats($feats, $m_feats) 
-		    && match_dep($feats, $rel, $head, $m_deps)) {
-		    $ud_cat = $m_cat_ud;
-		    $cont = 0;
-		}
-		$i++;
-	    }
-	}
-
-	#Convert Features
-	$cont = 1;
-	$i = 0;
-	#####Do we have to strip them off, one by one? Or doesn't it matter? Maybe for sanity?
-	$tmp_feats = $feats;
-	$tmp_feats = '*' unless $tmp_feats; #So tokens with no features also get processed!
-	@m_feats_ud = ();
-	##print STDERR "INFO: Starting work on $lemma\n";
-	while ($cont) {
-	    if ($tmp_feats =~ m/^\|*$/) {
-		$cont = 0;
-		##print STDERR "INFO: No feats\n";
-	    }
-	    elsif ($i >= $feat_map) {
-		$cont = 0;
-		print STDERR "ERROR: Out of feature array with '$tmp_feats' in: $line\n" 
-	    }
-	    else {
-		my ($prio,$m_lemma,$m_cat,$m_feat,$m_ud_cat,$m_feat_ud) = split /\t+/, $feat_map[$i];
-		##print STDERR "INFO: matching $lemma to $feat_map[$i]\n";
-		if (match_re($lemma, $m_lemma) && match_re($cat, $m_cat) 
-		    && match_feats($feats, $m_feat)
-		    && match_re($ud_cat, $m_ud_cat)) {
-		    ##print STDERR "MATCH!\n";
-		    if ($tmp_feats eq '*') {$tmp_feats = ''}
-		    elsif ($m_feat ne '*') {$tmp_feats =~ s/$m_feat//}
-		    my @tmp = split /\|/, $m_feat_ud;
-		    push(@m_feats_ud, @tmp) unless $m_feat_ud eq '-';
-		}
-		$i++;
-	    }
-	}
-	#@m_feats_ud = sort @m_feats_ud;
-	#have to lower case features before sorting
-	my %sorted;
-	foreach $f (@m_feats_ud) {
-	    $sorted{lc $f} = $f
-	}
-	@m_feats_ud = ();
-	foreach $f (sort keys %sorted) {
-	    push @m_feats_ud, $sorted{$f}
-	}
-	$ud_feats = join("|", @m_feats_ud);
-	$ud_feats = '_' unless $ud_feats;
+	$ud_cat = pos_jos2ud($lemma, $cat, $feats, $rel, $head);
+	$ud_feats = feats_jos2ud($lemma, $cat, $feats, $ud_cat);
 	$ud_head = 0;
 	$ud_deprel = 'root';
 	$misc .= "|Dep=$dep|Rel=$rel";
 	$misc =~ s/^_?\|//;
-	print join("\t", ($n,$tok,$lemma,$ud_cat,$msd,$ud_feats,$ud_head,$ud_deprel,$deps,$misc)), "\n";
+	
+	print join("\t",  
+		   ($n, $tok, $lemma, 
+		    $ud_cat, $msd, $ud_feats, 
+		    $ud_head, $ud_deprel, $deps, $misc)),  "\n";
     }
     print "\n";
 }
+
 sub match_re {
     my $str = shift;
     my $re = shift;
@@ -145,7 +87,6 @@ sub match_re {
     if ($str =~ /^$qre$/) {return 1}
     else {return 0}
 }
-
 sub match_feats {
     my $f = shift;
     my $fre = shift;
@@ -171,9 +112,9 @@ sub match_dep {
     if ($match eq '*') {return 1}
     else {
 	#head token
-	my ($n,$htok,$hlemma,$hcat,$hmsd,$hfeats) = split /\t/, $head;
+	my ($n, $htok, $hlemma, $hcat, $hmsd, $hfeats) = split /\t/, $head;
 	#mapping for dependency a la: Atr/Noun/agr(Gender,Number,Case)
-	my ($mrel,$mcat,$magr) = split m|/|, $match;
+	my ($mrel, $mcat, $magr) = split m|/|, $match;
 	if ($magr) {
 	    my ($magrfeats)=$magr=~/agr\((.+)\)/;
 	    @agrfeats = split /,\s*/, $magrfeats;
@@ -184,12 +125,12 @@ sub match_dep {
 	elsif (@agrfeats) {
 	    my $ok = 1;
 	    foreach my $f (split /\|/, $feats) {
-		my ($att,$val) = split /=/, $f;
+		my ($att, $val) = split /=/, $f;
 		$f1{$att}=$val;
 	    }
 	    foreach my $f (split /\|/, $hfeats) {
-		my ($att,$val) = split /=/, $f;
-		$f2{$att}=$val;
+		my ($att, $val) = split /=/, $f;
+		$f2{$att} = $val;
 	    }
 	    foreach my $att (@agrfeats) {
 		#Both words have feature, but it doesnt agree
@@ -203,4 +144,86 @@ sub match_dep {
 	}
 	else {return 1}
     }
+}
+sub pos_jos2ud {
+    my $pos_map = scalar @pos_map;
+    my $lemma = shift;
+    my $jos_cat = shift;
+    my $jos_feats = shift;
+    my $jos_rel = shift;
+    my $jos_head = shift;
+    my $cont = 1;
+    my $i = 0;
+    my $ud_cat;
+    while ($cont) {
+	if ($i >= $pos_map) {
+	    print STDERR "ERROR: Out of cat array in:\n$line\n\n";
+	    $cont = 0;
+	}
+	else {
+	    my ($prio,$m_lemma,$m_cat,$m_feats,$m_deps,$m_cat_ud) = split /\t+/, $pos_map[$i];
+	    #print STDERR join("\t", $n, $tok, $jos_cat, $dep, $jos_rel, '->', $m_cat_ud), "\n";
+	    if (match_re($lemma, $m_lemma) && match_re($jos_cat, $m_cat) 
+		&& match_feats($jos_feats, $m_feats) 
+		&& match_dep($jos_feats, $jos_rel, $jos_head, $m_deps)) {
+		$ud_cat = $m_cat_ud;
+		$cont = 0;
+	    }
+	    $i++;
+	}
+    }
+    return $ud_cat;
+}
+sub feats_jos2ud {
+    my $feat_map = scalar @feat_map;
+    my $lemma = shift;
+    my $jos_cat = shift;
+    my $jos_feats = shift;
+    my $ud_cat = shift;
+    my $cont = 1;
+    my $i = 0;
+    my $ud_feats;
+
+    ##Do we have to strip them off, one by one? Or doesn't it matter? Maybe for sanity?
+    my $tmp_feats = $jos_feats;
+    $tmp_feats = '*' unless $tmp_feats; #So tokens with no features also get processed!
+    my @m_feats_ud = ();
+    ##print STDERR "INFO: Starting work on $lemma\n";
+    while ($cont) {
+	if ($tmp_feats =~ m/^\|*$/) {
+	    $cont = 0;
+	    ##print STDERR "INFO: No feats\n";
+	}
+	elsif ($i >= $feat_map) {
+	    $cont = 0;
+	    print STDERR "ERROR: Out of feature array with '$tmp_feats' in: $line\n" 
+	}
+	else {
+	    my ($prio,$m_lemma,$m_cat,$m_feat,$m_ud_cat,$m_feat_ud) = split /\t+/, $feat_map[$i];
+	    ##print STDERR "INFO: matching $lemma to $feat_map[$i]\n";
+	    if (match_re($lemma, $m_lemma) && match_re($jos_cat, $m_cat) 
+		&& match_feats($jos_feats, $m_feat)
+		&& match_re($ud_cat, $m_ud_cat)) {
+		##print STDERR "MATCH!\n";
+		if ($tmp_feats eq '*') {$tmp_feats = ''}
+		elsif ($m_feat ne '*') {$tmp_feats =~ s/$m_feat//}
+		my @tmp = split /\|/, $m_feat_ud;
+		push(@m_feats_ud, @tmp) unless $m_feat_ud eq '-';
+	    }
+	    $i++;
+	}
+    }
+    #@m_feats_ud = sort @m_feats_ud;
+    #have to lower case features before sorting
+    my %sorted;
+    foreach my $f (@m_feats_ud) {
+	$sorted{lc $f} = $f
+    }
+    @m_feats_ud = ();
+    foreach my $f (sort keys %sorted) {
+	push @m_feats_ud, $sorted{$f}
+    }
+    $ud_feats = join("|", @m_feats_ud);
+    $ud_feats = '_' unless $ud_feats;
+    return $ud_feats
 }

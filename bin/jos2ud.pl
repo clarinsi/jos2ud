@@ -4,6 +4,7 @@ use utf8;
 binmode STDIN, ":utf8";
 binmode STDOUT,":utf8";
 binmode STDERR,":utf8";
+my $type = shift or die "Need type of input ('corpus' or 'lexicon')!\n";
 my $posFile = shift or die "Need PoS mapping file!\n";
 my $featFile = shift or die "Need feature mapping file!\n";
 my (@pos_map, @feat_map);
@@ -38,41 +39,76 @@ close FEAT;
 @feat_map = sort @tmp;
 undef @tmp;
 
-$/ = "\n\n";
-while (<>){
-    @lines = split /\n/;
-    $comments=0;
-    foreach $line (@lines) {
-	if ($line=~/^#/) {
-	    $comments++;
-	    print $line, "\n";
-	    next;
+if ($type eq 'corpus') {
+    $/ = "\n\n";
+    while (<>){
+	@lines = split /\n/;
+	$comments=0;
+	foreach $line (@lines) {
+	    if ($line=~/^#/) {
+		$comments++;
+		print $line, "\n";
+		next;
+	    }
+	    if (not $line=~/\t/) {
+		print $line, "\n";
+		next;
+	    }
+	    my ($n, $tok, $lemma, $cat, $msd, 
+		$feats, $dep, $rel, $deps, $misc) = split /\t/, $line;
+	    if ($dep) {
+		$head = $lines[$dep+$comments-1];
+	    }
+	    else {$head = ''}
+	    if ($feats eq '_') {$feats = ''};
+	    #Convert PoS
+	    $ud_cat = pos_jos2ud($lemma, $cat, $feats, $rel, $head);
+	    print STDERR "ERROR: Out of cat array for '$cat + $lemma + $feats' in:\n$_\n\n"
+		unless $ud_cat;
+	    $ud_feats = feats_jos2ud($lemma, $cat, $feats, $ud_cat);
+	    print STDERR "ERROR: Out of feature array with '$cat + $feats' in: $line\n"
+		unless $ud_feats;
+	    $ud_head = 0;
+	    $ud_deprel = 'root';
+	    $misc .= "|Dep=$dep|Rel=$rel";
+	    $misc =~ s/^_?\|//;
+	    
+	    print join("\t",  
+		       ($n, $tok, $lemma, 
+			$ud_cat, $msd, $ud_feats, 
+			$ud_head, $ud_deprel, $deps, $misc)),  "\n";
 	}
-	if (not $line=~/\t/) {
-	    print $line, "\n";
-	    next;
-	}
-	my ($n, $tok, $lemma, $cat, $msd, 
-	    $feats, $dep, $rel, $deps, $misc) = split /\t/, $line;
-	if ($dep) {
-	    $head = $lines[$dep+$comments-1];
-	}
-	else {$head = ''}
-	if ($feats eq '_') {$feats = ''};
-	#Convert PoS
-	$ud_cat = pos_jos2ud($lemma, $cat, $feats, $rel, $head);
-	$ud_feats = feats_jos2ud($lemma, $cat, $feats, $ud_cat);
-	$ud_head = 0;
-	$ud_deprel = 'root';
-	$misc .= "|Dep=$dep|Rel=$rel";
-	$misc =~ s/^_?\|//;
-	
-	print join("\t",  
-		   ($n, $tok, $lemma, 
-		    $ud_cat, $msd, $ud_feats, 
-		    $ud_head, $ud_deprel, $deps, $misc)),  "\n";
+	print "\n";
     }
-    print "\n";
+}
+elsif ($type eq 'lexicon') {
+    my ($cat, $feats);
+    while (<>){
+	chomp;
+	my ($word, $lemma, $rest, $all_feats) = /^([^\t]+)\t([^\t]+)\t(.+)\t([^\t]+)$/;
+	if ($all_feats =~ / /) {
+	    ($cat, $feats) = $all_feats =~ /(.+?) (.+)/; 
+	}
+	else {
+	    $cat = $all_feats;
+	    $feats = ''
+	}
+	$head = '';
+	$ud_cat = pos_jos2ud($lemma, $cat, $feats, '', '');
+	print STDERR "ERROR: Out of cat array for '$cat + $lemma + $feats' in:\n$_\n\n"
+	    unless $ud_cat;
+	$ud_feats = feats_jos2ud($lemma, $cat, $feats, $ud_cat);
+	print STDERR "ERROR: Out of feature array with '$cat + $feats' in: $_\n"
+	    unless $ud_feats;
+	$ud_feats =~ s/\|/ /g;
+	$ud_all_feats = "$ud_cat $ud_feats";
+	print join("\t",  
+		   $word, $lemma, $rest, 
+		   $all_feats, $ud_all_feats) . "\n";
+    }
+}
+else {
+    die "Type of input should be 'corpus' or 'lexicon'!\n"
 }
 
 sub match_re {
@@ -93,7 +129,7 @@ sub match_feats {
     my %f;
     if ($fre eq '*') {return 1}
     else {
-	foreach my $f (split /\|/, $f) {$f{$f}++}
+	foreach my $f (split /[\| ]/, $f) {$f{$f}++}
 	my $ok = 1;
 	foreach my $f (split /\|/, $fre) {
 	    $ok = 0 unless exists $f{$f}
@@ -157,12 +193,11 @@ sub pos_jos2ud {
     my $ud_cat;
     while ($cont) {
 	if ($i >= $pos_map) {
-	    print STDERR "ERROR: Out of cat array in:\n$line\n\n";
 	    $cont = 0;
 	}
 	else {
 	    my ($prio,$m_lemma,$m_cat,$m_feats,$m_deps,$m_cat_ud) = split /\t+/, $pos_map[$i];
-	    #print STDERR join("\t", $n, $tok, $jos_cat, $dep, $jos_rel, '->', $m_cat_ud), "\n";
+	    #print STDERR join("*", $lemma, $jos_cat, $jos_feats, $jos_rel, '///', $m_lemma, $m_feats, $m_cat_ud), "\n";
 	    if (match_re($lemma, $m_lemma) && match_re($jos_cat, $m_cat) 
 		&& match_feats($jos_feats, $m_feats) 
 		&& match_dep($jos_feats, $jos_rel, $jos_head, $m_deps)) {
@@ -196,7 +231,6 @@ sub feats_jos2ud {
 	}
 	elsif ($i >= $feat_map) {
 	    $cont = 0;
-	    print STDERR "ERROR: Out of feature array with '$tmp_feats' in: $line\n" 
 	}
 	else {
 	    my ($prio,$m_lemma,$m_cat,$m_feat,$m_ud_cat,$m_feat_ud) = split /\t+/, $feat_map[$i];

@@ -1,16 +1,27 @@
-test:
+test-lex:
+	shuf < Data/sloleks-en.tbl | head -1000 | bin/lex2feats.pl jos-msd2features.tbl > Data/test.lex.tbl
+	LC_ALL=C bin/jos2ud.pl lexicon jos2ud-pos.tbl jos2ud-features.tbl \
+	< Data/test.lex.tbl > Data/test.lex.ud.tbl
+test-crp:
 	$s -xsl:bin/tei2ud.xsl Data/test.xml > Data/test.tbl
-	LC_ALL=C bin/jos2ud.pl jos2ud-pos.tbl jos2ud-features.tbl < Data/test.tbl > Data/test.ud.tbl
+	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl < Data/test.tbl > Data/test.ud.tbl
 	cd UD; ../bin/convert_dependencies.py ../Data/test.ud.tbl 2.2
+test-new:
+	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl < Data/test.tbl > Data/test.ud.tbl
+	diff Data/test.ud.old.tbl Data/test.ud.tbl
 nohup:
 	nohup time make all > nohup.all &
 all:	format ud-mor ud-syn
-xall:	get format ud-mor ud-syn
+xall:	get format ud-mor ud-syn lexicon
+lexicon:
+	cat < Data/sloleks-en.tbl | bin/lex2feats.pl jos-msd2features.tbl > Data/sloleks.feats.tbl
+	LC_ALL=C bin/jos2ud.pl lexicon jos2ud-pos.tbl jos2ud-features.tbl \
+	< Data/sloleks.feats.tbl > Data/sloleks.ud.tbl
 ud-syn:
 	rm -fr UD; mkdir UD
 	cd UD; ../bin/convert_dependencies.py ../Data/ssj500k-en.ud.tbl 2.2
 ud-mor:
-	LC_ALL=C bin/jos2ud.pl jos2ud-pos.tbl jos2ud-features.tbl \
+	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
 	< Data/ssj500k-en.tbl > Data/ssj500k-en.ud.tbl
 format:
 	$s -xi -xsl:bin/tei2ud.xsl Data/ssj500k-en.TEI/ssj500k-en.xml > Data/ssj500k-en.tbl

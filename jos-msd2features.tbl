@@ -1,0 +1,1900 @@
+Ncmsn	Noun Type=common Gender=masculine Number=singular Case=nominative
+Ncmsg	Noun Type=common Gender=masculine Number=singular Case=genitive
+Ncmsd	Noun Type=common Gender=masculine Number=singular Case=dative
+Ncmsan	Noun Type=common Gender=masculine Number=singular Case=accusative Animate=no
+Ncmsay	Noun Type=common Gender=masculine Number=singular Case=accusative Animate=yes
+Ncmsl	Noun Type=common Gender=masculine Number=singular Case=locative
+Ncmsi	Noun Type=common Gender=masculine Number=singular Case=instrumental
+Ncmdn	Noun Type=common Gender=masculine Number=dual Case=nominative
+Ncmdg	Noun Type=common Gender=masculine Number=dual Case=genitive
+Ncmdd	Noun Type=common Gender=masculine Number=dual Case=dative
+Ncmda	Noun Type=common Gender=masculine Number=dual Case=accusative
+Ncmdl	Noun Type=common Gender=masculine Number=dual Case=locative
+Ncmdi	Noun Type=common Gender=masculine Number=dual Case=instrumental
+Ncmpn	Noun Type=common Gender=masculine Number=plural Case=nominative
+Ncmpg	Noun Type=common Gender=masculine Number=plural Case=genitive
+Ncmpd	Noun Type=common Gender=masculine Number=plural Case=dative
+Ncmpa	Noun Type=common Gender=masculine Number=plural Case=accusative
+Ncmpl	Noun Type=common Gender=masculine Number=plural Case=locative
+Ncmpi	Noun Type=common Gender=masculine Number=plural Case=instrumental
+Ncfsn	Noun Type=common Gender=feminine Number=singular Case=nominative
+Ncfsg	Noun Type=common Gender=feminine Number=singular Case=genitive
+Ncfsd	Noun Type=common Gender=feminine Number=singular Case=dative
+Ncfsa	Noun Type=common Gender=feminine Number=singular Case=accusative
+Ncfsl	Noun Type=common Gender=feminine Number=singular Case=locative
+Ncfsi	Noun Type=common Gender=feminine Number=singular Case=instrumental
+Ncfdn	Noun Type=common Gender=feminine Number=dual Case=nominative
+Ncfdg	Noun Type=common Gender=feminine Number=dual Case=genitive
+Ncfdd	Noun Type=common Gender=feminine Number=dual Case=dative
+Ncfda	Noun Type=common Gender=feminine Number=dual Case=accusative
+Ncfdl	Noun Type=common Gender=feminine Number=dual Case=locative
+Ncfdi	Noun Type=common Gender=feminine Number=dual Case=instrumental
+Ncfpn	Noun Type=common Gender=feminine Number=plural Case=nominative
+Ncfpg	Noun Type=common Gender=feminine Number=plural Case=genitive
+Ncfpd	Noun Type=common Gender=feminine Number=plural Case=dative
+Ncfpa	Noun Type=common Gender=feminine Number=plural Case=accusative
+Ncfpl	Noun Type=common Gender=feminine Number=plural Case=locative
+Ncfpi	Noun Type=common Gender=feminine Number=plural Case=instrumental
+Ncnsn	Noun Type=common Gender=neuter Number=singular Case=nominative
+Ncnsg	Noun Type=common Gender=neuter Number=singular Case=genitive
+Ncnsd	Noun Type=common Gender=neuter Number=singular Case=dative
+Ncnsa	Noun Type=common Gender=neuter Number=singular Case=accusative
+Ncnsl	Noun Type=common Gender=neuter Number=singular Case=locative
+Ncnsi	Noun Type=common Gender=neuter Number=singular Case=instrumental
+Ncndn	Noun Type=common Gender=neuter Number=dual Case=nominative
+Ncndg	Noun Type=common Gender=neuter Number=dual Case=genitive
+Ncndd	Noun Type=common Gender=neuter Number=dual Case=dative
+Ncnda	Noun Type=common Gender=neuter Number=dual Case=accusative
+Ncndl	Noun Type=common Gender=neuter Number=dual Case=locative
+Ncndi	Noun Type=common Gender=neuter Number=dual Case=instrumental
+Ncnpn	Noun Type=common Gender=neuter Number=plural Case=nominative
+Ncnpg	Noun Type=common Gender=neuter Number=plural Case=genitive
+Ncnpd	Noun Type=common Gender=neuter Number=plural Case=dative
+Ncnpa	Noun Type=common Gender=neuter Number=plural Case=accusative
+Ncnpl	Noun Type=common Gender=neuter Number=plural Case=locative
+Ncnpi	Noun Type=common Gender=neuter Number=plural Case=instrumental
+Npmsn	Noun Type=proper Gender=masculine Number=singular Case=nominative
+Npmsg	Noun Type=proper Gender=masculine Number=singular Case=genitive
+Npmsd	Noun Type=proper Gender=masculine Number=singular Case=dative
+Npmsan	Noun Type=proper Gender=masculine Number=singular Case=accusative Animate=no
+Npmsay	Noun Type=proper Gender=masculine Number=singular Case=accusative Animate=yes
+Npmsl	Noun Type=proper Gender=masculine Number=singular Case=locative
+Npmsi	Noun Type=proper Gender=masculine Number=singular Case=instrumental
+Npmdn	Noun Type=proper Gender=masculine Number=dual Case=nominative
+Npmdg	Noun Type=proper Gender=masculine Number=dual Case=genitive
+Npmdd	Noun Type=proper Gender=masculine Number=dual Case=dative
+Npmda	Noun Type=proper Gender=masculine Number=dual Case=accusative
+Npmdl	Noun Type=proper Gender=masculine Number=dual Case=locative
+Npmdi	Noun Type=proper Gender=masculine Number=dual Case=instrumental
+Npmpn	Noun Type=proper Gender=masculine Number=plural Case=nominative
+Npmpg	Noun Type=proper Gender=masculine Number=plural Case=genitive
+Npmpd	Noun Type=proper Gender=masculine Number=plural Case=dative
+Npmpa	Noun Type=proper Gender=masculine Number=plural Case=accusative
+Npmpl	Noun Type=proper Gender=masculine Number=plural Case=locative
+Npmpi	Noun Type=proper Gender=masculine Number=plural Case=instrumental
+Npfsn	Noun Type=proper Gender=feminine Number=singular Case=nominative
+Npfsg	Noun Type=proper Gender=feminine Number=singular Case=genitive
+Npfsd	Noun Type=proper Gender=feminine Number=singular Case=dative
+Npfsa	Noun Type=proper Gender=feminine Number=singular Case=accusative
+Npfsl	Noun Type=proper Gender=feminine Number=singular Case=locative
+Npfsi	Noun Type=proper Gender=feminine Number=singular Case=instrumental
+Npfdn	Noun Type=proper Gender=feminine Number=dual Case=nominative
+Npfdg	Noun Type=proper Gender=feminine Number=dual Case=genitive
+Npfdd	Noun Type=proper Gender=feminine Number=dual Case=dative
+Npfda	Noun Type=proper Gender=feminine Number=dual Case=accusative
+Npfdl	Noun Type=proper Gender=feminine Number=dual Case=locative
+Npfdi	Noun Type=proper Gender=feminine Number=dual Case=instrumental
+Npfpn	Noun Type=proper Gender=feminine Number=plural Case=nominative
+Npfpg	Noun Type=proper Gender=feminine Number=plural Case=genitive
+Npfpd	Noun Type=proper Gender=feminine Number=plural Case=dative
+Npfpa	Noun Type=proper Gender=feminine Number=plural Case=accusative
+Npfpl	Noun Type=proper Gender=feminine Number=plural Case=locative
+Npfpi	Noun Type=proper Gender=feminine Number=plural Case=instrumental
+Npnsn	Noun Type=proper Gender=neuter Number=singular Case=nominative
+Npnsg	Noun Type=proper Gender=neuter Number=singular Case=genitive
+Npnsd	Noun Type=proper Gender=neuter Number=singular Case=dative
+Npnsa	Noun Type=proper Gender=neuter Number=singular Case=accusative
+Npnsl	Noun Type=proper Gender=neuter Number=singular Case=locative
+Npnsi	Noun Type=proper Gender=neuter Number=singular Case=instrumental
+Npnpn	Noun Type=proper Gender=neuter Number=plural Case=nominative
+Npnpg	Noun Type=proper Gender=neuter Number=plural Case=genitive
+Npnpd	Noun Type=proper Gender=neuter Number=plural Case=dative
+Npnpa	Noun Type=proper Gender=neuter Number=plural Case=accusative
+Npnpl	Noun Type=proper Gender=neuter Number=plural Case=locative
+Npnpi	Noun Type=proper Gender=neuter Number=plural Case=instrumental
+Vmen	Verb Type=main Aspect=perfective VForm=infinitive
+Vmeu	Verb Type=main Aspect=perfective VForm=supine
+Vmep-sm	Verb Type=main Aspect=perfective VForm=participle Number=singular Gender=masculine
+Vmep-sf	Verb Type=main Aspect=perfective VForm=participle Number=singular Gender=feminine
+Vmep-sn	Verb Type=main Aspect=perfective VForm=participle Number=singular Gender=neuter
+Vmep-pm	Verb Type=main Aspect=perfective VForm=participle Number=plural Gender=masculine
+Vmep-pf	Verb Type=main Aspect=perfective VForm=participle Number=plural Gender=feminine
+Vmep-pn	Verb Type=main Aspect=perfective VForm=participle Number=plural Gender=neuter
+Vmep-dm	Verb Type=main Aspect=perfective VForm=participle Number=dual Gender=masculine
+Vmep-df	Verb Type=main Aspect=perfective VForm=participle Number=dual Gender=feminine
+Vmep-dn	Verb Type=main Aspect=perfective VForm=participle Number=dual Gender=neuter
+Vmer1s	Verb Type=main Aspect=perfective VForm=present Person=first Number=singular
+Vmer1p	Verb Type=main Aspect=perfective VForm=present Person=first Number=plural
+Vmer1d	Verb Type=main Aspect=perfective VForm=present Person=first Number=dual
+Vmer2s	Verb Type=main Aspect=perfective VForm=present Person=second Number=singular
+Vmer2p	Verb Type=main Aspect=perfective VForm=present Person=second Number=plural
+Vmer2d	Verb Type=main Aspect=perfective VForm=present Person=second Number=dual
+Vmer3s	Verb Type=main Aspect=perfective VForm=present Person=third Number=singular
+Vmer3p	Verb Type=main Aspect=perfective VForm=present Person=third Number=plural
+Vmer3d	Verb Type=main Aspect=perfective VForm=present Person=third Number=dual
+Vmem1p	Verb Type=main Aspect=perfective VForm=imperative Person=first Number=plural
+Vmem1d	Verb Type=main Aspect=perfective VForm=imperative Person=first Number=dual
+Vmem2s	Verb Type=main Aspect=perfective VForm=imperative Person=second Number=singular
+Vmem2p	Verb Type=main Aspect=perfective VForm=imperative Person=second Number=plural
+Vmem2d	Verb Type=main Aspect=perfective VForm=imperative Person=second Number=dual
+Vmpn	Verb Type=main Aspect=progressive VForm=infinitive
+Vmpu	Verb Type=main Aspect=progressive VForm=supine
+Vmpp-sm	Verb Type=main Aspect=progressive VForm=participle Number=singular Gender=masculine
+Vmpp-sf	Verb Type=main Aspect=progressive VForm=participle Number=singular Gender=feminine
+Vmpp-sn	Verb Type=main Aspect=progressive VForm=participle Number=singular Gender=neuter
+Vmpp-pm	Verb Type=main Aspect=progressive VForm=participle Number=plural Gender=masculine
+Vmpp-pf	Verb Type=main Aspect=progressive VForm=participle Number=plural Gender=feminine
+Vmpp-pn	Verb Type=main Aspect=progressive VForm=participle Number=plural Gender=neuter
+Vmpp-dm	Verb Type=main Aspect=progressive VForm=participle Number=dual Gender=masculine
+Vmpp-df	Verb Type=main Aspect=progressive VForm=participle Number=dual Gender=feminine
+Vmpp-dn	Verb Type=main Aspect=progressive VForm=participle Number=dual Gender=neuter
+Vmpr1s	Verb Type=main Aspect=progressive VForm=present Person=first Number=singular
+Vmpr1s-n	Verb Type=main Aspect=progressive VForm=present Person=first Number=singular Negative=no
+Vmpr1s-y	Verb Type=main Aspect=progressive VForm=present Person=first Number=singular Negative=yes
+Vmpr1p	Verb Type=main Aspect=progressive VForm=present Person=first Number=plural
+Vmpr1p-n	Verb Type=main Aspect=progressive VForm=present Person=first Number=plural Negative=no
+Vmpr1p-y	Verb Type=main Aspect=progressive VForm=present Person=first Number=plural Negative=yes
+Vmpr1d	Verb Type=main Aspect=progressive VForm=present Person=first Number=dual
+Vmpr1d-n	Verb Type=main Aspect=progressive VForm=present Person=first Number=dual Negative=no
+Vmpr1d-y	Verb Type=main Aspect=progressive VForm=present Person=first Number=dual Negative=yes
+Vmpr2s	Verb Type=main Aspect=progressive VForm=present Person=second Number=singular
+Vmpr2s-n	Verb Type=main Aspect=progressive VForm=present Person=second Number=singular Negative=no
+Vmpr2s-y	Verb Type=main Aspect=progressive VForm=present Person=second Number=singular Negative=yes
+Vmpr2p	Verb Type=main Aspect=progressive VForm=present Person=second Number=plural
+Vmpr2p-n	Verb Type=main Aspect=progressive VForm=present Person=second Number=plural Negative=no
+Vmpr2p-y	Verb Type=main Aspect=progressive VForm=present Person=second Number=plural Negative=yes
+Vmpr2d	Verb Type=main Aspect=progressive VForm=present Person=second Number=dual
+Vmpr2d-n	Verb Type=main Aspect=progressive VForm=present Person=second Number=dual Negative=no
+Vmpr2d-y	Verb Type=main Aspect=progressive VForm=present Person=second Number=dual Negative=yes
+Vmpr3s	Verb Type=main Aspect=progressive VForm=present Person=third Number=singular
+Vmpr3s-n	Verb Type=main Aspect=progressive VForm=present Person=third Number=singular Negative=no
+Vmpr3s-y	Verb Type=main Aspect=progressive VForm=present Person=third Number=singular Negative=yes
+Vmpr3p	Verb Type=main Aspect=progressive VForm=present Person=third Number=plural
+Vmpr3p-n	Verb Type=main Aspect=progressive VForm=present Person=third Number=plural Negative=no
+Vmpr3p-y	Verb Type=main Aspect=progressive VForm=present Person=third Number=plural Negative=yes
+Vmpr3d	Verb Type=main Aspect=progressive VForm=present Person=third Number=dual
+Vmpr3d-n	Verb Type=main Aspect=progressive VForm=present Person=third Number=dual Negative=no
+Vmpr3d-y	Verb Type=main Aspect=progressive VForm=present Person=third Number=dual Negative=yes
+Vmpm1p	Verb Type=main Aspect=progressive VForm=imperative Person=first Number=plural
+Vmpm1d	Verb Type=main Aspect=progressive VForm=imperative Person=first Number=dual
+Vmpm2s	Verb Type=main Aspect=progressive VForm=imperative Person=second Number=singular
+Vmpm2p	Verb Type=main Aspect=progressive VForm=imperative Person=second Number=plural
+Vmpm2d	Verb Type=main Aspect=progressive VForm=imperative Person=second Number=dual
+Vmbn	Verb Type=main Aspect=biaspectual VForm=infinitive
+Vmbu	Verb Type=main Aspect=biaspectual VForm=supine
+Vmbp-sm	Verb Type=main Aspect=biaspectual VForm=participle Number=singular Gender=masculine
+Vmbp-sf	Verb Type=main Aspect=biaspectual VForm=participle Number=singular Gender=feminine
+Vmbp-sn	Verb Type=main Aspect=biaspectual VForm=participle Number=singular Gender=neuter
+Vmbp-pm	Verb Type=main Aspect=biaspectual VForm=participle Number=plural Gender=masculine
+Vmbp-pf	Verb Type=main Aspect=biaspectual VForm=participle Number=plural Gender=feminine
+Vmbp-pn	Verb Type=main Aspect=biaspectual VForm=participle Number=plural Gender=neuter
+Vmbp-dm	Verb Type=main Aspect=biaspectual VForm=participle Number=dual Gender=masculine
+Vmbp-df	Verb Type=main Aspect=biaspectual VForm=participle Number=dual Gender=feminine
+Vmbp-dn	Verb Type=main Aspect=biaspectual VForm=participle Number=dual Gender=neuter
+Vmbr1s	Verb Type=main Aspect=biaspectual VForm=present Person=first Number=singular
+Vmbr1p	Verb Type=main Aspect=biaspectual VForm=present Person=first Number=plural
+Vmbr1d	Verb Type=main Aspect=biaspectual VForm=present Person=first Number=dual
+Vmbr1df	Verb Type=main Aspect=biaspectual VForm=present Person=first Number=dual Gender=feminine
+Vmbr2s	Verb Type=main Aspect=biaspectual VForm=present Person=second Number=singular
+Vmbr2p	Verb Type=main Aspect=biaspectual VForm=present Person=second Number=plural
+Vmbr2d	Verb Type=main Aspect=biaspectual VForm=present Person=second Number=dual
+Vmbr3s	Verb Type=main Aspect=biaspectual VForm=present Person=third Number=singular
+Vmbr3p	Verb Type=main Aspect=biaspectual VForm=present Person=third Number=plural
+Vmbr3d	Verb Type=main Aspect=biaspectual VForm=present Person=third Number=dual
+Vmbf1s	Verb Type=main Aspect=biaspectual VForm=future Person=first Number=singular
+Vmbf1p	Verb Type=main Aspect=biaspectual VForm=future Person=first Number=plural
+Vmbf1d	Verb Type=main Aspect=biaspectual VForm=future Person=first Number=dual
+Vmbf2s	Verb Type=main Aspect=biaspectual VForm=future Person=second Number=singular
+Vmbf2p	Verb Type=main Aspect=biaspectual VForm=future Person=second Number=plural
+Vmbf2d	Verb Type=main Aspect=biaspectual VForm=future Person=second Number=dual
+Vmbf3s	Verb Type=main Aspect=biaspectual VForm=future Person=third Number=singular
+Vmbf3p	Verb Type=main Aspect=biaspectual VForm=future Person=third Number=plural
+Vmbf3d	Verb Type=main Aspect=biaspectual VForm=future Person=third Number=dual
+Vmbm1p	Verb Type=main Aspect=biaspectual VForm=imperative Person=first Number=plural
+Vmbm1d	Verb Type=main Aspect=biaspectual VForm=imperative Person=first Number=dual
+Vmbm2s	Verb Type=main Aspect=biaspectual VForm=imperative Person=second Number=singular
+Vmbm2p	Verb Type=main Aspect=biaspectual VForm=imperative Person=second Number=plural
+Vmbm2d	Verb Type=main Aspect=biaspectual VForm=imperative Person=second Number=dual
+Va-n	Verb Type=auxiliary VForm=infinitive
+Va-u	Verb Type=auxiliary VForm=supine
+Va-p-sm	Verb Type=auxiliary VForm=participle Number=singular Gender=masculine
+Va-p-sf	Verb Type=auxiliary VForm=participle Number=singular Gender=feminine
+Va-p-sn	Verb Type=auxiliary VForm=participle Number=singular Gender=neuter
+Va-p-pm	Verb Type=auxiliary VForm=participle Number=plural Gender=masculine
+Va-p-pf	Verb Type=auxiliary VForm=participle Number=plural Gender=feminine
+Va-p-pn	Verb Type=auxiliary VForm=participle Number=plural Gender=neuter
+Va-p-dm	Verb Type=auxiliary VForm=participle Number=dual Gender=masculine
+Va-p-df	Verb Type=auxiliary VForm=participle Number=dual Gender=feminine
+Va-p-dn	Verb Type=auxiliary VForm=participle Number=dual Gender=neuter
+Va-r1s-n	Verb Type=auxiliary VForm=present Person=first Number=singular Negative=no
+Va-r1s-y	Verb Type=auxiliary VForm=present Person=first Number=singular Negative=yes
+Va-r1p-n	Verb Type=auxiliary VForm=present Person=first Number=plural Negative=no
+Va-r1p-y	Verb Type=auxiliary VForm=present Person=first Number=plural Negative=yes
+Va-r1d-n	Verb Type=auxiliary VForm=present Person=first Number=dual Negative=no
+Va-r1d-y	Verb Type=auxiliary VForm=present Person=first Number=dual Negative=yes
+Va-r1dfn	Verb Type=auxiliary VForm=present Person=first Number=dual Gender=feminine Negative=no
+Va-r2s-n	Verb Type=auxiliary VForm=present Person=second Number=singular Negative=no
+Va-r2s-y	Verb Type=auxiliary VForm=present Person=second Number=singular Negative=yes
+Va-r2p-n	Verb Type=auxiliary VForm=present Person=second Number=plural Negative=no
+Va-r2p-y	Verb Type=auxiliary VForm=present Person=second Number=plural Negative=yes
+Va-r2d-n	Verb Type=auxiliary VForm=present Person=second Number=dual Negative=no
+Va-r2d-y	Verb Type=auxiliary VForm=present Person=second Number=dual Negative=yes
+Va-r3s-n	Verb Type=auxiliary VForm=present Person=third Number=singular Negative=no
+Va-r3s-y	Verb Type=auxiliary VForm=present Person=third Number=singular Negative=yes
+Va-r3p-n	Verb Type=auxiliary VForm=present Person=third Number=plural Negative=no
+Va-r3p-y	Verb Type=auxiliary VForm=present Person=third Number=plural Negative=yes
+Va-r3d-n	Verb Type=auxiliary VForm=present Person=third Number=dual Negative=no
+Va-r3d-y	Verb Type=auxiliary VForm=present Person=third Number=dual Negative=yes
+Va-f1s-n	Verb Type=auxiliary VForm=future Person=first Number=singular Negative=no
+Va-f1s-y	Verb Type=auxiliary VForm=future Person=first Number=singular Negative=yes
+Va-f1p-n	Verb Type=auxiliary VForm=future Person=first Number=plural Negative=no
+Va-f1p-y	Verb Type=auxiliary VForm=future Person=first Number=plural Negative=yes
+Va-f1d	Verb Type=auxiliary VForm=future Person=first Number=dual
+Va-f1d-n	Verb Type=auxiliary VForm=future Person=first Number=dual Negative=no
+Va-f1d-y	Verb Type=auxiliary VForm=future Person=first Number=dual Negative=yes
+Va-f2s-n	Verb Type=auxiliary VForm=future Person=second Number=singular Negative=no
+Va-f2s-y	Verb Type=auxiliary VForm=future Person=second Number=singular Negative=yes
+Va-f2p-n	Verb Type=auxiliary VForm=future Person=second Number=plural Negative=no
+Va-f2d-n	Verb Type=auxiliary VForm=future Person=second Number=dual Negative=no
+Va-f3s-n	Verb Type=auxiliary VForm=future Person=third Number=singular Negative=no
+Va-f3s-y	Verb Type=auxiliary VForm=future Person=third Number=singular Negative=yes
+Va-f3p-n	Verb Type=auxiliary VForm=future Person=third Number=plural Negative=no
+Va-f3p-y	Verb Type=auxiliary VForm=future Person=third Number=plural Negative=yes
+Va-f3d-n	Verb Type=auxiliary VForm=future Person=third Number=dual Negative=no
+Va-c	Verb Type=auxiliary VForm=conditional
+Va-c---y	Verb Type=auxiliary VForm=conditional Negative=yes
+Va-m1p	Verb Type=auxiliary VForm=imperative Person=first Number=plural
+Va-m1d	Verb Type=auxiliary VForm=imperative Person=first Number=dual
+Va-m2s	Verb Type=auxiliary VForm=imperative Person=second Number=singular
+Va-m2p	Verb Type=auxiliary VForm=imperative Person=second Number=plural
+Va-m2d	Verb Type=auxiliary VForm=imperative Person=second Number=dual
+Agpmsnn	Adjective Type=general Degree=positive Gender=masculine Number=singular Case=nominative Definiteness=no
+Agpmsny	Adjective Type=general Degree=positive Gender=masculine Number=singular Case=nominative Definiteness=yes
+Agpmsg	Adjective Type=general Degree=positive Gender=masculine Number=singular Case=genitive
+Agpmsd	Adjective Type=general Degree=positive Gender=masculine Number=singular Case=dative
+Agpmsa	Adjective Type=general Degree=positive Gender=masculine Number=singular Case=accusative
+Agpmsan	Adjective Type=general Degree=positive Gender=masculine Number=singular Case=accusative Definiteness=no
+Agpmsay	Adjective Type=general Degree=positive Gender=masculine Number=singular Case=accusative Definiteness=yes
+Agpmsl	Adjective Type=general Degree=positive Gender=masculine Number=singular Case=locative
+Agpmsi	Adjective Type=general Degree=positive Gender=masculine Number=singular Case=instrumental
+Agpmdn	Adjective Type=general Degree=positive Gender=masculine Number=dual Case=nominative
+Agpmdg	Adjective Type=general Degree=positive Gender=masculine Number=dual Case=genitive
+Agpmdd	Adjective Type=general Degree=positive Gender=masculine Number=dual Case=dative
+Agpmda	Adjective Type=general Degree=positive Gender=masculine Number=dual Case=accusative
+Agpmdl	Adjective Type=general Degree=positive Gender=masculine Number=dual Case=locative
+Agpmdi	Adjective Type=general Degree=positive Gender=masculine Number=dual Case=instrumental
+Agpmpn	Adjective Type=general Degree=positive Gender=masculine Number=plural Case=nominative
+Agpmpg	Adjective Type=general Degree=positive Gender=masculine Number=plural Case=genitive
+Agpmpd	Adjective Type=general Degree=positive Gender=masculine Number=plural Case=dative
+Agpmpa	Adjective Type=general Degree=positive Gender=masculine Number=plural Case=accusative
+Agpmpl	Adjective Type=general Degree=positive Gender=masculine Number=plural Case=locative
+Agpmpi	Adjective Type=general Degree=positive Gender=masculine Number=plural Case=instrumental
+Agpfsn	Adjective Type=general Degree=positive Gender=feminine Number=singular Case=nominative
+Agpfsg	Adjective Type=general Degree=positive Gender=feminine Number=singular Case=genitive
+Agpfsd	Adjective Type=general Degree=positive Gender=feminine Number=singular Case=dative
+Agpfsa	Adjective Type=general Degree=positive Gender=feminine Number=singular Case=accusative
+Agpfsl	Adjective Type=general Degree=positive Gender=feminine Number=singular Case=locative
+Agpfsi	Adjective Type=general Degree=positive Gender=feminine Number=singular Case=instrumental
+Agpfdn	Adjective Type=general Degree=positive Gender=feminine Number=dual Case=nominative
+Agpfdg	Adjective Type=general Degree=positive Gender=feminine Number=dual Case=genitive
+Agpfdd	Adjective Type=general Degree=positive Gender=feminine Number=dual Case=dative
+Agpfda	Adjective Type=general Degree=positive Gender=feminine Number=dual Case=accusative
+Agpfdl	Adjective Type=general Degree=positive Gender=feminine Number=dual Case=locative
+Agpfdi	Adjective Type=general Degree=positive Gender=feminine Number=dual Case=instrumental
+Agpfpn	Adjective Type=general Degree=positive Gender=feminine Number=plural Case=nominative
+Agpfpg	Adjective Type=general Degree=positive Gender=feminine Number=plural Case=genitive
+Agpfpd	Adjective Type=general Degree=positive Gender=feminine Number=plural Case=dative
+Agpfpa	Adjective Type=general Degree=positive Gender=feminine Number=plural Case=accusative
+Agpfpl	Adjective Type=general Degree=positive Gender=feminine Number=plural Case=locative
+Agpfpi	Adjective Type=general Degree=positive Gender=feminine Number=plural Case=instrumental
+Agpnsn	Adjective Type=general Degree=positive Gender=neuter Number=singular Case=nominative
+Agpnsg	Adjective Type=general Degree=positive Gender=neuter Number=singular Case=genitive
+Agpnsd	Adjective Type=general Degree=positive Gender=neuter Number=singular Case=dative
+Agpnsa	Adjective Type=general Degree=positive Gender=neuter Number=singular Case=accusative
+Agpnsl	Adjective Type=general Degree=positive Gender=neuter Number=singular Case=locative
+Agpnsi	Adjective Type=general Degree=positive Gender=neuter Number=singular Case=instrumental
+Agpndn	Adjective Type=general Degree=positive Gender=neuter Number=dual Case=nominative
+Agpndg	Adjective Type=general Degree=positive Gender=neuter Number=dual Case=genitive
+Agpndd	Adjective Type=general Degree=positive Gender=neuter Number=dual Case=dative
+Agpnda	Adjective Type=general Degree=positive Gender=neuter Number=dual Case=accusative
+Agpndl	Adjective Type=general Degree=positive Gender=neuter Number=dual Case=locative
+Agpndi	Adjective Type=general Degree=positive Gender=neuter Number=dual Case=instrumental
+Agpnpn	Adjective Type=general Degree=positive Gender=neuter Number=plural Case=nominative
+Agpnpg	Adjective Type=general Degree=positive Gender=neuter Number=plural Case=genitive
+Agpnpd	Adjective Type=general Degree=positive Gender=neuter Number=plural Case=dative
+Agpnpa	Adjective Type=general Degree=positive Gender=neuter Number=plural Case=accusative
+Agpnpl	Adjective Type=general Degree=positive Gender=neuter Number=plural Case=locative
+Agpnpi	Adjective Type=general Degree=positive Gender=neuter Number=plural Case=instrumental
+Agcmsny	Adjective Type=general Degree=comparative Gender=masculine Number=singular Case=nominative Definiteness=yes
+Agcmsg	Adjective Type=general Degree=comparative Gender=masculine Number=singular Case=genitive
+Agcmsd	Adjective Type=general Degree=comparative Gender=masculine Number=singular Case=dative
+Agcmsa	Adjective Type=general Degree=comparative Gender=masculine Number=singular Case=accusative
+Agcmsay	Adjective Type=general Degree=comparative Gender=masculine Number=singular Case=accusative Definiteness=yes
+Agcmsl	Adjective Type=general Degree=comparative Gender=masculine Number=singular Case=locative
+Agcmsi	Adjective Type=general Degree=comparative Gender=masculine Number=singular Case=instrumental
+Agcmdn	Adjective Type=general Degree=comparative Gender=masculine Number=dual Case=nominative
+Agcmdg	Adjective Type=general Degree=comparative Gender=masculine Number=dual Case=genitive
+Agcmdd	Adjective Type=general Degree=comparative Gender=masculine Number=dual Case=dative
+Agcmda	Adjective Type=general Degree=comparative Gender=masculine Number=dual Case=accusative
+Agcmdl	Adjective Type=general Degree=comparative Gender=masculine Number=dual Case=locative
+Agcmdi	Adjective Type=general Degree=comparative Gender=masculine Number=dual Case=instrumental
+Agcmpn	Adjective Type=general Degree=comparative Gender=masculine Number=plural Case=nominative
+Agcmpg	Adjective Type=general Degree=comparative Gender=masculine Number=plural Case=genitive
+Agcmpd	Adjective Type=general Degree=comparative Gender=masculine Number=plural Case=dative
+Agcmpa	Adjective Type=general Degree=comparative Gender=masculine Number=plural Case=accusative
+Agcmpl	Adjective Type=general Degree=comparative Gender=masculine Number=plural Case=locative
+Agcmpi	Adjective Type=general Degree=comparative Gender=masculine Number=plural Case=instrumental
+Agcfsn	Adjective Type=general Degree=comparative Gender=feminine Number=singular Case=nominative
+Agcfsg	Adjective Type=general Degree=comparative Gender=feminine Number=singular Case=genitive
+Agcfsd	Adjective Type=general Degree=comparative Gender=feminine Number=singular Case=dative
+Agcfsa	Adjective Type=general Degree=comparative Gender=feminine Number=singular Case=accusative
+Agcfsl	Adjective Type=general Degree=comparative Gender=feminine Number=singular Case=locative
+Agcfsi	Adjective Type=general Degree=comparative Gender=feminine Number=singular Case=instrumental
+Agcfdn	Adjective Type=general Degree=comparative Gender=feminine Number=dual Case=nominative
+Agcfdg	Adjective Type=general Degree=comparative Gender=feminine Number=dual Case=genitive
+Agcfdd	Adjective Type=general Degree=comparative Gender=feminine Number=dual Case=dative
+Agcfda	Adjective Type=general Degree=comparative Gender=feminine Number=dual Case=accusative
+Agcfdl	Adjective Type=general Degree=comparative Gender=feminine Number=dual Case=locative
+Agcfdi	Adjective Type=general Degree=comparative Gender=feminine Number=dual Case=instrumental
+Agcfpn	Adjective Type=general Degree=comparative Gender=feminine Number=plural Case=nominative
+Agcfpg	Adjective Type=general Degree=comparative Gender=feminine Number=plural Case=genitive
+Agcfpd	Adjective Type=general Degree=comparative Gender=feminine Number=plural Case=dative
+Agcfpa	Adjective Type=general Degree=comparative Gender=feminine Number=plural Case=accusative
+Agcfpl	Adjective Type=general Degree=comparative Gender=feminine Number=plural Case=locative
+Agcfpi	Adjective Type=general Degree=comparative Gender=feminine Number=plural Case=instrumental
+Agcnsn	Adjective Type=general Degree=comparative Gender=neuter Number=singular Case=nominative
+Agcnsg	Adjective Type=general Degree=comparative Gender=neuter Number=singular Case=genitive
+Agcnsd	Adjective Type=general Degree=comparative Gender=neuter Number=singular Case=dative
+Agcnsa	Adjective Type=general Degree=comparative Gender=neuter Number=singular Case=accusative
+Agcnsl	Adjective Type=general Degree=comparative Gender=neuter Number=singular Case=locative
+Agcnsi	Adjective Type=general Degree=comparative Gender=neuter Number=singular Case=instrumental
+Agcndn	Adjective Type=general Degree=comparative Gender=neuter Number=dual Case=nominative
+Agcndg	Adjective Type=general Degree=comparative Gender=neuter Number=dual Case=genitive
+Agcndd	Adjective Type=general Degree=comparative Gender=neuter Number=dual Case=dative
+Agcnda	Adjective Type=general Degree=comparative Gender=neuter Number=dual Case=accusative
+Agcndl	Adjective Type=general Degree=comparative Gender=neuter Number=dual Case=locative
+Agcndi	Adjective Type=general Degree=comparative Gender=neuter Number=dual Case=instrumental
+Agcnpn	Adjective Type=general Degree=comparative Gender=neuter Number=plural Case=nominative
+Agcnpg	Adjective Type=general Degree=comparative Gender=neuter Number=plural Case=genitive
+Agcnpd	Adjective Type=general Degree=comparative Gender=neuter Number=plural Case=dative
+Agcnpa	Adjective Type=general Degree=comparative Gender=neuter Number=plural Case=accusative
+Agcnpl	Adjective Type=general Degree=comparative Gender=neuter Number=plural Case=locative
+Agcnpi	Adjective Type=general Degree=comparative Gender=neuter Number=plural Case=instrumental
+Agsmsny	Adjective Type=general Degree=superlative Gender=masculine Number=singular Case=nominative Definiteness=yes
+Agsmsg	Adjective Type=general Degree=superlative Gender=masculine Number=singular Case=genitive
+Agsmsd	Adjective Type=general Degree=superlative Gender=masculine Number=singular Case=dative
+Agsmsa	Adjective Type=general Degree=superlative Gender=masculine Number=singular Case=accusative
+Agsmsay	Adjective Type=general Degree=superlative Gender=masculine Number=singular Case=accusative Definiteness=yes
+Agsmsl	Adjective Type=general Degree=superlative Gender=masculine Number=singular Case=locative
+Agsmsi	Adjective Type=general Degree=superlative Gender=masculine Number=singular Case=instrumental
+Agsmdn	Adjective Type=general Degree=superlative Gender=masculine Number=dual Case=nominative
+Agsmdg	Adjective Type=general Degree=superlative Gender=masculine Number=dual Case=genitive
+Agsmdd	Adjective Type=general Degree=superlative Gender=masculine Number=dual Case=dative
+Agsmda	Adjective Type=general Degree=superlative Gender=masculine Number=dual Case=accusative
+Agsmdl	Adjective Type=general Degree=superlative Gender=masculine Number=dual Case=locative
+Agsmdi	Adjective Type=general Degree=superlative Gender=masculine Number=dual Case=instrumental
+Agsmpn	Adjective Type=general Degree=superlative Gender=masculine Number=plural Case=nominative
+Agsmpg	Adjective Type=general Degree=superlative Gender=masculine Number=plural Case=genitive
+Agsmpd	Adjective Type=general Degree=superlative Gender=masculine Number=plural Case=dative
+Agsmpa	Adjective Type=general Degree=superlative Gender=masculine Number=plural Case=accusative
+Agsmpl	Adjective Type=general Degree=superlative Gender=masculine Number=plural Case=locative
+Agsmpi	Adjective Type=general Degree=superlative Gender=masculine Number=plural Case=instrumental
+Agsfsn	Adjective Type=general Degree=superlative Gender=feminine Number=singular Case=nominative
+Agsfsg	Adjective Type=general Degree=superlative Gender=feminine Number=singular Case=genitive
+Agsfsd	Adjective Type=general Degree=superlative Gender=feminine Number=singular Case=dative
+Agsfsa	Adjective Type=general Degree=superlative Gender=feminine Number=singular Case=accusative
+Agsfsl	Adjective Type=general Degree=superlative Gender=feminine Number=singular Case=locative
+Agsfsi	Adjective Type=general Degree=superlative Gender=feminine Number=singular Case=instrumental
+Agsfdn	Adjective Type=general Degree=superlative Gender=feminine Number=dual Case=nominative
+Agsfdg	Adjective Type=general Degree=superlative Gender=feminine Number=dual Case=genitive
+Agsfdd	Adjective Type=general Degree=superlative Gender=feminine Number=dual Case=dative
+Agsfda	Adjective Type=general Degree=superlative Gender=feminine Number=dual Case=accusative
+Agsfdl	Adjective Type=general Degree=superlative Gender=feminine Number=dual Case=locative
+Agsfdi	Adjective Type=general Degree=superlative Gender=feminine Number=dual Case=instrumental
+Agsfpn	Adjective Type=general Degree=superlative Gender=feminine Number=plural Case=nominative
+Agsfpg	Adjective Type=general Degree=superlative Gender=feminine Number=plural Case=genitive
+Agsfpd	Adjective Type=general Degree=superlative Gender=feminine Number=plural Case=dative
+Agsfpa	Adjective Type=general Degree=superlative Gender=feminine Number=plural Case=accusative
+Agsfpl	Adjective Type=general Degree=superlative Gender=feminine Number=plural Case=locative
+Agsfpi	Adjective Type=general Degree=superlative Gender=feminine Number=plural Case=instrumental
+Agsnsn	Adjective Type=general Degree=superlative Gender=neuter Number=singular Case=nominative
+Agsnsg	Adjective Type=general Degree=superlative Gender=neuter Number=singular Case=genitive
+Agsnsd	Adjective Type=general Degree=superlative Gender=neuter Number=singular Case=dative
+Agsnsa	Adjective Type=general Degree=superlative Gender=neuter Number=singular Case=accusative
+Agsnsl	Adjective Type=general Degree=superlative Gender=neuter Number=singular Case=locative
+Agsnsi	Adjective Type=general Degree=superlative Gender=neuter Number=singular Case=instrumental
+Agsndn	Adjective Type=general Degree=superlative Gender=neuter Number=dual Case=nominative
+Agsndg	Adjective Type=general Degree=superlative Gender=neuter Number=dual Case=genitive
+Agsndd	Adjective Type=general Degree=superlative Gender=neuter Number=dual Case=dative
+Agsnda	Adjective Type=general Degree=superlative Gender=neuter Number=dual Case=accusative
+Agsndl	Adjective Type=general Degree=superlative Gender=neuter Number=dual Case=locative
+Agsndi	Adjective Type=general Degree=superlative Gender=neuter Number=dual Case=instrumental
+Agsnpn	Adjective Type=general Degree=superlative Gender=neuter Number=plural Case=nominative
+Agsnpg	Adjective Type=general Degree=superlative Gender=neuter Number=plural Case=genitive
+Agsnpd	Adjective Type=general Degree=superlative Gender=neuter Number=plural Case=dative
+Agsnpa	Adjective Type=general Degree=superlative Gender=neuter Number=plural Case=accusative
+Agsnpl	Adjective Type=general Degree=superlative Gender=neuter Number=plural Case=locative
+Agsnpi	Adjective Type=general Degree=superlative Gender=neuter Number=plural Case=instrumental
+Aspmsnn	Adjective Type=possessive Degree=positive Gender=masculine Number=singular Case=nominative Definiteness=no
+Aspmsg	Adjective Type=possessive Degree=positive Gender=masculine Number=singular Case=genitive
+Aspmsd	Adjective Type=possessive Degree=positive Gender=masculine Number=singular Case=dative
+Aspmsa	Adjective Type=possessive Degree=positive Gender=masculine Number=singular Case=accusative
+Aspmsan	Adjective Type=possessive Degree=positive Gender=masculine Number=singular Case=accusative Definiteness=no
+Aspmsl	Adjective Type=possessive Degree=positive Gender=masculine Number=singular Case=locative
+Aspmsi	Adjective Type=possessive Degree=positive Gender=masculine Number=singular Case=instrumental
+Aspmdn	Adjective Type=possessive Degree=positive Gender=masculine Number=dual Case=nominative
+Aspmdg	Adjective Type=possessive Degree=positive Gender=masculine Number=dual Case=genitive
+Aspmdd	Adjective Type=possessive Degree=positive Gender=masculine Number=dual Case=dative
+Aspmda	Adjective Type=possessive Degree=positive Gender=masculine Number=dual Case=accusative
+Aspmdl	Adjective Type=possessive Degree=positive Gender=masculine Number=dual Case=locative
+Aspmdi	Adjective Type=possessive Degree=positive Gender=masculine Number=dual Case=instrumental
+Aspmpn	Adjective Type=possessive Degree=positive Gender=masculine Number=plural Case=nominative
+Aspmpg	Adjective Type=possessive Degree=positive Gender=masculine Number=plural Case=genitive
+Aspmpd	Adjective Type=possessive Degree=positive Gender=masculine Number=plural Case=dative
+Aspmpa	Adjective Type=possessive Degree=positive Gender=masculine Number=plural Case=accusative
+Aspmpl	Adjective Type=possessive Degree=positive Gender=masculine Number=plural Case=locative
+Aspmpi	Adjective Type=possessive Degree=positive Gender=masculine Number=plural Case=instrumental
+Aspfsn	Adjective Type=possessive Degree=positive Gender=feminine Number=singular Case=nominative
+Aspfsg	Adjective Type=possessive Degree=positive Gender=feminine Number=singular Case=genitive
+Aspfsd	Adjective Type=possessive Degree=positive Gender=feminine Number=singular Case=dative
+Aspfsa	Adjective Type=possessive Degree=positive Gender=feminine Number=singular Case=accusative
+Aspfsl	Adjective Type=possessive Degree=positive Gender=feminine Number=singular Case=locative
+Aspfsi	Adjective Type=possessive Degree=positive Gender=feminine Number=singular Case=instrumental
+Aspfdn	Adjective Type=possessive Degree=positive Gender=feminine Number=dual Case=nominative
+Aspfdg	Adjective Type=possessive Degree=positive Gender=feminine Number=dual Case=genitive
+Aspfdd	Adjective Type=possessive Degree=positive Gender=feminine Number=dual Case=dative
+Aspfda	Adjective Type=possessive Degree=positive Gender=feminine Number=dual Case=accusative
+Aspfdl	Adjective Type=possessive Degree=positive Gender=feminine Number=dual Case=locative
+Aspfdi	Adjective Type=possessive Degree=positive Gender=feminine Number=dual Case=instrumental
+Aspfpn	Adjective Type=possessive Degree=positive Gender=feminine Number=plural Case=nominative
+Aspfpg	Adjective Type=possessive Degree=positive Gender=feminine Number=plural Case=genitive
+Aspfpd	Adjective Type=possessive Degree=positive Gender=feminine Number=plural Case=dative
+Aspfpa	Adjective Type=possessive Degree=positive Gender=feminine Number=plural Case=accusative
+Aspfpl	Adjective Type=possessive Degree=positive Gender=feminine Number=plural Case=locative
+Aspfpi	Adjective Type=possessive Degree=positive Gender=feminine Number=plural Case=instrumental
+Aspnsn	Adjective Type=possessive Degree=positive Gender=neuter Number=singular Case=nominative
+Aspnsg	Adjective Type=possessive Degree=positive Gender=neuter Number=singular Case=genitive
+Aspnsd	Adjective Type=possessive Degree=positive Gender=neuter Number=singular Case=dative
+Aspnsa	Adjective Type=possessive Degree=positive Gender=neuter Number=singular Case=accusative
+Aspnsl	Adjective Type=possessive Degree=positive Gender=neuter Number=singular Case=locative
+Aspnsi	Adjective Type=possessive Degree=positive Gender=neuter Number=singular Case=instrumental
+Aspndn	Adjective Type=possessive Degree=positive Gender=neuter Number=dual Case=nominative
+Aspndg	Adjective Type=possessive Degree=positive Gender=neuter Number=dual Case=genitive
+Aspndd	Adjective Type=possessive Degree=positive Gender=neuter Number=dual Case=dative
+Aspnda	Adjective Type=possessive Degree=positive Gender=neuter Number=dual Case=accusative
+Aspndl	Adjective Type=possessive Degree=positive Gender=neuter Number=dual Case=locative
+Aspndi	Adjective Type=possessive Degree=positive Gender=neuter Number=dual Case=instrumental
+Aspnpn	Adjective Type=possessive Degree=positive Gender=neuter Number=plural Case=nominative
+Aspnpg	Adjective Type=possessive Degree=positive Gender=neuter Number=plural Case=genitive
+Aspnpd	Adjective Type=possessive Degree=positive Gender=neuter Number=plural Case=dative
+Aspnpa	Adjective Type=possessive Degree=positive Gender=neuter Number=plural Case=accusative
+Aspnpl	Adjective Type=possessive Degree=positive Gender=neuter Number=plural Case=locative
+Aspnpi	Adjective Type=possessive Degree=positive Gender=neuter Number=plural Case=instrumental
+Appmsnn	Adjective Type=participle Degree=positive Gender=masculine Number=singular Case=nominative Definiteness=no
+Appmsny	Adjective Type=participle Degree=positive Gender=masculine Number=singular Case=nominative Definiteness=yes
+Appmsg	Adjective Type=participle Degree=positive Gender=masculine Number=singular Case=genitive
+Appmsd	Adjective Type=participle Degree=positive Gender=masculine Number=singular Case=dative
+Appmsa	Adjective Type=participle Degree=positive Gender=masculine Number=singular Case=accusative
+Appmsan	Adjective Type=participle Degree=positive Gender=masculine Number=singular Case=accusative Definiteness=no
+Appmsay	Adjective Type=participle Degree=positive Gender=masculine Number=singular Case=accusative Definiteness=yes
+Appmsl	Adjective Type=participle Degree=positive Gender=masculine Number=singular Case=locative
+Appmsi	Adjective Type=participle Degree=positive Gender=masculine Number=singular Case=instrumental
+Appmdn	Adjective Type=participle Degree=positive Gender=masculine Number=dual Case=nominative
+Appmdg	Adjective Type=participle Degree=positive Gender=masculine Number=dual Case=genitive
+Appmdd	Adjective Type=participle Degree=positive Gender=masculine Number=dual Case=dative
+Appmda	Adjective Type=participle Degree=positive Gender=masculine Number=dual Case=accusative
+Appmdl	Adjective Type=participle Degree=positive Gender=masculine Number=dual Case=locative
+Appmdi	Adjective Type=participle Degree=positive Gender=masculine Number=dual Case=instrumental
+Appmpn	Adjective Type=participle Degree=positive Gender=masculine Number=plural Case=nominative
+Appmpg	Adjective Type=participle Degree=positive Gender=masculine Number=plural Case=genitive
+Appmpd	Adjective Type=participle Degree=positive Gender=masculine Number=plural Case=dative
+Appmpa	Adjective Type=participle Degree=positive Gender=masculine Number=plural Case=accusative
+Appmpl	Adjective Type=participle Degree=positive Gender=masculine Number=plural Case=locative
+Appmpi	Adjective Type=participle Degree=positive Gender=masculine Number=plural Case=instrumental
+Appfsn	Adjective Type=participle Degree=positive Gender=feminine Number=singular Case=nominative
+Appfsg	Adjective Type=participle Degree=positive Gender=feminine Number=singular Case=genitive
+Appfsd	Adjective Type=participle Degree=positive Gender=feminine Number=singular Case=dative
+Appfsa	Adjective Type=participle Degree=positive Gender=feminine Number=singular Case=accusative
+Appfsl	Adjective Type=participle Degree=positive Gender=feminine Number=singular Case=locative
+Appfsi	Adjective Type=participle Degree=positive Gender=feminine Number=singular Case=instrumental
+Appfdn	Adjective Type=participle Degree=positive Gender=feminine Number=dual Case=nominative
+Appfdg	Adjective Type=participle Degree=positive Gender=feminine Number=dual Case=genitive
+Appfdd	Adjective Type=participle Degree=positive Gender=feminine Number=dual Case=dative
+Appfda	Adjective Type=participle Degree=positive Gender=feminine Number=dual Case=accusative
+Appfdl	Adjective Type=participle Degree=positive Gender=feminine Number=dual Case=locative
+Appfdi	Adjective Type=participle Degree=positive Gender=feminine Number=dual Case=instrumental
+Appfpn	Adjective Type=participle Degree=positive Gender=feminine Number=plural Case=nominative
+Appfpg	Adjective Type=participle Degree=positive Gender=feminine Number=plural Case=genitive
+Appfpd	Adjective Type=participle Degree=positive Gender=feminine Number=plural Case=dative
+Appfpa	Adjective Type=participle Degree=positive Gender=feminine Number=plural Case=accusative
+Appfpl	Adjective Type=participle Degree=positive Gender=feminine Number=plural Case=locative
+Appfpi	Adjective Type=participle Degree=positive Gender=feminine Number=plural Case=instrumental
+Appnsn	Adjective Type=participle Degree=positive Gender=neuter Number=singular Case=nominative
+Appnsg	Adjective Type=participle Degree=positive Gender=neuter Number=singular Case=genitive
+Appnsd	Adjective Type=participle Degree=positive Gender=neuter Number=singular Case=dative
+Appnsa	Adjective Type=participle Degree=positive Gender=neuter Number=singular Case=accusative
+Appnsl	Adjective Type=participle Degree=positive Gender=neuter Number=singular Case=locative
+Appnsi	Adjective Type=participle Degree=positive Gender=neuter Number=singular Case=instrumental
+Appndn	Adjective Type=participle Degree=positive Gender=neuter Number=dual Case=nominative
+Appndg	Adjective Type=participle Degree=positive Gender=neuter Number=dual Case=genitive
+Appndd	Adjective Type=participle Degree=positive Gender=neuter Number=dual Case=dative
+Appnda	Adjective Type=participle Degree=positive Gender=neuter Number=dual Case=accusative
+Appndl	Adjective Type=participle Degree=positive Gender=neuter Number=dual Case=locative
+Appndi	Adjective Type=participle Degree=positive Gender=neuter Number=dual Case=instrumental
+Appnpn	Adjective Type=participle Degree=positive Gender=neuter Number=plural Case=nominative
+Appnpg	Adjective Type=participle Degree=positive Gender=neuter Number=plural Case=genitive
+Appnpd	Adjective Type=participle Degree=positive Gender=neuter Number=plural Case=dative
+Appnpa	Adjective Type=participle Degree=positive Gender=neuter Number=plural Case=accusative
+Appnpl	Adjective Type=participle Degree=positive Gender=neuter Number=plural Case=locative
+Appnpi	Adjective Type=participle Degree=positive Gender=neuter Number=plural Case=instrumental
+Rgp	Adverb Type=general Degree=positive
+Rgc	Adverb Type=general Degree=comparative
+Rgs	Adverb Type=general Degree=superlative
+Rr	Adverb Type=participle
+Pp1-sn	Pronoun Type=personal Person=first Number=singular Case=nominative
+Pp1-sg	Pronoun Type=personal Person=first Number=singular Case=genitive
+Pp1-sg--y	Pronoun Type=personal Person=first Number=singular Case=genitive Clitic=yes
+Pp1-sd	Pronoun Type=personal Person=first Number=singular Case=dative
+Pp1-sd--y	Pronoun Type=personal Person=first Number=singular Case=dative Clitic=yes
+Pp1-sa	Pronoun Type=personal Person=first Number=singular Case=accusative
+Pp1-sa--y	Pronoun Type=personal Person=first Number=singular Case=accusative Clitic=yes
+Pp1-sa--b	Pronoun Type=personal Person=first Number=singular Case=accusative Clitic=bound
+Pp1-sl	Pronoun Type=personal Person=first Number=singular Case=locative
+Pp1-si	Pronoun Type=personal Person=first Number=singular Case=instrumental
+Pp1-dg	Pronoun Type=personal Person=first Number=dual Case=genitive
+Pp1-dd	Pronoun Type=personal Person=first Number=dual Case=dative
+Pp1-da	Pronoun Type=personal Person=first Number=dual Case=accusative
+Pp1-dl	Pronoun Type=personal Person=first Number=dual Case=locative
+Pp1-di	Pronoun Type=personal Person=first Number=dual Case=instrumental
+Pp1-pg	Pronoun Type=personal Person=first Number=plural Case=genitive
+Pp1-pd	Pronoun Type=personal Person=first Number=plural Case=dative
+Pp1-pa	Pronoun Type=personal Person=first Number=plural Case=accusative
+Pp1-pl	Pronoun Type=personal Person=first Number=plural Case=locative
+Pp1-pi	Pronoun Type=personal Person=first Number=plural Case=instrumental
+Pp1mdn	Pronoun Type=personal Person=first Gender=masculine Number=dual Case=nominative
+Pp1mpn	Pronoun Type=personal Person=first Gender=masculine Number=plural Case=nominative
+Pp1fdn	Pronoun Type=personal Person=first Gender=feminine Number=dual Case=nominative
+Pp1fpn	Pronoun Type=personal Person=first Gender=feminine Number=plural Case=nominative
+Pp2-sn	Pronoun Type=personal Person=second Number=singular Case=nominative
+Pp2-sg	Pronoun Type=personal Person=second Number=singular Case=genitive
+Pp2-sg--y	Pronoun Type=personal Person=second Number=singular Case=genitive Clitic=yes
+Pp2-sd	Pronoun Type=personal Person=second Number=singular Case=dative
+Pp2-sd--y	Pronoun Type=personal Person=second Number=singular Case=dative Clitic=yes
+Pp2-sa	Pronoun Type=personal Person=second Number=singular Case=accusative
+Pp2-sa--y	Pronoun Type=personal Person=second Number=singular Case=accusative Clitic=yes
+Pp2-sa--b	Pronoun Type=personal Person=second Number=singular Case=accusative Clitic=bound
+Pp2-sl	Pronoun Type=personal Person=second Number=singular Case=locative
+Pp2-si	Pronoun Type=personal Person=second Number=singular Case=instrumental
+Pp2-dg	Pronoun Type=personal Person=second Number=dual Case=genitive
+Pp2-dd	Pronoun Type=personal Person=second Number=dual Case=dative
+Pp2-da	Pronoun Type=personal Person=second Number=dual Case=accusative
+Pp2-dl	Pronoun Type=personal Person=second Number=dual Case=locative
+Pp2-di	Pronoun Type=personal Person=second Number=dual Case=instrumental
+Pp2-pg	Pronoun Type=personal Person=second Number=plural Case=genitive
+Pp2-pd	Pronoun Type=personal Person=second Number=plural Case=dative
+Pp2-pa	Pronoun Type=personal Person=second Number=plural Case=accusative
+Pp2-pl	Pronoun Type=personal Person=second Number=plural Case=locative
+Pp2-pi	Pronoun Type=personal Person=second Number=plural Case=instrumental
+Pp2mdn	Pronoun Type=personal Person=second Gender=masculine Number=dual Case=nominative
+Pp2mpn	Pronoun Type=personal Person=second Gender=masculine Number=plural Case=nominative
+Pp2fdn	Pronoun Type=personal Person=second Gender=feminine Number=dual Case=nominative
+Pp2fpn	Pronoun Type=personal Person=second Gender=feminine Number=plural Case=nominative
+Pp2ndn	Pronoun Type=personal Person=second Gender=neuter Number=dual Case=nominative
+Pp2npn	Pronoun Type=personal Person=second Gender=neuter Number=plural Case=nominative
+Pp3msn	Pronoun Type=personal Person=third Gender=masculine Number=singular Case=nominative
+Pp3msg	Pronoun Type=personal Person=third Gender=masculine Number=singular Case=genitive
+Pp3msg--y	Pronoun Type=personal Person=third Gender=masculine Number=singular Case=genitive Clitic=yes
+Pp3msd	Pronoun Type=personal Person=third Gender=masculine Number=singular Case=dative
+Pp3msd--y	Pronoun Type=personal Person=third Gender=masculine Number=singular Case=dative Clitic=yes
+Pp3msa	Pronoun Type=personal Person=third Gender=masculine Number=singular Case=accusative
+Pp3msa--y	Pronoun Type=personal Person=third Gender=masculine Number=singular Case=accusative Clitic=yes
+Pp3msa--b	Pronoun Type=personal Person=third Gender=masculine Number=singular Case=accusative Clitic=bound
+Pp3msl	Pronoun Type=personal Person=third Gender=masculine Number=singular Case=locative
+Pp3msi	Pronoun Type=personal Person=third Gender=masculine Number=singular Case=instrumental
+Pp3mdn	Pronoun Type=personal Person=third Gender=masculine Number=dual Case=nominative
+Pp3mdg	Pronoun Type=personal Person=third Gender=masculine Number=dual Case=genitive
+Pp3mdg--y	Pronoun Type=personal Person=third Gender=masculine Number=dual Case=genitive Clitic=yes
+Pp3mdd	Pronoun Type=personal Person=third Gender=masculine Number=dual Case=dative
+Pp3mdd--y	Pronoun Type=personal Person=third Gender=masculine Number=dual Case=dative Clitic=yes
+Pp3mda	Pronoun Type=personal Person=third Gender=masculine Number=dual Case=accusative
+Pp3mda--y	Pronoun Type=personal Person=third Gender=masculine Number=dual Case=accusative Clitic=yes
+Pp3mda--b	Pronoun Type=personal Person=third Gender=masculine Number=dual Case=accusative Clitic=bound
+Pp3mdl	Pronoun Type=personal Person=third Gender=masculine Number=dual Case=locative
+Pp3mdi	Pronoun Type=personal Person=third Gender=masculine Number=dual Case=instrumental
+Pp3mpn	Pronoun Type=personal Person=third Gender=masculine Number=plural Case=nominative
+Pp3mpg	Pronoun Type=personal Person=third Gender=masculine Number=plural Case=genitive
+Pp3mpg--y	Pronoun Type=personal Person=third Gender=masculine Number=plural Case=genitive Clitic=yes
+Pp3mpd	Pronoun Type=personal Person=third Gender=masculine Number=plural Case=dative
+Pp3mpd--y	Pronoun Type=personal Person=third Gender=masculine Number=plural Case=dative Clitic=yes
+Pp3mpa	Pronoun Type=personal Person=third Gender=masculine Number=plural Case=accusative
+Pp3mpa--y	Pronoun Type=personal Person=third Gender=masculine Number=plural Case=accusative Clitic=yes
+Pp3mpa--b	Pronoun Type=personal Person=third Gender=masculine Number=plural Case=accusative Clitic=bound
+Pp3mpl	Pronoun Type=personal Person=third Gender=masculine Number=plural Case=locative
+Pp3mpi	Pronoun Type=personal Person=third Gender=masculine Number=plural Case=instrumental
+Pp3fsn	Pronoun Type=personal Person=third Gender=feminine Number=singular Case=nominative
+Pp3fsg	Pronoun Type=personal Person=third Gender=feminine Number=singular Case=genitive
+Pp3fsg--y	Pronoun Type=personal Person=third Gender=feminine Number=singular Case=genitive Clitic=yes
+Pp3fsd	Pronoun Type=personal Person=third Gender=feminine Number=singular Case=dative
+Pp3fsd--y	Pronoun Type=personal Person=third Gender=feminine Number=singular Case=dative Clitic=yes
+Pp3fsa	Pronoun Type=personal Person=third Gender=feminine Number=singular Case=accusative
+Pp3fsa--y	Pronoun Type=personal Person=third Gender=feminine Number=singular Case=accusative Clitic=yes
+Pp3fsa--b	Pronoun Type=personal Person=third Gender=feminine Number=singular Case=accusative Clitic=bound
+Pp3fsl	Pronoun Type=personal Person=third Gender=feminine Number=singular Case=locative
+Pp3fsi	Pronoun Type=personal Person=third Gender=feminine Number=singular Case=instrumental
+Pp3fdn	Pronoun Type=personal Person=third Gender=feminine Number=dual Case=nominative
+Pp3fdg	Pronoun Type=personal Person=third Gender=feminine Number=dual Case=genitive
+Pp3fdg--y	Pronoun Type=personal Person=third Gender=feminine Number=dual Case=genitive Clitic=yes
+Pp3fdd	Pronoun Type=personal Person=third Gender=feminine Number=dual Case=dative
+Pp3fdd--y	Pronoun Type=personal Person=third Gender=feminine Number=dual Case=dative Clitic=yes
+Pp3fda	Pronoun Type=personal Person=third Gender=feminine Number=dual Case=accusative
+Pp3fda--y	Pronoun Type=personal Person=third Gender=feminine Number=dual Case=accusative Clitic=yes
+Pp3fda--b	Pronoun Type=personal Person=third Gender=feminine Number=dual Case=accusative Clitic=bound
+Pp3fdl	Pronoun Type=personal Person=third Gender=feminine Number=dual Case=locative
+Pp3fdi	Pronoun Type=personal Person=third Gender=feminine Number=dual Case=instrumental
+Pp3fpn	Pronoun Type=personal Person=third Gender=feminine Number=plural Case=nominative
+Pp3fpg	Pronoun Type=personal Person=third Gender=feminine Number=plural Case=genitive
+Pp3fpg--y	Pronoun Type=personal Person=third Gender=feminine Number=plural Case=genitive Clitic=yes
+Pp3fpd	Pronoun Type=personal Person=third Gender=feminine Number=plural Case=dative
+Pp3fpd--y	Pronoun Type=personal Person=third Gender=feminine Number=plural Case=dative Clitic=yes
+Pp3fpa	Pronoun Type=personal Person=third Gender=feminine Number=plural Case=accusative
+Pp3fpa--y	Pronoun Type=personal Person=third Gender=feminine Number=plural Case=accusative Clitic=yes
+Pp3fpa--b	Pronoun Type=personal Person=third Gender=feminine Number=plural Case=accusative Clitic=bound
+Pp3fpl	Pronoun Type=personal Person=third Gender=feminine Number=plural Case=locative
+Pp3fpi	Pronoun Type=personal Person=third Gender=feminine Number=plural Case=instrumental
+Pp3nsn	Pronoun Type=personal Person=third Gender=neuter Number=singular Case=nominative
+Pp3nsg	Pronoun Type=personal Person=third Gender=neuter Number=singular Case=genitive
+Pp3nsg--y	Pronoun Type=personal Person=third Gender=neuter Number=singular Case=genitive Clitic=yes
+Pp3nsd	Pronoun Type=personal Person=third Gender=neuter Number=singular Case=dative
+Pp3nsd--y	Pronoun Type=personal Person=third Gender=neuter Number=singular Case=dative Clitic=yes
+Pp3nsa	Pronoun Type=personal Person=third Gender=neuter Number=singular Case=accusative
+Pp3nsa--y	Pronoun Type=personal Person=third Gender=neuter Number=singular Case=accusative Clitic=yes
+Pp3nsa--b	Pronoun Type=personal Person=third Gender=neuter Number=singular Case=accusative Clitic=bound
+Pp3nsl	Pronoun Type=personal Person=third Gender=neuter Number=singular Case=locative
+Pp3nsi	Pronoun Type=personal Person=third Gender=neuter Number=singular Case=instrumental
+Pp3ndn	Pronoun Type=personal Person=third Gender=neuter Number=dual Case=nominative
+Pp3ndg	Pronoun Type=personal Person=third Gender=neuter Number=dual Case=genitive
+Pp3ndg--y	Pronoun Type=personal Person=third Gender=neuter Number=dual Case=genitive Clitic=yes
+Pp3ndd	Pronoun Type=personal Person=third Gender=neuter Number=dual Case=dative
+Pp3ndd--y	Pronoun Type=personal Person=third Gender=neuter Number=dual Case=dative Clitic=yes
+Pp3nda	Pronoun Type=personal Person=third Gender=neuter Number=dual Case=accusative
+Pp3nda--y	Pronoun Type=personal Person=third Gender=neuter Number=dual Case=accusative Clitic=yes
+Pp3nda--b	Pronoun Type=personal Person=third Gender=neuter Number=dual Case=accusative Clitic=bound
+Pp3ndl	Pronoun Type=personal Person=third Gender=neuter Number=dual Case=locative
+Pp3ndi	Pronoun Type=personal Person=third Gender=neuter Number=dual Case=instrumental
+Pp3npn	Pronoun Type=personal Person=third Gender=neuter Number=plural Case=nominative
+Pp3npg	Pronoun Type=personal Person=third Gender=neuter Number=plural Case=genitive
+Pp3npg--y	Pronoun Type=personal Person=third Gender=neuter Number=plural Case=genitive Clitic=yes
+Pp3npd	Pronoun Type=personal Person=third Gender=neuter Number=plural Case=dative
+Pp3npd--y	Pronoun Type=personal Person=third Gender=neuter Number=plural Case=dative Clitic=yes
+Pp3npa	Pronoun Type=personal Person=third Gender=neuter Number=plural Case=accusative
+Pp3npa--y	Pronoun Type=personal Person=third Gender=neuter Number=plural Case=accusative Clitic=yes
+Pp3npa--b	Pronoun Type=personal Person=third Gender=neuter Number=plural Case=accusative Clitic=bound
+Pp3npl	Pronoun Type=personal Person=third Gender=neuter Number=plural Case=locative
+Pp3npi	Pronoun Type=personal Person=third Gender=neuter Number=plural Case=instrumental
+Ps1msns	Pronoun Type=possessive Person=first Gender=masculine Number=singular Case=nominative Owner_Number=singular
+Ps1msnd	Pronoun Type=possessive Person=first Gender=masculine Number=singular Case=nominative Owner_Number=dual
+Ps1msnp	Pronoun Type=possessive Person=first Gender=masculine Number=singular Case=nominative Owner_Number=plural
+Ps1msgs	Pronoun Type=possessive Person=first Gender=masculine Number=singular Case=genitive Owner_Number=singular
+Ps1msgd	Pronoun Type=possessive Person=first Gender=masculine Number=singular Case=genitive Owner_Number=dual
+Ps1msgp	Pronoun Type=possessive Person=first Gender=masculine Number=singular Case=genitive Owner_Number=plural
+Ps1msds	Pronoun Type=possessive Person=first Gender=masculine Number=singular Case=dative Owner_Number=singular
+Ps1msdd	Pronoun Type=possessive Person=first Gender=masculine Number=singular Case=dative Owner_Number=dual
+Ps1msdp	Pronoun Type=possessive Person=first Gender=masculine Number=singular Case=dative Owner_Number=plural
+Ps1msas	Pronoun Type=possessive Person=first Gender=masculine Number=singular Case=accusative Owner_Number=singular
+Ps1msad	Pronoun Type=possessive Person=first Gender=masculine Number=singular Case=accusative Owner_Number=dual
+Ps1msap	Pronoun Type=possessive Person=first Gender=masculine Number=singular Case=accusative Owner_Number=plural
+Ps1msls	Pronoun Type=possessive Person=first Gender=masculine Number=singular Case=locative Owner_Number=singular
+Ps1msld	Pronoun Type=possessive Person=first Gender=masculine Number=singular Case=locative Owner_Number=dual
+Ps1mslp	Pronoun Type=possessive Person=first Gender=masculine Number=singular Case=locative Owner_Number=plural
+Ps1msis	Pronoun Type=possessive Person=first Gender=masculine Number=singular Case=instrumental Owner_Number=singular
+Ps1msid	Pronoun Type=possessive Person=first Gender=masculine Number=singular Case=instrumental Owner_Number=dual
+Ps1msip	Pronoun Type=possessive Person=first Gender=masculine Number=singular Case=instrumental Owner_Number=plural
+Ps1mdns	Pronoun Type=possessive Person=first Gender=masculine Number=dual Case=nominative Owner_Number=singular
+Ps1mdnd	Pronoun Type=possessive Person=first Gender=masculine Number=dual Case=nominative Owner_Number=dual
+Ps1mdnp	Pronoun Type=possessive Person=first Gender=masculine Number=dual Case=nominative Owner_Number=plural
+Ps1mdgs	Pronoun Type=possessive Person=first Gender=masculine Number=dual Case=genitive Owner_Number=singular
+Ps1mdgd	Pronoun Type=possessive Person=first Gender=masculine Number=dual Case=genitive Owner_Number=dual
+Ps1mdgp	Pronoun Type=possessive Person=first Gender=masculine Number=dual Case=genitive Owner_Number=plural
+Ps1mdds	Pronoun Type=possessive Person=first Gender=masculine Number=dual Case=dative Owner_Number=singular
+Ps1mddd	Pronoun Type=possessive Person=first Gender=masculine Number=dual Case=dative Owner_Number=dual
+Ps1mddp	Pronoun Type=possessive Person=first Gender=masculine Number=dual Case=dative Owner_Number=plural
+Ps1mdas	Pronoun Type=possessive Person=first Gender=masculine Number=dual Case=accusative Owner_Number=singular
+Ps1mdad	Pronoun Type=possessive Person=first Gender=masculine Number=dual Case=accusative Owner_Number=dual
+Ps1mdap	Pronoun Type=possessive Person=first Gender=masculine Number=dual Case=accusative Owner_Number=plural
+Ps1mdls	Pronoun Type=possessive Person=first Gender=masculine Number=dual Case=locative Owner_Number=singular
+Ps1mdld	Pronoun Type=possessive Person=first Gender=masculine Number=dual Case=locative Owner_Number=dual
+Ps1mdlp	Pronoun Type=possessive Person=first Gender=masculine Number=dual Case=locative Owner_Number=plural
+Ps1mdis	Pronoun Type=possessive Person=first Gender=masculine Number=dual Case=instrumental Owner_Number=singular
+Ps1mdid	Pronoun Type=possessive Person=first Gender=masculine Number=dual Case=instrumental Owner_Number=dual
+Ps1mdip	Pronoun Type=possessive Person=first Gender=masculine Number=dual Case=instrumental Owner_Number=plural
+Ps1mpns	Pronoun Type=possessive Person=first Gender=masculine Number=plural Case=nominative Owner_Number=singular
+Ps1mpnd	Pronoun Type=possessive Person=first Gender=masculine Number=plural Case=nominative Owner_Number=dual
+Ps1mpnp	Pronoun Type=possessive Person=first Gender=masculine Number=plural Case=nominative Owner_Number=plural
+Ps1mpgs	Pronoun Type=possessive Person=first Gender=masculine Number=plural Case=genitive Owner_Number=singular
+Ps1mpgd	Pronoun Type=possessive Person=first Gender=masculine Number=plural Case=genitive Owner_Number=dual
+Ps1mpgp	Pronoun Type=possessive Person=first Gender=masculine Number=plural Case=genitive Owner_Number=plural
+Ps1mpds	Pronoun Type=possessive Person=first Gender=masculine Number=plural Case=dative Owner_Number=singular
+Ps1mpdd	Pronoun Type=possessive Person=first Gender=masculine Number=plural Case=dative Owner_Number=dual
+Ps1mpdp	Pronoun Type=possessive Person=first Gender=masculine Number=plural Case=dative Owner_Number=plural
+Ps1mpas	Pronoun Type=possessive Person=first Gender=masculine Number=plural Case=accusative Owner_Number=singular
+Ps1mpad	Pronoun Type=possessive Person=first Gender=masculine Number=plural Case=accusative Owner_Number=dual
+Ps1mpap	Pronoun Type=possessive Person=first Gender=masculine Number=plural Case=accusative Owner_Number=plural
+Ps1mpls	Pronoun Type=possessive Person=first Gender=masculine Number=plural Case=locative Owner_Number=singular
+Ps1mpld	Pronoun Type=possessive Person=first Gender=masculine Number=plural Case=locative Owner_Number=dual
+Ps1mplp	Pronoun Type=possessive Person=first Gender=masculine Number=plural Case=locative Owner_Number=plural
+Ps1mpis	Pronoun Type=possessive Person=first Gender=masculine Number=plural Case=instrumental Owner_Number=singular
+Ps1mpid	Pronoun Type=possessive Person=first Gender=masculine Number=plural Case=instrumental Owner_Number=dual
+Ps1mpip	Pronoun Type=possessive Person=first Gender=masculine Number=plural Case=instrumental Owner_Number=plural
+Ps1fsns	Pronoun Type=possessive Person=first Gender=feminine Number=singular Case=nominative Owner_Number=singular
+Ps1fsnd	Pronoun Type=possessive Person=first Gender=feminine Number=singular Case=nominative Owner_Number=dual
+Ps1fsnp	Pronoun Type=possessive Person=first Gender=feminine Number=singular Case=nominative Owner_Number=plural
+Ps1fsgs	Pronoun Type=possessive Person=first Gender=feminine Number=singular Case=genitive Owner_Number=singular
+Ps1fsgd	Pronoun Type=possessive Person=first Gender=feminine Number=singular Case=genitive Owner_Number=dual
+Ps1fsgp	Pronoun Type=possessive Person=first Gender=feminine Number=singular Case=genitive Owner_Number=plural
+Ps1fsds	Pronoun Type=possessive Person=first Gender=feminine Number=singular Case=dative Owner_Number=singular
+Ps1fsdd	Pronoun Type=possessive Person=first Gender=feminine Number=singular Case=dative Owner_Number=dual
+Ps1fsdp	Pronoun Type=possessive Person=first Gender=feminine Number=singular Case=dative Owner_Number=plural
+Ps1fsas	Pronoun Type=possessive Person=first Gender=feminine Number=singular Case=accusative Owner_Number=singular
+Ps1fsad	Pronoun Type=possessive Person=first Gender=feminine Number=singular Case=accusative Owner_Number=dual
+Ps1fsap	Pronoun Type=possessive Person=first Gender=feminine Number=singular Case=accusative Owner_Number=plural
+Ps1fsls	Pronoun Type=possessive Person=first Gender=feminine Number=singular Case=locative Owner_Number=singular
+Ps1fsld	Pronoun Type=possessive Person=first Gender=feminine Number=singular Case=locative Owner_Number=dual
+Ps1fslp	Pronoun Type=possessive Person=first Gender=feminine Number=singular Case=locative Owner_Number=plural
+Ps1fsis	Pronoun Type=possessive Person=first Gender=feminine Number=singular Case=instrumental Owner_Number=singular
+Ps1fsid	Pronoun Type=possessive Person=first Gender=feminine Number=singular Case=instrumental Owner_Number=dual
+Ps1fsip	Pronoun Type=possessive Person=first Gender=feminine Number=singular Case=instrumental Owner_Number=plural
+Ps1fdns	Pronoun Type=possessive Person=first Gender=feminine Number=dual Case=nominative Owner_Number=singular
+Ps1fdnd	Pronoun Type=possessive Person=first Gender=feminine Number=dual Case=nominative Owner_Number=dual
+Ps1fdnp	Pronoun Type=possessive Person=first Gender=feminine Number=dual Case=nominative Owner_Number=plural
+Ps1fdgs	Pronoun Type=possessive Person=first Gender=feminine Number=dual Case=genitive Owner_Number=singular
+Ps1fdgd	Pronoun Type=possessive Person=first Gender=feminine Number=dual Case=genitive Owner_Number=dual
+Ps1fdgp	Pronoun Type=possessive Person=first Gender=feminine Number=dual Case=genitive Owner_Number=plural
+Ps1fdds	Pronoun Type=possessive Person=first Gender=feminine Number=dual Case=dative Owner_Number=singular
+Ps1fddd	Pronoun Type=possessive Person=first Gender=feminine Number=dual Case=dative Owner_Number=dual
+Ps1fddp	Pronoun Type=possessive Person=first Gender=feminine Number=dual Case=dative Owner_Number=plural
+Ps1fdas	Pronoun Type=possessive Person=first Gender=feminine Number=dual Case=accusative Owner_Number=singular
+Ps1fdad	Pronoun Type=possessive Person=first Gender=feminine Number=dual Case=accusative Owner_Number=dual
+Ps1fdap	Pronoun Type=possessive Person=first Gender=feminine Number=dual Case=accusative Owner_Number=plural
+Ps1fdls	Pronoun Type=possessive Person=first Gender=feminine Number=dual Case=locative Owner_Number=singular
+Ps1fdld	Pronoun Type=possessive Person=first Gender=feminine Number=dual Case=locative Owner_Number=dual
+Ps1fdlp	Pronoun Type=possessive Person=first Gender=feminine Number=dual Case=locative Owner_Number=plural
+Ps1fdis	Pronoun Type=possessive Person=first Gender=feminine Number=dual Case=instrumental Owner_Number=singular
+Ps1fdid	Pronoun Type=possessive Person=first Gender=feminine Number=dual Case=instrumental Owner_Number=dual
+Ps1fdip	Pronoun Type=possessive Person=first Gender=feminine Number=dual Case=instrumental Owner_Number=plural
+Ps1fpns	Pronoun Type=possessive Person=first Gender=feminine Number=plural Case=nominative Owner_Number=singular
+Ps1fpnd	Pronoun Type=possessive Person=first Gender=feminine Number=plural Case=nominative Owner_Number=dual
+Ps1fpnp	Pronoun Type=possessive Person=first Gender=feminine Number=plural Case=nominative Owner_Number=plural
+Ps1fpgs	Pronoun Type=possessive Person=first Gender=feminine Number=plural Case=genitive Owner_Number=singular
+Ps1fpgd	Pronoun Type=possessive Person=first Gender=feminine Number=plural Case=genitive Owner_Number=dual
+Ps1fpgp	Pronoun Type=possessive Person=first Gender=feminine Number=plural Case=genitive Owner_Number=plural
+Ps1fpds	Pronoun Type=possessive Person=first Gender=feminine Number=plural Case=dative Owner_Number=singular
+Ps1fpdd	Pronoun Type=possessive Person=first Gender=feminine Number=plural Case=dative Owner_Number=dual
+Ps1fpdp	Pronoun Type=possessive Person=first Gender=feminine Number=plural Case=dative Owner_Number=plural
+Ps1fpas	Pronoun Type=possessive Person=first Gender=feminine Number=plural Case=accusative Owner_Number=singular
+Ps1fpad	Pronoun Type=possessive Person=first Gender=feminine Number=plural Case=accusative Owner_Number=dual
+Ps1fpap	Pronoun Type=possessive Person=first Gender=feminine Number=plural Case=accusative Owner_Number=plural
+Ps1fpls	Pronoun Type=possessive Person=first Gender=feminine Number=plural Case=locative Owner_Number=singular
+Ps1fpld	Pronoun Type=possessive Person=first Gender=feminine Number=plural Case=locative Owner_Number=dual
+Ps1fplp	Pronoun Type=possessive Person=first Gender=feminine Number=plural Case=locative Owner_Number=plural
+Ps1fpis	Pronoun Type=possessive Person=first Gender=feminine Number=plural Case=instrumental Owner_Number=singular
+Ps1fpid	Pronoun Type=possessive Person=first Gender=feminine Number=plural Case=instrumental Owner_Number=dual
+Ps1fpip	Pronoun Type=possessive Person=first Gender=feminine Number=plural Case=instrumental Owner_Number=plural
+Ps1nsns	Pronoun Type=possessive Person=first Gender=neuter Number=singular Case=nominative Owner_Number=singular
+Ps1nsnd	Pronoun Type=possessive Person=first Gender=neuter Number=singular Case=nominative Owner_Number=dual
+Ps1nsnp	Pronoun Type=possessive Person=first Gender=neuter Number=singular Case=nominative Owner_Number=plural
+Ps1nsgs	Pronoun Type=possessive Person=first Gender=neuter Number=singular Case=genitive Owner_Number=singular
+Ps1nsgd	Pronoun Type=possessive Person=first Gender=neuter Number=singular Case=genitive Owner_Number=dual
+Ps1nsgp	Pronoun Type=possessive Person=first Gender=neuter Number=singular Case=genitive Owner_Number=plural
+Ps1nsds	Pronoun Type=possessive Person=first Gender=neuter Number=singular Case=dative Owner_Number=singular
+Ps1nsdd	Pronoun Type=possessive Person=first Gender=neuter Number=singular Case=dative Owner_Number=dual
+Ps1nsdp	Pronoun Type=possessive Person=first Gender=neuter Number=singular Case=dative Owner_Number=plural
+Ps1nsas	Pronoun Type=possessive Person=first Gender=neuter Number=singular Case=accusative Owner_Number=singular
+Ps1nsad	Pronoun Type=possessive Person=first Gender=neuter Number=singular Case=accusative Owner_Number=dual
+Ps1nsap	Pronoun Type=possessive Person=first Gender=neuter Number=singular Case=accusative Owner_Number=plural
+Ps1nsls	Pronoun Type=possessive Person=first Gender=neuter Number=singular Case=locative Owner_Number=singular
+Ps1nsld	Pronoun Type=possessive Person=first Gender=neuter Number=singular Case=locative Owner_Number=dual
+Ps1nslp	Pronoun Type=possessive Person=first Gender=neuter Number=singular Case=locative Owner_Number=plural
+Ps1nsis	Pronoun Type=possessive Person=first Gender=neuter Number=singular Case=instrumental Owner_Number=singular
+Ps1nsid	Pronoun Type=possessive Person=first Gender=neuter Number=singular Case=instrumental Owner_Number=dual
+Ps1nsip	Pronoun Type=possessive Person=first Gender=neuter Number=singular Case=instrumental Owner_Number=plural
+Ps1ndns	Pronoun Type=possessive Person=first Gender=neuter Number=dual Case=nominative Owner_Number=singular
+Ps1ndnd	Pronoun Type=possessive Person=first Gender=neuter Number=dual Case=nominative Owner_Number=dual
+Ps1ndnp	Pronoun Type=possessive Person=first Gender=neuter Number=dual Case=nominative Owner_Number=plural
+Ps1ndgs	Pronoun Type=possessive Person=first Gender=neuter Number=dual Case=genitive Owner_Number=singular
+Ps1ndgd	Pronoun Type=possessive Person=first Gender=neuter Number=dual Case=genitive Owner_Number=dual
+Ps1ndgp	Pronoun Type=possessive Person=first Gender=neuter Number=dual Case=genitive Owner_Number=plural
+Ps1ndds	Pronoun Type=possessive Person=first Gender=neuter Number=dual Case=dative Owner_Number=singular
+Ps1nddd	Pronoun Type=possessive Person=first Gender=neuter Number=dual Case=dative Owner_Number=dual
+Ps1nddp	Pronoun Type=possessive Person=first Gender=neuter Number=dual Case=dative Owner_Number=plural
+Ps1ndas	Pronoun Type=possessive Person=first Gender=neuter Number=dual Case=accusative Owner_Number=singular
+Ps1ndad	Pronoun Type=possessive Person=first Gender=neuter Number=dual Case=accusative Owner_Number=dual
+Ps1ndap	Pronoun Type=possessive Person=first Gender=neuter Number=dual Case=accusative Owner_Number=plural
+Ps1ndls	Pronoun Type=possessive Person=first Gender=neuter Number=dual Case=locative Owner_Number=singular
+Ps1ndld	Pronoun Type=possessive Person=first Gender=neuter Number=dual Case=locative Owner_Number=dual
+Ps1ndlp	Pronoun Type=possessive Person=first Gender=neuter Number=dual Case=locative Owner_Number=plural
+Ps1ndis	Pronoun Type=possessive Person=first Gender=neuter Number=dual Case=instrumental Owner_Number=singular
+Ps1ndid	Pronoun Type=possessive Person=first Gender=neuter Number=dual Case=instrumental Owner_Number=dual
+Ps1ndip	Pronoun Type=possessive Person=first Gender=neuter Number=dual Case=instrumental Owner_Number=plural
+Ps1npns	Pronoun Type=possessive Person=first Gender=neuter Number=plural Case=nominative Owner_Number=singular
+Ps1npnd	Pronoun Type=possessive Person=first Gender=neuter Number=plural Case=nominative Owner_Number=dual
+Ps1npnp	Pronoun Type=possessive Person=first Gender=neuter Number=plural Case=nominative Owner_Number=plural
+Ps1npgs	Pronoun Type=possessive Person=first Gender=neuter Number=plural Case=genitive Owner_Number=singular
+Ps1npgd	Pronoun Type=possessive Person=first Gender=neuter Number=plural Case=genitive Owner_Number=dual
+Ps1npgp	Pronoun Type=possessive Person=first Gender=neuter Number=plural Case=genitive Owner_Number=plural
+Ps1npds	Pronoun Type=possessive Person=first Gender=neuter Number=plural Case=dative Owner_Number=singular
+Ps1npdd	Pronoun Type=possessive Person=first Gender=neuter Number=plural Case=dative Owner_Number=dual
+Ps1npdp	Pronoun Type=possessive Person=first Gender=neuter Number=plural Case=dative Owner_Number=plural
+Ps1npas	Pronoun Type=possessive Person=first Gender=neuter Number=plural Case=accusative Owner_Number=singular
+Ps1npad	Pronoun Type=possessive Person=first Gender=neuter Number=plural Case=accusative Owner_Number=dual
+Ps1npap	Pronoun Type=possessive Person=first Gender=neuter Number=plural Case=accusative Owner_Number=plural
+Ps1npls	Pronoun Type=possessive Person=first Gender=neuter Number=plural Case=locative Owner_Number=singular
+Ps1npld	Pronoun Type=possessive Person=first Gender=neuter Number=plural Case=locative Owner_Number=dual
+Ps1nplp	Pronoun Type=possessive Person=first Gender=neuter Number=plural Case=locative Owner_Number=plural
+Ps1npis	Pronoun Type=possessive Person=first Gender=neuter Number=plural Case=instrumental Owner_Number=singular
+Ps1npid	Pronoun Type=possessive Person=first Gender=neuter Number=plural Case=instrumental Owner_Number=dual
+Ps1npip	Pronoun Type=possessive Person=first Gender=neuter Number=plural Case=instrumental Owner_Number=plural
+Ps2msns	Pronoun Type=possessive Person=second Gender=masculine Number=singular Case=nominative Owner_Number=singular
+Ps2msnd	Pronoun Type=possessive Person=second Gender=masculine Number=singular Case=nominative Owner_Number=dual
+Ps2msnp	Pronoun Type=possessive Person=second Gender=masculine Number=singular Case=nominative Owner_Number=plural
+Ps2msgs	Pronoun Type=possessive Person=second Gender=masculine Number=singular Case=genitive Owner_Number=singular
+Ps2msgd	Pronoun Type=possessive Person=second Gender=masculine Number=singular Case=genitive Owner_Number=dual
+Ps2msgp	Pronoun Type=possessive Person=second Gender=masculine Number=singular Case=genitive Owner_Number=plural
+Ps2msds	Pronoun Type=possessive Person=second Gender=masculine Number=singular Case=dative Owner_Number=singular
+Ps2msdd	Pronoun Type=possessive Person=second Gender=masculine Number=singular Case=dative Owner_Number=dual
+Ps2msdp	Pronoun Type=possessive Person=second Gender=masculine Number=singular Case=dative Owner_Number=plural
+Ps2msas	Pronoun Type=possessive Person=second Gender=masculine Number=singular Case=accusative Owner_Number=singular
+Ps2msad	Pronoun Type=possessive Person=second Gender=masculine Number=singular Case=accusative Owner_Number=dual
+Ps2msap	Pronoun Type=possessive Person=second Gender=masculine Number=singular Case=accusative Owner_Number=plural
+Ps2msls	Pronoun Type=possessive Person=second Gender=masculine Number=singular Case=locative Owner_Number=singular
+Ps2msld	Pronoun Type=possessive Person=second Gender=masculine Number=singular Case=locative Owner_Number=dual
+Ps2mslp	Pronoun Type=possessive Person=second Gender=masculine Number=singular Case=locative Owner_Number=plural
+Ps2msis	Pronoun Type=possessive Person=second Gender=masculine Number=singular Case=instrumental Owner_Number=singular
+Ps2msid	Pronoun Type=possessive Person=second Gender=masculine Number=singular Case=instrumental Owner_Number=dual
+Ps2msip	Pronoun Type=possessive Person=second Gender=masculine Number=singular Case=instrumental Owner_Number=plural
+Ps2mdns	Pronoun Type=possessive Person=second Gender=masculine Number=dual Case=nominative Owner_Number=singular
+Ps2mdnd	Pronoun Type=possessive Person=second Gender=masculine Number=dual Case=nominative Owner_Number=dual
+Ps2mdnp	Pronoun Type=possessive Person=second Gender=masculine Number=dual Case=nominative Owner_Number=plural
+Ps2mdgs	Pronoun Type=possessive Person=second Gender=masculine Number=dual Case=genitive Owner_Number=singular
+Ps2mdgd	Pronoun Type=possessive Person=second Gender=masculine Number=dual Case=genitive Owner_Number=dual
+Ps2mdgp	Pronoun Type=possessive Person=second Gender=masculine Number=dual Case=genitive Owner_Number=plural
+Ps2mdds	Pronoun Type=possessive Person=second Gender=masculine Number=dual Case=dative Owner_Number=singular
+Ps2mddd	Pronoun Type=possessive Person=second Gender=masculine Number=dual Case=dative Owner_Number=dual
+Ps2mddp	Pronoun Type=possessive Person=second Gender=masculine Number=dual Case=dative Owner_Number=plural
+Ps2mdas	Pronoun Type=possessive Person=second Gender=masculine Number=dual Case=accusative Owner_Number=singular
+Ps2mdad	Pronoun Type=possessive Person=second Gender=masculine Number=dual Case=accusative Owner_Number=dual
+Ps2mdap	Pronoun Type=possessive Person=second Gender=masculine Number=dual Case=accusative Owner_Number=plural
+Ps2mdls	Pronoun Type=possessive Person=second Gender=masculine Number=dual Case=locative Owner_Number=singular
+Ps2mdld	Pronoun Type=possessive Person=second Gender=masculine Number=dual Case=locative Owner_Number=dual
+Ps2mdlp	Pronoun Type=possessive Person=second Gender=masculine Number=dual Case=locative Owner_Number=plural
+Ps2mdis	Pronoun Type=possessive Person=second Gender=masculine Number=dual Case=instrumental Owner_Number=singular
+Ps2mdid	Pronoun Type=possessive Person=second Gender=masculine Number=dual Case=instrumental Owner_Number=dual
+Ps2mdip	Pronoun Type=possessive Person=second Gender=masculine Number=dual Case=instrumental Owner_Number=plural
+Ps2mpns	Pronoun Type=possessive Person=second Gender=masculine Number=plural Case=nominative Owner_Number=singular
+Ps2mpnd	Pronoun Type=possessive Person=second Gender=masculine Number=plural Case=nominative Owner_Number=dual
+Ps2mpnp	Pronoun Type=possessive Person=second Gender=masculine Number=plural Case=nominative Owner_Number=plural
+Ps2mpgs	Pronoun Type=possessive Person=second Gender=masculine Number=plural Case=genitive Owner_Number=singular
+Ps2mpgd	Pronoun Type=possessive Person=second Gender=masculine Number=plural Case=genitive Owner_Number=dual
+Ps2mpgp	Pronoun Type=possessive Person=second Gender=masculine Number=plural Case=genitive Owner_Number=plural
+Ps2mpds	Pronoun Type=possessive Person=second Gender=masculine Number=plural Case=dative Owner_Number=singular
+Ps2mpdd	Pronoun Type=possessive Person=second Gender=masculine Number=plural Case=dative Owner_Number=dual
+Ps2mpdp	Pronoun Type=possessive Person=second Gender=masculine Number=plural Case=dative Owner_Number=plural
+Ps2mpas	Pronoun Type=possessive Person=second Gender=masculine Number=plural Case=accusative Owner_Number=singular
+Ps2mpad	Pronoun Type=possessive Person=second Gender=masculine Number=plural Case=accusative Owner_Number=dual
+Ps2mpap	Pronoun Type=possessive Person=second Gender=masculine Number=plural Case=accusative Owner_Number=plural
+Ps2mpls	Pronoun Type=possessive Person=second Gender=masculine Number=plural Case=locative Owner_Number=singular
+Ps2mpld	Pronoun Type=possessive Person=second Gender=masculine Number=plural Case=locative Owner_Number=dual
+Ps2mplp	Pronoun Type=possessive Person=second Gender=masculine Number=plural Case=locative Owner_Number=plural
+Ps2mpis	Pronoun Type=possessive Person=second Gender=masculine Number=plural Case=instrumental Owner_Number=singular
+Ps2mpid	Pronoun Type=possessive Person=second Gender=masculine Number=plural Case=instrumental Owner_Number=dual
+Ps2mpip	Pronoun Type=possessive Person=second Gender=masculine Number=plural Case=instrumental Owner_Number=plural
+Ps2fsns	Pronoun Type=possessive Person=second Gender=feminine Number=singular Case=nominative Owner_Number=singular
+Ps2fsnd	Pronoun Type=possessive Person=second Gender=feminine Number=singular Case=nominative Owner_Number=dual
+Ps2fsnp	Pronoun Type=possessive Person=second Gender=feminine Number=singular Case=nominative Owner_Number=plural
+Ps2fsgs	Pronoun Type=possessive Person=second Gender=feminine Number=singular Case=genitive Owner_Number=singular
+Ps2fsgd	Pronoun Type=possessive Person=second Gender=feminine Number=singular Case=genitive Owner_Number=dual
+Ps2fsgp	Pronoun Type=possessive Person=second Gender=feminine Number=singular Case=genitive Owner_Number=plural
+Ps2fsds	Pronoun Type=possessive Person=second Gender=feminine Number=singular Case=dative Owner_Number=singular
+Ps2fsdd	Pronoun Type=possessive Person=second Gender=feminine Number=singular Case=dative Owner_Number=dual
+Ps2fsdp	Pronoun Type=possessive Person=second Gender=feminine Number=singular Case=dative Owner_Number=plural
+Ps2fsas	Pronoun Type=possessive Person=second Gender=feminine Number=singular Case=accusative Owner_Number=singular
+Ps2fsad	Pronoun Type=possessive Person=second Gender=feminine Number=singular Case=accusative Owner_Number=dual
+Ps2fsap	Pronoun Type=possessive Person=second Gender=feminine Number=singular Case=accusative Owner_Number=plural
+Ps2fsls	Pronoun Type=possessive Person=second Gender=feminine Number=singular Case=locative Owner_Number=singular
+Ps2fsld	Pronoun Type=possessive Person=second Gender=feminine Number=singular Case=locative Owner_Number=dual
+Ps2fslp	Pronoun Type=possessive Person=second Gender=feminine Number=singular Case=locative Owner_Number=plural
+Ps2fsis	Pronoun Type=possessive Person=second Gender=feminine Number=singular Case=instrumental Owner_Number=singular
+Ps2fsid	Pronoun Type=possessive Person=second Gender=feminine Number=singular Case=instrumental Owner_Number=dual
+Ps2fsip	Pronoun Type=possessive Person=second Gender=feminine Number=singular Case=instrumental Owner_Number=plural
+Ps2fdns	Pronoun Type=possessive Person=second Gender=feminine Number=dual Case=nominative Owner_Number=singular
+Ps2fdnd	Pronoun Type=possessive Person=second Gender=feminine Number=dual Case=nominative Owner_Number=dual
+Ps2fdnp	Pronoun Type=possessive Person=second Gender=feminine Number=dual Case=nominative Owner_Number=plural
+Ps2fdgs	Pronoun Type=possessive Person=second Gender=feminine Number=dual Case=genitive Owner_Number=singular
+Ps2fdgd	Pronoun Type=possessive Person=second Gender=feminine Number=dual Case=genitive Owner_Number=dual
+Ps2fdgp	Pronoun Type=possessive Person=second Gender=feminine Number=dual Case=genitive Owner_Number=plural
+Ps2fdds	Pronoun Type=possessive Person=second Gender=feminine Number=dual Case=dative Owner_Number=singular
+Ps2fddd	Pronoun Type=possessive Person=second Gender=feminine Number=dual Case=dative Owner_Number=dual
+Ps2fddp	Pronoun Type=possessive Person=second Gender=feminine Number=dual Case=dative Owner_Number=plural
+Ps2fdas	Pronoun Type=possessive Person=second Gender=feminine Number=dual Case=accusative Owner_Number=singular
+Ps2fdad	Pronoun Type=possessive Person=second Gender=feminine Number=dual Case=accusative Owner_Number=dual
+Ps2fdap	Pronoun Type=possessive Person=second Gender=feminine Number=dual Case=accusative Owner_Number=plural
+Ps2fdls	Pronoun Type=possessive Person=second Gender=feminine Number=dual Case=locative Owner_Number=singular
+Ps2fdld	Pronoun Type=possessive Person=second Gender=feminine Number=dual Case=locative Owner_Number=dual
+Ps2fdlp	Pronoun Type=possessive Person=second Gender=feminine Number=dual Case=locative Owner_Number=plural
+Ps2fdis	Pronoun Type=possessive Person=second Gender=feminine Number=dual Case=instrumental Owner_Number=singular
+Ps2fdid	Pronoun Type=possessive Person=second Gender=feminine Number=dual Case=instrumental Owner_Number=dual
+Ps2fdip	Pronoun Type=possessive Person=second Gender=feminine Number=dual Case=instrumental Owner_Number=plural
+Ps2fpns	Pronoun Type=possessive Person=second Gender=feminine Number=plural Case=nominative Owner_Number=singular
+Ps2fpnd	Pronoun Type=possessive Person=second Gender=feminine Number=plural Case=nominative Owner_Number=dual
+Ps2fpnp	Pronoun Type=possessive Person=second Gender=feminine Number=plural Case=nominative Owner_Number=plural
+Ps2fpgs	Pronoun Type=possessive Person=second Gender=feminine Number=plural Case=genitive Owner_Number=singular
+Ps2fpgd	Pronoun Type=possessive Person=second Gender=feminine Number=plural Case=genitive Owner_Number=dual
+Ps2fpgp	Pronoun Type=possessive Person=second Gender=feminine Number=plural Case=genitive Owner_Number=plural
+Ps2fpds	Pronoun Type=possessive Person=second Gender=feminine Number=plural Case=dative Owner_Number=singular
+Ps2fpdd	Pronoun Type=possessive Person=second Gender=feminine Number=plural Case=dative Owner_Number=dual
+Ps2fpdp	Pronoun Type=possessive Person=second Gender=feminine Number=plural Case=dative Owner_Number=plural
+Ps2fpas	Pronoun Type=possessive Person=second Gender=feminine Number=plural Case=accusative Owner_Number=singular
+Ps2fpad	Pronoun Type=possessive Person=second Gender=feminine Number=plural Case=accusative Owner_Number=dual
+Ps2fpap	Pronoun Type=possessive Person=second Gender=feminine Number=plural Case=accusative Owner_Number=plural
+Ps2fpls	Pronoun Type=possessive Person=second Gender=feminine Number=plural Case=locative Owner_Number=singular
+Ps2fpld	Pronoun Type=possessive Person=second Gender=feminine Number=plural Case=locative Owner_Number=dual
+Ps2fplp	Pronoun Type=possessive Person=second Gender=feminine Number=plural Case=locative Owner_Number=plural
+Ps2fpis	Pronoun Type=possessive Person=second Gender=feminine Number=plural Case=instrumental Owner_Number=singular
+Ps2fpid	Pronoun Type=possessive Person=second Gender=feminine Number=plural Case=instrumental Owner_Number=dual
+Ps2fpip	Pronoun Type=possessive Person=second Gender=feminine Number=plural Case=instrumental Owner_Number=plural
+Ps2nsns	Pronoun Type=possessive Person=second Gender=neuter Number=singular Case=nominative Owner_Number=singular
+Ps2nsnd	Pronoun Type=possessive Person=second Gender=neuter Number=singular Case=nominative Owner_Number=dual
+Ps2nsnp	Pronoun Type=possessive Person=second Gender=neuter Number=singular Case=nominative Owner_Number=plural
+Ps2nsgs	Pronoun Type=possessive Person=second Gender=neuter Number=singular Case=genitive Owner_Number=singular
+Ps2nsgd	Pronoun Type=possessive Person=second Gender=neuter Number=singular Case=genitive Owner_Number=dual
+Ps2nsgp	Pronoun Type=possessive Person=second Gender=neuter Number=singular Case=genitive Owner_Number=plural
+Ps2nsds	Pronoun Type=possessive Person=second Gender=neuter Number=singular Case=dative Owner_Number=singular
+Ps2nsdd	Pronoun Type=possessive Person=second Gender=neuter Number=singular Case=dative Owner_Number=dual
+Ps2nsdp	Pronoun Type=possessive Person=second Gender=neuter Number=singular Case=dative Owner_Number=plural
+Ps2nsas	Pronoun Type=possessive Person=second Gender=neuter Number=singular Case=accusative Owner_Number=singular
+Ps2nsad	Pronoun Type=possessive Person=second Gender=neuter Number=singular Case=accusative Owner_Number=dual
+Ps2nsap	Pronoun Type=possessive Person=second Gender=neuter Number=singular Case=accusative Owner_Number=plural
+Ps2nsls	Pronoun Type=possessive Person=second Gender=neuter Number=singular Case=locative Owner_Number=singular
+Ps2nsld	Pronoun Type=possessive Person=second Gender=neuter Number=singular Case=locative Owner_Number=dual
+Ps2nslp	Pronoun Type=possessive Person=second Gender=neuter Number=singular Case=locative Owner_Number=plural
+Ps2nsis	Pronoun Type=possessive Person=second Gender=neuter Number=singular Case=instrumental Owner_Number=singular
+Ps2nsid	Pronoun Type=possessive Person=second Gender=neuter Number=singular Case=instrumental Owner_Number=dual
+Ps2nsip	Pronoun Type=possessive Person=second Gender=neuter Number=singular Case=instrumental Owner_Number=plural
+Ps2ndns	Pronoun Type=possessive Person=second Gender=neuter Number=dual Case=nominative Owner_Number=singular
+Ps2ndnd	Pronoun Type=possessive Person=second Gender=neuter Number=dual Case=nominative Owner_Number=dual
+Ps2ndnp	Pronoun Type=possessive Person=second Gender=neuter Number=dual Case=nominative Owner_Number=plural
+Ps2ndgs	Pronoun Type=possessive Person=second Gender=neuter Number=dual Case=genitive Owner_Number=singular
+Ps2ndgd	Pronoun Type=possessive Person=second Gender=neuter Number=dual Case=genitive Owner_Number=dual
+Ps2ndgp	Pronoun Type=possessive Person=second Gender=neuter Number=dual Case=genitive Owner_Number=plural
+Ps2ndds	Pronoun Type=possessive Person=second Gender=neuter Number=dual Case=dative Owner_Number=singular
+Ps2nddd	Pronoun Type=possessive Person=second Gender=neuter Number=dual Case=dative Owner_Number=dual
+Ps2nddp	Pronoun Type=possessive Person=second Gender=neuter Number=dual Case=dative Owner_Number=plural
+Ps2ndas	Pronoun Type=possessive Person=second Gender=neuter Number=dual Case=accusative Owner_Number=singular
+Ps2ndad	Pronoun Type=possessive Person=second Gender=neuter Number=dual Case=accusative Owner_Number=dual
+Ps2ndap	Pronoun Type=possessive Person=second Gender=neuter Number=dual Case=accusative Owner_Number=plural
+Ps2ndls	Pronoun Type=possessive Person=second Gender=neuter Number=dual Case=locative Owner_Number=singular
+Ps2ndld	Pronoun Type=possessive Person=second Gender=neuter Number=dual Case=locative Owner_Number=dual
+Ps2ndlp	Pronoun Type=possessive Person=second Gender=neuter Number=dual Case=locative Owner_Number=plural
+Ps2ndis	Pronoun Type=possessive Person=second Gender=neuter Number=dual Case=instrumental Owner_Number=singular
+Ps2ndid	Pronoun Type=possessive Person=second Gender=neuter Number=dual Case=instrumental Owner_Number=dual
+Ps2ndip	Pronoun Type=possessive Person=second Gender=neuter Number=dual Case=instrumental Owner_Number=plural
+Ps2npns	Pronoun Type=possessive Person=second Gender=neuter Number=plural Case=nominative Owner_Number=singular
+Ps2npnd	Pronoun Type=possessive Person=second Gender=neuter Number=plural Case=nominative Owner_Number=dual
+Ps2npnp	Pronoun Type=possessive Person=second Gender=neuter Number=plural Case=nominative Owner_Number=plural
+Ps2npgs	Pronoun Type=possessive Person=second Gender=neuter Number=plural Case=genitive Owner_Number=singular
+Ps2npgd	Pronoun Type=possessive Person=second Gender=neuter Number=plural Case=genitive Owner_Number=dual
+Ps2npgp	Pronoun Type=possessive Person=second Gender=neuter Number=plural Case=genitive Owner_Number=plural
+Ps2npds	Pronoun Type=possessive Person=second Gender=neuter Number=plural Case=dative Owner_Number=singular
+Ps2npdd	Pronoun Type=possessive Person=second Gender=neuter Number=plural Case=dative Owner_Number=dual
+Ps2npdp	Pronoun Type=possessive Person=second Gender=neuter Number=plural Case=dative Owner_Number=plural
+Ps2npas	Pronoun Type=possessive Person=second Gender=neuter Number=plural Case=accusative Owner_Number=singular
+Ps2npad	Pronoun Type=possessive Person=second Gender=neuter Number=plural Case=accusative Owner_Number=dual
+Ps2npap	Pronoun Type=possessive Person=second Gender=neuter Number=plural Case=accusative Owner_Number=plural
+Ps2npls	Pronoun Type=possessive Person=second Gender=neuter Number=plural Case=locative Owner_Number=singular
+Ps2npld	Pronoun Type=possessive Person=second Gender=neuter Number=plural Case=locative Owner_Number=dual
+Ps2nplp	Pronoun Type=possessive Person=second Gender=neuter Number=plural Case=locative Owner_Number=plural
+Ps2npis	Pronoun Type=possessive Person=second Gender=neuter Number=plural Case=instrumental Owner_Number=singular
+Ps2npid	Pronoun Type=possessive Person=second Gender=neuter Number=plural Case=instrumental Owner_Number=dual
+Ps2npip	Pronoun Type=possessive Person=second Gender=neuter Number=plural Case=instrumental Owner_Number=plural
+Ps3msnsm	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=nominative Owner_Number=singular Owner_Gender=masculine
+Ps3msnsf	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=nominative Owner_Number=singular Owner_Gender=feminine
+Ps3msnsn	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=nominative Owner_Number=singular Owner_Gender=neuter
+Ps3msnd	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=nominative Owner_Number=dual
+Ps3msnp	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=nominative Owner_Number=plural
+Ps3msgsm	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=genitive Owner_Number=singular Owner_Gender=masculine
+Ps3msgsf	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=genitive Owner_Number=singular Owner_Gender=feminine
+Ps3msgsn	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=genitive Owner_Number=singular Owner_Gender=neuter
+Ps3msgd	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=genitive Owner_Number=dual
+Ps3msgp	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=genitive Owner_Number=plural
+Ps3msdsm	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=dative Owner_Number=singular Owner_Gender=masculine
+Ps3msdsf	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=dative Owner_Number=singular Owner_Gender=feminine
+Ps3msdsn	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=dative Owner_Number=singular Owner_Gender=neuter
+Ps3msdd	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=dative Owner_Number=dual
+Ps3msdp	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=dative Owner_Number=plural
+Ps3msasm	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=accusative Owner_Number=singular Owner_Gender=masculine
+Ps3msasf	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=accusative Owner_Number=singular Owner_Gender=feminine
+Ps3msasn	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=accusative Owner_Number=singular Owner_Gender=neuter
+Ps3msad	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=accusative Owner_Number=dual
+Ps3msap	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=accusative Owner_Number=plural
+Ps3mslsm	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=locative Owner_Number=singular Owner_Gender=masculine
+Ps3mslsf	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=locative Owner_Number=singular Owner_Gender=feminine
+Ps3mslsn	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=locative Owner_Number=singular Owner_Gender=neuter
+Ps3msld	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=locative Owner_Number=dual
+Ps3mslp	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=locative Owner_Number=plural
+Ps3msism	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=instrumental Owner_Number=singular Owner_Gender=masculine
+Ps3msisf	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=instrumental Owner_Number=singular Owner_Gender=feminine
+Ps3msisn	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=instrumental Owner_Number=singular Owner_Gender=neuter
+Ps3msid	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=instrumental Owner_Number=dual
+Ps3msip	Pronoun Type=possessive Person=third Gender=masculine Number=singular Case=instrumental Owner_Number=plural
+Ps3mdnsm	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=nominative Owner_Number=singular Owner_Gender=masculine
+Ps3mdnsf	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=nominative Owner_Number=singular Owner_Gender=feminine
+Ps3mdnsn	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=nominative Owner_Number=singular Owner_Gender=neuter
+Ps3mdnd	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=nominative Owner_Number=dual
+Ps3mdnp	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=nominative Owner_Number=plural
+Ps3mdgsm	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=genitive Owner_Number=singular Owner_Gender=masculine
+Ps3mdgsf	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=genitive Owner_Number=singular Owner_Gender=feminine
+Ps3mdgsn	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=genitive Owner_Number=singular Owner_Gender=neuter
+Ps3mdgd	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=genitive Owner_Number=dual
+Ps3mdgp	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=genitive Owner_Number=plural
+Ps3mddsm	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=dative Owner_Number=singular Owner_Gender=masculine
+Ps3mddsf	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=dative Owner_Number=singular Owner_Gender=feminine
+Ps3mddsn	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=dative Owner_Number=singular Owner_Gender=neuter
+Ps3mddd	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=dative Owner_Number=dual
+Ps3mddp	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=dative Owner_Number=plural
+Ps3mdasm	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=accusative Owner_Number=singular Owner_Gender=masculine
+Ps3mdasf	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=accusative Owner_Number=singular Owner_Gender=feminine
+Ps3mdasn	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=accusative Owner_Number=singular Owner_Gender=neuter
+Ps3mdad	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=accusative Owner_Number=dual
+Ps3mdap	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=accusative Owner_Number=plural
+Ps3mdlsm	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=locative Owner_Number=singular Owner_Gender=masculine
+Ps3mdlsf	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=locative Owner_Number=singular Owner_Gender=feminine
+Ps3mdlsn	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=locative Owner_Number=singular Owner_Gender=neuter
+Ps3mdld	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=locative Owner_Number=dual
+Ps3mdlp	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=locative Owner_Number=plural
+Ps3mdism	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=instrumental Owner_Number=singular Owner_Gender=masculine
+Ps3mdisf	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=instrumental Owner_Number=singular Owner_Gender=feminine
+Ps3mdisn	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=instrumental Owner_Number=singular Owner_Gender=neuter
+Ps3mdid	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=instrumental Owner_Number=dual
+Ps3mdip	Pronoun Type=possessive Person=third Gender=masculine Number=dual Case=instrumental Owner_Number=plural
+Ps3mpnsm	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=nominative Owner_Number=singular Owner_Gender=masculine
+Ps3mpnsf	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=nominative Owner_Number=singular Owner_Gender=feminine
+Ps3mpnsn	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=nominative Owner_Number=singular Owner_Gender=neuter
+Ps3mpnd	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=nominative Owner_Number=dual
+Ps3mpnp	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=nominative Owner_Number=plural
+Ps3mpgsm	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=genitive Owner_Number=singular Owner_Gender=masculine
+Ps3mpgsf	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=genitive Owner_Number=singular Owner_Gender=feminine
+Ps3mpgsn	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=genitive Owner_Number=singular Owner_Gender=neuter
+Ps3mpgd	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=genitive Owner_Number=dual
+Ps3mpgp	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=genitive Owner_Number=plural
+Ps3mpdsm	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=dative Owner_Number=singular Owner_Gender=masculine
+Ps3mpdsf	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=dative Owner_Number=singular Owner_Gender=feminine
+Ps3mpdsn	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=dative Owner_Number=singular Owner_Gender=neuter
+Ps3mpdd	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=dative Owner_Number=dual
+Ps3mpdp	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=dative Owner_Number=plural
+Ps3mpasm	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=accusative Owner_Number=singular Owner_Gender=masculine
+Ps3mpasf	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=accusative Owner_Number=singular Owner_Gender=feminine
+Ps3mpasn	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=accusative Owner_Number=singular Owner_Gender=neuter
+Ps3mpad	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=accusative Owner_Number=dual
+Ps3mpap	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=accusative Owner_Number=plural
+Ps3mplsm	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=locative Owner_Number=singular Owner_Gender=masculine
+Ps3mplsf	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=locative Owner_Number=singular Owner_Gender=feminine
+Ps3mplsn	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=locative Owner_Number=singular Owner_Gender=neuter
+Ps3mpld	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=locative Owner_Number=dual
+Ps3mplp	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=locative Owner_Number=plural
+Ps3mpism	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=instrumental Owner_Number=singular Owner_Gender=masculine
+Ps3mpisf	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=instrumental Owner_Number=singular Owner_Gender=feminine
+Ps3mpisn	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=instrumental Owner_Number=singular Owner_Gender=neuter
+Ps3mpid	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=instrumental Owner_Number=dual
+Ps3mpip	Pronoun Type=possessive Person=third Gender=masculine Number=plural Case=instrumental Owner_Number=plural
+Ps3fsnsm	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=nominative Owner_Number=singular Owner_Gender=masculine
+Ps3fsnsf	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=nominative Owner_Number=singular Owner_Gender=feminine
+Ps3fsnsn	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=nominative Owner_Number=singular Owner_Gender=neuter
+Ps3fsnd	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=nominative Owner_Number=dual
+Ps3fsnp	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=nominative Owner_Number=plural
+Ps3fsgsm	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=genitive Owner_Number=singular Owner_Gender=masculine
+Ps3fsgsf	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=genitive Owner_Number=singular Owner_Gender=feminine
+Ps3fsgsn	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=genitive Owner_Number=singular Owner_Gender=neuter
+Ps3fsgd	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=genitive Owner_Number=dual
+Ps3fsgp	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=genitive Owner_Number=plural
+Ps3fsdsm	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=dative Owner_Number=singular Owner_Gender=masculine
+Ps3fsdsf	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=dative Owner_Number=singular Owner_Gender=feminine
+Ps3fsdsn	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=dative Owner_Number=singular Owner_Gender=neuter
+Ps3fsdd	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=dative Owner_Number=dual
+Ps3fsdp	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=dative Owner_Number=plural
+Ps3fsasm	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=accusative Owner_Number=singular Owner_Gender=masculine
+Ps3fsasf	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=accusative Owner_Number=singular Owner_Gender=feminine
+Ps3fsasn	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=accusative Owner_Number=singular Owner_Gender=neuter
+Ps3fsad	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=accusative Owner_Number=dual
+Ps3fsap	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=accusative Owner_Number=plural
+Ps3fslsm	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=locative Owner_Number=singular Owner_Gender=masculine
+Ps3fslsf	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=locative Owner_Number=singular Owner_Gender=feminine
+Ps3fslsn	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=locative Owner_Number=singular Owner_Gender=neuter
+Ps3fsld	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=locative Owner_Number=dual
+Ps3fslp	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=locative Owner_Number=plural
+Ps3fsism	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=instrumental Owner_Number=singular Owner_Gender=masculine
+Ps3fsisf	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=instrumental Owner_Number=singular Owner_Gender=feminine
+Ps3fsisn	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=instrumental Owner_Number=singular Owner_Gender=neuter
+Ps3fsid	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=instrumental Owner_Number=dual
+Ps3fsip	Pronoun Type=possessive Person=third Gender=feminine Number=singular Case=instrumental Owner_Number=plural
+Ps3fdnsm	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=nominative Owner_Number=singular Owner_Gender=masculine
+Ps3fdnsf	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=nominative Owner_Number=singular Owner_Gender=feminine
+Ps3fdnsn	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=nominative Owner_Number=singular Owner_Gender=neuter
+Ps3fdnd	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=nominative Owner_Number=dual
+Ps3fdnp	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=nominative Owner_Number=plural
+Ps3fdgsm	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=genitive Owner_Number=singular Owner_Gender=masculine
+Ps3fdgsf	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=genitive Owner_Number=singular Owner_Gender=feminine
+Ps3fdgsn	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=genitive Owner_Number=singular Owner_Gender=neuter
+Ps3fdgd	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=genitive Owner_Number=dual
+Ps3fdgp	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=genitive Owner_Number=plural
+Ps3fddsm	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=dative Owner_Number=singular Owner_Gender=masculine
+Ps3fddsf	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=dative Owner_Number=singular Owner_Gender=feminine
+Ps3fddsn	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=dative Owner_Number=singular Owner_Gender=neuter
+Ps3fddd	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=dative Owner_Number=dual
+Ps3fddp	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=dative Owner_Number=plural
+Ps3fdasm	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=accusative Owner_Number=singular Owner_Gender=masculine
+Ps3fdasf	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=accusative Owner_Number=singular Owner_Gender=feminine
+Ps3fdasn	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=accusative Owner_Number=singular Owner_Gender=neuter
+Ps3fdad	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=accusative Owner_Number=dual
+Ps3fdap	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=accusative Owner_Number=plural
+Ps3fdlsm	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=locative Owner_Number=singular Owner_Gender=masculine
+Ps3fdlsf	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=locative Owner_Number=singular Owner_Gender=feminine
+Ps3fdlsn	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=locative Owner_Number=singular Owner_Gender=neuter
+Ps3fdld	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=locative Owner_Number=dual
+Ps3fdlp	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=locative Owner_Number=plural
+Ps3fdism	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=instrumental Owner_Number=singular Owner_Gender=masculine
+Ps3fdisf	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=instrumental Owner_Number=singular Owner_Gender=feminine
+Ps3fdisn	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=instrumental Owner_Number=singular Owner_Gender=neuter
+Ps3fdid	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=instrumental Owner_Number=dual
+Ps3fdip	Pronoun Type=possessive Person=third Gender=feminine Number=dual Case=instrumental Owner_Number=plural
+Ps3fpnsm	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=nominative Owner_Number=singular Owner_Gender=masculine
+Ps3fpnsf	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=nominative Owner_Number=singular Owner_Gender=feminine
+Ps3fpnsn	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=nominative Owner_Number=singular Owner_Gender=neuter
+Ps3fpnd	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=nominative Owner_Number=dual
+Ps3fpnp	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=nominative Owner_Number=plural
+Ps3fpgsm	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=genitive Owner_Number=singular Owner_Gender=masculine
+Ps3fpgsf	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=genitive Owner_Number=singular Owner_Gender=feminine
+Ps3fpgsn	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=genitive Owner_Number=singular Owner_Gender=neuter
+Ps3fpgd	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=genitive Owner_Number=dual
+Ps3fpgp	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=genitive Owner_Number=plural
+Ps3fpdsm	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=dative Owner_Number=singular Owner_Gender=masculine
+Ps3fpdsf	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=dative Owner_Number=singular Owner_Gender=feminine
+Ps3fpdsn	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=dative Owner_Number=singular Owner_Gender=neuter
+Ps3fpdd	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=dative Owner_Number=dual
+Ps3fpdp	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=dative Owner_Number=plural
+Ps3fpasm	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=accusative Owner_Number=singular Owner_Gender=masculine
+Ps3fpasf	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=accusative Owner_Number=singular Owner_Gender=feminine
+Ps3fpasn	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=accusative Owner_Number=singular Owner_Gender=neuter
+Ps3fpad	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=accusative Owner_Number=dual
+Ps3fpap	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=accusative Owner_Number=plural
+Ps3fplsm	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=locative Owner_Number=singular Owner_Gender=masculine
+Ps3fplsf	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=locative Owner_Number=singular Owner_Gender=feminine
+Ps3fplsn	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=locative Owner_Number=singular Owner_Gender=neuter
+Ps3fpld	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=locative Owner_Number=dual
+Ps3fplp	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=locative Owner_Number=plural
+Ps3fpism	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=instrumental Owner_Number=singular Owner_Gender=masculine
+Ps3fpisf	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=instrumental Owner_Number=singular Owner_Gender=feminine
+Ps3fpisn	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=instrumental Owner_Number=singular Owner_Gender=neuter
+Ps3fpid	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=instrumental Owner_Number=dual
+Ps3fpip	Pronoun Type=possessive Person=third Gender=feminine Number=plural Case=instrumental Owner_Number=plural
+Ps3nsnsm	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=nominative Owner_Number=singular Owner_Gender=masculine
+Ps3nsnsf	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=nominative Owner_Number=singular Owner_Gender=feminine
+Ps3nsnsn	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=nominative Owner_Number=singular Owner_Gender=neuter
+Ps3nsnd	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=nominative Owner_Number=dual
+Ps3nsnp	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=nominative Owner_Number=plural
+Ps3nsgsm	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=genitive Owner_Number=singular Owner_Gender=masculine
+Ps3nsgsf	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=genitive Owner_Number=singular Owner_Gender=feminine
+Ps3nsgsn	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=genitive Owner_Number=singular Owner_Gender=neuter
+Ps3nsgd	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=genitive Owner_Number=dual
+Ps3nsgp	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=genitive Owner_Number=plural
+Ps3nsdsm	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=dative Owner_Number=singular Owner_Gender=masculine
+Ps3nsdsf	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=dative Owner_Number=singular Owner_Gender=feminine
+Ps3nsdsn	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=dative Owner_Number=singular Owner_Gender=neuter
+Ps3nsdd	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=dative Owner_Number=dual
+Ps3nsdp	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=dative Owner_Number=plural
+Ps3nsasm	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=accusative Owner_Number=singular Owner_Gender=masculine
+Ps3nsasf	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=accusative Owner_Number=singular Owner_Gender=feminine
+Ps3nsasn	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=accusative Owner_Number=singular Owner_Gender=neuter
+Ps3nsad	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=accusative Owner_Number=dual
+Ps3nsap	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=accusative Owner_Number=plural
+Ps3nslsm	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=locative Owner_Number=singular Owner_Gender=masculine
+Ps3nslsf	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=locative Owner_Number=singular Owner_Gender=feminine
+Ps3nslsn	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=locative Owner_Number=singular Owner_Gender=neuter
+Ps3nsld	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=locative Owner_Number=dual
+Ps3nslp	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=locative Owner_Number=plural
+Ps3nsism	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=instrumental Owner_Number=singular Owner_Gender=masculine
+Ps3nsisf	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=instrumental Owner_Number=singular Owner_Gender=feminine
+Ps3nsisn	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=instrumental Owner_Number=singular Owner_Gender=neuter
+Ps3nsid	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=instrumental Owner_Number=dual
+Ps3nsip	Pronoun Type=possessive Person=third Gender=neuter Number=singular Case=instrumental Owner_Number=plural
+Ps3ndnsm	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=nominative Owner_Number=singular Owner_Gender=masculine
+Ps3ndnsf	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=nominative Owner_Number=singular Owner_Gender=feminine
+Ps3ndnsn	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=nominative Owner_Number=singular Owner_Gender=neuter
+Ps3ndnd	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=nominative Owner_Number=dual
+Ps3ndnp	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=nominative Owner_Number=plural
+Ps3ndgsm	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=genitive Owner_Number=singular Owner_Gender=masculine
+Ps3ndgsf	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=genitive Owner_Number=singular Owner_Gender=feminine
+Ps3ndgsn	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=genitive Owner_Number=singular Owner_Gender=neuter
+Ps3ndgd	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=genitive Owner_Number=dual
+Ps3ndgp	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=genitive Owner_Number=plural
+Ps3nddsm	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=dative Owner_Number=singular Owner_Gender=masculine
+Ps3nddsf	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=dative Owner_Number=singular Owner_Gender=feminine
+Ps3nddsn	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=dative Owner_Number=singular Owner_Gender=neuter
+Ps3nddd	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=dative Owner_Number=dual
+Ps3nddp	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=dative Owner_Number=plural
+Ps3ndasm	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=accusative Owner_Number=singular Owner_Gender=masculine
+Ps3ndasf	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=accusative Owner_Number=singular Owner_Gender=feminine
+Ps3ndasn	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=accusative Owner_Number=singular Owner_Gender=neuter
+Ps3ndad	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=accusative Owner_Number=dual
+Ps3ndap	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=accusative Owner_Number=plural
+Ps3ndlsm	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=locative Owner_Number=singular Owner_Gender=masculine
+Ps3ndlsf	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=locative Owner_Number=singular Owner_Gender=feminine
+Ps3ndlsn	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=locative Owner_Number=singular Owner_Gender=neuter
+Ps3ndld	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=locative Owner_Number=dual
+Ps3ndlp	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=locative Owner_Number=plural
+Ps3ndism	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=instrumental Owner_Number=singular Owner_Gender=masculine
+Ps3ndisf	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=instrumental Owner_Number=singular Owner_Gender=feminine
+Ps3ndisn	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=instrumental Owner_Number=singular Owner_Gender=neuter
+Ps3ndid	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=instrumental Owner_Number=dual
+Ps3ndip	Pronoun Type=possessive Person=third Gender=neuter Number=dual Case=instrumental Owner_Number=plural
+Ps3npnsm	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=nominative Owner_Number=singular Owner_Gender=masculine
+Ps3npnsf	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=nominative Owner_Number=singular Owner_Gender=feminine
+Ps3npnsn	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=nominative Owner_Number=singular Owner_Gender=neuter
+Ps3npnd	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=nominative Owner_Number=dual
+Ps3npnp	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=nominative Owner_Number=plural
+Ps3npgsm	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=genitive Owner_Number=singular Owner_Gender=masculine
+Ps3npgsf	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=genitive Owner_Number=singular Owner_Gender=feminine
+Ps3npgsn	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=genitive Owner_Number=singular Owner_Gender=neuter
+Ps3npgd	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=genitive Owner_Number=dual
+Ps3npgp	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=genitive Owner_Number=plural
+Ps3npdsm	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=dative Owner_Number=singular Owner_Gender=masculine
+Ps3npdsf	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=dative Owner_Number=singular Owner_Gender=feminine
+Ps3npdsn	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=dative Owner_Number=singular Owner_Gender=neuter
+Ps3npdd	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=dative Owner_Number=dual
+Ps3npdp	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=dative Owner_Number=plural
+Ps3npasm	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=accusative Owner_Number=singular Owner_Gender=masculine
+Ps3npasf	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=accusative Owner_Number=singular Owner_Gender=feminine
+Ps3npasn	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=accusative Owner_Number=singular Owner_Gender=neuter
+Ps3npad	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=accusative Owner_Number=dual
+Ps3npap	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=accusative Owner_Number=plural
+Ps3nplsm	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=locative Owner_Number=singular Owner_Gender=masculine
+Ps3nplsf	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=locative Owner_Number=singular Owner_Gender=feminine
+Ps3nplsn	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=locative Owner_Number=singular Owner_Gender=neuter
+Ps3npld	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=locative Owner_Number=dual
+Ps3nplp	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=locative Owner_Number=plural
+Ps3npism	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=instrumental Owner_Number=singular Owner_Gender=masculine
+Ps3npisf	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=instrumental Owner_Number=singular Owner_Gender=feminine
+Ps3npisn	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=instrumental Owner_Number=singular Owner_Gender=neuter
+Ps3npid	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=instrumental Owner_Number=dual
+Ps3npip	Pronoun Type=possessive Person=third Gender=neuter Number=plural Case=instrumental Owner_Number=plural
+Pd-msn	Pronoun Type=demonstrative Gender=masculine Number=singular Case=nominative
+Pd-msg	Pronoun Type=demonstrative Gender=masculine Number=singular Case=genitive
+Pd-msd	Pronoun Type=demonstrative Gender=masculine Number=singular Case=dative
+Pd-msa	Pronoun Type=demonstrative Gender=masculine Number=singular Case=accusative
+Pd-msl	Pronoun Type=demonstrative Gender=masculine Number=singular Case=locative
+Pd-msi	Pronoun Type=demonstrative Gender=masculine Number=singular Case=instrumental
+Pd-mdn	Pronoun Type=demonstrative Gender=masculine Number=dual Case=nominative
+Pd-mdg	Pronoun Type=demonstrative Gender=masculine Number=dual Case=genitive
+Pd-mdd	Pronoun Type=demonstrative Gender=masculine Number=dual Case=dative
+Pd-mda	Pronoun Type=demonstrative Gender=masculine Number=dual Case=accusative
+Pd-mdl	Pronoun Type=demonstrative Gender=masculine Number=dual Case=locative
+Pd-mdi	Pronoun Type=demonstrative Gender=masculine Number=dual Case=instrumental
+Pd-mpn	Pronoun Type=demonstrative Gender=masculine Number=plural Case=nominative
+Pd-mpg	Pronoun Type=demonstrative Gender=masculine Number=plural Case=genitive
+Pd-mpd	Pronoun Type=demonstrative Gender=masculine Number=plural Case=dative
+Pd-mpa	Pronoun Type=demonstrative Gender=masculine Number=plural Case=accusative
+Pd-mpl	Pronoun Type=demonstrative Gender=masculine Number=plural Case=locative
+Pd-mpi	Pronoun Type=demonstrative Gender=masculine Number=plural Case=instrumental
+Pd-fsn	Pronoun Type=demonstrative Gender=feminine Number=singular Case=nominative
+Pd-fsg	Pronoun Type=demonstrative Gender=feminine Number=singular Case=genitive
+Pd-fsd	Pronoun Type=demonstrative Gender=feminine Number=singular Case=dative
+Pd-fsa	Pronoun Type=demonstrative Gender=feminine Number=singular Case=accusative
+Pd-fsl	Pronoun Type=demonstrative Gender=feminine Number=singular Case=locative
+Pd-fsi	Pronoun Type=demonstrative Gender=feminine Number=singular Case=instrumental
+Pd-fdn	Pronoun Type=demonstrative Gender=feminine Number=dual Case=nominative
+Pd-fdg	Pronoun Type=demonstrative Gender=feminine Number=dual Case=genitive
+Pd-fdd	Pronoun Type=demonstrative Gender=feminine Number=dual Case=dative
+Pd-fda	Pronoun Type=demonstrative Gender=feminine Number=dual Case=accusative
+Pd-fdl	Pronoun Type=demonstrative Gender=feminine Number=dual Case=locative
+Pd-fdi	Pronoun Type=demonstrative Gender=feminine Number=dual Case=instrumental
+Pd-fpn	Pronoun Type=demonstrative Gender=feminine Number=plural Case=nominative
+Pd-fpg	Pronoun Type=demonstrative Gender=feminine Number=plural Case=genitive
+Pd-fpd	Pronoun Type=demonstrative Gender=feminine Number=plural Case=dative
+Pd-fpa	Pronoun Type=demonstrative Gender=feminine Number=plural Case=accusative
+Pd-fpl	Pronoun Type=demonstrative Gender=feminine Number=plural Case=locative
+Pd-fpi	Pronoun Type=demonstrative Gender=feminine Number=plural Case=instrumental
+Pd-nsn	Pronoun Type=demonstrative Gender=neuter Number=singular Case=nominative
+Pd-nsg	Pronoun Type=demonstrative Gender=neuter Number=singular Case=genitive
+Pd-nsd	Pronoun Type=demonstrative Gender=neuter Number=singular Case=dative
+Pd-nsa	Pronoun Type=demonstrative Gender=neuter Number=singular Case=accusative
+Pd-nsl	Pronoun Type=demonstrative Gender=neuter Number=singular Case=locative
+Pd-nsi	Pronoun Type=demonstrative Gender=neuter Number=singular Case=instrumental
+Pd-ndn	Pronoun Type=demonstrative Gender=neuter Number=dual Case=nominative
+Pd-ndg	Pronoun Type=demonstrative Gender=neuter Number=dual Case=genitive
+Pd-ndd	Pronoun Type=demonstrative Gender=neuter Number=dual Case=dative
+Pd-nda	Pronoun Type=demonstrative Gender=neuter Number=dual Case=accusative
+Pd-ndl	Pronoun Type=demonstrative Gender=neuter Number=dual Case=locative
+Pd-ndi	Pronoun Type=demonstrative Gender=neuter Number=dual Case=instrumental
+Pd-npn	Pronoun Type=demonstrative Gender=neuter Number=plural Case=nominative
+Pd-npg	Pronoun Type=demonstrative Gender=neuter Number=plural Case=genitive
+Pd-npd	Pronoun Type=demonstrative Gender=neuter Number=plural Case=dative
+Pd-npa	Pronoun Type=demonstrative Gender=neuter Number=plural Case=accusative
+Pd-npl	Pronoun Type=demonstrative Gender=neuter Number=plural Case=locative
+Pd-npi	Pronoun Type=demonstrative Gender=neuter Number=plural Case=instrumental
+Pr	Pronoun Type=relative
+Pr----sm	Pronoun Type=relative Owner_Number=singular Owner_Gender=masculine
+Pr-msn	Pronoun Type=relative Gender=masculine Number=singular Case=nominative
+Pr-msg	Pronoun Type=relative Gender=masculine Number=singular Case=genitive
+Pr-msd	Pronoun Type=relative Gender=masculine Number=singular Case=dative
+Pr-msa	Pronoun Type=relative Gender=masculine Number=singular Case=accusative
+Pr-msl	Pronoun Type=relative Gender=masculine Number=singular Case=locative
+Pr-msi	Pronoun Type=relative Gender=masculine Number=singular Case=instrumental
+Pr-mdn	Pronoun Type=relative Gender=masculine Number=dual Case=nominative
+Pr-mdg	Pronoun Type=relative Gender=masculine Number=dual Case=genitive
+Pr-mdd	Pronoun Type=relative Gender=masculine Number=dual Case=dative
+Pr-mda	Pronoun Type=relative Gender=masculine Number=dual Case=accusative
+Pr-mdl	Pronoun Type=relative Gender=masculine Number=dual Case=locative
+Pr-mdi	Pronoun Type=relative Gender=masculine Number=dual Case=instrumental
+Pr-mpn	Pronoun Type=relative Gender=masculine Number=plural Case=nominative
+Pr-mpg	Pronoun Type=relative Gender=masculine Number=plural Case=genitive
+Pr-mpd	Pronoun Type=relative Gender=masculine Number=plural Case=dative
+Pr-mpa	Pronoun Type=relative Gender=masculine Number=plural Case=accusative
+Pr-mpl	Pronoun Type=relative Gender=masculine Number=plural Case=locative
+Pr-mpi	Pronoun Type=relative Gender=masculine Number=plural Case=instrumental
+Pr-fsn	Pronoun Type=relative Gender=feminine Number=singular Case=nominative
+Pr-fsg	Pronoun Type=relative Gender=feminine Number=singular Case=genitive
+Pr-fsd	Pronoun Type=relative Gender=feminine Number=singular Case=dative
+Pr-fsa	Pronoun Type=relative Gender=feminine Number=singular Case=accusative
+Pr-fsl	Pronoun Type=relative Gender=feminine Number=singular Case=locative
+Pr-fsi	Pronoun Type=relative Gender=feminine Number=singular Case=instrumental
+Pr-fdn	Pronoun Type=relative Gender=feminine Number=dual Case=nominative
+Pr-fdg	Pronoun Type=relative Gender=feminine Number=dual Case=genitive
+Pr-fdd	Pronoun Type=relative Gender=feminine Number=dual Case=dative
+Pr-fda	Pronoun Type=relative Gender=feminine Number=dual Case=accusative
+Pr-fdl	Pronoun Type=relative Gender=feminine Number=dual Case=locative
+Pr-fdi	Pronoun Type=relative Gender=feminine Number=dual Case=instrumental
+Pr-fpn	Pronoun Type=relative Gender=feminine Number=plural Case=nominative
+Pr-fpg	Pronoun Type=relative Gender=feminine Number=plural Case=genitive
+Pr-fpd	Pronoun Type=relative Gender=feminine Number=plural Case=dative
+Pr-fpa	Pronoun Type=relative Gender=feminine Number=plural Case=accusative
+Pr-fpl	Pronoun Type=relative Gender=feminine Number=plural Case=locative
+Pr-fpi	Pronoun Type=relative Gender=feminine Number=plural Case=instrumental
+Pr-nsn	Pronoun Type=relative Gender=neuter Number=singular Case=nominative
+Pr-nsg	Pronoun Type=relative Gender=neuter Number=singular Case=genitive
+Pr-nsd	Pronoun Type=relative Gender=neuter Number=singular Case=dative
+Pr-nsa	Pronoun Type=relative Gender=neuter Number=singular Case=accusative
+Pr-nsl	Pronoun Type=relative Gender=neuter Number=singular Case=locative
+Pr-nsi	Pronoun Type=relative Gender=neuter Number=singular Case=instrumental
+Pr-ndn	Pronoun Type=relative Gender=neuter Number=dual Case=nominative
+Pr-ndg	Pronoun Type=relative Gender=neuter Number=dual Case=genitive
+Pr-ndd	Pronoun Type=relative Gender=neuter Number=dual Case=dative
+Pr-nda	Pronoun Type=relative Gender=neuter Number=dual Case=accusative
+Pr-ndl	Pronoun Type=relative Gender=neuter Number=dual Case=locative
+Pr-ndi	Pronoun Type=relative Gender=neuter Number=dual Case=instrumental
+Pr-npn	Pronoun Type=relative Gender=neuter Number=plural Case=nominative
+Pr-npg	Pronoun Type=relative Gender=neuter Number=plural Case=genitive
+Pr-npd	Pronoun Type=relative Gender=neuter Number=plural Case=dative
+Pr-npa	Pronoun Type=relative Gender=neuter Number=plural Case=accusative
+Pr-npl	Pronoun Type=relative Gender=neuter Number=plural Case=locative
+Pr-npi	Pronoun Type=relative Gender=neuter Number=plural Case=instrumental
+Px------y	Pronoun Type=reflexive Clitic=yes
+Px---g	Pronoun Type=reflexive Case=genitive
+Px---d	Pronoun Type=reflexive Case=dative
+Px---d--y	Pronoun Type=reflexive Case=dative Clitic=yes
+Px---a	Pronoun Type=reflexive Case=accusative
+Px---a--b	Pronoun Type=reflexive Case=accusative Clitic=bound
+Px---l	Pronoun Type=reflexive Case=locative
+Px---i	Pronoun Type=reflexive Case=instrumental
+Px-msn	Pronoun Type=reflexive Gender=masculine Number=singular Case=nominative
+Px-msg	Pronoun Type=reflexive Gender=masculine Number=singular Case=genitive
+Px-msd	Pronoun Type=reflexive Gender=masculine Number=singular Case=dative
+Px-msa	Pronoun Type=reflexive Gender=masculine Number=singular Case=accusative
+Px-msl	Pronoun Type=reflexive Gender=masculine Number=singular Case=locative
+Px-msi	Pronoun Type=reflexive Gender=masculine Number=singular Case=instrumental
+Px-mdn	Pronoun Type=reflexive Gender=masculine Number=dual Case=nominative
+Px-mdg	Pronoun Type=reflexive Gender=masculine Number=dual Case=genitive
+Px-mdd	Pronoun Type=reflexive Gender=masculine Number=dual Case=dative
+Px-mda	Pronoun Type=reflexive Gender=masculine Number=dual Case=accusative
+Px-mdl	Pronoun Type=reflexive Gender=masculine Number=dual Case=locative
+Px-mdi	Pronoun Type=reflexive Gender=masculine Number=dual Case=instrumental
+Px-mpn	Pronoun Type=reflexive Gender=masculine Number=plural Case=nominative
+Px-mpg	Pronoun Type=reflexive Gender=masculine Number=plural Case=genitive
+Px-mpd	Pronoun Type=reflexive Gender=masculine Number=plural Case=dative
+Px-mpa	Pronoun Type=reflexive Gender=masculine Number=plural Case=accusative
+Px-mpl	Pronoun Type=reflexive Gender=masculine Number=plural Case=locative
+Px-mpi	Pronoun Type=reflexive Gender=masculine Number=plural Case=instrumental
+Px-fsn	Pronoun Type=reflexive Gender=feminine Number=singular Case=nominative
+Px-fsg	Pronoun Type=reflexive Gender=feminine Number=singular Case=genitive
+Px-fsd	Pronoun Type=reflexive Gender=feminine Number=singular Case=dative
+Px-fsa	Pronoun Type=reflexive Gender=feminine Number=singular Case=accusative
+Px-fsl	Pronoun Type=reflexive Gender=feminine Number=singular Case=locative
+Px-fsi	Pronoun Type=reflexive Gender=feminine Number=singular Case=instrumental
+Px-fdn	Pronoun Type=reflexive Gender=feminine Number=dual Case=nominative
+Px-fdg	Pronoun Type=reflexive Gender=feminine Number=dual Case=genitive
+Px-fdd	Pronoun Type=reflexive Gender=feminine Number=dual Case=dative
+Px-fda	Pronoun Type=reflexive Gender=feminine Number=dual Case=accusative
+Px-fdl	Pronoun Type=reflexive Gender=feminine Number=dual Case=locative
+Px-fdi	Pronoun Type=reflexive Gender=feminine Number=dual Case=instrumental
+Px-fpn	Pronoun Type=reflexive Gender=feminine Number=plural Case=nominative
+Px-fpg	Pronoun Type=reflexive Gender=feminine Number=plural Case=genitive
+Px-fpd	Pronoun Type=reflexive Gender=feminine Number=plural Case=dative
+Px-fpa	Pronoun Type=reflexive Gender=feminine Number=plural Case=accusative
+Px-fpl	Pronoun Type=reflexive Gender=feminine Number=plural Case=locative
+Px-fpi	Pronoun Type=reflexive Gender=feminine Number=plural Case=instrumental
+Px-nsn	Pronoun Type=reflexive Gender=neuter Number=singular Case=nominative
+Px-nsg	Pronoun Type=reflexive Gender=neuter Number=singular Case=genitive
+Px-nsd	Pronoun Type=reflexive Gender=neuter Number=singular Case=dative
+Px-nsa	Pronoun Type=reflexive Gender=neuter Number=singular Case=accusative
+Px-nsl	Pronoun Type=reflexive Gender=neuter Number=singular Case=locative
+Px-nsi	Pronoun Type=reflexive Gender=neuter Number=singular Case=instrumental
+Px-ndn	Pronoun Type=reflexive Gender=neuter Number=dual Case=nominative
+Px-ndg	Pronoun Type=reflexive Gender=neuter Number=dual Case=genitive
+Px-ndd	Pronoun Type=reflexive Gender=neuter Number=dual Case=dative
+Px-nda	Pronoun Type=reflexive Gender=neuter Number=dual Case=accusative
+Px-ndl	Pronoun Type=reflexive Gender=neuter Number=dual Case=locative
+Px-ndi	Pronoun Type=reflexive Gender=neuter Number=dual Case=instrumental
+Px-npn	Pronoun Type=reflexive Gender=neuter Number=plural Case=nominative
+Px-npg	Pronoun Type=reflexive Gender=neuter Number=plural Case=genitive
+Px-npd	Pronoun Type=reflexive Gender=neuter Number=plural Case=dative
+Px-npa	Pronoun Type=reflexive Gender=neuter Number=plural Case=accusative
+Px-npl	Pronoun Type=reflexive Gender=neuter Number=plural Case=locative
+Px-npi	Pronoun Type=reflexive Gender=neuter Number=plural Case=instrumental
+Pg-msn	Pronoun Type=general Gender=masculine Number=singular Case=nominative
+Pg-msg	Pronoun Type=general Gender=masculine Number=singular Case=genitive
+Pg-msd	Pronoun Type=general Gender=masculine Number=singular Case=dative
+Pg-msa	Pronoun Type=general Gender=masculine Number=singular Case=accusative
+Pg-msl	Pronoun Type=general Gender=masculine Number=singular Case=locative
+Pg-msi	Pronoun Type=general Gender=masculine Number=singular Case=instrumental
+Pg-mdn	Pronoun Type=general Gender=masculine Number=dual Case=nominative
+Pg-mdg	Pronoun Type=general Gender=masculine Number=dual Case=genitive
+Pg-mdd	Pronoun Type=general Gender=masculine Number=dual Case=dative
+Pg-mda	Pronoun Type=general Gender=masculine Number=dual Case=accusative
+Pg-mdl	Pronoun Type=general Gender=masculine Number=dual Case=locative
+Pg-mdi	Pronoun Type=general Gender=masculine Number=dual Case=instrumental
+Pg-mpn	Pronoun Type=general Gender=masculine Number=plural Case=nominative
+Pg-mpg	Pronoun Type=general Gender=masculine Number=plural Case=genitive
+Pg-mpd	Pronoun Type=general Gender=masculine Number=plural Case=dative
+Pg-mpa	Pronoun Type=general Gender=masculine Number=plural Case=accusative
+Pg-mpl	Pronoun Type=general Gender=masculine Number=plural Case=locative
+Pg-mpi	Pronoun Type=general Gender=masculine Number=plural Case=instrumental
+Pg-fsn	Pronoun Type=general Gender=feminine Number=singular Case=nominative
+Pg-fsg	Pronoun Type=general Gender=feminine Number=singular Case=genitive
+Pg-fsd	Pronoun Type=general Gender=feminine Number=singular Case=dative
+Pg-fsa	Pronoun Type=general Gender=feminine Number=singular Case=accusative
+Pg-fsl	Pronoun Type=general Gender=feminine Number=singular Case=locative
+Pg-fsi	Pronoun Type=general Gender=feminine Number=singular Case=instrumental
+Pg-fdn	Pronoun Type=general Gender=feminine Number=dual Case=nominative
+Pg-fdg	Pronoun Type=general Gender=feminine Number=dual Case=genitive
+Pg-fdd	Pronoun Type=general Gender=feminine Number=dual Case=dative
+Pg-fda	Pronoun Type=general Gender=feminine Number=dual Case=accusative
+Pg-fdl	Pronoun Type=general Gender=feminine Number=dual Case=locative
+Pg-fdi	Pronoun Type=general Gender=feminine Number=dual Case=instrumental
+Pg-fpn	Pronoun Type=general Gender=feminine Number=plural Case=nominative
+Pg-fpg	Pronoun Type=general Gender=feminine Number=plural Case=genitive
+Pg-fpd	Pronoun Type=general Gender=feminine Number=plural Case=dative
+Pg-fpa	Pronoun Type=general Gender=feminine Number=plural Case=accusative
+Pg-fpl	Pronoun Type=general Gender=feminine Number=plural Case=locative
+Pg-fpi	Pronoun Type=general Gender=feminine Number=plural Case=instrumental
+Pg-nsn	Pronoun Type=general Gender=neuter Number=singular Case=nominative
+Pg-nsg	Pronoun Type=general Gender=neuter Number=singular Case=genitive
+Pg-nsd	Pronoun Type=general Gender=neuter Number=singular Case=dative
+Pg-nsa	Pronoun Type=general Gender=neuter Number=singular Case=accusative
+Pg-nsl	Pronoun Type=general Gender=neuter Number=singular Case=locative
+Pg-nsi	Pronoun Type=general Gender=neuter Number=singular Case=instrumental
+Pg-ndn	Pronoun Type=general Gender=neuter Number=dual Case=nominative
+Pg-ndg	Pronoun Type=general Gender=neuter Number=dual Case=genitive
+Pg-ndd	Pronoun Type=general Gender=neuter Number=dual Case=dative
+Pg-nda	Pronoun Type=general Gender=neuter Number=dual Case=accusative
+Pg-ndl	Pronoun Type=general Gender=neuter Number=dual Case=locative
+Pg-ndi	Pronoun Type=general Gender=neuter Number=dual Case=instrumental
+Pg-npn	Pronoun Type=general Gender=neuter Number=plural Case=nominative
+Pg-npg	Pronoun Type=general Gender=neuter Number=plural Case=genitive
+Pg-npd	Pronoun Type=general Gender=neuter Number=plural Case=dative
+Pg-npa	Pronoun Type=general Gender=neuter Number=plural Case=accusative
+Pg-npl	Pronoun Type=general Gender=neuter Number=plural Case=locative
+Pg-npi	Pronoun Type=general Gender=neuter Number=plural Case=instrumental
+Pq-msn	Pronoun Type=interrogative Gender=masculine Number=singular Case=nominative
+Pq-msg	Pronoun Type=interrogative Gender=masculine Number=singular Case=genitive
+Pq-msd	Pronoun Type=interrogative Gender=masculine Number=singular Case=dative
+Pq-msa	Pronoun Type=interrogative Gender=masculine Number=singular Case=accusative
+Pq-msl	Pronoun Type=interrogative Gender=masculine Number=singular Case=locative
+Pq-msi	Pronoun Type=interrogative Gender=masculine Number=singular Case=instrumental
+Pq-mdn	Pronoun Type=interrogative Gender=masculine Number=dual Case=nominative
+Pq-mdg	Pronoun Type=interrogative Gender=masculine Number=dual Case=genitive
+Pq-mdd	Pronoun Type=interrogative Gender=masculine Number=dual Case=dative
+Pq-mda	Pronoun Type=interrogative Gender=masculine Number=dual Case=accusative
+Pq-mdl	Pronoun Type=interrogative Gender=masculine Number=dual Case=locative
+Pq-mdi	Pronoun Type=interrogative Gender=masculine Number=dual Case=instrumental
+Pq-mpn	Pronoun Type=interrogative Gender=masculine Number=plural Case=nominative
+Pq-mpg	Pronoun Type=interrogative Gender=masculine Number=plural Case=genitive
+Pq-mpd	Pronoun Type=interrogative Gender=masculine Number=plural Case=dative
+Pq-mpa	Pronoun Type=interrogative Gender=masculine Number=plural Case=accusative
+Pq-mpl	Pronoun Type=interrogative Gender=masculine Number=plural Case=locative
+Pq-mpi	Pronoun Type=interrogative Gender=masculine Number=plural Case=instrumental
+Pq-fsn	Pronoun Type=interrogative Gender=feminine Number=singular Case=nominative
+Pq-fsg	Pronoun Type=interrogative Gender=feminine Number=singular Case=genitive
+Pq-fsd	Pronoun Type=interrogative Gender=feminine Number=singular Case=dative
+Pq-fsa	Pronoun Type=interrogative Gender=feminine Number=singular Case=accusative
+Pq-fsl	Pronoun Type=interrogative Gender=feminine Number=singular Case=locative
+Pq-fsi	Pronoun Type=interrogative Gender=feminine Number=singular Case=instrumental
+Pq-fdn	Pronoun Type=interrogative Gender=feminine Number=dual Case=nominative
+Pq-fdg	Pronoun Type=interrogative Gender=feminine Number=dual Case=genitive
+Pq-fdd	Pronoun Type=interrogative Gender=feminine Number=dual Case=dative
+Pq-fda	Pronoun Type=interrogative Gender=feminine Number=dual Case=accusative
+Pq-fdl	Pronoun Type=interrogative Gender=feminine Number=dual Case=locative
+Pq-fdi	Pronoun Type=interrogative Gender=feminine Number=dual Case=instrumental
+Pq-fpn	Pronoun Type=interrogative Gender=feminine Number=plural Case=nominative
+Pq-fpg	Pronoun Type=interrogative Gender=feminine Number=plural Case=genitive
+Pq-fpd	Pronoun Type=interrogative Gender=feminine Number=plural Case=dative
+Pq-fpa	Pronoun Type=interrogative Gender=feminine Number=plural Case=accusative
+Pq-fpl	Pronoun Type=interrogative Gender=feminine Number=plural Case=locative
+Pq-fpi	Pronoun Type=interrogative Gender=feminine Number=plural Case=instrumental
+Pq-nsn	Pronoun Type=interrogative Gender=neuter Number=singular Case=nominative
+Pq-nsg	Pronoun Type=interrogative Gender=neuter Number=singular Case=genitive
+Pq-nsd	Pronoun Type=interrogative Gender=neuter Number=singular Case=dative
+Pq-nsa	Pronoun Type=interrogative Gender=neuter Number=singular Case=accusative
+Pq-nsl	Pronoun Type=interrogative Gender=neuter Number=singular Case=locative
+Pq-nsi	Pronoun Type=interrogative Gender=neuter Number=singular Case=instrumental
+Pq-ndn	Pronoun Type=interrogative Gender=neuter Number=dual Case=nominative
+Pq-ndg	Pronoun Type=interrogative Gender=neuter Number=dual Case=genitive
+Pq-ndd	Pronoun Type=interrogative Gender=neuter Number=dual Case=dative
+Pq-nda	Pronoun Type=interrogative Gender=neuter Number=dual Case=accusative
+Pq-ndl	Pronoun Type=interrogative Gender=neuter Number=dual Case=locative
+Pq-ndi	Pronoun Type=interrogative Gender=neuter Number=dual Case=instrumental
+Pq-npn	Pronoun Type=interrogative Gender=neuter Number=plural Case=nominative
+Pq-npg	Pronoun Type=interrogative Gender=neuter Number=plural Case=genitive
+Pq-npd	Pronoun Type=interrogative Gender=neuter Number=plural Case=dative
+Pq-npa	Pronoun Type=interrogative Gender=neuter Number=plural Case=accusative
+Pq-npl	Pronoun Type=interrogative Gender=neuter Number=plural Case=locative
+Pq-npi	Pronoun Type=interrogative Gender=neuter Number=plural Case=instrumental
+Pi-msn	Pronoun Type=indefinite Gender=masculine Number=singular Case=nominative
+Pi-msg	Pronoun Type=indefinite Gender=masculine Number=singular Case=genitive
+Pi-msd	Pronoun Type=indefinite Gender=masculine Number=singular Case=dative
+Pi-msa	Pronoun Type=indefinite Gender=masculine Number=singular Case=accusative
+Pi-msl	Pronoun Type=indefinite Gender=masculine Number=singular Case=locative
+Pi-msi	Pronoun Type=indefinite Gender=masculine Number=singular Case=instrumental
+Pi-mdn	Pronoun Type=indefinite Gender=masculine Number=dual Case=nominative
+Pi-mdg	Pronoun Type=indefinite Gender=masculine Number=dual Case=genitive
+Pi-mdd	Pronoun Type=indefinite Gender=masculine Number=dual Case=dative
+Pi-mda	Pronoun Type=indefinite Gender=masculine Number=dual Case=accusative
+Pi-mdl	Pronoun Type=indefinite Gender=masculine Number=dual Case=locative
+Pi-mdi	Pronoun Type=indefinite Gender=masculine Number=dual Case=instrumental
+Pi-mpn	Pronoun Type=indefinite Gender=masculine Number=plural Case=nominative
+Pi-mpg	Pronoun Type=indefinite Gender=masculine Number=plural Case=genitive
+Pi-mpd	Pronoun Type=indefinite Gender=masculine Number=plural Case=dative
+Pi-mpa	Pronoun Type=indefinite Gender=masculine Number=plural Case=accusative
+Pi-mpl	Pronoun Type=indefinite Gender=masculine Number=plural Case=locative
+Pi-mpi	Pronoun Type=indefinite Gender=masculine Number=plural Case=instrumental
+Pi-fsn	Pronoun Type=indefinite Gender=feminine Number=singular Case=nominative
+Pi-fsg	Pronoun Type=indefinite Gender=feminine Number=singular Case=genitive
+Pi-fsd	Pronoun Type=indefinite Gender=feminine Number=singular Case=dative
+Pi-fsa	Pronoun Type=indefinite Gender=feminine Number=singular Case=accusative
+Pi-fsl	Pronoun Type=indefinite Gender=feminine Number=singular Case=locative
+Pi-fsi	Pronoun Type=indefinite Gender=feminine Number=singular Case=instrumental
+Pi-fdn	Pronoun Type=indefinite Gender=feminine Number=dual Case=nominative
+Pi-fdg	Pronoun Type=indefinite Gender=feminine Number=dual Case=genitive
+Pi-fdd	Pronoun Type=indefinite Gender=feminine Number=dual Case=dative
+Pi-fda	Pronoun Type=indefinite Gender=feminine Number=dual Case=accusative
+Pi-fdl	Pronoun Type=indefinite Gender=feminine Number=dual Case=locative
+Pi-fdi	Pronoun Type=indefinite Gender=feminine Number=dual Case=instrumental
+Pi-fpn	Pronoun Type=indefinite Gender=feminine Number=plural Case=nominative
+Pi-fpg	Pronoun Type=indefinite Gender=feminine Number=plural Case=genitive
+Pi-fpd	Pronoun Type=indefinite Gender=feminine Number=plural Case=dative
+Pi-fpa	Pronoun Type=indefinite Gender=feminine Number=plural Case=accusative
+Pi-fpl	Pronoun Type=indefinite Gender=feminine Number=plural Case=locative
+Pi-fpi	Pronoun Type=indefinite Gender=feminine Number=plural Case=instrumental
+Pi-nsn	Pronoun Type=indefinite Gender=neuter Number=singular Case=nominative
+Pi-nsg	Pronoun Type=indefinite Gender=neuter Number=singular Case=genitive
+Pi-nsd	Pronoun Type=indefinite Gender=neuter Number=singular Case=dative
+Pi-nsa	Pronoun Type=indefinite Gender=neuter Number=singular Case=accusative
+Pi-nsl	Pronoun Type=indefinite Gender=neuter Number=singular Case=locative
+Pi-nsi	Pronoun Type=indefinite Gender=neuter Number=singular Case=instrumental
+Pi-ndn	Pronoun Type=indefinite Gender=neuter Number=dual Case=nominative
+Pi-ndg	Pronoun Type=indefinite Gender=neuter Number=dual Case=genitive
+Pi-ndd	Pronoun Type=indefinite Gender=neuter Number=dual Case=dative
+Pi-nda	Pronoun Type=indefinite Gender=neuter Number=dual Case=accusative
+Pi-ndl	Pronoun Type=indefinite Gender=neuter Number=dual Case=locative
+Pi-ndi	Pronoun Type=indefinite Gender=neuter Number=dual Case=instrumental
+Pi-npn	Pronoun Type=indefinite Gender=neuter Number=plural Case=nominative
+Pi-npg	Pronoun Type=indefinite Gender=neuter Number=plural Case=genitive
+Pi-npd	Pronoun Type=indefinite Gender=neuter Number=plural Case=dative
+Pi-npa	Pronoun Type=indefinite Gender=neuter Number=plural Case=accusative
+Pi-npl	Pronoun Type=indefinite Gender=neuter Number=plural Case=locative
+Pi-npi	Pronoun Type=indefinite Gender=neuter Number=plural Case=instrumental
+Pz-msn	Pronoun Type=negative Gender=masculine Number=singular Case=nominative
+Pz-msg	Pronoun Type=negative Gender=masculine Number=singular Case=genitive
+Pz-msd	Pronoun Type=negative Gender=masculine Number=singular Case=dative
+Pz-msa	Pronoun Type=negative Gender=masculine Number=singular Case=accusative
+Pz-msl	Pronoun Type=negative Gender=masculine Number=singular Case=locative
+Pz-msi	Pronoun Type=negative Gender=masculine Number=singular Case=instrumental
+Pz-mdn	Pronoun Type=negative Gender=masculine Number=dual Case=nominative
+Pz-mdg	Pronoun Type=negative Gender=masculine Number=dual Case=genitive
+Pz-mdd	Pronoun Type=negative Gender=masculine Number=dual Case=dative
+Pz-mda	Pronoun Type=negative Gender=masculine Number=dual Case=accusative
+Pz-mdl	Pronoun Type=negative Gender=masculine Number=dual Case=locative
+Pz-mdi	Pronoun Type=negative Gender=masculine Number=dual Case=instrumental
+Pz-mpn	Pronoun Type=negative Gender=masculine Number=plural Case=nominative
+Pz-mpg	Pronoun Type=negative Gender=masculine Number=plural Case=genitive
+Pz-mpd	Pronoun Type=negative Gender=masculine Number=plural Case=dative
+Pz-mpa	Pronoun Type=negative Gender=masculine Number=plural Case=accusative
+Pz-mpl	Pronoun Type=negative Gender=masculine Number=plural Case=locative
+Pz-mpi	Pronoun Type=negative Gender=masculine Number=plural Case=instrumental
+Pz-fsn	Pronoun Type=negative Gender=feminine Number=singular Case=nominative
+Pz-fsg	Pronoun Type=negative Gender=feminine Number=singular Case=genitive
+Pz-fsd	Pronoun Type=negative Gender=feminine Number=singular Case=dative
+Pz-fsa	Pronoun Type=negative Gender=feminine Number=singular Case=accusative
+Pz-fsl	Pronoun Type=negative Gender=feminine Number=singular Case=locative
+Pz-fsi	Pronoun Type=negative Gender=feminine Number=singular Case=instrumental
+Pz-fdn	Pronoun Type=negative Gender=feminine Number=dual Case=nominative
+Pz-fdg	Pronoun Type=negative Gender=feminine Number=dual Case=genitive
+Pz-fdd	Pronoun Type=negative Gender=feminine Number=dual Case=dative
+Pz-fda	Pronoun Type=negative Gender=feminine Number=dual Case=accusative
+Pz-fdl	Pronoun Type=negative Gender=feminine Number=dual Case=locative
+Pz-fdi	Pronoun Type=negative Gender=feminine Number=dual Case=instrumental
+Pz-fpn	Pronoun Type=negative Gender=feminine Number=plural Case=nominative
+Pz-fpg	Pronoun Type=negative Gender=feminine Number=plural Case=genitive
+Pz-fpd	Pronoun Type=negative Gender=feminine Number=plural Case=dative
+Pz-fpa	Pronoun Type=negative Gender=feminine Number=plural Case=accusative
+Pz-fpl	Pronoun Type=negative Gender=feminine Number=plural Case=locative
+Pz-fpi	Pronoun Type=negative Gender=feminine Number=plural Case=instrumental
+Pz-nsn	Pronoun Type=negative Gender=neuter Number=singular Case=nominative
+Pz-nsg	Pronoun Type=negative Gender=neuter Number=singular Case=genitive
+Pz-nsd	Pronoun Type=negative Gender=neuter Number=singular Case=dative
+Pz-nsa	Pronoun Type=negative Gender=neuter Number=singular Case=accusative
+Pz-nsl	Pronoun Type=negative Gender=neuter Number=singular Case=locative
+Pz-nsi	Pronoun Type=negative Gender=neuter Number=singular Case=instrumental
+Pz-ndn	Pronoun Type=negative Gender=neuter Number=dual Case=nominative
+Pz-ndg	Pronoun Type=negative Gender=neuter Number=dual Case=genitive
+Pz-ndd	Pronoun Type=negative Gender=neuter Number=dual Case=dative
+Pz-nda	Pronoun Type=negative Gender=neuter Number=dual Case=accusative
+Pz-ndl	Pronoun Type=negative Gender=neuter Number=dual Case=locative
+Pz-ndi	Pronoun Type=negative Gender=neuter Number=dual Case=instrumental
+Pz-npn	Pronoun Type=negative Gender=neuter Number=plural Case=nominative
+Pz-npg	Pronoun Type=negative Gender=neuter Number=plural Case=genitive
+Pz-npd	Pronoun Type=negative Gender=neuter Number=plural Case=dative
+Pz-npa	Pronoun Type=negative Gender=neuter Number=plural Case=accusative
+Pz-npl	Pronoun Type=negative Gender=neuter Number=plural Case=locative
+Pz-npi	Pronoun Type=negative Gender=neuter Number=plural Case=instrumental
+Mdc	Numeral Form=digit Type=cardinal
+Mdo	Numeral Form=digit Type=ordinal
+Mrc	Numeral Form=roman Type=cardinal
+Mro	Numeral Form=roman Type=ordinal
+Mlc-pn	Numeral Form=letter Type=cardinal Number=plural Case=nominative
+Mlc-pg	Numeral Form=letter Type=cardinal Number=plural Case=genitive
+Mlc-pd	Numeral Form=letter Type=cardinal Number=plural Case=dative
+Mlc-pa	Numeral Form=letter Type=cardinal Number=plural Case=accusative
+Mlc-pl	Numeral Form=letter Type=cardinal Number=plural Case=locative
+Mlc-pi	Numeral Form=letter Type=cardinal Number=plural Case=instrumental
+Mlcmdn	Numeral Form=letter Type=cardinal Gender=masculine Number=dual Case=nominative
+Mlcmdg	Numeral Form=letter Type=cardinal Gender=masculine Number=dual Case=genitive
+Mlcmdd	Numeral Form=letter Type=cardinal Gender=masculine Number=dual Case=dative
+Mlcmda	Numeral Form=letter Type=cardinal Gender=masculine Number=dual Case=accusative
+Mlcmdl	Numeral Form=letter Type=cardinal Gender=masculine Number=dual Case=locative
+Mlcmdi	Numeral Form=letter Type=cardinal Gender=masculine Number=dual Case=instrumental
+Mlcmpn	Numeral Form=letter Type=cardinal Gender=masculine Number=plural Case=nominative
+Mlcmpg	Numeral Form=letter Type=cardinal Gender=masculine Number=plural Case=genitive
+Mlcmpd	Numeral Form=letter Type=cardinal Gender=masculine Number=plural Case=dative
+Mlcmpa	Numeral Form=letter Type=cardinal Gender=masculine Number=plural Case=accusative
+Mlcmpl	Numeral Form=letter Type=cardinal Gender=masculine Number=plural Case=locative
+Mlcmpi	Numeral Form=letter Type=cardinal Gender=masculine Number=plural Case=instrumental
+Mlcfdn	Numeral Form=letter Type=cardinal Gender=feminine Number=dual Case=nominative
+Mlcfdg	Numeral Form=letter Type=cardinal Gender=feminine Number=dual Case=genitive
+Mlcfdd	Numeral Form=letter Type=cardinal Gender=feminine Number=dual Case=dative
+Mlcfda	Numeral Form=letter Type=cardinal Gender=feminine Number=dual Case=accusative
+Mlcfdl	Numeral Form=letter Type=cardinal Gender=feminine Number=dual Case=locative
+Mlcfdi	Numeral Form=letter Type=cardinal Gender=feminine Number=dual Case=instrumental
+Mlcfpn	Numeral Form=letter Type=cardinal Gender=feminine Number=plural Case=nominative
+Mlcfpg	Numeral Form=letter Type=cardinal Gender=feminine Number=plural Case=genitive
+Mlcfpd	Numeral Form=letter Type=cardinal Gender=feminine Number=plural Case=dative
+Mlcfpa	Numeral Form=letter Type=cardinal Gender=feminine Number=plural Case=accusative
+Mlcfpl	Numeral Form=letter Type=cardinal Gender=feminine Number=plural Case=locative
+Mlcfpi	Numeral Form=letter Type=cardinal Gender=feminine Number=plural Case=instrumental
+Mlcndn	Numeral Form=letter Type=cardinal Gender=neuter Number=dual Case=nominative
+Mlcndg	Numeral Form=letter Type=cardinal Gender=neuter Number=dual Case=genitive
+Mlcndd	Numeral Form=letter Type=cardinal Gender=neuter Number=dual Case=dative
+Mlcnda	Numeral Form=letter Type=cardinal Gender=neuter Number=dual Case=accusative
+Mlcndl	Numeral Form=letter Type=cardinal Gender=neuter Number=dual Case=locative
+Mlcndi	Numeral Form=letter Type=cardinal Gender=neuter Number=dual Case=instrumental
+Mlcnpn	Numeral Form=letter Type=cardinal Gender=neuter Number=plural Case=nominative
+Mlcnpg	Numeral Form=letter Type=cardinal Gender=neuter Number=plural Case=genitive
+Mlcnpd	Numeral Form=letter Type=cardinal Gender=neuter Number=plural Case=dative
+Mlcnpa	Numeral Form=letter Type=cardinal Gender=neuter Number=plural Case=accusative
+Mlcnpl	Numeral Form=letter Type=cardinal Gender=neuter Number=plural Case=locative
+Mlcnpi	Numeral Form=letter Type=cardinal Gender=neuter Number=plural Case=instrumental
+Mlomsn	Numeral Form=letter Type=ordinal Gender=masculine Number=singular Case=nominative
+Mlomsg	Numeral Form=letter Type=ordinal Gender=masculine Number=singular Case=genitive
+Mlomsd	Numeral Form=letter Type=ordinal Gender=masculine Number=singular Case=dative
+Mlomsa	Numeral Form=letter Type=ordinal Gender=masculine Number=singular Case=accusative
+Mlomsl	Numeral Form=letter Type=ordinal Gender=masculine Number=singular Case=locative
+Mlomsi	Numeral Form=letter Type=ordinal Gender=masculine Number=singular Case=instrumental
+Mlomdn	Numeral Form=letter Type=ordinal Gender=masculine Number=dual Case=nominative
+Mlomdg	Numeral Form=letter Type=ordinal Gender=masculine Number=dual Case=genitive
+Mlomdd	Numeral Form=letter Type=ordinal Gender=masculine Number=dual Case=dative
+Mlomda	Numeral Form=letter Type=ordinal Gender=masculine Number=dual Case=accusative
+Mlomdl	Numeral Form=letter Type=ordinal Gender=masculine Number=dual Case=locative
+Mlomdi	Numeral Form=letter Type=ordinal Gender=masculine Number=dual Case=instrumental
+Mlompn	Numeral Form=letter Type=ordinal Gender=masculine Number=plural Case=nominative
+Mlompg	Numeral Form=letter Type=ordinal Gender=masculine Number=plural Case=genitive
+Mlompd	Numeral Form=letter Type=ordinal Gender=masculine Number=plural Case=dative
+Mlompa	Numeral Form=letter Type=ordinal Gender=masculine Number=plural Case=accusative
+Mlompl	Numeral Form=letter Type=ordinal Gender=masculine Number=plural Case=locative
+Mlompi	Numeral Form=letter Type=ordinal Gender=masculine Number=plural Case=instrumental
+Mlofsn	Numeral Form=letter Type=ordinal Gender=feminine Number=singular Case=nominative
+Mlofsg	Numeral Form=letter Type=ordinal Gender=feminine Number=singular Case=genitive
+Mlofsd	Numeral Form=letter Type=ordinal Gender=feminine Number=singular Case=dative
+Mlofsa	Numeral Form=letter Type=ordinal Gender=feminine Number=singular Case=accusative
+Mlofsl	Numeral Form=letter Type=ordinal Gender=feminine Number=singular Case=locative
+Mlofsi	Numeral Form=letter Type=ordinal Gender=feminine Number=singular Case=instrumental
+Mlofdn	Numeral Form=letter Type=ordinal Gender=feminine Number=dual Case=nominative
+Mlofdg	Numeral Form=letter Type=ordinal Gender=feminine Number=dual Case=genitive
+Mlofdd	Numeral Form=letter Type=ordinal Gender=feminine Number=dual Case=dative
+Mlofda	Numeral Form=letter Type=ordinal Gender=feminine Number=dual Case=accusative
+Mlofdl	Numeral Form=letter Type=ordinal Gender=feminine Number=dual Case=locative
+Mlofdi	Numeral Form=letter Type=ordinal Gender=feminine Number=dual Case=instrumental
+Mlofpn	Numeral Form=letter Type=ordinal Gender=feminine Number=plural Case=nominative
+Mlofpg	Numeral Form=letter Type=ordinal Gender=feminine Number=plural Case=genitive
+Mlofpd	Numeral Form=letter Type=ordinal Gender=feminine Number=plural Case=dative
+Mlofpa	Numeral Form=letter Type=ordinal Gender=feminine Number=plural Case=accusative
+Mlofpl	Numeral Form=letter Type=ordinal Gender=feminine Number=plural Case=locative
+Mlofpi	Numeral Form=letter Type=ordinal Gender=feminine Number=plural Case=instrumental
+Mlonsn	Numeral Form=letter Type=ordinal Gender=neuter Number=singular Case=nominative
+Mlonsg	Numeral Form=letter Type=ordinal Gender=neuter Number=singular Case=genitive
+Mlonsd	Numeral Form=letter Type=ordinal Gender=neuter Number=singular Case=dative
+Mlonsa	Numeral Form=letter Type=ordinal Gender=neuter Number=singular Case=accusative
+Mlonsl	Numeral Form=letter Type=ordinal Gender=neuter Number=singular Case=locative
+Mlonsi	Numeral Form=letter Type=ordinal Gender=neuter Number=singular Case=instrumental
+Mlondn	Numeral Form=letter Type=ordinal Gender=neuter Number=dual Case=nominative
+Mlondg	Numeral Form=letter Type=ordinal Gender=neuter Number=dual Case=genitive
+Mlondd	Numeral Form=letter Type=ordinal Gender=neuter Number=dual Case=dative
+Mlonda	Numeral Form=letter Type=ordinal Gender=neuter Number=dual Case=accusative
+Mlondl	Numeral Form=letter Type=ordinal Gender=neuter Number=dual Case=locative
+Mlondi	Numeral Form=letter Type=ordinal Gender=neuter Number=dual Case=instrumental
+Mlonpn	Numeral Form=letter Type=ordinal Gender=neuter Number=plural Case=nominative
+Mlonpg	Numeral Form=letter Type=ordinal Gender=neuter Number=plural Case=genitive
+Mlonpd	Numeral Form=letter Type=ordinal Gender=neuter Number=plural Case=dative
+Mlonpa	Numeral Form=letter Type=ordinal Gender=neuter Number=plural Case=accusative
+Mlonpl	Numeral Form=letter Type=ordinal Gender=neuter Number=plural Case=locative
+Mlonpi	Numeral Form=letter Type=ordinal Gender=neuter Number=plural Case=instrumental
+Mlpmsn	Numeral Form=letter Type=pronominal Gender=masculine Number=singular Case=nominative
+Mlpmsnn	Numeral Form=letter Type=pronominal Gender=masculine Number=singular Case=nominative Definiteness=no
+Mlpmsny	Numeral Form=letter Type=pronominal Gender=masculine Number=singular Case=nominative Definiteness=yes
+Mlpmsg	Numeral Form=letter Type=pronominal Gender=masculine Number=singular Case=genitive
+Mlpmsd	Numeral Form=letter Type=pronominal Gender=masculine Number=singular Case=dative
+Mlpmsa	Numeral Form=letter Type=pronominal Gender=masculine Number=singular Case=accusative
+Mlpmsan	Numeral Form=letter Type=pronominal Gender=masculine Number=singular Case=accusative Definiteness=no
+Mlpmsay	Numeral Form=letter Type=pronominal Gender=masculine Number=singular Case=accusative Definiteness=yes
+Mlpmsl	Numeral Form=letter Type=pronominal Gender=masculine Number=singular Case=locative
+Mlpmsi	Numeral Form=letter Type=pronominal Gender=masculine Number=singular Case=instrumental
+Mlpmdn	Numeral Form=letter Type=pronominal Gender=masculine Number=dual Case=nominative
+Mlpmdg	Numeral Form=letter Type=pronominal Gender=masculine Number=dual Case=genitive
+Mlpmdd	Numeral Form=letter Type=pronominal Gender=masculine Number=dual Case=dative
+Mlpmda	Numeral Form=letter Type=pronominal Gender=masculine Number=dual Case=accusative
+Mlpmdl	Numeral Form=letter Type=pronominal Gender=masculine Number=dual Case=locative
+Mlpmdi	Numeral Form=letter Type=pronominal Gender=masculine Number=dual Case=instrumental
+Mlpmpn	Numeral Form=letter Type=pronominal Gender=masculine Number=plural Case=nominative
+Mlpmpg	Numeral Form=letter Type=pronominal Gender=masculine Number=plural Case=genitive
+Mlpmpd	Numeral Form=letter Type=pronominal Gender=masculine Number=plural Case=dative
+Mlpmpa	Numeral Form=letter Type=pronominal Gender=masculine Number=plural Case=accusative
+Mlpmpl	Numeral Form=letter Type=pronominal Gender=masculine Number=plural Case=locative
+Mlpmpi	Numeral Form=letter Type=pronominal Gender=masculine Number=plural Case=instrumental
+Mlpfsn	Numeral Form=letter Type=pronominal Gender=feminine Number=singular Case=nominative
+Mlpfsg	Numeral Form=letter Type=pronominal Gender=feminine Number=singular Case=genitive
+Mlpfsd	Numeral Form=letter Type=pronominal Gender=feminine Number=singular Case=dative
+Mlpfsa	Numeral Form=letter Type=pronominal Gender=feminine Number=singular Case=accusative
+Mlpfsl	Numeral Form=letter Type=pronominal Gender=feminine Number=singular Case=locative
+Mlpfsi	Numeral Form=letter Type=pronominal Gender=feminine Number=singular Case=instrumental
+Mlpfdn	Numeral Form=letter Type=pronominal Gender=feminine Number=dual Case=nominative
+Mlpfdg	Numeral Form=letter Type=pronominal Gender=feminine Number=dual Case=genitive
+Mlpfdd	Numeral Form=letter Type=pronominal Gender=feminine Number=dual Case=dative
+Mlpfda	Numeral Form=letter Type=pronominal Gender=feminine Number=dual Case=accusative
+Mlpfdl	Numeral Form=letter Type=pronominal Gender=feminine Number=dual Case=locative
+Mlpfdi	Numeral Form=letter Type=pronominal Gender=feminine Number=dual Case=instrumental
+Mlpfpn	Numeral Form=letter Type=pronominal Gender=feminine Number=plural Case=nominative
+Mlpfpg	Numeral Form=letter Type=pronominal Gender=feminine Number=plural Case=genitive
+Mlpfpd	Numeral Form=letter Type=pronominal Gender=feminine Number=plural Case=dative
+Mlpfpa	Numeral Form=letter Type=pronominal Gender=feminine Number=plural Case=accusative
+Mlpfpl	Numeral Form=letter Type=pronominal Gender=feminine Number=plural Case=locative
+Mlpfpi	Numeral Form=letter Type=pronominal Gender=feminine Number=plural Case=instrumental
+Mlpnsn	Numeral Form=letter Type=pronominal Gender=neuter Number=singular Case=nominative
+Mlpnsg	Numeral Form=letter Type=pronominal Gender=neuter Number=singular Case=genitive
+Mlpnsd	Numeral Form=letter Type=pronominal Gender=neuter Number=singular Case=dative
+Mlpnsa	Numeral Form=letter Type=pronominal Gender=neuter Number=singular Case=accusative
+Mlpnsl	Numeral Form=letter Type=pronominal Gender=neuter Number=singular Case=locative
+Mlpnsi	Numeral Form=letter Type=pronominal Gender=neuter Number=singular Case=instrumental
+Mlpndn	Numeral Form=letter Type=pronominal Gender=neuter Number=dual Case=nominative
+Mlpndg	Numeral Form=letter Type=pronominal Gender=neuter Number=dual Case=genitive
+Mlpndd	Numeral Form=letter Type=pronominal Gender=neuter Number=dual Case=dative
+Mlpnda	Numeral Form=letter Type=pronominal Gender=neuter Number=dual Case=accusative
+Mlpndl	Numeral Form=letter Type=pronominal Gender=neuter Number=dual Case=locative
+Mlpndi	Numeral Form=letter Type=pronominal Gender=neuter Number=dual Case=instrumental
+Mlpnpn	Numeral Form=letter Type=pronominal Gender=neuter Number=plural Case=nominative
+Mlpnpg	Numeral Form=letter Type=pronominal Gender=neuter Number=plural Case=genitive
+Mlpnpd	Numeral Form=letter Type=pronominal Gender=neuter Number=plural Case=dative
+Mlpnpa	Numeral Form=letter Type=pronominal Gender=neuter Number=plural Case=accusative
+Mlpnpl	Numeral Form=letter Type=pronominal Gender=neuter Number=plural Case=locative
+Mlpnpi	Numeral Form=letter Type=pronominal Gender=neuter Number=plural Case=instrumental
+Mlsmsnn	Numeral Form=letter Type=special Gender=masculine Number=singular Case=nominative Definiteness=no
+Mlsmsny	Numeral Form=letter Type=special Gender=masculine Number=singular Case=nominative Definiteness=yes
+Mlsmsg	Numeral Form=letter Type=special Gender=masculine Number=singular Case=genitive
+Mlsmsd	Numeral Form=letter Type=special Gender=masculine Number=singular Case=dative
+Mlsmsa	Numeral Form=letter Type=special Gender=masculine Number=singular Case=accusative
+Mlsmsan	Numeral Form=letter Type=special Gender=masculine Number=singular Case=accusative Definiteness=no
+Mlsmsay	Numeral Form=letter Type=special Gender=masculine Number=singular Case=accusative Definiteness=yes
+Mlsmsl	Numeral Form=letter Type=special Gender=masculine Number=singular Case=locative
+Mlsmsi	Numeral Form=letter Type=special Gender=masculine Number=singular Case=instrumental
+Mlsmdn	Numeral Form=letter Type=special Gender=masculine Number=dual Case=nominative
+Mlsmdg	Numeral Form=letter Type=special Gender=masculine Number=dual Case=genitive
+Mlsmdd	Numeral Form=letter Type=special Gender=masculine Number=dual Case=dative
+Mlsmda	Numeral Form=letter Type=special Gender=masculine Number=dual Case=accusative
+Mlsmdl	Numeral Form=letter Type=special Gender=masculine Number=dual Case=locative
+Mlsmdi	Numeral Form=letter Type=special Gender=masculine Number=dual Case=instrumental
+Mlsmpn	Numeral Form=letter Type=special Gender=masculine Number=plural Case=nominative
+Mlsmpg	Numeral Form=letter Type=special Gender=masculine Number=plural Case=genitive
+Mlsmpd	Numeral Form=letter Type=special Gender=masculine Number=plural Case=dative
+Mlsmpa	Numeral Form=letter Type=special Gender=masculine Number=plural Case=accusative
+Mlsmpl	Numeral Form=letter Type=special Gender=masculine Number=plural Case=locative
+Mlsmpi	Numeral Form=letter Type=special Gender=masculine Number=plural Case=instrumental
+Mlsfsn	Numeral Form=letter Type=special Gender=feminine Number=singular Case=nominative
+Mlsfsg	Numeral Form=letter Type=special Gender=feminine Number=singular Case=genitive
+Mlsfsd	Numeral Form=letter Type=special Gender=feminine Number=singular Case=dative
+Mlsfsa	Numeral Form=letter Type=special Gender=feminine Number=singular Case=accusative
+Mlsfsl	Numeral Form=letter Type=special Gender=feminine Number=singular Case=locative
+Mlsfsi	Numeral Form=letter Type=special Gender=feminine Number=singular Case=instrumental
+Mlsfdn	Numeral Form=letter Type=special Gender=feminine Number=dual Case=nominative
+Mlsfdg	Numeral Form=letter Type=special Gender=feminine Number=dual Case=genitive
+Mlsfdd	Numeral Form=letter Type=special Gender=feminine Number=dual Case=dative
+Mlsfda	Numeral Form=letter Type=special Gender=feminine Number=dual Case=accusative
+Mlsfdl	Numeral Form=letter Type=special Gender=feminine Number=dual Case=locative
+Mlsfdi	Numeral Form=letter Type=special Gender=feminine Number=dual Case=instrumental
+Mlsfpn	Numeral Form=letter Type=special Gender=feminine Number=plural Case=nominative
+Mlsfpg	Numeral Form=letter Type=special Gender=feminine Number=plural Case=genitive
+Mlsfpd	Numeral Form=letter Type=special Gender=feminine Number=plural Case=dative
+Mlsfpa	Numeral Form=letter Type=special Gender=feminine Number=plural Case=accusative
+Mlsfpl	Numeral Form=letter Type=special Gender=feminine Number=plural Case=locative
+Mlsfpi	Numeral Form=letter Type=special Gender=feminine Number=plural Case=instrumental
+Mlsnsn	Numeral Form=letter Type=special Gender=neuter Number=singular Case=nominative
+Mlsnsg	Numeral Form=letter Type=special Gender=neuter Number=singular Case=genitive
+Mlsnsd	Numeral Form=letter Type=special Gender=neuter Number=singular Case=dative
+Mlsnsa	Numeral Form=letter Type=special Gender=neuter Number=singular Case=accusative
+Mlsnsl	Numeral Form=letter Type=special Gender=neuter Number=singular Case=locative
+Mlsnsi	Numeral Form=letter Type=special Gender=neuter Number=singular Case=instrumental
+Mlsndn	Numeral Form=letter Type=special Gender=neuter Number=dual Case=nominative
+Mlsndg	Numeral Form=letter Type=special Gender=neuter Number=dual Case=genitive
+Mlsndd	Numeral Form=letter Type=special Gender=neuter Number=dual Case=dative
+Mlsnda	Numeral Form=letter Type=special Gender=neuter Number=dual Case=accusative
+Mlsndl	Numeral Form=letter Type=special Gender=neuter Number=dual Case=locative
+Mlsndi	Numeral Form=letter Type=special Gender=neuter Number=dual Case=instrumental
+Mlsnpn	Numeral Form=letter Type=special Gender=neuter Number=plural Case=nominative
+Mlsnpg	Numeral Form=letter Type=special Gender=neuter Number=plural Case=genitive
+Mlsnpd	Numeral Form=letter Type=special Gender=neuter Number=plural Case=dative
+Mlsnpa	Numeral Form=letter Type=special Gender=neuter Number=plural Case=accusative
+Mlsnpl	Numeral Form=letter Type=special Gender=neuter Number=plural Case=locative
+Mlsnpi	Numeral Form=letter Type=special Gender=neuter Number=plural Case=instrumental
+Sn	Adposition Case=nominative
+Sg	Adposition Case=genitive
+Sd	Adposition Case=dative
+Sa	Adposition Case=accusative
+Sl	Adposition Case=locative
+Si	Adposition Case=instrumental
+Cc	Conjunction Type=coordinating
+Cs	Conjunction Type=subordinating
+Q	Particle
+I	Interjection
+Y	Abbreviation
+X	Residual
+Xf	Residual Type=foreign
+Xt	Residual Type=typo
+Xw	Residual Type=web
+Xe	Residual Type=emo
+Xh	Residual Type=hashtag
+Xa	Residual Type=at
+Xp	Residual Type=program
+Z	Punctuation

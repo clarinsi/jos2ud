@@ -11,7 +11,7 @@ test-new:
 	diff Data/test.ud.old.tbl Data/test.ud.tbl
 nohup:
 	nohup time make all > nohup.all &
-all:	format ud-mor ud-syn
+all:	lexicon
 xall:	get format ud-mor ud-syn lexicon
 lexicon:
 	cat < Data/sloleks-en.tbl | bin/lex2feats.pl jos-msd2features.tbl > Data/sloleks.feats.tbl

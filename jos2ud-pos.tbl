@@ -1,6 +1,6 @@
 # Mapping from JOS PoS to UD 2.0 PoS
 # Kaja Dobrovoljc, Tomaž Erjavec, Simon Krek
-# 2018-11-23
+# 2018-11-24
 #
 #Prio	Lemma	Category	Feats				Deps	->PoS-UD	#Comment
 #-------------------------------------------------------------------------------------------------------
@@ -91,6 +91,7 @@
 1	kolikšen	Pronoun	Type=interrogative	*	DET
 1	čigav		Pronoun	Type=interrogative	*	DET
 1	kak		Pronoun	Type=interrogative	*	DET
+1	kolik		Pronoun	Type=interrogative	*	DET   #Kaja: is this ok?
 1	nekaj		Pronoun	Type=indefinite		*	PRON
 1	nekdo		Pronoun	Type=indefinite		*	PRON
 1	marsikaj	Pronoun	Type=indefinite		*	PRON
@@ -244,7 +245,8 @@
 1	*en	Numeral		Form=letter|Type=special	*	ADJ	#enojen, dvojen
 1	eden	Numeral		Form=letter|Type=pronominal	*	NUM	#Dodal E.T.
 
-3	*	Preposition	*				*	ADP
+3	*	Adposition	*				*	ADP	#MULTEXT-East name
+3	*	Preposition	*				*	ADP	#JOS name
 
 3	*	Conjunction	Type=coordinating		*	CCONJ
 3	*	Conjunction	Type=subordinating		*	SCONJ

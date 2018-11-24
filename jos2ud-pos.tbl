@@ -91,7 +91,7 @@
 1	kolikšen	Pronoun	Type=interrogative	*	DET
 1	čigav		Pronoun	Type=interrogative	*	DET
 1	kak		Pronoun	Type=interrogative	*	DET
-1	kolik		Pronoun	Type=interrogative	*	DET   #Kaja: is this ok?
+1	kolik		Pronoun	Type=interrogative	*	DET	#Kaja: is this ok?
 1	nekaj		Pronoun	Type=indefinite		*	PRON
 1	nekdo		Pronoun	Type=indefinite		*	PRON
 1	marsikaj	Pronoun	Type=indefinite		*	PRON

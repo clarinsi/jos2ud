@@ -56,7 +56,7 @@ if ($type eq 'corpus') {
 	    }
 	    my ($n, $tok, $lemma, $cat, $msd, 
 		$feats, $dep, $rel, $deps, $misc) = split /\t/, $line;
-	    if ($dep) {
+	    if ($dep > 0) {
 		$head = $lines[$dep+$comments-1];
 	    }
 	    else {$head = ''}
@@ -68,9 +68,15 @@ if ($type eq 'corpus') {
 	    $ud_feats = feats_jos2ud($lemma, $cat, $feats, $ud_cat);
 	    print STDERR "ERROR: Out of feature array with '$cat + $feats' in: $line\n"
 		unless $ud_feats;
-	    $ud_head = 0;
-	    $ud_deprel = 'root';
-	    $misc .= "|Dep=$dep|Rel=$rel";
+	    if ($dep == -1) {
+		$ud_head = -1;
+		$ud_deprel = '-';
+	    }
+	    else {
+		$ud_head = 0;
+		$ud_deprel = 'root';
+		$misc .= "|Dep=$dep|Rel=$rel";
+	    }
 	    $misc =~ s/^_?\|//;
 	    
 	    print join("\t",  

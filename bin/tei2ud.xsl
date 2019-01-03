@@ -30,16 +30,13 @@
   </xsl:template>
   
   <xsl:template match="tei:s">
-    <!-- Write out only if there is a syntactic analysis! -->
-    <xsl:if test="key('corresp',@xml:id)[@type='syntax']">
-      <xsl:value-of select="concat('# sent_id=',@xml:id, '&#10;')"/>
-      <xsl:variable name="text">
-	<xsl:apply-templates mode="plain"/>
-      </xsl:variable>
-      <xsl:value-of select="concat('# text=', normalize-space($text), '&#10;')"/>
-      <xsl:apply-templates/>
-      <xsl:text>&#10;</xsl:text>
-    </xsl:if>
+    <xsl:value-of select="concat('# sent_id=',@xml:id, '&#10;')"/>
+    <xsl:variable name="text">
+      <xsl:apply-templates mode="plain"/>
+    </xsl:variable>
+    <xsl:value-of select="concat('# text=', normalize-space($text), '&#10;')"/>
+    <xsl:apply-templates/>
+    <xsl:text>&#10;</xsl:text>
   </xsl:template>
   
   <xsl:template mode="plain" match="text()"/>
@@ -135,14 +132,28 @@
     <!-- 7/HEAD -->
     <xsl:variable name="Syntax"
 		  select="key('corresp',ancestor::tei:s[1]/@xml:id)[@type='syntax']"/>
-    <xsl:call-template name="head">
-      <xsl:with-param name="links" select="$Syntax"/>
-    </xsl:call-template>
+    <xsl:choose>
+      <xsl:when test="$Syntax//tei:link">
+	<xsl:call-template name="head">
+	  <xsl:with-param name="links" select="$Syntax"/>
+	</xsl:call-template>
+      </xsl:when>
+      <xsl:otherwise>
+	<xsl:text>-1</xsl:text>
+      </xsl:otherwise>
+    </xsl:choose>
     <xsl:text>&#9;</xsl:text>
     <!-- 8/DEPREL -->
-    <xsl:call-template name="rel">
-      <xsl:with-param name="links" select="$Syntax"/>
-    </xsl:call-template>
+    <xsl:choose>
+      <xsl:when test="$Syntax//tei:link">
+	<xsl:call-template name="rel">
+	  <xsl:with-param name="links" select="$Syntax"/>
+	</xsl:call-template>
+      </xsl:when>
+      <xsl:otherwise>
+	<xsl:text>-</xsl:text>
+      </xsl:otherwise>
+    </xsl:choose>
     <xsl:text>&#9;</xsl:text>
     <!-- 9/DEPS -->
     <xsl:text>_</xsl:text>

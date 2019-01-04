@@ -23,7 +23,7 @@ xall:	get format ud-mor ud-syn lexicon
 lexicon:
 	cat < Data/sloleks-en.tbl | bin/lex2feats.pl jos-msd2features.tbl > Data/sloleks.feats.tbl
 	LC_ALL=C bin/jos2ud.pl lexicon jos2ud-pos.tbl jos2ud-features.tbl \
-	< Data/sloleks.feats.tbl > Data/sloleks.ud.tbl
+	< Data/sloleks.feats.tbl | bin/add-biti-lexicon.pl > Data/sloleks.ud.tbl
 ud-syn:
 	rm -fr UD; mkdir UD
 	cd UD; ../bin/convert_dependencies.py ../Data/ssj500k-en.ud.tbl 2.2

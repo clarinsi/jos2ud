@@ -1,7 +1,7 @@
 # test-snip:
 # 	cat < Data/ssj500k-en.ud.tbl | bin/take-syn.pl > Data/ssj500k-en.ud.synonly.tbl
 biti:
-	cat < Data/ssj500k-en.ud.tmp | bin/add-biti.pl Data/biti-as-VERB.txt > Data/test-en.ud.tbl
+	cat < Data/ssj500k-en.ud.tmp | bin/add-biti-corpus.pl Data/biti-as-VERB.txt > Data/test-en.ud.tbl
 test-lex:
 	shuf < Data/sloleks-en.tbl | head -1000 | bin/lex2feats.pl jos-msd2features.tbl > Data/test.lex.tbl
 	LC_ALL=C bin/jos2ud.pl lexicon jos2ud-pos.tbl jos2ud-features.tbl \
@@ -13,10 +13,13 @@ test-crp:
 test-new:
 	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl < Data/test.tbl > Data/test.ud.tbl
 	diff Data/test.ud.old.tbl Data/test.ud.tbl
+
 nohup:
-	nohup time make all > nohup.all &
+	date > nohup.all
+	nohup time make all >> nohup.all &
 all:	get format ud-mor ud-syn lexicon
 xall:	get format ud-mor ud-syn lexicon
+
 lexicon:
 	cat < Data/sloleks-en.tbl | bin/lex2feats.pl jos-msd2features.tbl > Data/sloleks.feats.tbl
 	LC_ALL=C bin/jos2ud.pl lexicon jos2ud-pos.tbl jos2ud-features.tbl \
@@ -27,7 +30,7 @@ ud-syn:
 ud-mor:
 	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
 	< Data/ssj500k-en.tbl > Data/ssj500k-en.ud.tmp
-	bin/add-biti.pl Data/biti-as-VERB.txt < Data/ssj500k-en.ud.tmp > Data/ssj500k-en.ud.tbl
+	bin/add-biti-corpus.pl Data/biti-as-VERB.txt < Data/ssj500k-en.ud.tmp > Data/ssj500k-en.ud.tbl
 format:
 	$s -xi -xsl:bin/tei2ud.xsl Data/ssj500k-en.TEI/ssj500k-en.xml > Data/ssj500k-en.tbl
 get:

@@ -36,14 +36,14 @@ while (<>){
 	if (exists $mark{$id} and $n == $tok_n) {
 	    die unless $lemma eq 'biti';
 	    $_ = join("\t", $n, $tok, $lemma, 
-		      '*VERB', $msd, $ud_feats, 
+		      'VERB', $msd, $ud_feats, 
 		      $ud_head, $ud_deprel, $deps, $misc);
 	    if (@toks) {$tok_n = shift @toks}
 	    else {$tok_n = 0}
 	}
 	elsif ($lemma and $lemma eq 'biti' and $ud_head == -1) {
 	    $_ = join("\t", $n, $tok, $lemma, 
-		      '*AUX', $msd, $ud_feats, 
+		      'AUX', $msd, $ud_feats, 
 		      $ud_head, $ud_deprel, $deps, $misc);
 	}
 	else {

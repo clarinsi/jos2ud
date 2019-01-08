@@ -107,7 +107,8 @@ elsif ($type eq 'lexicon') {
 	print STDERR "ERROR: Out of feature array with '$cat + $feats' in: $_\n"
 	    unless $ud_feats;
 	$ud_feats =~ s/\|/ /g;
-	$ud_all_feats = "$ud_cat $ud_feats";
+	if ($ud_feats eq '_') {$ud_all_feats = $ud_cat}
+	else  {$ud_all_feats = "$ud_cat $ud_feats"}
 	print join("\t",  
 		   $word, $lemma, $rest, 
 		   $all_feats, $ud_all_feats) . "\n";

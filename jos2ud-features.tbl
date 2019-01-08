@@ -80,8 +80,8 @@
 1	*	Conjunction	Type=subordinating	*	-
 1	*	Conjunction	Type=coordinating	*	-
 
-2	ne	Particle	*			*	Polarity=Neg
-1	*	Particle	*			*	-
+2	*	Particle	*			*	-
+1	ne	Particle	*			*	Polarity=Neg
 
 1	*	Interjection	*			*	-
 

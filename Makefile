@@ -1,5 +1,8 @@
 # test-snip:
 # 	cat < Data/ssj500k-en.ud.tbl | bin/take-syn.pl > Data/ssj500k-en.ud.synonly.tbl
+test-ne:
+	LC_ALL=C bin/jos2ud.pl lexicon jos2ud-pos.tbl jos2ud-features.tbl \
+	< Data/test.feats.tbl | bin/add-biti-lexicon.pl > Data/test.ud.lex
 biti:
 	cat < Data/ssj500k-en.ud.tmp | bin/add-biti-corpus.pl Data/biti-as-VERB.txt > Data/test-en.ud.tbl
 test-lex:
@@ -17,7 +20,7 @@ test-new:
 nohup:
 	date > nohup.all
 	nohup time make all >> nohup.all &
-all:	get format ud-mor ud-syn lexicon
+all:	lexicon
 xall:	get format ud-mor ud-syn lexicon
 
 lexicon:

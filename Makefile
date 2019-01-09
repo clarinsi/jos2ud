@@ -1,9 +1,10 @@
 test-biti:
 	cut -f1-4 < UD/output_ssj500k-en.ud.syn_2.2.conllu > Data/old.tmp
+	#cut -f1-4 < UD/sl_ssj-ud_v2.2.conllu > Data/old.tmp
 	bin/add-biti-syn.pl < Data/ssj500k-en.ud.syn.tmp > Data/ssj500k-en.ud1.tmp
 	cut -f1-4 < Data/ssj500k-en.ud1.tmp > Data/new.tmp
-	diff Data/old.tmp Data/new.tmp > diff.tmp; date
-	wc -l diff.tmp
+	diff Data/old.tmp Data/new.tmp > Data/diff.tmp; date
+	wc -l Data/diff.tmp
 test-kaja:
 	cat < Data/ssj500k-en.ud.tbl | bin/take-syn.pl > Data/ssj500k-en.ud.synonly.tbl
 	cd UD; python ../bin/convert_dependencies.py Data/ssj500k-en.ud.synonly.tbl 2.2

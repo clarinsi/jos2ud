@@ -1,5 +1,7 @@
 # test-snip:
 # 	cat < Data/ssj500k-en.ud.tbl | bin/take-syn.pl > Data/ssj500k-en.ud.synonly.tbl
+test-kaja:
+	convert_dependencies_v2_v33_no-data-split.py Data/ssj500k-en.ud.tbl 2.2
 test-ne:
 	LC_ALL=C bin/jos2ud.pl lexicon jos2ud-pos.tbl jos2ud-features.tbl \
 	< Data/test.feats.tbl | bin/add-biti-lexicon.pl > Data/test.ud.lex

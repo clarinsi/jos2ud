@@ -1,4 +1,5 @@
-﻿import sys
+﻿#!/usr/bin/python3
+import sys
 import os
 import re
 import collections

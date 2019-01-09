@@ -1,4 +1,5 @@
-﻿#!/usr/bin/python3
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 import sys
 import os
 import re
@@ -13,10 +14,10 @@ treebank_name = os.path.splitext(treebank_file)[0]
 
 version_name = sys.argv[2]
 
-output = open("output_{}_{}.conllu".format(treebank_name, version_name), "w", encoding="utf8") #the ssj250k-ud.conllu treebank (i.e. all sentences from ssj250k with automatic conversions, including the non-UD "working" labels)
-report = open("report_{}_{}.txt".format(treebank_name, version_name), "w", encoding="utf8") #counts on types of sentences
-morpho_changes = open("morpho_changes_report_{}_{}.txt".format(treebank_name, version_name), "w", encoding="utf8")
-release = open("sl_ssj-ud_v{}.conllu".format(version_name), "w", encoding="utf8", newline='') #the released sl-ud.conllu treebank (i.e. sentences with only one reliable root left, see group p1 and e1 below)
+output = open("output_{}_{}.conllu".format(treebank_name, version_name), "w") #the ssj250k-ud.conllu treebank (i.e. all sentences from ssj250k with automatic conversions, including the non-UD "working" labels)
+report = open("report_{}_{}.txt".format(treebank_name, version_name), "w") #counts on types of sentences
+morpho_changes = open("morpho_changes_report_{}_{}.txt".format(treebank_name, version_name), "w")
+release = open("sl_ssj-ud_v{}.conllu".format(version_name), "w") #the released sl-ud.conllu treebank (i.e. sentences with only one reliable root left, see group p1 and e1 below)
 
 # counts for report
 p1_group = [0,0] #only root left
@@ -147,7 +148,7 @@ def following(token):
     return following
 
 ######################## process file ##################################################################################
-with open(treebank_path, "r", encoding="utf8") as file:
+with open(treebank_path, "r") as file:
 
     sentence_open = False #doing the longer, but memory friendly, sentence by sentence processing in order to be able to convert bigger files in the long term
 

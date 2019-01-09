@@ -30,11 +30,11 @@
   </xsl:template>
   
   <xsl:template match="tei:s">
-    <xsl:value-of select="concat('# sent_id=',@xml:id, '&#10;')"/>
+    <xsl:value-of select="concat('# sent_id = ',@xml:id, '&#10;')"/>
     <xsl:variable name="text">
       <xsl:apply-templates mode="plain"/>
     </xsl:variable>
-    <xsl:value-of select="concat('# text=', normalize-space($text), '&#10;')"/>
+    <xsl:value-of select="concat('# text = ', normalize-space($text), '&#10;')"/>
     <xsl:apply-templates/>
     <xsl:text>&#10;</xsl:text>
   </xsl:template>

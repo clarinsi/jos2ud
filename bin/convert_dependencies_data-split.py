@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
 import sys
 import os
 import re
 import collections
 
 # JOS: Linguistic Annotation in Slovene Scheme (original)
-# UD: Universal Dependencies Scheme (new)
+# UD:  Universal Dependencies Scheme (new)
 
 treebank_path = sys.argv[1] #input treebank in conllu (with UD POS tags and features already given and with JOS dependencies as part of MISC column)
 treebank_file = os.path.basename(treebank_path)
@@ -14,10 +13,10 @@ treebank_name = os.path.splitext(treebank_file)[0]
 
 version_name = sys.argv[2]
 
-output = open("output_{}_{}.conllu".format(treebank_name, version_name), "w") #the ssj250k-ud.conllu treebank (i.e. all sentences from ssj250k with automatic conversions, including the non-UD "working" labels)
-report = open("report_{}_{}.txt".format(treebank_name, version_name), "w") #counts on types of sentences
-morpho_changes = open("morpho_changes_report_{}_{}.txt".format(treebank_name, version_name), "w")
-release = open("sl_ssj-ud_v{}.conllu".format(version_name), "w") #the released sl-ud.conllu treebank (i.e. sentences with only one reliable root left, see group p1 and e1 below)
+output = open("output_{}_{}.conllu".format(treebank_name, version_name), "w", encoding="utf8") #the ssj250k-ud.conllu treebank (i.e. all sentences from ssj250k with automatic conversions, including the non-UD "working" labels)
+report = open("report_{}_{}.txt".format(treebank_name, version_name), "w", encoding="utf8") #counts on types of sentences
+morpho_changes = open("morpho_changes_report_{}_{}.txt".format(treebank_name, version_name), "w", encoding="utf8")
+release = open("release-all_{}_{}.conllu".format(treebank_name, version_name), "w", encoding="utf8", newline='') #the released sl-ud.conllu treebank (i.e. sentences with only one reliable root left, see group p1 and e1 below)
 
 # counts for report
 p1_group = [0,0] #only root left
@@ -148,16 +147,18 @@ def following(token):
     return following
 
 ######################## process file ##################################################################################
-with open(treebank_path, "r") as file:
+with open(treebank_path, "r", encoding="utf8") as file:
 
     sentence_open = False #doing the longer, but memory friendly, sentence by sentence processing in order to be able to convert bigger files in the long term
 
     for line in file:
 
         if line.startswith("# sent_id"):
+            line = line.replace("="," = ")
             sentence_comment_line = line
 
         elif line.startswith("# text"):
+            line = line.replace("="," = ")
             text_comment_line = line
 
         if sentence_open:
@@ -2289,4 +2290,52 @@ with open(treebank_path, "r") as file:
     release.close()
     output.close()
 
+
+    with open("release-all_{}_{}.conllu".format(treebank_name, version_name), "r", encoding="utf8") as file:
+        data = file.read()
+        split_data = data.split("\n\n")
+        if '' in split_data:
+            split_data.remove('')
+        train = open("sl_ssj-ud-train.conllu", "w", encoding="utf8", newline='')
+        dev = open("sl_ssj-ud-dev.conllu", "w", encoding="utf8", newline='')
+        test = open("sl_ssj-ud-test.conllu", "w", encoding="utf8", newline='')
+
+        training = [0,0] # 80%
+        development = [0,0] # 10%
+        testing = [0,0] # 10%
+        tokens = 0
+
+        included = []
+        for sentence in split_data:
+            split_sentence = sentence.split("\n")
+            if '' in split_sentence:
+                split_sentence.remove('')
+            s_tokens = len(split_sentence) - 2 #two comment lines in UD2
+            tokens += s_tokens
+
+            if tokens / released_tokens < 0.8:
+                train.write("{}\n\n".format(sentence))
+                training[0] += 1
+                training[1] += s_tokens
+            elif tokens / released_tokens < 0.9:
+                dev.write("{}\n\n".format(sentence))
+                development[0] += 1
+                development[1] += s_tokens
+            else:
+                test.write("{}\n\n".format(sentence))
+                testing[0] += 1
+                testing[1] += s_tokens
+
+            for sentence_id in released_sentences:
+                if sentence_id in split_sentence[0]:
+                    included.append(sentence_id)
+
+        for sentence_id in released_sentences:
+            if sentence_id not in included:
+                print(sentence_id)
+
+        report.write("sentences: {}, tokens: {}\ntrain: {}, dev: {}, test: {}".format(len(released_sentences), released_tokens, training, development, testing))
+        report.close()
+
+        print(training, development, testing)
 

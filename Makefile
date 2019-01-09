@@ -1,12 +1,12 @@
-# test-snip:
-# 	cat < Data/ssj500k-en.ud.tbl | bin/take-syn.pl > Data/ssj500k-en.ud.synonly.tbl
+test-biti:
+	cut -f1-4 < UD/output_ssj500k-en.ud.syn_2.2.conllu > Data/old.tmp
+	bin/add-biti-syn.pl < Data/ssj500k-en.ud.syn.tmp > Data/ssj500k-en.ud1.tmp
+	cut -f1-4 < Data/ssj500k-en.ud1.tmp > Data/new.tmp
+	diff Data/old.tmp Data/new.tmp > diff.tmp; date
+	wc -l diff.tmp
 test-kaja:
-	convert_dependencies_v2_v33_no-data-split.py Data/ssj500k-en.ud.tbl 2.2
-test-ne:
-	LC_ALL=C bin/jos2ud.pl lexicon jos2ud-pos.tbl jos2ud-features.tbl \
-	< Data/test.feats.tbl | bin/add-biti-lexicon.pl > Data/test.ud.lex
-biti:
-	cat < Data/ssj500k-en.ud.tmp | bin/add-biti-corpus.pl Data/biti-as-VERB.txt > Data/test-en.ud.tbl
+	cat < Data/ssj500k-en.ud.tbl | bin/take-syn.pl > Data/ssj500k-en.ud.synonly.tbl
+	cd UD; python ../bin/convert_dependencies.py Data/ssj500k-en.ud.synonly.tbl 2.2
 test-lex:
 	shuf < Data/sloleks-en.tbl | head -1000 | bin/lex2feats.pl jos-msd2features.tbl > Data/test.lex.tbl
 	LC_ALL=C bin/jos2ud.pl lexicon jos2ud-pos.tbl jos2ud-features.tbl \
@@ -22,7 +22,7 @@ test-new:
 nohup:
 	date > nohup.all
 	nohup time make all >> nohup.all &
-all:	lexicon
+all:	format ud-mor ud-syn 
 xall:	get format ud-mor ud-syn lexicon
 
 lexicon:
@@ -31,11 +31,14 @@ lexicon:
 	< Data/sloleks.feats.tbl | bin/add-biti-lexicon.pl > Data/sloleks.ud.tbl
 ud-syn:
 	rm -fr UD; mkdir UD
-	cd UD; ../bin/convert_dependencies.py ../Data/ssj500k-en.ud.tbl 2.2
+	cd UD; ../bin/convert_dependencies.py ../Data/ssj500k-en.ud.syn.tmp 2.2
+ud-biti:
+	cat < Data/ssj500k-en.ud.tmp | bin/take-syn.pl only   > Data/ssj500k-en.ud.syn.tmp
+	cat < Data/ssj500k-en.ud.tmp | bin/take-syn.pl except > Data/ssj500k-en.ud.nosyn.tmp
+	bin/add-biti-nosyn.pl Data/biti-as-VERB.txt < Data/ssj500k-en.ud.nosyn.tmp > Data/ssj500k-en.ud2.tmp
 ud-mor:
 	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
 	< Data/ssj500k-en.tbl > Data/ssj500k-en.ud.tmp
-	bin/add-biti-corpus.pl Data/biti-as-VERB.txt < Data/ssj500k-en.ud.tmp > Data/ssj500k-en.ud.tbl
 format:
 	$s -xi -xsl:bin/tei2ud.xsl Data/ssj500k-en.TEI/ssj500k-en.xml > Data/ssj500k-en.tbl
 get:

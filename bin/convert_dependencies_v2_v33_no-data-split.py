@@ -155,11 +155,9 @@ with open(treebank_path, "r") as file:
     for line in file:
 
         if line.startswith("# sent_id"):
-            line = line.replace("="," = ")
             sentence_comment_line = line
 
         elif line.startswith("# text"):
-            line = line.replace("="," = ")
             text_comment_line = line
 
         if sentence_open:

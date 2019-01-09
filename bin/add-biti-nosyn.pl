@@ -17,7 +17,7 @@ while (<MAP>) {
 close MAP;
 
 while (<>){
-    if (/^# sent_id=(.+?)$/) {
+    if (/^# sent_id = (.+?)$/) {
 	$id = $1;
 	if (exists $mark{$id}) {
 	    @toks = @{$mark{$id}};

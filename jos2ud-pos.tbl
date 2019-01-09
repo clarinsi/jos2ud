@@ -8,9 +8,9 @@
 3	*	Noun		Type=proper	*	PROPN
 
 3	*	Verb		*			*		VERB
-###This is the only one that still needs synt. dependency for mapping
-###Get rid of it in next iteration!
-2	*	Verb		Type=auxiliary		PPart/Verb	AUX
+#This is the only one that still needs synt. dependency for mapping
+#2	*	Verb		Type=auxiliary		PPart/Verb	AUX
+2	*	Verb		Type=auxiliary		*		AUX
 
 3	*	Adjective	*	*	ADJ
 

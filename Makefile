@@ -1,9 +1,5 @@
-testb:
-	head -100 < Data/ssj500k-en.ud.syn.tmp | bin/add-biti-syn.pl
-
 test-biti:
 	cut -f1-4 < UD/output_ssj500k-en.ud.syn_2.2.conllu > Data/old.tmp
-	#cut -f1-4 < UD/sl_ssj-ud_v2.2.conllu > Data/old.tmp
 	bin/add-biti-syn.pl < Data/ssj500k-en.ud.syn.tmp > Data/ssj500k-en.ud1.tmp
 	cut -f1-4 < Data/ssj500k-en.ud1.tmp > Data/new.tmp
 	diff Data/old.tmp Data/new.tmp > Data/diff.tmp; date
@@ -30,16 +26,18 @@ all:	format ud-mor ud-syn lexicon
 xall:	get format ud-mor ud-syn lexicon
 
 lexicon:
-	cat < Data/sloleks-en.tbl | bin/lex2feats.pl jos-msd2features.tbl > Data/sloleks.feats.tbl
+	cat < Data/sloleks-en.tbl | bin/lex2feats.pl jos-msd2features.tbl > Data/sloleks.feats.tmp
 	LC_ALL=C bin/jos2ud.pl lexicon jos2ud-pos.tbl jos2ud-features.tbl \
-	< Data/sloleks.feats.tbl | bin/add-biti-lexicon.pl > Data/sloleks.ud.tbl
+	< Data/sloleks.feats.tmp | bin/add-biti-lexicon.pl > Data/sloleks.ud.tbl
 ud-syn:
 	rm -fr UD; mkdir UD
 	cd UD; ../bin/convert_dependencies.py ../Data/ssj500k-en.ud.syn.tmp 2.2
 ud-biti:
-	cat < Data/ssj500k-en.ud.tmp | bin/take-syn.pl only   > Data/ssj500k-en.ud.syn.tmp
-	cat < Data/ssj500k-en.ud.tmp | bin/take-syn.pl except > Data/ssj500k-en.ud.nosyn.tmp
-	bin/add-biti-nosyn.pl Data/biti-as-VERB.txt < Data/ssj500k-en.ud.nosyn.tmp > Data/ssj500k-en.ud2.tmp
+	cat < Data/ssj500k-en.ud.tmp | bin/take-syn.pl only | \
+	bin/add-biti-syn.pl > Data/ssj500k-en.ud.syn.tbl
+	cat < Data/ssj500k-en.ud.tmp | bin/take-syn.pl except | \
+	bin/add-biti-nosyn.pl Data/biti-as-VERB.txt > Data/ssj500k-en.ud.nosyn.tbl
+	cat Data/ssj500k-en.ud.syn.tbl Data/ssj500k-en.ud.nosyn.tbl > Data/ssj500k-en.ud.tbl
 ud-mor:
 	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
 	< Data/ssj500k-en.tbl > Data/ssj500k-en.ud.tmp

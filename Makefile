@@ -1,3 +1,6 @@
+testb:
+	head -100 < Data/ssj500k-en.ud.syn.tmp | bin/add-biti-syn.pl
+
 test-biti:
 	cut -f1-4 < UD/output_ssj500k-en.ud.syn_2.2.conllu > Data/old.tmp
 	#cut -f1-4 < UD/sl_ssj-ud_v2.2.conllu > Data/old.tmp
@@ -23,7 +26,7 @@ test-new:
 nohup:
 	date > nohup.all
 	nohup time make all >> nohup.all &
-all:	format ud-mor ud-syn 
+all:	format ud-mor ud-syn lexicon
 xall:	get format ud-mor ud-syn lexicon
 
 lexicon:

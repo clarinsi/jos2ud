@@ -1,6 +1,3 @@
-dlex:
-	LC_ALL=C bin/jos2ud.pl lexicon jos2ud-pos.tbl jos2ud-features.tbl \
-	< Data/sloleks.feats.tmp | bin/add-biti-lexicon.pl > Data/sloleks.ud.tbl
 test-split:
 	bin/ud-data-split.py Data/sl_ssj-ud_v2.2.conllu
 test-biti2:
@@ -18,7 +15,7 @@ test-kaja:
 	cat < Data/ssj500k-en.ud.tbl | bin/take-syn.pl > Data/ssj500k-en.ud.synonly.tbl
 	cd Data; python ../bin/convert_dependencies.py Data/ssj500k-en.ud.synonly.tbl 2.2
 test-lex:
-	shuf < Data/sloleks-en.tbl | head -1000 | bin/lex2feats.pl jos-msd2features.tbl > Data/test.lex.tbl
+	shuf < Data/sloleks-en_v1.2.tbl | head -1000 | bin/lex2feats.pl jos-msd2features.tbl > Data/test.lex.tbl
 	LC_ALL=C bin/jos2ud.pl lexicon jos2ud-pos.tbl jos2ud-features.tbl \
 	< Data/test.lex.tbl > Data/test.lex.ud.tbl
 test-crp:
@@ -32,11 +29,11 @@ test-new:
 nohup:
 	date > nohup.all
 	nohup time make all >> nohup.all &
-all:	lexicon
+all:	get format ud-mor ud-biti ud-syn lexicon
 xall:	get format ud-mor ud-biti ud-syn lexicon
 
 lexicon:
-	cat < Data/sloleks-en.tbl | bin/lex2feats.pl jos-msd2features.tbl > Data/sloleks.feats.tmp
+	cat < Data/sloleks-en_v1.2.tbl | bin/lex2feats.pl jos-msd2features.tbl > Data/sloleks.feats.tmp
 	LC_ALL=C bin/jos2ud.pl lexicon jos2ud-pos.tbl jos2ud-features.tbl \
 	< Data/sloleks.feats.tmp | bin/add-biti-lexicon.pl > Data/sloleks.ud.tbl
 ud-syn:
@@ -45,7 +42,7 @@ ud-biti:
 	cat < Data/ssj500k-en.ud.tmp | bin/take-syn.pl only | \
 	bin/add-biti-syn.pl > Data/ssj500k-en.ud.syn.tbl
 	cat < Data/ssj500k-en.ud.tmp | bin/take-syn.pl except | \
-	bin/add-biti-nosyn.pl Data/biti-as-VERB.txt > Data/ssj500k-en.ud.nosyn.tbl
+	bin/add-biti-nosyn.pl biti-as-VERB.txt > Data/ssj500k-en.ud.nosyn.tbl
 	cat Data/ssj500k-en.ud.syn.tbl Data/ssj500k-en.ud.nosyn.tbl > Data/ssj500k-en.ud.tbl
 ud-mor:
 	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
@@ -56,9 +53,14 @@ format:
 
 #Get source data from CLARIN.SI repository
 get:
+	mkdir -p Data
 	rm -fr Data/ssj500k-en.TEI
 	rm -f Data/ssj500k-en.TEI.zip
 	cd Data; wget https://www.clarin.si/repository/xmlui/bitstream/handle/11356/1181/ssj500k-en.TEI.zip
 	cd Data; unzip ssj500k-en.TEI.zip
+	rm -f Data/sloleks-en*
+	cd Data; wget https://www.clarin.si/repository/xmlui/bitstream/handle/11356/1039/sloleks-en.tbl_v1.2.zip
+	cd Data; unzip sloleks-en.tbl_v1.2.zip
+	rm Data/*.zip
 
 s = java -jar /usr/local/bin/saxon9he.jar

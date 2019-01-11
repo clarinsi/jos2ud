@@ -1,12 +1,22 @@
+dlex:
+	LC_ALL=C bin/jos2ud.pl lexicon jos2ud-pos.tbl jos2ud-features.tbl \
+	< Data/sloleks.feats.tmp | bin/add-biti-lexicon.pl > Data/sloleks.ud.tbl
+test-split:
+	bin/ud-data-split.py Data/sl_ssj-ud_v2.2.conllu
+test-biti2:
+	cut -f1-6,9-11 < Data/output_ssj500k-en.ud.syn_2.2.conllu > Data/old.tmp
+	cut -f1-6,9-11 < Data/ssj500k-en.ud.syn.tbl > Data/new.tmp
+	diff Data/old.tmp Data/new.tmp > Data/diff.tmp; date
+	wc -l Data/diff.tmp
 test-biti:
-	cut -f1-4 < UD/output_ssj500k-en.ud.syn_2.2.conllu > Data/old.tmp
+	cut -f1-4 < Data/output_ssj500k-en.ud.syn_2.2.conllu > Data/old.tmp
 	bin/add-biti-syn.pl < Data/ssj500k-en.ud.syn.tmp > Data/ssj500k-en.ud1.tmp
 	cut -f1-4 < Data/ssj500k-en.ud1.tmp > Data/new.tmp
 	diff Data/old.tmp Data/new.tmp > Data/diff.tmp; date
 	wc -l Data/diff.tmp
 test-kaja:
 	cat < Data/ssj500k-en.ud.tbl | bin/take-syn.pl > Data/ssj500k-en.ud.synonly.tbl
-	cd UD; python ../bin/convert_dependencies.py Data/ssj500k-en.ud.synonly.tbl 2.2
+	cd Data; python ../bin/convert_dependencies.py Data/ssj500k-en.ud.synonly.tbl 2.2
 test-lex:
 	shuf < Data/sloleks-en.tbl | head -1000 | bin/lex2feats.pl jos-msd2features.tbl > Data/test.lex.tbl
 	LC_ALL=C bin/jos2ud.pl lexicon jos2ud-pos.tbl jos2ud-features.tbl \
@@ -14,7 +24,7 @@ test-lex:
 test-crp:
 	$s -xsl:bin/tei2ud.xsl Data/test.xml > Data/test.tbl
 	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl < Data/test.tbl > Data/test.ud.tbl
-	cd UD; ../bin/convert_dependencies.py ../Data/test.ud.tbl 2.2
+	cd Data; ../bin/convert_dependencies.py ../Data/test.ud.tbl 2.2
 test-new:
 	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl < Data/test.tbl > Data/test.ud.tbl
 	diff Data/test.ud.old.tbl Data/test.ud.tbl
@@ -22,16 +32,15 @@ test-new:
 nohup:
 	date > nohup.all
 	nohup time make all >> nohup.all &
-all:	format ud-mor ud-syn lexicon
-xall:	get format ud-mor ud-syn lexicon
+all:	lexicon
+xall:	get format ud-mor ud-biti ud-syn lexicon
 
 lexicon:
 	cat < Data/sloleks-en.tbl | bin/lex2feats.pl jos-msd2features.tbl > Data/sloleks.feats.tmp
 	LC_ALL=C bin/jos2ud.pl lexicon jos2ud-pos.tbl jos2ud-features.tbl \
 	< Data/sloleks.feats.tmp | bin/add-biti-lexicon.pl > Data/sloleks.ud.tbl
 ud-syn:
-	rm -fr UD; mkdir UD
-	cd UD; ../bin/convert_dependencies.py ../Data/ssj500k-en.ud.syn.tmp 2.2
+	cd Data; ../bin/convert_dependencies.py ../Data/ssj500k-en.ud.syn.tbl 2.2
 ud-biti:
 	cat < Data/ssj500k-en.ud.tmp | bin/take-syn.pl only | \
 	bin/add-biti-syn.pl > Data/ssj500k-en.ud.syn.tbl
@@ -41,8 +50,11 @@ ud-biti:
 ud-mor:
 	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
 	< Data/ssj500k-en.tbl > Data/ssj500k-en.ud.tmp
+
 format:
-	$s -xi -xsl:bin/tei2ud.xsl Data/ssj500k-en.TEI/ssj500k-en.xml > Data/ssj500k-en.tbl
+	${s} -xi -xsl:bin/tei2ud.xsl Data/ssj500k-en.TEI/ssj500k-en.xml > Data/ssj500k-en.tbl
+
+#Get source data from CLARIN.SI repository
 get:
 	rm -fr Data/ssj500k-en.TEI
 	rm -f Data/ssj500k-en.TEI.zip

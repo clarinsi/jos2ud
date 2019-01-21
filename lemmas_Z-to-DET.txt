@@ -1,4 +1,4 @@
-﻿oboj
+oboj
 ves
 vsak
 oba
@@ -106,3 +106,5 @@ vsakogaršen
 vsakogaršnji
 vsakteri
 tisti
+oni
+un

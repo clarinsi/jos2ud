@@ -14,10 +14,9 @@ treebank_name = os.path.splitext(treebank_file)[0]
 
 version_name = sys.argv[2]
 
-output = open("output_{}_{}.conllu".format(treebank_name, version_name), "w") #the ssj250k-ud.conllu treebank (i.e. all sentences from ssj250k with automatic conversions, including the non-UD "working" labels)
-report = open("report_{}_{}.txt".format(treebank_name, version_name), "w") #counts on types of sentences
-morpho_changes = open("morpho_changes_report_{}_{}.txt".format(treebank_name, version_name), "w")
-release = open("sl_ssj-ud_v{}.conllu".format(version_name), "w") #the released sl-ud.conllu treebank (i.e. sentences with only one reliable root left, see group p1 and e1 below)
+output = open("output_{}_{}.conllu".format(treebank_name, version_name), "w", encoding="utf8") #the ssj250k-ud.conllu treebank (i.e. all sentences from ssj250k with automatic conversions, including the non-UD "working" labels)
+report = open("report_{}_{}.txt".format(treebank_name, version_name), "w", encoding="utf8") #counts on types of sentences
+release = open("sl_ssj-ud_v{}.conllu".format(version_name), "w", newline='\n', encoding="utf8") #the released sl-ud.conllu treebank (i.e. sentences with only one reliable root left, see group p1 and e1 below)
 
 # counts for report
 p1_group = [0,0] #only root left
@@ -148,7 +147,7 @@ def following(token):
     return following
 
 ######################## process file ##################################################################################
-with open(treebank_path, "r") as file:
+with open(treebank_path, "r", encoding="utf8") as file:
 
     sentence_open = False #doing the longer, but memory friendly, sentence by sentence processing in order to be able to convert bigger files in the long term
 
@@ -172,20 +171,26 @@ with open(treebank_path, "r") as file:
             elif line.strip() == '': #we have reached the end of the sentence, so it is time for conversions
                 no_of_tokens = len(sentence)
 
+######################## 0.1 keep auxiliary verbs as AUX, but change all other (incl. copulas) to VERB #################
+
+                for token in sentence:
+                    if cpostag(token) in ["AUX"]:
+                        if jos_deprel(token) in ["PPart"]:
+                            token[3] = "AUX"
+                        else:
+                            token[3] ="VERB"
+
+### This is a quick-and-dirty way to make the v34 script compatible with the new morphological input (Jan 2018).
+### We temporarily change copulas to VERBs, and re-tag them in the end (see Section 9)
+### In the future, however, we should go through the multitude of rules involving VERB, AUX, or JOS-verbs and modify them
+### so they either rely on JOS POS tag or on actual AUX-VERB distinctions (as is the new morphological input)
+########################################################################################################################
 
                 for token in sentence:
 
-########################## 0.1 CORRECTING MORPHOLOGY MISTAKES ############################################################
-
-                    if cpostag(token) in ["DET"]:
-                        if jos_head_cpostag(token) in ["NOUN"]:
-                            if int(id(token)) > int(jos_head(token)):
-                                morpho_changes.write("Potential non-DET in sentence:{}, token:{}\n".format(sentence_id, id(token)))
-
-
-# maybe also add determiners (see report)
 # maybe also add abbreviations
 # maybe also add splitting of fused tokens
+
 
 ########################## 1 RELIABLE RULE-BASED CONVERSIONS ###########################################################
 
@@ -335,11 +340,6 @@ with open(treebank_path, "r") as file:
                             # constructions with "lahko.ADV, naj.PART"
 
 
-                            if lemma(token) in ["ne"]:
-                                old_feats = token[5]
-                                token[5] = "Polarity=Neg"
-                                morpho_changes.write("Change of features for sentence {}, token {}, from {} to {}\n". format(sentence_id, id(token), old_feats, token[5]))
-
 
                     if jos_msd(token)[0] in ["R"]:
                         if jos_deprel(token) in ["Conj"]:
@@ -362,11 +362,6 @@ with open(treebank_path, "r") as file:
 
                         # politični, ne jezikovni dejavniki; in UDv2, neg is cancelled, so we distinguish between ne-PPart as
                         # TAMVE particle modifying a verb (see the rule udner aux) and ne-PPart as a negation modifier of NPs (this case)
-
-                        old_feats = token[5]
-                        token[5] = "Polarity=Neg"
-                        morpho_changes.write("Change of features for sentence {}, token {}, from {} to {}\n". format(sentence_id, id(token), old_feats, token[5]))
-
 
 
                     # plus special rules for particles (see 2)
@@ -1971,12 +1966,13 @@ with open(treebank_path, "r") as file:
                                 sentence[int(jos_head(token))-1][6] = id(token)
                                 sentence[int(jos_head(token))-1][7] = "cop"
 
+                                ### CHANGE POS back to AUX, AS IT SHOULD BE (see section 0.1 above ###
                                 old_POS = sentence[int(jos_head(token))-1][3]
                                 sentence[int(jos_head(token))-1][3] = "AUX"
-                                morpho_changes.write("Change of POS for sentence {}, token {}, from {} to {}\n". format(sentence_id, id(token), old_POS, sentence[int(jos_head(token))-1][3]))
+
 
                             elif head(t) == jos_head(token) and not deprel(t) in ["copx"]:
-                                    sentence[int(id(t))-1][6] = id(token)
+                                sentence[int(id(t))-1][6] = id(token)
                                     #dependents of biti now become dependends of the predicative (copx)
 
                         token[6] = copulas_head
@@ -2285,7 +2281,6 @@ with open(treebank_path, "r") as file:
     for sentence_id in sentences:
         report.write("{}\t{}\n".format(sentence_id, "\t".join(str(count) for count in sentences[sentence_id])))
 
-    print("Splitting into train-dev-test ...")
     release.close()
     output.close()
 

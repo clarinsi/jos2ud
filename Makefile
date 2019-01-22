@@ -38,7 +38,8 @@ split:
 
 # Compute UD dependencies
 ud-syn:
-	cd Data; ../bin/convert_dependencies.py ../Data/ssj500k-en.ud.syn.tbl 2.2
+	#cd Data; ../bin/convert_dependencies.py ../Data/ssj500k-en.ud.syn.tbl 2.2
+	cd Data; ../bin/ud-data-split.py sl_ssj-ud_v2.2.conllu
 
 # Fix "biti" in the both parts of the corpus, the syn. annotated and syn. unannotated one
 ud-biti:

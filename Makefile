@@ -23,8 +23,8 @@ test-new:
 nohup:
 	date > nohup.all
 	nohup time make all >> nohup.all &
-all:	get format ud-mor ud-biti ud-syn split lexicon
-xall:	get format ud-mor ud-biti ud-syn split lexicon
+all:	get format ud-mor ud-biti ud-syn ud-split lexicon
+xall:	get format ud-mor ud-biti ud-syn ud-split lexicon
 
 # Process lexicon
 lexicon:
@@ -33,13 +33,12 @@ lexicon:
 	< Data/sloleks.feats.tmp | bin/add-biti-lexicon.pl > Data/sloleks.ud.tbl
 
 # Split corpus into train, dev, test
-split:
+ud-split:
 	cd Data; ../bin/ud-data-split.py sl_ssj-ud_v2.2.conllu
 
 # Compute UD dependencies
 ud-syn:
-	#cd Data; ../bin/convert_dependencies.py ../Data/ssj500k-en.ud.syn.tbl 2.2
-	cd Data; ../bin/ud-data-split.py sl_ssj-ud_v2.2.conllu
+	cd Data; ../bin/convert_dependencies.py ../Data/ssj500k-en.ud.syn.tbl 2.2
 
 # Fix "biti" in the both parts of the corpus, the syn. annotated and syn. unannotated one
 ud-biti:
@@ -55,11 +54,15 @@ ud-mor:
 	< Data/ssj500k-en.tbl > Data/ssj500k-en.ud.tmp
 
 # Format corpus into CONLL-U
-format:
+xxxformat:
 	${saxon} -xi -xsl:bin/tei2ud.xsl Data/ssj500k-en.TEI/ssj500k-en.xml > Data/ssj500k-en.tbl
+format:
+	${saxon} -xi -xsl:bin/tei2ud.xsl Data/ssj500k.all.xml > Data/ssj500k-en.tbl
 
-#Get source data from CLARIN.SI repository
 get:
+	cp /home/tomaz/Project/SSJ/Ucni/ssj500k.2.2/Master/ssj500k.all.xml Data
+#Get source data from CLARIN.SI repository
+xxxget:
 	mkdir -p Data
 	rm -fr Data/ssj500k-en.TEI
 	rm -f Data/ssj500k-en.TEI.zip

@@ -161,10 +161,10 @@
     <!-- 10/MISC -->
     <xsl:choose>
       <xsl:when test="not(
-		      following-sibling::tei:*[1][self::tei:c] or
-		      (not(following-sibling::tei:*[self::tei:w or self::tei:pc])
+		      following::tei:*[1][self::tei:c] or
+		      (not(following::tei:*[self::tei:w or self::tei:pc])
 		      and
-		      (../following-sibling::tei:*[1][self::tei:c] or
+		      (../following::tei:*[1][self::tei:c] or
 		      not(../following-sibling::tei:*))
 		      ))">
 	<xsl:text>SpaceAfter=No</xsl:text>

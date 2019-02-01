@@ -23,8 +23,8 @@ test-new:
 nohup:
 	date > nohup.all
 	nohup time make all >> nohup.all &
-all:	get format ud-mor ud-biti ud-syn ud-split lexicon
-xall:	get format ud-mor ud-biti ud-syn ud-split lexicon
+all:	get format-jos ud-mor-jos ud-biti-ssj ud-syn-ssj ud-split-ssj lexicon
+xall:	get format-ssj ud-mor-ssj ud-biti-ssj ud-syn-ssj ud-split-ssj lexicon format-jos ud-mor-jos
 
 # Process lexicon
 lexicon:
@@ -33,15 +33,15 @@ lexicon:
 	< Data/sloleks.feats.tmp | bin/add-biti-lexicon.pl > Data/sloleks.ud.tbl
 
 # Split corpus into train, dev, test
-ud-split:
+ud-split-ssj:
 	cd Data; ../bin/ud-data-split.py sl_ssj-ud_v2.2.conllu
 
 # Compute UD dependencies
-ud-syn:
+ud-syn-ssj:
 	cd Data; ../bin/convert_dependencies.py ../Data/ssj500k-en.ud.syn.tbl 2.2
 
 # Fix "biti" in the both parts of the corpus, the syn. annotated and syn. unannotated one
-ud-biti:
+ud-biti-ssj:
 	cat < Data/ssj500k-en.ud.tmp | bin/take-syn.pl only | \
 	bin/add-biti-syn.pl > Data/ssj500k-en.ud.syn.tbl
 	cat < Data/ssj500k-en.ud.tmp | bin/take-syn.pl except | \
@@ -49,18 +49,22 @@ ud-biti:
 	cat Data/ssj500k-en.ud.syn.tbl Data/ssj500k-en.ud.nosyn.tbl > Data/ssj500k-en.ud.tbl
 
 # Compute UD PoS and features
-ud-mor:
+ud-mor-ssj:
 	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
 	< Data/ssj500k-en.tbl > Data/ssj500k-en.ud.tmp
+ud-mor-jos:
+	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
+	< Data/jos1M-en.tbl > Data/jos1M-en.ud.tmp
 
 # Format corpus into CONLL-U
-xxxformat:
-	${saxon} -xi -xsl:bin/tei2ud.xsl Data/ssj500k-en.TEI/ssj500k-en.xml > Data/ssj500k-en.tbl
-format:
+format-ssj:
 	${saxon} -xi -xsl:bin/tei2ud.xsl Data/ssj500k.all.xml > Data/ssj500k-en.tbl
+format-jos:
+	${saxon} -xi -xsl:bin/tei2ud.xsl Data/jos1M-en.xml > Data/jos1M-en.tbl
 
 get:
 	cp /home/tomaz/Project/SSJ/Ucni/ssj500k.2.2/Master/ssj500k.all.xml Data
+	cp /home/tomaz/Resources/CLARIN/jos1M/Fix/jos1M-en.xml Data
 #Get source data from CLARIN.SI repository
 xxxget:
 	mkdir -p Data
@@ -73,4 +77,5 @@ xxxget:
 	cd Data; unzip sloleks-en.tbl_v1.2.zip
 	rm Data/*.zip
 
-saxon = java -jar /usr/local/bin/saxon9he.jar
+#saxon = java -jar /usr/local/bin/saxon9he.jar
+saxon = java -jar /home/tomaz/bin/saxon9he.jar

@@ -61,13 +61,16 @@ if ($type eq 'corpus') {
 	    }
 	    else {$head = ''}
 	    if ($feats eq '_') {$feats = ''};
-	    #Convert PoS
+	    #Convert PoS & feats
 	    $ud_cat = pos_jos2ud($lemma, $cat, $feats, $rel, $head);
-	    print STDERR "ERROR: Out of cat array for '$cat + $lemma + $feats' in:\n$_\n\n"
-		unless $ud_cat;
-	    $ud_feats = feats_jos2ud($lemma, $cat, $feats, $ud_cat);
-	    print STDERR "ERROR: Out of feature array with '$cat + $feats' in: $line\n"
-		unless $ud_feats;
+	    if ($ud_cat) {
+		$ud_feats = feats_jos2ud($lemma, $cat, $feats, $ud_cat);
+	    }
+	    else {
+		print STDERR "ERROR: Cat mapping fail: $lemma + $msd ($cat|$feats)\n";
+		$ud_cat = '_';
+		$ud_feats = '_';
+	    }
 	    if ($dep == -1) {
 		$ud_head = -1;
 		$ud_deprel = '-';

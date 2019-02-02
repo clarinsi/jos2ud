@@ -254,18 +254,25 @@
 3	*	Abbreviation	*				*	X
 
 3	*	Residual	*				*	X
+2	*	Residual	Type=web			*	SYM
+2	*	Residual	Type=emo			*	SYM
+2	*	Residual	Type=foreign			*	X      #Better mapping?
+2	*	Residual	Type=hashtag			*	X      #Better mapping?
+2	*	Residual	Type=at				*	X      #Better mapping?
 
 3	*	Punctuation	*				*	PUNCT
 1	\#	Punctuation	*				*	SYM
 1	%	Punctuation	*				*	SYM
-1	<	Punctuation	*				*	SYM
 1	&	Punctuation	*				*	SYM
+1	<	Punctuation	*				*	SYM
 1	>	Punctuation	*				*	SYM
 1	+	Punctuation	*				*	SYM
 1	=	Punctuation	*				*	SYM
 1	°	Punctuation	*				*	SYM
 1	×	Punctuation	*				*	SYM
+1	÷	Punctuation	*				*	SYM
 1	$	Punctuation	*				*	SYM
 1	@	Punctuation	*				*	SYM
 1	µ	Punctuation	*				*	SYM
 1	©	Punctuation	*				*	SYM
+1	§	Punctuation	*				*	SYM

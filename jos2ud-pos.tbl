@@ -1,6 +1,6 @@
 # Mapping from JOS PoS to UD 2.0 PoS
 # Kaja Dobrovoljc, Tomaž Erjavec, Simon Krek
-# 2019-01-21
+# 2019-02-04
 #
 #Prio	Lemma	Category	Feats				Deps	->PoS-UD	#Comment
 #-------------------------------------------------------------------------------------------------------
@@ -55,7 +55,8 @@
 1	zadosti		Adverb	*	*	ADV
 
 ##All Pronouns should be explicitly defined
-##3	*		Pronoun	*			*	PRON
+##But are not because of jos1M wrong lemmatisations for e.g. "ti", "te" etc.
+3	*		Pronoun	*			*	PRON
 ##2	*		Pronoun	Type=demonstrative	*	DET
 ##2	*		Pronoun	Type=possessive		*	DET
 1	bogsigavedikakšen	Pronoun	Type=indefinite	*	DET

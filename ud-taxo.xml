@@ -1,0 +1,182 @@
+<taxonomy xml:id="UD-SYN">
+  <category xml:id="acl">
+    <catDesc xml:lang="en">Clausal modifier of noun (adjectival clause)</catDesc>
+    <catDesc xml:lang="sl">Prilastkov odvisnik</catDesc>
+  </category>
+  <category xml:id="advcl">
+    <catDesc xml:lang="en">Adverbial clause modifier</catDesc>
+    <catDesc xml:lang="sl">Prislovni odvisnik</catDesc>
+  </category>
+  <category xml:id="advmod">
+    <catDesc xml:lang="en">Adverbial modifier</catDesc>
+    <catDesc xml:lang="sl">Prislovni modifikator</catDesc>
+  </category>
+  <!--category xml:id="advmod_emph">
+    <catDesc xml:lang="en">Adverbial modifier: emphaziser</catDesc>
+    <catDesc xml:lang="sl">Adverbial modifier: emphaziser</catDesc>
+  </category-->
+  <category xml:id="amod">
+    <catDesc xml:lang="en">Adjectival modifier</catDesc>
+    <catDesc xml:lang="sl">Pridevniški prilastek</catDesc>
+  </category>
+  <category xml:id="appos">
+    <catDesc xml:lang="en">Appositional modifier</catDesc>
+    <catDesc xml:lang="sl">Pristavek</catDesc>
+  </category>
+  <category xml:id="aux">
+    <catDesc xml:lang="en">Auxiliary</catDesc>
+    <catDesc xml:lang="sl">Pomožnik</catDesc>
+  </category>
+  <!--category xml:id="aux_pass">
+    <catDesc xml:lang="en">Auxiliary: passive</catDesc>
+    <catDesc xml:lang="sl">Auxiliary: passive</catDesc>
+  </category-->
+  <category xml:id="case">
+    <catDesc xml:lang="en">Case marking</catDesc>
+    <catDesc xml:lang="sl">Predlog</catDesc>
+  </category>
+  <category xml:id="cc">
+    <catDesc xml:lang="en">Coordinating conjunction</catDesc>
+    <catDesc xml:lang="sl">Priredni veznik</catDesc>
+  </category>
+  <category xml:id="ccomp">
+    <catDesc xml:lang="en">Clausal complement</catDesc>
+    <catDesc xml:lang="sl">Predmetni odvisnik</catDesc>
+  </category>
+  <category xml:id="cc_preconj">
+    <catDesc xml:lang="en">Preconjunct</catDesc>
+    <catDesc xml:lang="sl">Predveznik</catDesc>
+  </category>
+  <!--category xml:id="compound">
+    <catDesc xml:lang="en">Compound</catDesc>
+    <catDesc xml:lang="sl">Compound</catDesc>
+  </category-->
+  <category xml:id="conj">
+    <catDesc xml:lang="en">Conjunct</catDesc>
+    <catDesc xml:lang="sl">Priredje</catDesc>
+  </category>
+  <category xml:id="cop">
+    <catDesc xml:lang="en">Copula</catDesc>
+    <catDesc xml:lang="sl">Vezni glagol</catDesc>
+  </category>
+  <category xml:id="csubj">
+    <catDesc xml:lang="en">Clausal subject</catDesc>
+    <catDesc xml:lang="sl">Osebkov odvisnik</catDesc>
+  </category>
+  <!--category xml:id="csubj_pass">
+    <catDesc xml:lang="en">Clausal subject: passive</catDesc>
+    <catDesc xml:lang="sl">Clausal subject: passive</catDesc>
+  </category-->
+  <category xml:id="dep">
+    <catDesc xml:lang="en">Unspecified dependency</catDesc>
+    <catDesc xml:lang="sl">Nespecificirano določilo</catDesc>
+  </category>
+  <category xml:id="det">
+    <catDesc xml:lang="en">Determiner</catDesc>
+    <catDesc xml:lang="sl">Določilnik</catDesc>
+  </category>
+  <!--category xml:id="det_numgov">
+    <catDesc xml:lang="en">Pronominal quantifier governing the case of the noun</catDesc>
+    <catDesc xml:lang="sl">Pronominal quantifier governing the case of the noun</catDesc>
+  </category-->
+  <category xml:id="discourse">
+    <catDesc xml:lang="en">Discourse element</catDesc>
+    <catDesc xml:lang="sl">Diskurzni element</catDesc>
+  </category>
+  <!--category xml:id="dislocated">
+    <catDesc xml:lang="en">Dislocated elements</catDesc>
+    <catDesc xml:lang="sl">Dislocated elements</catDesc>
+  </category-->
+  <category xml:id="expl">
+    <catDesc xml:lang="en">Expletive</catDesc>
+    <catDesc xml:lang="sl">Naslonka</catDesc>
+  </category>
+  <!--category xml:id="expl_pv">
+    <catDesc xml:lang="en">Reflexive clitic with an inherently reflexive verb</catDesc>
+    <catDesc xml:lang="sl">Reflexive clitic with an inherently reflexive verb</catDesc>
+  </category-->
+  <category xml:id="fixed">
+    <catDesc xml:lang="en">Fixed multiword expression</catDesc>
+    <catDesc xml:lang="sl">Stalna zveza</catDesc>
+  </category>
+  <category xml:id="flat">
+    <catDesc xml:lang="en">Flat multiword expression</catDesc>
+    <catDesc xml:lang="sl">Stalna entiteta</catDesc>
+  </category>
+  <category xml:id="flat_foreign">
+    <catDesc xml:lang="en">Flat multiword expression: foreign</catDesc>
+    <catDesc xml:lang="sl">Stalna entiteta: tujejezično</catDesc>
+  </category>
+  <category xml:id="flat_name">
+    <catDesc xml:lang="en">Flat name</catDesc>
+    <catDesc xml:lang="sl">Ime</catDesc>
+  </category>
+  <!--category xml:id="goeswith">
+    <catDesc xml:lang="en">Goes with</catDesc>
+    <catDesc xml:lang="sl">Goes with</catDesc>
+  </category-->
+  <category xml:id="iobj">
+    <catDesc xml:lang="en">Indirect object</catDesc>
+    <catDesc xml:lang="sl">Indirektni predmet</catDesc>
+  </category>
+  <!--category xml:id="list">
+    <catDesc xml:lang="en">List</catDesc>
+    <catDesc xml:lang="sl">List</catDesc>
+  </category-->
+  <category xml:id="mark">
+    <catDesc xml:lang="en">Marker</catDesc>
+    <catDesc xml:lang="sl">Podredni veznik</catDesc>
+  </category>
+  <category xml:id="nmod">
+    <catDesc xml:lang="en">Nominal modifier</catDesc>
+    <catDesc xml:lang="sl">Samostalniški prilastek</catDesc>
+  </category>
+  <category xml:id="nsubj">
+    <catDesc xml:lang="en">Nominal subject</catDesc>
+    <catDesc xml:lang="sl">Samostalniški osebek</catDesc>
+  </category>
+  <!--category xml:id="nsubj_pass">
+    <catDesc xml:lang="en">Nominal subject: passive</catDesc>
+    <catDesc xml:lang="sl">Nominal subject: passive</catDesc>
+  </category-->
+  <category xml:id="nummod">
+    <catDesc xml:lang="en">Numeric modifier</catDesc>
+    <catDesc xml:lang="sl">Števniški prilastek</catDesc>
+  </category>
+  <!--category xml:id="nummod_gov">
+    <catDesc xml:lang="en">Numeric modifier governing the case of the noun</catDesc>
+    <catDesc xml:lang="sl">Numeric modifier governing the case of the noun</catDesc>
+  </category-->
+  <category xml:id="obj">
+    <catDesc xml:lang="en">Object</catDesc>
+    <catDesc xml:lang="sl">Predmet</catDesc>
+  </category>
+  <category xml:id="obl">
+    <catDesc xml:lang="en">Oblique nominal</catDesc>
+    <catDesc xml:lang="sl">Predložno določilo</catDesc>
+  </category>
+  <!--category xml:id="orphan">
+    <catDesc xml:lang="en">Orphan</catDesc>
+    <catDesc xml:lang="sl">Orphan</catDesc>
+  </category-->
+  <category xml:id="parataxis">
+    <catDesc xml:lang="en">Parataxis</catDesc>
+    <catDesc xml:lang="sl">Parataksa</catDesc>
+  </category>
+  <category xml:id="punct">
+    <catDesc xml:lang="en">Punctuation</catDesc>
+    <catDesc xml:lang="sl">Ločilo</catDesc>
+  </category>
+  <category xml:id="root">
+    <catDesc xml:lang="en">Root</catDesc>
+    <catDesc xml:lang="sl">Koren</catDesc>
+  </category>
+  <!--category xml:id="vocative">
+    <catDesc xml:lang="en">Vocative</catDesc>
+    <catDesc xml:lang="sl">Vocative</catDesc>
+  </category-->
+  <category xml:id="xcomp">
+    <catDesc xml:lang="en">Open clausal complement</catDesc>
+    <catDesc xml:lang="sl">Stavčno dopolnilo</catDesc>
+  </category>
+</taxonomy>

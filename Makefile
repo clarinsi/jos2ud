@@ -1,4 +1,19 @@
 ### Testing
+eltec:
+	bin/excel2ud.pl Data/sloleks-en_v1.2.tbl \
+	< Data/SLV_5000-AB2.txt > Data/SLV_5000.tbl 2> Data/SLV_5000-err1.txt
+	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
+	< Data/SLV_5000.tbl > Data/SLV_5000.ud.tbl
+	bin/compare2ud.pl Data/SLV_5000.ud.tbl \
+	< Data/SLV_5000-AB2.txt 2> Data/SLV_5000-err2.txt # > Data/SLV_5000-AB3.txt 
+test-dist3:
+	bin/compare2ud.pl Data/SLV_5000.ud.tbl < Data/SLV_5000-AB2.txt > Data/SLV_5000-AB3.txt 
+test-dist2:
+	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
+	< Data/SLV_5000.tbl > Data/SLV_5000.ud.tbl
+test-dist1:
+	bin/excel2ud.pl Data/sloleks-en_v1.2.tbl \
+	< Data/SLV_5000-AB2.txt > Data/SLV_5000.tbl 2> Data/SLV_5000-err1.txt
 test-biti:
 	cut -f1-6,9-11 < Data/output_ssj500k-en.ud.syn_2.2.conllu > Data/old.tmp
 	cut -f1-6,9-11 < Data/ssj500k-en.ud.syn.tbl > Data/new.tmp
@@ -26,6 +41,7 @@ nohup:
 all:	jos
 xall:	ssj sloleks jos
 
+dist:	get-dist format-dist ud-mor-dist
 jos:	get-jos format-jos ud-mor-jos
 ssj:	get-ssj format-ssj ud-mor-ssj ud-biti-ssj ud-syn-ssj ud-split-ssj
 
@@ -69,6 +85,7 @@ get-ssj:
 	cp /home/tomaz/Project/SSJ/Ucni/ssj500k.2.2/Master/ssj500k.all.xml Data
 get-jos:
 	cp /home/tomaz/Resources/CLARIN/jos1M/Fix/jos1M-en.xml Data
+
 #Get source data from CLARIN.SI repository
 xxxget:
 	mkdir -p Data

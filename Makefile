@@ -31,7 +31,8 @@ ssj:	get-ssj format-ssj ud-mor-ssj ud-biti-ssj ud-syn-ssj ud-split-ssj
 
 # Process lexicon
 sloleks:
-	cat < Data/sloleks-en_v1.2.tbl | bin/lex2feats.pl jos-msd2features.tbl > Data/sloleks.feats.tmp
+	cp ~/Project/SSJ/Lexicon/SloLeks-2.0/sloleks_clarin_2.0-en.tbl Data
+	cat < Data/sloleks_clarin_2.0-en.tbl | bin/lex2feats.pl jos-msd2features.tbl > Data/sloleks.feats.tmp
 	LC_ALL=C bin/jos2ud.pl lexicon jos2ud-pos.tbl jos2ud-features.tbl \
 	< Data/sloleks.feats.tmp | bin/add-biti-lexicon.pl > Data/sloleks.ud.tbl
 
@@ -58,17 +59,25 @@ ud-mor-ssj:
 ud-mor-jos:
 	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
 	< Data/jos1M-en.tbl > Data/jos1M-en.ud.tbl
+	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
+	< Data/jos1M-en_ssj500k_yes.tbl > Data/jos1M-en_ssj500k_yes.ud.tbl
+	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
+	< Data/jos1M-en_ssj500k_no.tbl > Data/jos1M-en_ssj500k_no.ud.tbl
 
 # Format corpus into CONLL-U
 format-ssj:
 	${saxon} -xi -xsl:bin/tei2ud.xsl Data/ssj500k.all.xml > Data/ssj500k-en.tbl
 format-jos:
 	${saxon} -xi -xsl:bin/tei2ud.xsl Data/jos1M-en.xml > Data/jos1M-en.tbl
+	${saxon} -xi -xsl:bin/tei2ud.xsl Data/jos1M-en_ssj500k_yes.xml > Data/jos1M-en_ssj500k_yes.tbl
+	${saxon} -xi -xsl:bin/tei2ud.xsl Data/jos1M-en_ssj500k_no.xml  > Data/jos1M-en_ssj500k_no.tbl
 
 get-ssj:
 	cp /home/tomaz/Project/SSJ/Ucni/ssj500k.2.2/Master/ssj500k.all.xml Data
 get-jos:
 	cp /home/tomaz/Resources/CLARIN/jos1M/Fix/jos1M-en.xml Data
+	cp /home/tomaz/Resources/CLARIN/jos1M/Fix/jos1M-en_ssj500k_yes.xml Data
+	cp /home/tomaz/Resources/CLARIN/jos1M/Fix/jos1M-en_ssj500k_no.xml Data
 #Get source data from CLARIN.SI repository
 xxxget:
 	mkdir -p Data

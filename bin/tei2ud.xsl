@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- Convert SSJ TEI format to Universal Dependencies format -->
+<!-- Convert CLARIN TEI format to Universal Dependencies format -->
 <!-- This is only a format conversion, output linguistic features are not UD! -->
 <xsl:stylesheet version='2.0' 
   xmlns:xsl = "http://www.w3.org/1999/XSL/Transform"
@@ -43,11 +43,18 @@
   <xsl:template mode="plain" match="tei:*">
     <xsl:apply-templates mode="plain"/>
   </xsl:template>
+  <xsl:template mode="plain" match="tei:choice">
+    <!-- Output normalised tokens only -->
+    <xsl:apply-templates mode="plain" select="tei:reg"/>
+  </xsl:template>
   <xsl:template mode="plain" match="tei:c">
     <xsl:text>&#32;</xsl:text>
   </xsl:template>
   <xsl:template mode="plain" match="tei:w | tei:pc">
     <xsl:value-of select="."/>
+  </xsl:template>
+  <xsl:template match="tei:choice">
+    <xsl:apply-templates select="tei:reg"/>
   </xsl:template>
 
   <xsl:template match="tei:w | tei:pc">
@@ -201,7 +208,9 @@
 	<xsl:value-of select="concat('ERROR: sequence number for non-token: ', text())"/>
       </xsl:message>
     </xsl:if>
-    <xsl:number count="tei:w | tei:pc" level="any" from="tei:s"/>
+    <!-- Ignore origs! -->
+    <xsl:number count="tei:w[not(parent::tei:orig)] | tei:pc[not(parent::tei:orig)]"
+ 		level="any" from="tei:s"/>
   </xsl:template>
 
   <!-- Return the name of the syntactic relation -->

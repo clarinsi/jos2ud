@@ -1,4 +1,9 @@
 ### Testing
+test-janes:
+	${saxon} -xsl:bin/tei2ud.xsl Data/test.xml > Data/test.tbl
+	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl < Data/test.tbl > Data/test.ud.tbl
+	bin/add-biti-nosyn.pl JanesTag-biti-as-VERB.txt < Data/test.ud.tbl > Data/test.biti.tbl
+
 eltec:
 	bin/excel2ud.pl Data/sloleks-en_v1.2.tbl \
 	< Data/SLV_5000-AB2.txt > Data/SLV_5000.tbl 2> Data/SLV_5000-err1.txt
@@ -38,12 +43,13 @@ test-new:
 nohup:
 	date > nohup.all
 	nohup time make all >> nohup.all &
-all:	jos
-xall:	ssj sloleks jos
+all:	janes
+xall:	ssj sloleks jos janes
 
 dist:	get-dist format-dist ud-mor-dist
 jos:	get-jos format-jos ud-mor-jos
 ssj:	get-ssj format-ssj ud-mor-ssj ud-biti-ssj ud-syn-ssj ud-split-ssj
+janes:	get-janes format-janes ud-mor-janes
 
 # Process lexicon
 sloleks:
@@ -65,10 +71,14 @@ ud-biti-ssj:
 	cat < Data/ssj500k-en.ud.tmp | bin/take-syn.pl only | \
 	bin/add-biti-syn.pl > Data/ssj500k-en.ud.syn.tbl
 	cat < Data/ssj500k-en.ud.tmp | bin/take-syn.pl except | \
-	bin/add-biti-nosyn.pl biti-as-VERB.txt > Data/ssj500k-en.ud.nosyn.tbl
+	bin/add-biti-nosyn.pl ssj500k-biti-as-VERB.txt > Data/ssj500k-en.ud.nosyn.tbl
 	cat Data/ssj500k-en.ud.syn.tbl Data/ssj500k-en.ud.nosyn.tbl > Data/ssj500k-en.ud.tbl
 
 # Compute UD PoS and features
+ud-mor-janes:
+	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
+	< Data/janes.tag.tbl | \
+	bin/add-biti-nosyn.pl JanesTag-biti-as-VERB.txt > Data/janes.tag.ud.tbl
 ud-mor-ssj:
 	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
 	< Data/ssj500k-en.tbl > Data/ssj500k-en.ud.tmp
@@ -81,6 +91,8 @@ ud-mor-jos:
 	< Data/jos1M-en_ssj500k_no.tbl > Data/jos1M-en_ssj500k_no.ud.tbl
 
 # Format corpus into CONLL-U
+format-janes:
+	${saxon} -xi -xsl:bin/tei2ud.xsl Data/janes.tag-single.xml > Data/janes.tag.tbl
 format-ssj:
 	${saxon} -xi -xsl:bin/tei2ud.xsl Data/ssj500k.all.xml > Data/ssj500k-en.tbl
 format-jos:
@@ -88,6 +100,8 @@ format-jos:
 	${saxon} -xi -xsl:bin/tei2ud.xsl Data/jos1M-en_ssj500k_yes.xml > Data/jos1M-en_ssj500k_yes.tbl
 	${saxon} -xi -xsl:bin/tei2ud.xsl Data/jos1M-en_ssj500k_no.xml  > Data/jos1M-en_ssj500k_no.tbl
 
+get-janes:
+	cp /home/tomaz/Resources/JANES/Janes/Datasets/Janes-Tag_2.1/TEI/janes.tag-single.xml Data
 get-ssj:
 	cp /home/tomaz/Project/SSJ/Ucni/ssj500k.2.2/Master/ssj500k.all.xml Data
 get-jos:

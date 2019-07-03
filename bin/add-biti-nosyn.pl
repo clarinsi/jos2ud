@@ -11,7 +11,7 @@ binmode MAP,"utf8";
 while (<MAP>) {
     chomp;
     next unless /./;
-    ($id, $n) = /^(.+)\.t(\d+)$/;
+    ($id, $n) = /^(.+)\.t(\d+)/;
     push @{$mark{$id}}, $n;
 }
 close MAP;

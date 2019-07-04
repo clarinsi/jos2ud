@@ -1,6 +1,6 @@
 ### Testing
 test-janes:
-	${saxon} -xsl:bin/tei2ud.xsl Data/test.xml > Data/test.tbl
+	${saxon} -xsl:bin/tei2conllu.xsl Data/test.xml > Data/test.tbl
 	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl < Data/test.tbl > Data/test.ud.tbl
 	bin/add-biti-nosyn.pl Map/JanesTag-biti-as-VERB.txt < Data/test.ud.tbl > Data/test.biti.tbl
 test-dist3:
@@ -25,7 +25,7 @@ test-lex:
 	LC_ALL=C bin/jos2ud.pl lexicon Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
 	< Data/test.lex.tbl > Data/test.lex.ud.tbl
 test-crp:
-	${saxon} -xsl:bin/tei2ud.xsl Data/test.xml > Data/test.tbl
+	${saxon} -xsl:bin/tei2conllu.xsl Data/test.xml > Data/test.tbl
 	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl < Data/test.tbl > Data/test.ud.tbl
 	cd Data; ../bin/convert_dependencies.py ../Data/test.ud.tbl 2.2
 test-new:
@@ -94,13 +94,13 @@ ud-mor-jos:
 
 # Format corpus into CONLL-U
 format-janes:
-	${saxon} -xi -xsl:bin/tei2ud.xsl Data/janes.tag-single.xml > Data/janes.tag.tbl
+	${saxon} -xi -xsl:bin/tei2conllu.xsl Data/janes.tag-single.xml > Data/janes.tag.tbl
 format-ssj:
-	${saxon} -xi -xsl:bin/tei2ud.xsl Data/ssj500k.all.xml > Data/ssj500k-en.tbl
+	${saxon} -xi -xsl:bin/tei2conllu.xsl Data/ssj500k.all.xml > Data/ssj500k-en.tbl
 format-jos:
-	${saxon} -xi -xsl:bin/tei2ud.xsl Data/jos1M-en.xml > Data/jos1M-en.tbl
-	${saxon} -xi -xsl:bin/tei2ud.xsl Data/jos1M-en_ssj500k_yes.xml > Data/jos1M-en_ssj500k_yes.tbl
-	${saxon} -xi -xsl:bin/tei2ud.xsl Data/jos1M-en_ssj500k_no.xml  > Data/jos1M-en_ssj500k_no.tbl
+	${saxon} -xi -xsl:bin/tei2conllu.xsl Data/jos1M-en.xml > Data/jos1M-en.tbl
+	${saxon} -xi -xsl:bin/tei2conllu.xsl Data/jos1M-en_ssj500k_yes.xml > Data/jos1M-en_ssj500k_yes.tbl
+	${saxon} -xi -xsl:bin/tei2conllu.xsl Data/jos1M-en_ssj500k_no.xml  > Data/jos1M-en_ssj500k_no.tbl
 
 JANES = /home/tomaz/Resources/JANES/Janes/Datasets/Janes-Tag_2.1
 get-janes:

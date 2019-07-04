@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Convert CLARIN TEI format to Universal Dependencies format -->
-<!-- This is only a format conversion, output linguistic features are not UD! -->
+<!-- This is only a format conversion, output linguistic features are not UD but MULTEXT! -->
 <xsl:stylesheet version='2.0' 
   xmlns:xsl = "http://www.w3.org/1999/XSL/Transform"
   xmlns:fn="http://www.w3.org/2005/xpath-functions"

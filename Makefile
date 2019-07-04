@@ -1,22 +1,12 @@
-bug:
-	bin/add-biti-nosyn.pl JanesTag-biti-as-VERB.txt < Data/janes.tag.ud.tmp > Data/janes.tag.ud.tbl
 ### Testing
 test-janes:
 	${saxon} -xsl:bin/tei2ud.xsl Data/test.xml > Data/test.tbl
-	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl < Data/test.tbl > Data/test.ud.tbl
-	bin/add-biti-nosyn.pl JanesTag-biti-as-VERB.txt < Data/test.ud.tbl > Data/test.biti.tbl
-
-eltec:
-	bin/excel2ud.pl Data/sloleks-en_v1.2.tbl \
-	< Data/SLV_5000-AB2.txt > Data/SLV_5000.tbl 2> Data/SLV_5000-err1.txt
-	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
-	< Data/SLV_5000.tbl > Data/SLV_5000.ud.tbl
-	bin/compare2ud.pl Data/SLV_5000.ud.tbl \
-	< Data/SLV_5000-AB2.txt 2> Data/SLV_5000-err2.txt # > Data/SLV_5000-AB3.txt 
+	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl < Data/test.tbl > Data/test.ud.tbl
+	bin/add-biti-nosyn.pl Map/JanesTag-biti-as-VERB.txt < Data/test.ud.tbl > Data/test.biti.tbl
 test-dist3:
 	bin/compare2ud.pl Data/SLV_5000.ud.tbl < Data/SLV_5000-AB2.txt > Data/SLV_5000-AB3.txt 
 test-dist2:
-	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
+	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
 	< Data/SLV_5000.tbl > Data/SLV_5000.ud.tbl
 test-dist1:
 	bin/excel2ud.pl Data/sloleks-en_v1.2.tbl \
@@ -30,15 +20,16 @@ test-kaja:
 	cat < Data/ssj500k-en.ud.tbl | bin/take-syn.pl > Data/ssj500k-en.ud.synonly.tbl
 	cd Data; python ../bin/convert_dependencies.py Data/ssj500k-en.ud.synonly.tbl 2.2
 test-lex:
-	shuf < Data/sloleks-en_v1.2.tbl | head -1000 | bin/lex2feats.pl jos-msd2features.tbl > Data/test.lex.tbl
-	LC_ALL=C bin/jos2ud.pl lexicon jos2ud-pos.tbl jos2ud-features.tbl \
+	shuf < Data/sloleks-en_v1.2.tbl | head -1000 | bin/lex2feats.pl Map/jos-msd2features.tbl \
+	> Data/test.lex.tbl
+	LC_ALL=C bin/jos2ud.pl lexicon Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
 	< Data/test.lex.tbl > Data/test.lex.ud.tbl
 test-crp:
 	${saxon} -xsl:bin/tei2ud.xsl Data/test.xml > Data/test.tbl
-	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl < Data/test.tbl > Data/test.ud.tbl
+	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl < Data/test.tbl > Data/test.ud.tbl
 	cd Data; ../bin/convert_dependencies.py ../Data/test.ud.tbl 2.2
 test-new:
-	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl < Data/test.tbl > Data/test.ud.tbl
+	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl < Data/test.tbl > Data/test.ud.tbl
 	diff Data/test.ud.old.tbl Data/test.ud.tbl
 
 ### For real
@@ -53,11 +44,20 @@ jos:	get-jos format-jos ud-mor-jos
 ssj:	get-ssj format-ssj ud-mor-ssj ud-biti-ssj ud-syn-ssj ud-split-ssj
 janes:	get-janes format-janes ud-mor-janes
 
+eltec:
+	bin/excel2ud.pl Data/sloleks-en_v1.2.tbl \
+	< Data/SLV_5000-AB2.txt > Data/SLV_5000.tbl 2> Data/SLV_5000-err1.txt
+	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
+	< Data/SLV_5000.tbl > Data/SLV_5000.ud.tbl
+	bin/compare2ud.pl Data/SLV_5000.ud.tbl \
+	< Data/SLV_5000-AB2.txt 2> Data/SLV_5000-err2.txt # > Data/SLV_5000-AB3.txt 
+
 # Process lexicon
 sloleks:
 	cp ~/Project/SSJ/Lexicon/SloLeks-2.0/sloleks_clarin_2.0-en.tbl Data
-	cat < Data/sloleks_clarin_2.0-en.tbl | bin/lex2feats.pl jos-msd2features.tbl > Data/sloleks.feats.tmp
-	LC_ALL=C bin/jos2ud.pl lexicon jos2ud-pos.tbl jos2ud-features.tbl \
+	cat < Data/sloleks_clarin_2.0-en.tbl | bin/lex2feats.pl Map/jos-msd2features.tbl \
+	> Data/sloleks.feats.tmp
+	LC_ALL=C bin/jos2ud.pl lexicon Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
 	< Data/sloleks.feats.tmp | bin/add-biti-lexicon.pl > Data/sloleks.ud.tbl
 
 # Split corpus into train, dev, test
@@ -73,23 +73,23 @@ ud-biti-ssj:
 	cat < Data/ssj500k-en.ud.tmp | bin/take-syn.pl only | \
 	bin/add-biti-syn.pl > Data/ssj500k-en.ud.syn.tbl
 	cat < Data/ssj500k-en.ud.tmp | bin/take-syn.pl except | \
-	bin/add-biti-nosyn.pl ssj500k-biti-as-VERB.txt > Data/ssj500k-en.ud.nosyn.tbl
+	bin/add-biti-nosyn.pl Map/ssj500k-biti-as-VERB.txt > Data/ssj500k-en.ud.nosyn.tbl
 	cat Data/ssj500k-en.ud.syn.tbl Data/ssj500k-en.ud.nosyn.tbl > Data/ssj500k-en.ud.tbl
 
 # Compute UD PoS and features
 ud-mor-janes:
-	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
+	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
 	< Data/janes.tag.tbl > Data/janes.tag.ud.tmp
-	bin/add-biti-nosyn.pl JanesTag-biti-as-VERB.txt < Data/janes.tag.ud.tmp > Data/janes.tag.ud.tbl
+	bin/add-biti-nosyn.pl Map/JanesTag-biti-as-VERB.txt < Data/janes.tag.ud.tmp > Data/janes.tag.ud.tbl
 ud-mor-ssj:
-	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
+	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
 	< Data/ssj500k-en.tbl > Data/ssj500k-en.ud.tmp
 ud-mor-jos:
-	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
+	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
 	< Data/jos1M-en.tbl > Data/jos1M-en.ud.tbl
-	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
+	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
 	< Data/jos1M-en_ssj500k_yes.tbl > Data/jos1M-en_ssj500k_yes.ud.tbl
-	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
+	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
 	< Data/jos1M-en_ssj500k_no.tbl > Data/jos1M-en_ssj500k_no.ud.tbl
 
 # Format corpus into CONLL-U

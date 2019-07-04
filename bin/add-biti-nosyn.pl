@@ -34,7 +34,8 @@ while (<>){
 	 $ud_cat, $msd, $ud_feats, 
 	 $ud_head, $ud_deprel, $deps, $misc) = split /\t/;
 	if (exists $mark{$id} and $n == $tok_n) {
-	    die unless $lemma eq 'biti';
+	    die "Bad token $id / $n:\n$_\n" 
+		unless $lemma eq 'biti';
 	    $_ = join("\t", $n, $tok, $lemma, 
 		      'VERB', $msd, $ud_feats, 
 		      $ud_head, $ud_deprel, $deps, $misc);

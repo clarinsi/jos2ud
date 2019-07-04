@@ -1,3 +1,5 @@
+bug:
+	bin/add-biti-nosyn.pl JanesTag-biti-as-VERB.txt < Data/janes.tag.ud.tmp > Data/janes.tag.ud.tbl
 ### Testing
 test-janes:
 	${saxon} -xsl:bin/tei2ud.xsl Data/test.xml > Data/test.tbl
@@ -77,8 +79,8 @@ ud-biti-ssj:
 # Compute UD PoS and features
 ud-mor-janes:
 	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
-	< Data/janes.tag.tbl | \
-	bin/add-biti-nosyn.pl JanesTag-biti-as-VERB.txt > Data/janes.tag.ud.tbl
+	< Data/janes.tag.tbl > Data/janes.tag.ud.tmp
+	bin/add-biti-nosyn.pl JanesTag-biti-as-VERB.txt < Data/janes.tag.ud.tmp > Data/janes.tag.ud.tbl
 ud-mor-ssj:
 	LC_ALL=C bin/jos2ud.pl corpus jos2ud-pos.tbl jos2ud-features.tbl \
 	< Data/ssj500k-en.tbl > Data/ssj500k-en.ud.tmp
@@ -100,8 +102,10 @@ format-jos:
 	${saxon} -xi -xsl:bin/tei2ud.xsl Data/jos1M-en_ssj500k_yes.xml > Data/jos1M-en_ssj500k_yes.tbl
 	${saxon} -xi -xsl:bin/tei2ud.xsl Data/jos1M-en_ssj500k_no.xml  > Data/jos1M-en_ssj500k_no.tbl
 
+JANES = /home/tomaz/Resources/JANES/Janes/Datasets/Janes-Tag_2.1
 get-janes:
-	cp /home/tomaz/Resources/JANES/Janes/Datasets/Janes-Tag_2.1/TEI/janes.tag-single.xml Data
+	cp ${JANES}/TEI/janes.tag-single.xml Data/
+	cp ${JANES}/UD/janes.biti.tbl JanesTag-biti-as-VERB.txt
 get-ssj:
 	cp /home/tomaz/Project/SSJ/Ucni/ssj500k.2.2/Master/ssj500k.all.xml Data
 get-jos:

@@ -94,7 +94,7 @@ ud-mor-jos:
 
 # Format corpus into CONLL-U
 format-janes:
-	${saxon} -xi -xsl:bin/tei2conllu.xsl Data/janes.tag-single.xml > Data/janes.tag.tbl
+	${saxon} -xsl:bin/tei2conllu.xsl Data/janes.tag-single.xml > Data/janes.tag.tbl
 format-ssj:
 	${saxon} -xi -xsl:bin/tei2conllu.xsl Data/ssj500k.all.xml > Data/ssj500k-en.tbl
 format-jos:
@@ -105,7 +105,7 @@ format-jos:
 JANES = /home/tomaz/Resources/JANES/Janes/Datasets/Janes-Tag_2.1
 get-janes:
 	cp ${JANES}/TEI/janes.tag-single.xml Data/
-	cp ${JANES}/UD/janes.biti.tbl JanesTag-biti-as-VERB.txt
+	cp ${JANES}/UD/janes.biti.tbl Map/JanesTag-biti-as-VERB.txt
 get-ssj:
 	cp /home/tomaz/Project/SSJ/Ucni/ssj500k.2.2/Master/ssj500k.all.xml Data
 get-jos:
@@ -126,4 +126,5 @@ xxxget:
 	rm Data/*.zip
 
 #saxon = java -jar /usr/local/bin/saxon9he.jar
-saxon = java -jar /home/tomaz/bin/saxon9he.jar
+#saxon = java -jar /home/tomaz/bin/saxon9he.jar
+saxon = java -Djavax.xml.parsers.DocumentBuilderFactory=org.apache.xerces.jaxp.DocumentBuilderFactoryImpl -Djavax.xml.parsers.SAXParserFactory=org.apache.xerces.jaxp.SAXParserFactoryImpl net.sf.saxon.Transform

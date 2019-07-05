@@ -18,6 +18,7 @@
   <!-- TEI prefix replacement mechanism -->
   <xsl:variable name="prefixes" select="//tei:listPrefixDef"/>
 
+  <!--xsl:output encoding="utf-8" method="xml" indent="yes"/-->
   <xsl:output encoding="utf-8" method="text"/>
   <xsl:strip-space elements="*"/>
   <xsl:preserve-space elements="tei:c"/>
@@ -26,7 +27,7 @@
     <xsl:choose>
       <xsl:when test="//tei:s//tei:choice">
 	<xsl:variable name="normalised">
-	  <xsl:apply-templates mode="prep" select="//tei:s"/>
+	  <xsl:apply-templates mode="prep" select="tei:*"/>
 	</xsl:variable>
 	<!--xsl:copy-of select="$normalised"/-->
 	<xsl:apply-templates select="$normalised"/>
@@ -112,7 +113,7 @@
   <xsl:template name="swap">
     <xsl:param name="token" select="tei:orig/tei:*"/>
     <xsl:param name="attributes" select="tei:reg/tei:*"/>
-    <xsl:element name="{$token/name()}">
+    <xsl:element name="{$token/name()}" namespace="http://www.tei-c.org/ns/1.0">
       <xsl:apply-templates mode="prep" select="$attributes/@*"/>
       <xsl:value-of select="$token"/>
     </xsl:element>
@@ -139,8 +140,10 @@
     <xsl:value-of select="."/>
   </xsl:template>
 
+  <xsl:template match="tei:c"/>
   <xsl:template match="tei:w | tei:pc">
     <!-- 1/ID -->
+    <xsl:text></xsl:text>
     <xsl:apply-templates mode="number" select="."/>
     <xsl:text>&#9;</xsl:text>
     <!-- 2/FORM -->

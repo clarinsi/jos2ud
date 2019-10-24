@@ -138,7 +138,7 @@
     <xsl:text>&#9;</xsl:text>
     <!-- 7/HEAD -->
     <xsl:variable name="Syntax"
-		  select="key('corresp',ancestor::tei:s[1]/@xml:id)[@type='syntax']"/>
+		  select="key('corresp',ancestor::tei:s[1]/@xml:id)[@type='JOS-SYN']"/>
     <xsl:choose>
       <xsl:when test="$Syntax//tei:link">
 	<xsl:call-template name="head">

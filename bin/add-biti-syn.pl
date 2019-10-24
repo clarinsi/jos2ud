@@ -46,8 +46,8 @@ while (<>){
 		$t_ud_cat, $t_msd, $t_ud_feats, 
 		$t_ud_head, $t_ud_deprel, $t_deps, $t_misc) 
 		= split /\t/, $l;
-	    ($t_dep) = $t_misc =~ m|Dep=(\d+)| or die;
-	    ($t_rel) = $t_misc =~ m|Rel=(\w+)| or die;
+	    ($t_dep) = $t_misc =~ m|Dep=(\d+)| or die "No Dep in $t_misc for $l!\n";
+	    ($t_rel) = $t_misc =~ m|Rel=(\w+)| or die "No Rel in $t_misc for $l!\n";
 	    if ($t_dep == $n) { #Found a parent of "biti"
 		if ($t_msd =~ /[NAPMXY]/ and 
 		    $t_rel eq 'Atr') {$copula_a = 1}

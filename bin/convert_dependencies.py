@@ -13,6 +13,7 @@ treebank_file = os.path.basename(treebank_path)
 treebank_name = os.path.splitext(treebank_file)[0]
 
 version_name = sys.argv[2]
+version_name = sys.argv[2]
 
 output = open("output_{}_{}.conllu".format(treebank_name, version_name), "w", encoding="utf8") #the ssj250k-ud.conllu treebank (i.e. all sentences from ssj250k with automatic conversions, including the non-UD "working" labels)
 report = open("report_{}_{}.txt".format(treebank_name, version_name), "w", encoding="utf8") #counts on types of sentences
@@ -395,6 +396,16 @@ with open(treebank_path, "r", encoding="utf8") as file:
                                 token[7] = "aux"
                                 #In UD v2, TAMVE particles (ne,naj,lahko) could also become aux/AUX, but ET&SK were against it
 
+                    ### dep: auxiliary ######################################################
+                    if cpostag(token) in ["X"]:
+                        if jos_deprel(token) in ["PPart"]:
+                            if jos_head_cpostag(token) in ["VERB"]:
+                                token[6] = jos_head(token)
+                                token[7] = "dep"
+                                # e.g. nauš, tlevš
+                                # added for 2.5 to avoid the ''aux' should be 'AUX' but it is 'X'' validation error
+                                # in the long run, it is the tokenization that should be amended (e.g. nauš --> ne+boš)
+
                     ### auxpass: passive auxiliary ######################################################
                     # not used #
 
@@ -604,7 +615,9 @@ with open(treebank_path, "r", encoding="utf8") as file:
 
 
                     ### nmod: nominal modifier ############################################################
-                    if jos_msd(token)[0] in ["N", "P", "A", "X", "I", "C", "Y"] or cpostag(token) in ["ADJ"]: #INTJ: medmet v vlogi samostalnika, C-SCONJ: skup kakor-koli; cpostag in adjt zato, da vključimo nekatere besedne števnike, ne pa nebesednih
+                    ### obl: nominal modifier #############################################################
+                    if jos_msd(token)[0] in ["N", "P", "A", "X", "I", "C", "Y", "M"]: #or cpostag(token) in ["ADJ"]: #INTJ: medmet v vlogi samostalnika, S-CONJ skup kakor-koli
+                        # added in 2.5 to avoid the  'advmod' should be 'ADV' but it is 'NUM': mostly PPs with NUMs (e.g. ob pol šestih zjutraj sem vstal), but also other obliques (?) with numerals, e.g. sedem jih je sledilo
                         if jos_deprel(token) in ["AdvM", "AdvO"]:
                             token[6] = jos_head(token)
                             token[7] = "obl"
@@ -746,7 +759,7 @@ with open(treebank_path, "r", encoding="utf8") as file:
 ################################### 2 SPECIAL RULES FOR PRONOUNS INTRODUCING A SUBORDINATE CLAUSE #################################
 # this is a very interesting topic for further discussions
 
-                    if jos_msd(token)[0] in ["P"]:
+                    if jos_msd(token)[0] in ["P"] or lemma(token) in ["kdaj", "koder"]: #added the two lemmas for 2.5 to cover also cases of subordinate-introducting PPs of other types, e.g. od koder, do kdaj itd.
                         if jos_deprel(token) in ["Conj"]:
 
                             if preceding(token) and cpostag(preceding(token)) == "ADP" and head(preceding(token)) == id(token): #predložne zveze
@@ -1069,7 +1082,7 @@ with open(treebank_path, "r", encoding="utf8") as file:
                                 first_hit = 0
                                 for n in range(int(id(token)),no_of_tokens):
                                     if first_hit < 1:
-                                        if not sentence[n][1] in ["PUNCT"]: #attach as case to the first token that is not PUNCT == usually holds, very few mistakes
+                                        if not sentence[n][3] in ["PUNCT"]: #attach as case to the first token that is not PUNCT == usually holds, very few mistakes; corrected a mistake before 2.5
                                             token[6] = sentence[n][0] #this first element to the right that is not PUNCT becomes the head of the ADP
                                             token[7] = "case"
                                             first_hit = 1
@@ -1200,17 +1213,25 @@ with open(treebank_path, "r", encoding="utf8") as file:
                                     sentence[int(id(token))][7] = "nummod"
 
 
+                            # for 2.5, the following groups of adverbial annotations caused the "'advmod' should be 'ADV' but it is 'X'" error
+                            # to avoid it, they were changed to 'nmod', which has less restrictions regarding UPOS, for the time being
+                            # however, in the long term, it is the tokenization and morphological annotations that should be amended
+                            # for this reason, the information on the appropriate deprels has been maintained once deabreviation is completed
+
+
                             # ok. 1986
                             elif lemma(token) in ["ok."]:
                                 if sentence[int(id(token))][3] in ["NUM"]:
                                     token[6] = sentence[int(id(token))][0]
-                                    token[7] = "advmod"
+                                    #token[7] = "advmod"
+                                    token[7] = "nmod" #changed to pass 2.5 validation (see above)
 
                             #angl. criss-cross
                             elif lemma(token) in ["it.", "angl."]:
                                 if sentence[int(id(token))][3] in ["NOUN", "PROPN", "X"]:
                                     token[6] = sentence[int(id(token))][0]
-                                    token[7] = "advmod"
+                                    #token[7] = "advmod"
+                                    token[7] = "nmod" #changed to pass 2.5 validation (see above)
 
                             #50 odst.
                             elif lemma(token) in ["odst.", "sek."]:
@@ -1224,7 +1245,8 @@ with open(treebank_path, "r", encoding="utf8") as file:
                             elif lemma(token) in ["gl.", "prim.", "cf."]:
                                 if sentence[int(id(token))][3] in ["NOUN"] and sentence[int(id(token))][6] in "0":
                                     token[6] = sentence[int(id(token))][0]
-                                    token[7] = "advmod" #unsure about whether they should considered predicates
+                                    # token[7] = "advmod" #unsure about whether they should considered predicates
+                                    token[7] = "nmod" #changed to pass 2.5 validation (see above)
 
                             elif lemma(token) in ["str."]:
                                 if sentence[int(id(token))-2][3] in ["NUM"]:
@@ -1244,28 +1266,33 @@ with open(treebank_path, "r", encoding="utf8") as file:
                                 else:
                                     if sentence[int(id(token))][3] in ["VERB"]:
                                         token[6] = sentence[int(id(token))][0]
-                                        token[7] = "advmod"
+                                        # token[7] = "advmod"
+                                        token[7] = "nmod"  # changed to pass 2.5 validation (see above)
                                         #npr. povzeli
                                     else:
                                         head_of_next = sentence[int(id(token))][6]
                                         if sentence[int(head_of_next)-1][3] in ["NOUN"]:
                                             token[6] = sentence[int(head_of_next)-1][0]
-                                            token[7] = "advmod"
+                                            # token[7] = "advmod"
+                                            token[7] = "nmod"  # changed to pass 2.5 validation (see above)
                                             #npr. kmetijska zbornica
                                         else:
                                             token[6] = sentence[int(id(token))][0]
-                                            token[7] = "advmod"
+                                            # token[7] = "advmod"
+                                            token[7] = "nmod"  # changed to pass 2.5 validation (see above)
                                             #npr. nekaj,
 
                             elif lemma(token) in ["tj."]:
                                 head_of_next = sentence[int(id(token))][6]
                                 if sentence[int(head_of_next)-1][3] in ["NOUN"]:
                                     token[6] = sentence[int(head_of_next)-1][0]
-                                    token[7] = "advmod"
+                                    #token[7] = "advmod"
+                                    token[7] = "nmod" #changed to pass 2.5 validation (see above)
                                     #npr. kmetijska zbornica
                                 else:
                                     token[6] = sentence[int(id(token))][0]
-                                    token[7] = "advmod"
+                                    #token[7] = "advmod"
+                                    token[7] = "nmod" #changed to pass 2.5 validation (see above)
                                     #npr. nekaj,
 
 
@@ -1275,8 +1302,9 @@ with open(treebank_path, "r", encoding="utf8") as file:
                                     token[7] = "conj"
                                     # mama, oče, sin itd.
                                 else:
-                                    token[7] = "attach_predicate_advmod"
+                                    #token[7] = "attach_predicate_advmod"
                                     # sodelovali pri projektih itd,
+                                    token[7] = "attach_predicate_nmod" #changed to pass 2.5 validation (see above)
 
                             elif lemma(token) in ["oz."]:
                                 if cpostag(following(token)) in ["NOUN", "PROPN", "SYM"]:
@@ -1324,7 +1352,8 @@ with open(treebank_path, "r", encoding="utf8") as file:
 
                                         if sentence[int(id(token))-2][3] in ["NUM", "NOUN"]:
                                             token[6] = sentence[int(id(token))-2][0]
-                                            token[7] = "advmod"
+                                            # token[7] = "advmod"
+                                            token[7] = "nmod"  # changed to pass 2.5 validation (see above)
 
 
                             # t.i. pretvorbena pravila
@@ -1339,11 +1368,13 @@ with open(treebank_path, "r", encoding="utf8") as file:
                                     head_of_next = sentence[int(id(token))+1][6]
                                     if sentence[int(head_of_next)-1][3] in ["NOUN"]:
                                         token[6] = head_of_next
-                                        token[7] = "advmod"
+                                        # token[7] = "advmod"
+                                        token[7] = "nmod"  # changed to pass 2.5 validation (see above)
                                         #npr. kmetijska zbornica
                                     else:
                                         token[6] = sentence[int(id(token)+1)][0]
-                                        token[7] = "advmod"
+                                        # token[7] = "advmod"
+                                        token[7] = "nmod"  # changed to pass 2.5 validation (see above)
                                         #npr. nekaj,
 
                             elif lemma(token)in ["k."]:
@@ -1589,7 +1620,7 @@ with open(treebank_path, "r", encoding="utf8") as file:
                         nearest = 10000
                         nearest_id = 0
                         for t in sentence:
-                            if t[3] in ["VERB"] and not t[6] == id(token):
+                            if t[3] in ["VERB"] and not t[6] == id(token) and not t[7] in ["fixed"]: # the 'verb must not be fixed' condition was added before 2.5, so as to avoid attaching to verbs in fixed expressions, e.g. 'kdo ve'
                                 v_id = t[0]
                                 distance = abs(int(id(token))-int(v_id))
                                 intermediate_tokens = distance - 1
@@ -1758,7 +1789,7 @@ with open(treebank_path, "r", encoding="utf8") as file:
                                 number_of_comma.remove(comma)
 
 
-                #if a sentence beginns with a lonely symbol, attach it too root (segmentation problems)
+                #if a sentence beginns with a lonely symbol, attach it to the root (segmentation problems)
                 if number_of_roots and number_of_punct:
                     if number_of_punct[0] == "1" and not sentence[int(number_of_punct[0])-1][1] in ['"','(', '“', '»']:
                         sentence[int(number_of_punct[0])-1][6] = sentence[int(number_of_roots[0])-1][0]
@@ -1771,21 +1802,25 @@ with open(treebank_path, "r", encoding="utf8") as file:
                         sentence[int(number_of_punct[-1])-1][6] = sentence[int(number_of_roots[0])-1][0]
                         sentence[int(number_of_punct[-1])-1][7] = "punct"
 
+
                         if len(number_of_punct) > 1:
                             if int(number_of_punct[-2]) == no_of_tokens - 1:
                                 if not sentence[int(number_of_punct[-2])][1] in ['"', '«', ")", '”', '<']:
                                     sentence[int(number_of_punct[-2])-1][6] = sentence[int(number_of_roots[0])-1][0]
                                     sentence[int(number_of_punct[-2])-1][7] = "punct"
+
                                     if len(number_of_punct) > 2:
                                         if not sentence[int(number_of_punct[-3])][1] in ['"', '«', ")", '”', '<']:
                                             sentence[int(number_of_punct[-3])-1][6] = sentence[int(number_of_roots[0])-1][0]
                                             sentence[int(number_of_punct[-3])-1][7] = "punct"
 
 
+
                 elif len(number_of_ellipsis) == 1 and number_of_punct:
                     if int(number_of_punct[-1]) == no_of_tokens:
                         sentence[int(number_of_punct[-1])-1][6] = sentence[int(number_of_ellipsis[0])-1][0]
                         sentence[int(number_of_punct[-1])-1][7] = "punct"
+
 
 
                 # brackets and quotes are attached to the head of the construction they surround
@@ -1811,8 +1846,10 @@ with open(treebank_path, "r", encoding="utf8") as file:
                                 if len(potential_heads) == 1:
                                     sentence[int(first)-1][6] = potential_heads[0]
                                     sentence[int(first)-1][7] = "punct"
+
                                     sentence[int(next)-1][6] = potential_heads[0]
                                     sentence[int(next)-1][7] = "punct"
+
 
                 # then come the subordinate clauses if right of their head (left comma attachment)
                 if number_of_roots and number_of_comma:
@@ -1832,6 +1869,7 @@ with open(treebank_path, "r", encoding="utf8") as file:
                                 if sentence[int(clause_head)-1][3] in ["VERB"]:
                                     sentence[int(comma)-1][6] = clause_head
                                     sentence[int(comma)-1][7] = "punct"
+
                                     #number_of_comma.remove(comma)
                                     for p in range(int(clause_head), no_of_tokens-1):
                                         if sentence[p][0] in number_of_comma:
@@ -1854,7 +1892,7 @@ with open(treebank_path, "r", encoding="utf8") as file:
                 # subordinate clauses with head on right and right oppositions
                 if number_of_roots and number_of_comma:
                     for comma in number_of_comma:
-                        for node in reversed(range(0,int(comma)-1)):
+                        for node in reversed(range(0,int(comma)-1)): #tukaj potrebne spremembe za 2.5
                             if sentence[node][7] in ["ccomp", "acl", "advcl", "csubj"]:
                                 if int(sentence[node][6]) > int(comma):
                                     sentence[int(comma)-1][6] = sentence[node][0]
@@ -1891,8 +1929,12 @@ with open(treebank_path, "r", encoding="utf8") as file:
                         for node in range(int(punctuation),no_of_tokens-1):
                             if sentence[node][7] in ["parataxis"]:
                                 if int(sentence[node][6]) < int(punctuation):
-                                    sentence[int(punctuation)-1][6] = sentence[node][0]
-                                    sentence[int(punctuation)-1][7] = "punct"
+                                    if not sentence[int(punctuation)][1] in ['"','»','«','“','”']: # modified for 2.5: punct before parataxis attaches to parataxis ..
+                                        sentence[int(punctuation) - 1][6] = sentence[node][0]
+                                        sentence[int(punctuation) - 1][7] = "punct"
+                                    else: # ... unless punct is followed by closed quotation marks (e.g. comma placement in "blablabla," je rekel x.)
+                                        sentence[int(punctuation)-1][6] = sentence[node][6] #attach to the head of parataxis
+                                        sentence[int(punctuation)-1][7] = "punct"
                                     found = 1
                                     break
                             if sentence[node][7] in ["conj"]:
@@ -2105,6 +2147,39 @@ with open(treebank_path, "r", encoding="utf8") as file:
                             # z
                             sentence[int(id(token))-2][6] = "2"
 
+                    # ERROR TYPE: [Line 81067 Sent ssj249.1601.5814 Node 18]: [L3 Syntax leaf-cc] 'cc' not expected to have children (18:zato:cc --> 17:prav:advmod)
+                    # mistake in JOS annotation: zato in prav zato was always labeled as AdvO and thus correctly converted to UD advmod with the exception of this one example
+
+                    if sentence_id in ["ssj249.1601.5814"] and id(token) in ["18"]:
+                        token[6] = "19"
+                        token[7] = "advmod"
+
+
+                    # this detailed and dirty conversion for 1318 was done to keep the same set of sentences in UD2.5 as in UD 2.4
+                    # (8,000 in total) - this sentence was the only one left behind after adding new rules for 2.5
+                    if sentence_id in ["ssj47.321.1318"]:
+                        if id(token) in ["4"]:
+                            token[7] = "root_true"
+                        elif id(token) in ["5"]:
+                            token[6] = "9"
+                            token[7] = "punct"
+                        elif id(token) in ["12"]:
+                            token[6] = "9"
+                            token[7] = "punct"
+                        elif id(token) in ["13"]: #ADP cannot be advmod, so we temporarily chose dep
+                            token[6] = "9"
+                            token[7] = "dep"
+                        elif id(token) in ["14"]:
+                            token[6] = "4"
+                            token[7] = "punct"
+                        elif id(token) in ["15"]:
+                            token[6] = "4"
+                            token[7] = "punct"
+                        elif id(token) in ["16"]:
+                            token[6] = "4"
+                            token[7] = "punct"
+
+
 
 ########################### 9.2. CHANGE JOS LOGIC FOR SPECIAL CONSTRUCTIONS ##############################################################################
 
@@ -2130,7 +2205,12 @@ with open(treebank_path, "r", encoding="utf8") as file:
                                         for t in sentence: #
                                             if head(t) == old_head_id and cpostag(t) in ["ADP"] and int(id(t)) < int(id(token)):
                                                 sentence[int(id(t))-1][6] = id(token)
-                                                # v eno izmed vrst
+                                                # v eno izmed vrst - predlog gre zdaj k števniku, ne več samostalniku
+
+                                            if head(t) == old_head_id and deprel(t) not in ["acl", "nmod", "case", "amod", "nummod", "det"]:
+                                                #a heuristic set of relations that probably dependend on the noun, e.g. eden od(ok) tistih(ok) lepih(ok) spominov iz preteklosti(ok)
+                                                # povezave, kot so "cop", "nsubj", "punct", "mark", "aux", "cc", "csubj", pa najbrž spadajo k glavi te zveze (en/eden)
+                                                sentence[int(id(t))-1][6] = id(token)
 
 
                     ########## "več kot x" constructions (neustrezno v JOS)
@@ -2257,7 +2337,7 @@ with open(treebank_path, "r", encoding="utf8") as file:
         if not sentence_open:
             sentence = []
             if line.startswith("#"):
-                sentence_id = line.split("=")[1].strip("\n")
+                sentence_id = line.split(" = ")[1].strip("\n")
                 output.write(line)
                 sentence_open = True
 

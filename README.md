@@ -20,7 +20,9 @@ In short:
 
 4. `convert_dependencies.py`: conversion of JOS syntactic dependencies to UD ones.
 
-5. `ud-data-split.py`: splits the UD treebank into train (80%), test (10%) and dev (10%) files. 
+5. `correct_dependencies.py`: final manual-like correction of dependency conversion errors in specific sentences.
+
+6. `ud-data-split.py`: splits the UD treebank into train (80%), test (10%) and dev (10%) files. 
 
 NB: `jos2ud.pl` takes two mapping files as parameters, one for PoS mapping (`jos2ud-pos.tbl`), and the other for feature mapping (`jos2ud-features.tbl`). The files have tab-separated lines with the following characteristics:
 

@@ -126,6 +126,5 @@ xget-ssj500k:
 	cd Origin; unzip sloleks-en.tbl_v1.2.zip
 	rm Origin/*.zip
 
-#saxon = java -jar /usr/local/bin/saxon9he.jar
-#saxon = java -jar /home/tomaz/bin/saxon9he.jar
-saxon = java -Djavax.xml.parsers.DocumentBuilderFactory=org.apache.xerces.jaxp.DocumentBuilderFactoryImpl -Djavax.xml.parsers.SAXParserFactory=org.apache.xerces.jaxp.SAXParserFactoryImpl net.sf.saxon.Transform
+saxon = java -jar /usr/share/java/saxon.jar
+#saxon = java -Djavax.xml.parsers.DocumentBuilderFactory=org.apache.xerces.jaxp.DocumentBuilderFactoryImpl -Djavax.xml.parsers.SAXParserFactory=org.apache.xerces.jaxp.SAXParserFactoryImpl net.sf.saxon.Transform

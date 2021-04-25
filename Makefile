@@ -45,7 +45,7 @@ xall:	ssj sloleks jos janes
 
 dist:	get-dist format-dist ud-mor-dist
 jos:	get-jos format-jos ud-mor-jos
-ssj:	get-ssj format-ssj ud-mor-ssj ud-biti-ssj ud-syn-ssj ud-val-ssj ud-split-ssj
+ssj:	get-ssj format-ssj ud-mor-ssj ud-biti-ssj ud-syn-ssj ud-split-ssj ud-val-ssj
 janes:	get-janes format-janes ud-mor-janes
 
 eltec:
@@ -64,13 +64,14 @@ sloleks:
 	LC_ALL=C bin/jos2ud.pl lexicon Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
 	< Origin/sloleks.feats.tmp | bin/add-biti-lexicon.pl > Origin/sloleks.ud.tbl
 
+ud-val-ssj:
+	python3 bin/tools/validate.py --lang sl --level 1 Origin/sl_ssj-ud-*.conllu
+	python3 bin/tools/validate.py --lang sl --level 2 Origin/sl_ssj-ud-*.conllu
+
 # Split corpus into train, dev, test
 ud-split-ssj:
 	cd Origin; ../bin/ud-data-split.py sl_ssj-ud_v2.2.conllu
 
-ud-val-ssj:
-	python3 bin/tools/validate.py --lang sl --level 1 Origin/ssj500k-en.ud.syn.tbl
-	python3 bin/tools/validate.py --lang sl --level 2 Origin/ssj500k-en.ud.syn.tbl
 # Compute UD dependencies
 ud-syn-ssj:
 	cd Origin; ../bin/convert_dependencies.py ../Origin/ssj500k-en.ud.syn.tbl 2.2

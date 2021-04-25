@@ -167,18 +167,13 @@
     <xsl:text>&#9;</xsl:text>
     <!-- 10/MISC -->
     <xsl:choose>
-      <xsl:when test="not(
-		      following::tei:*[1][self::tei:c] or
-		      (not(following::tei:*[self::tei:w or self::tei:pc])
-		      and
-		      (../following::tei:*[1][self::tei:c] or
-		      not(../following-sibling::tei:*))
-		      ))">
-	<xsl:text>SpaceAfter=No</xsl:text>
-      </xsl:when>
-      <xsl:otherwise>
-	<xsl:text>_</xsl:text>
-      </xsl:otherwise>
+      <xsl:when test="following-sibling::tei:*[1][self::tei:c]">_</xsl:when>
+      <xsl:when test="following-sibling::tei:*[not(self::tei:linkGrp)]">SpaceAfter=No</xsl:when>
+      <xsl:when test="parent::tei:seg/following-sibling::tei:*[1][self::tei:c]">_</xsl:when>
+      <xsl:when test="parent::tei:seg/following-sibling::tei:*[not(self::tei:linkGrp)]">SpaceAfter=No</xsl:when>
+      <xsl:when test="ancestor::tei:s/following-sibling::tei:*[1][self::tei:c]">_</xsl:when>
+      <xsl:when test="ancestor::tei:s/following-sibling::tei:*">SpaceAfter=No</xsl:when>
+      <xsl:otherwise>_</xsl:otherwise>
     </xsl:choose>
     <xsl:text>&#10;</xsl:text>
   </xsl:template>

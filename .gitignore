@@ -5,6 +5,7 @@ nohup.*
 *.old
 *.zip
 tmp
+tools
 Origin/*
 !Origin/README.md
 

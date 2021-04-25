@@ -1,3 +1,7 @@
+test-valid:
+	python3 bin/tools/validate.py --lang sl --level 1 Origin/ssj500k-en.ud.syn.tbl
+	python3 bin/tools/validate.py --lang sl --level 2 Origin/ssj500k-en.ud.syn.tbl
+
 ### Testing
 test-janes:
 	${saxon} -xsl:bin/tei2conllu.xsl Origin/test.xml > Origin/test.tbl
@@ -41,7 +45,7 @@ xall:	ssj sloleks jos janes
 
 dist:	get-dist format-dist ud-mor-dist
 jos:	get-jos format-jos ud-mor-jos
-ssj:	get-ssj format-ssj ud-mor-ssj ud-biti-ssj ud-syn-ssj ud-split-ssj
+ssj:	get-ssj format-ssj ud-mor-ssj ud-biti-ssj ud-syn-ssj ud-val-ssj ud-split-ssj
 janes:	get-janes format-janes ud-mor-janes
 
 eltec:
@@ -64,6 +68,9 @@ sloleks:
 ud-split-ssj:
 	cd Origin; ../bin/ud-data-split.py sl_ssj-ud_v2.2.conllu
 
+ud-val-ssj:
+	python3 bin/tools/validate.py --lang sl --level 1 Origin/ssj500k-en.ud.syn.tbl
+	python3 bin/tools/validate.py --lang sl --level 2 Origin/ssj500k-en.ud.syn.tbl
 # Compute UD dependencies
 ud-syn-ssj:
 	cd Origin; ../bin/convert_dependencies.py ../Origin/ssj500k-en.ud.syn.tbl 2.2

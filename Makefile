@@ -70,11 +70,12 @@ ud-val-ssj:
 
 # Split corpus into train, dev, test
 ud-split-ssj:
-	cd Origin; ../bin/ud-data-split.py sl_ssj-ud_v2.2.conllu
+	cd Origin; ../bin/ud-data-split.py manually-corrected_sl_ssj-ud_v2.2_2.5.conllu
 
 # Compute UD dependencies
 ud-syn-ssj:
-	cd Origin; ../bin/convert_dependencies.py ../Origin/ssj500k-en.ud.syn.tbl 2.2
+	#cd Origin; ../bin/convert_dependencies.py ssj500k-en.ud.syn.tbl 2.2
+	cd Origin; ../bin/correct_dependencies.py sl_ssj-ud_v2.2.conllu 2.5
 
 # Fix "biti" in the both parts of the corpus, the syn. annotated and syn. unannotated one
 ud-biti-ssj:

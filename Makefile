@@ -105,7 +105,7 @@ ud-mor-jos:
 format-janes:
 	${saxon} -xsl:bin/tei2conllu.xsl Origin/janes.tag-single.xml > Origin/janes.tag.tbl
 format-ssj:
-	#${saxon} -xi -xsl:bin/tei2conllu.xsl Origin/ssj500k.all.xml > Origin/ssj500k-en.tbl
+	${saxon} -xi -xsl:bin/tei2conllu.xsl Origin/ssj500k.all.xml > Origin/ssj500k-en.tbl
 	${saxon} -xi -xsl:bin/tei2conllu.xsl Origin/${ssj-500k}/ssj500k-en.xml > Origin/ssj500k-en.tbl
 format-jos:
 	${saxon} -xi -xsl:bin/tei2conllu.xsl Origin/jos1M-en.xml > Origin/jos1M-en.tbl

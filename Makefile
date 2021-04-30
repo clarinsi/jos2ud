@@ -1,3 +1,5 @@
+test-ssj:
+	${saxon} -xi -xsl:bin/tei2conllu.xsl Origin/test.xml > Origin/test.tbl
 test-valid:
 	python3 bin/tools/validate.py --lang sl --level 1 Origin/ssj500k-en.ud.syn.tbl
 	python3 bin/tools/validate.py --lang sl --level 2 Origin/ssj500k-en.ud.syn.tbl
@@ -45,7 +47,8 @@ xall:	ssj sloleks jos janes
 
 dist:	get-dist format-dist ud-mor-dist
 jos:	get-jos format-jos ud-mor-jos
-ssj:	get-ssj format-ssj ud-mor-ssj ud-biti-ssj ud-syn-ssj ud-split-ssj ud-val-ssj
+ssj:	format-ssj ud-mor-ssj ud-biti-ssj ud-syn-ssj ud-split-ssj ud-val-ssj
+xssj:	get-ssj format-ssj ud-mor-ssj ud-biti-ssj ud-syn-ssj ud-split-ssj ud-val-ssj
 janes:	get-janes format-janes ud-mor-janes
 
 eltec:
@@ -74,7 +77,7 @@ ud-split-ssj:
 
 # Compute UD dependencies
 ud-syn-ssj:
-	#cd Origin; ../bin/convert_dependencies.py ssj500k-en.ud.syn.tbl 2.2
+	cd Origin; ../bin/convert_dependencies.py ssj500k-en.ud.syn.tbl 2.2
 	cd Origin; ../bin/correct_dependencies.py sl_ssj-ud_v2.2.conllu 2.5
 
 # Fix "biti" in the both parts of the corpus, the syn. annotated and syn. unannotated one
@@ -105,8 +108,7 @@ ud-mor-jos:
 format-janes:
 	${saxon} -xsl:bin/tei2conllu.xsl Origin/janes.tag-single.xml > Origin/janes.tag.tbl
 format-ssj:
-	${saxon} -xi -xsl:bin/tei2conllu.xsl Origin/ssj500k.all.xml > Origin/ssj500k-en.tbl
-	${saxon} -xi -xsl:bin/tei2conllu.xsl Origin/${ssj-500k}/ssj500k-en.xml > Origin/ssj500k-en.tbl
+	${saxon} -xi -xsl:bin/tei2conllu.xsl Origin/ssj500k-en.TEI/ssj500k-en.xml > Origin/ssj500k-en.tbl
 format-jos:
 	${saxon} -xi -xsl:bin/tei2conllu.xsl Origin/jos1M-en.xml > Origin/jos1M-en.tbl
 	${saxon} -xi -xsl:bin/tei2conllu.xsl Origin/jos1M-en_ssj500k_yes.xml > Origin/jos1M-en_ssj500k_yes.tbl
@@ -118,12 +120,11 @@ get-janes:
 	cp ${JANES}/UD/janes.biti.tbl Map/JanesTag-biti-as-VERB.txt
 
 CLARIN.SI = https://www.clarin.si/repository/xmlui/bitstream/handle
-ssj-500k  = ssj500k-en.TEI
 get-ssj:
 	#cp /home/tomaz/Project/SSJ/Ucni/ssj500k.2.2/Master/ssj500k.all.xml Origin
-	rm -f Origin/${ssj-500k}.zip; rm -fr Origin/${ssj-500k}/
-	cd Origin/; wget ${CLARIN.SI}/11356/1210/${ssj-500k}.zip
-	cd Origin/; unzip ${ssj-500k}.zip; rm ${ssj-500k}.zip
+	rm -f Origin/ssj500k-en.TEI.zip; rm -fr Origin/ssj500k-en.TEI/
+	cd Origin/; wget ${CLARIN.SI}/11356/1210/ssj500k-en.TEI.zip
+	cd Origin/; unzip ssj500k-en.TEI.zip; rm ssj500k-en.TEI.zip
 
 get-jos:
 	cp /home/tomaz/Resources/CLARIN/jos1M/Fix/jos1M-en.xml Origin
@@ -136,4 +137,3 @@ xget-ssj500k:
 	rm Origin/*.zip
 
 saxon = java -jar /usr/share/java/saxon.jar
-#saxon = java -Djavax.xml.parsers.DocumentBuilderFactory=org.apache.xerces.jaxp.DocumentBuilderFactoryImpl -Djavax.xml.parsers.SAXParserFactory=org.apache.xerces.jaxp.SAXParserFactoryImpl net.sf.saxon.Transform

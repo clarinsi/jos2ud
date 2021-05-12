@@ -33,3 +33,23 @@ NB: `jos2ud.pl` takes two mapping files as parameters, one for PoS mapping (`jos
 * The PoS mapping checks, for each token, all the mappings in (semi)order, and applies the first one whose conditions match the token annotations. If no mapping matches, this is an error.
 
 * The Feature mapping goes through the semiordered mapping table only once; when a mapping matches then the corresponding JOS features is removed, and a UD features can be output. If all the mappings have been tried, but JOS features still remain, this is an error. Note that this means that JOS features that map to nothing also have to be included in the table.
+
+**Citing**
+
+If you use this tool, please cite the following paper:
+```
+@inproceedings{dobrovoljc-etal-2017-universal,
+    title = "The {U}niversal {D}ependencies Treebank for {S}lovenian",
+    author = "Dobrovoljc, Kaja  and
+      Erjavec, Toma{\v{z}}  and
+      Krek, Simon",
+    booktitle = "Proceedings of the 6th Workshop on {B}alto-{S}lavic Natural Language Processing",
+    month = apr,
+    year = "2017",
+    address = "Valencia, Spain",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/W17-1406",
+    doi = "10.18653/v1/W17-1406",
+    pages = "33--38",
+}
+```

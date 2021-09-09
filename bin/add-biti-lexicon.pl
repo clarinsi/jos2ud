@@ -10,6 +10,7 @@ while (<>){
     my ($word, $lemma, $msd, $freq, $std, $feats, $ud_feats) = split /\t/;
     if ($lemma eq 'biti' and $feats =~ /Verb Type=auxiliary/) {
 	print;
+	print "\n";
 	s/\tAUX /\tVERB /;
     }
     print;

@@ -56,7 +56,7 @@ if ($type eq 'corpus') {
 	    }
 	    my ($n, $tok, $lemma, $cat, $msd, 
 		$feats, $dep, $rel, $deps, $misc) = split /\t/, $line;
-	    if ($dep > 0) {
+	    if ($dep =~ /^\d+$/ and $dep > 0) {
 		$head = $lines[$dep+$comments-1];
 	    }
 	    else {$head = ''}
@@ -71,14 +71,15 @@ if ($type eq 'corpus') {
 		$ud_cat = '_';
 		$ud_feats = '_';
 	    }
-	    if ($dep == -1) {
+	    if ($dep eq '-1') {
 		$ud_head = -1;
-		$ud_deprel = '-';
+		$ud_deprel = '_';
 	    }
 	    else {
-		$ud_head = 0;
-		$ud_deprel = 'root';
-		$misc .= "|Dep=$dep|Rel=$rel";
+		$ud_head = '_';
+		$ud_deprel = '_';
+		$misc .= "|Dep=$dep|Rel=$rel"
+		    if $dep ne '_'
 	    }
 	    $misc =~ s/^_?\|//;
 	    

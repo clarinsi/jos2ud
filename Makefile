@@ -1,3 +1,12 @@
+kaja:
+	bin/conllu2tei.pl < Origin/ELEXIS-WSD-SL_SPACEAFTER_UPOS.tsv \
+	> Origin/ELEXIS-WSD-SL_SPACEAFTER_UPOS.xml
+	${saxon} msd-file=../Origin/ssj500k-en.TEI/ssj500k.back.xml \
+	-xsl:bin/tei2conllu.xsl Origin/ELEXIS-WSD-SL_SPACEAFTER_UPOS.xml \
+	> Origin/ELEXIS-WSD-SL_SPACEAFTER_UPOS.tbl
+	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
+	< Origin/ELEXIS-WSD-SL_SPACEAFTER_UPOS.tbl > Origin/ELEXIS-WSD-SL_SPACEAFTER_UPOS.conllu
+
 test-ssj:
 	${saxon} -xi -xsl:bin/tei2conllu.xsl Origin/test.xml > Origin/test.tbl
 test-valid:

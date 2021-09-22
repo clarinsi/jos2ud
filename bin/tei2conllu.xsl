@@ -5,9 +5,13 @@
   xmlns:xsl = "http://www.w3.org/1999/XSL/Transform"
   xmlns:fn="http://www.w3.org/2005/xpath-functions"
   xmlns:tei="http://www.tei-c.org/ns/1.0"
+  xmlns="http://www.tei-c.org/ns/1.0"
   xmlns:et="http://nl.ijs.si/et"
   exclude-result-prefixes="fn tei et">
 
+  <!-- If source TEI does not have the MSD feature-structures, they should be found in this file: -->
+  <xsl:param name="msd-file"/>
+  
   <!-- In the source Punctuation might not have an MSD -->
   <xsl:param name="punct-tag">Z</xsl:param>
   <xsl:param name="punct-name">Punctuation</xsl:param>
@@ -16,10 +20,46 @@
   <xsl:key name="corresp" match="tei:*" use="substring-after(@corresp,'#')"/>
 
   <!-- TEI prefix replacement mechanism -->
-  <xsl:variable name="prefixes" select="//tei:listPrefixDef"/>
+  <xsl:variable name="prefixes">
+    <xsl:choose>
+      <xsl:when test="//tei:listPrefixDef">
+	<xsl:copy-of select="//tei:listPrefixDef"/>
+      </xsl:when>
+      <!-- We just assume listPrefixDef -->
+      <xsl:otherwise>
+	<listPrefixDef>
+          <prefixDef ident="mte" matchPattern="(.+)" replacementPattern="#$1"/>
+          <prefixDef ident="jos-syn" matchPattern="(.+)" replacementPattern="#$1"/>
+          <prefixDef ident="ud-syn" matchPattern="(.+)" replacementPattern="#$1"/>
+          <prefixDef ident="mwe" matchPattern="(.+)" replacementPattern="#$1"/>
+          <prefixDef ident="srl" matchPattern="(.+)" replacementPattern="#$1"/>
+       </listPrefixDef>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
 
   <!-- The MSD (PoS tag) feature library -->
-  <xsl:variable name="msds" select="key('id','#msds')"/>
+  <xsl:variable name="msds">
+    <xsl:choose>
+      <xsl:when test="key('id','#msds')/tei:*">
+	<xsl:copy-of select="key('id','#msds')"/>
+      </xsl:when>
+      <xsl:when test="key('id','#msd-sl')/tei:*">
+	<xsl:copy-of select="key('id','#msd-sl')"/>
+      </xsl:when>
+      <xsl:when test="key('id','#msds', document($msd-file))/tei:*">
+	<xsl:copy-of select="key('id', '#msds', document($msd-file))"/>
+      </xsl:when>
+      <xsl:when test="key('id','#msd-sl', document($msd-file))/tei:*">
+	<xsl:copy-of select="key('id', '#msd-sl', document($msd-file))"/>
+      </xsl:when>
+      <xsl:otherwise>
+	<xsl:message terminate="yes">
+	  <xsl:text>Can't find MSD library!</xsl:text>
+	</xsl:message>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
 
   <xsl:output encoding="utf-8" method="text"/>
   
@@ -51,10 +91,28 @@
     <xsl:text>&#32;</xsl:text>
   </xsl:template>
   <xsl:template mode="plain" match="tei:w | tei:pc">
-    <xsl:value-of select="."/>
+    <xsl:value-of select="normalize-space(.)"/>
+    <xsl:call-template name="SpaceAfter">
+      <xsl:with-param name="yes" select="'&#32;'"/>
+    </xsl:call-template>
   </xsl:template>
   <xsl:template match="tei:choice">
     <xsl:apply-templates select="tei:reg"/>
+  </xsl:template>
+  <!-- Output $no if token is @join-ed to next token, $yes otherwise -->
+  <xsl:template name="SpaceAfter">
+    <xsl:param name="yes"/>
+    <xsl:param name="no"/>
+    <xsl:choose>
+      <xsl:when test="@join = 'right' or @join='both' or
+		      following::tei:*[self::tei:w or self::tei:pc][1]
+		      [@join = 'left' or @join = 'both']">
+	<xsl:value-of select="$no"/>
+      </xsl:when>
+      <xsl:otherwise>
+	<xsl:value-of select="$yes"/>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template match="tei:w | tei:pc">
@@ -95,13 +153,13 @@
       <xsl:when test="self::tei:pc and not(@ana)">
         <xsl:value-of select="$punct-name"/>
       </xsl:when>
-      <xsl:when test="contains(key('id',$ana)/@feats,' ')">
-	<xsl:variable name="cat" select="substring-before(key('id',$ana)/@feats,' ')"/>
-	<xsl:value-of select="key('id',$cat,$msds)/tei:symbol/@value"/>
+      <xsl:when test="contains(key('id', $ana, $msds)/@feats,' ')">
+	<xsl:variable name="cat" select="substring-before(key('id',$ana, $msds)/@feats,' ')"/>
+	<xsl:value-of select="key('id', $cat, $msds)/tei:symbol/@value"/>
       </xsl:when>
       <xsl:otherwise>
-	<xsl:variable name="cat" select="key('id',$ana)/@feats"/>
-	<xsl:value-of select="key('id',$cat,$msds)/tei:symbol/@value"/>
+	<xsl:variable name="cat" select="key('id', $ana, $msds)/@feats"/>
+	<xsl:value-of select="key('id', $cat, $msds)/tei:symbol/@value"/>
       </xsl:otherwise>
     </xsl:choose>
     <xsl:text>&#9;</xsl:text>
@@ -122,11 +180,11 @@
     <xsl:text>&#9;</xsl:text>
     <!-- 6/FEATS -->
     <xsl:variable name="feats">
-      <xsl:for-each select="fn:tokenize(substring-after(key('id',$ana)/@feats,' '),' ')">
+      <xsl:for-each select="fn:tokenize(substring-after(key('id', $ana, $msds)/@feats,' '),' ')">
 	<xsl:text>|</xsl:text>
-	<xsl:value-of select="key('id',.,$msds)/@name"/>
+	<xsl:value-of select="key('id',. , $msds)/@name"/>
 	<xsl:text>=</xsl:text>
-	<xsl:value-of select="key('id',.,$msds)/tei:symbol/@value"/>
+	<xsl:value-of select="key('id', ., $msds)/tei:symbol/@value"/>
       </xsl:for-each>
     </xsl:variable>
     <xsl:choose>
@@ -138,7 +196,7 @@
     <xsl:text>&#9;</xsl:text>
     <!-- 7/HEAD -->
     <xsl:variable name="Syntax"
-		  select="key('corresp',ancestor::tei:s[1]/@xml:id)[@type='JOS-SYN']"/>
+		  select="key('corresp', ancestor::tei:s[1]/@xml:id)[@type='JOS-SYN']"/>
     <xsl:choose>
       <xsl:when test="$Syntax//tei:link">
 	<xsl:call-template name="head">
@@ -146,7 +204,7 @@
 	</xsl:call-template>
       </xsl:when>
       <xsl:otherwise>
-	<xsl:text>-1</xsl:text>
+	<xsl:text>_</xsl:text>
       </xsl:otherwise>
     </xsl:choose>
     <xsl:text>&#9;</xsl:text>
@@ -158,7 +216,7 @@
 	</xsl:call-template>
       </xsl:when>
       <xsl:otherwise>
-	<xsl:text>-</xsl:text>
+	<xsl:text>_</xsl:text>
       </xsl:otherwise>
     </xsl:choose>
     <xsl:text>&#9;</xsl:text>
@@ -167,13 +225,16 @@
     <xsl:text>&#9;</xsl:text>
     <!-- 10/MISC -->
     <xsl:choose>
-      <xsl:when test="following-sibling::tei:*[1][self::tei:c]">_</xsl:when>
-      <xsl:when test="following-sibling::tei:*[not(self::tei:linkGrp)]">SpaceAfter=No</xsl:when>
-      <xsl:when test="parent::tei:seg/following-sibling::tei:*[1][self::tei:c]">_</xsl:when>
-      <xsl:when test="parent::tei:seg/following-sibling::tei:*[not(self::tei:linkGrp)]">SpaceAfter=No</xsl:when>
-      <xsl:when test="ancestor::tei:s/following-sibling::tei:*[1][self::tei:c]">_</xsl:when>
-      <xsl:when test="ancestor::tei:s/following-sibling::tei:*">SpaceAfter=No</xsl:when>
-      <xsl:otherwise>_</xsl:otherwise>
+      <!-- Do not put MISC features on sytactic words -->
+      <xsl:when test="parent::tei:w">
+	<xsl:text>_</xsl:text>
+      </xsl:when>
+      <xsl:otherwise>
+	<!--xsl:call-template name="NER"/-->
+	<xsl:call-template name="SpaceAfter">
+	  <xsl:with-param name="no">SpaceAfter=No</xsl:with-param>
+	</xsl:call-template>
+      </xsl:otherwise>
     </xsl:choose>
     <xsl:text>&#10;</xsl:text>
   </xsl:template>

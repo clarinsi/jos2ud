@@ -1,4 +1,12 @@
-kaja:
+kaja2:
+	bin/conllu2tei.pl < Origin/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.tsv \
+	> Origin/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.xml
+	${saxon} msd-file=../Origin/ssj500k-en.TEI/ssj500k.back.xml \
+	-xsl:bin/tei2conllu.xsl Origin/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.xml \
+	> Origin/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.tbl
+	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
+	< Origin/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.tbl > Origin/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.conllu
+kaja1:
 	bin/conllu2tei.pl < Origin/ELEXIS-WSD-SL_SPACEAFTER_UPOS.tsv \
 	> Origin/ELEXIS-WSD-SL_SPACEAFTER_UPOS.xml
 	${saxon} msd-file=../Origin/ssj500k-en.TEI/ssj500k.back.xml \

@@ -1,3 +1,9 @@
+check-feats:
+	bin/slolex2shortlex.pl < Origin/sloleks.ud.tbl | sort | uniq > Origin/sloleks.short.lex
+	bin/conllu2shortlex.pl < Origin/manually-corrected_sl_ssj-ud_v2.2_2.5.conllu | sort | uniq > Origin/ssj500k.short.lex
+	cut -f1-4 Origin/sloleks.short.lex | uniq -d
+	cut -f1-4 Origin/ssj500k.short.lex | uniq -d
+	bin/cmpshortlex.pl Origin/ssj500k.short.lex Origin/sloleks.short.lex
 kaja2:
 	bin/conllu2tei.pl < Origin/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.tsv \
 	> Origin/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.xml

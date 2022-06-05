@@ -49,6 +49,8 @@ test-kaja:
 	cat < Origin/ssj500k-en.ud.tbl | bin/take-syn.pl > Origin/ssj500k-en.ud.synonly.tbl
 	cd Origin; python ../bin/convert_dependencies.py Origin/ssj500k-en.ud.synonly.tbl 2.2
 test-lex:
+	#grep '	več	Rgc	' < Origin/sloleks-en_v1.2.tbl | bin/lex2feats.pl Map/jos-msd2features.tbl \
+	#> Origin/test.lex.tbl
 	shuf < Origin/sloleks-en_v1.2.tbl | head -1000 | bin/lex2feats.pl Map/jos-msd2features.tbl \
 	> Origin/test.lex.tbl
 	LC_ALL=C bin/jos2ud.pl lexicon Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
@@ -82,7 +84,13 @@ eltec:
 	bin/compare2ud.pl Origin/SLV_5000.ud.tbl \
 	< Origin/SLV_5000-AB2.txt 2> Origin/SLV_5000-err2.txt # > Origin/SLV_5000-AB3.txt 
 
-# Process lexicon
+# Process lexicons
+mfidaleks:
+	zcat ~/Project/SSJ/MetaFida/mfida01.wfl.gz | bin/filter-lex.pl > Origin/mfida01-lex.tbl
+	cat < Origin/mfida01-lex.tbl | bin/lex2feats.pl Map/jos-msd2features.tbl \
+	> Origin/mfida-lex.feats.tmp
+	LC_ALL=C bin/jos2ud.pl lexicon Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
+	< Origin/mfida-lex.feats.tmp | bin/add-biti-lexicon.pl > Origin/mfida-lex.ud.tbl
 sloleks:
 	cp ~/Project/SSJ/Lexicon/SloLeks-2.0/sloleks_clarin_2.0-en.tbl Origin
 	cat < Origin/sloleks_clarin_2.0-en.tbl | bin/lex2feats.pl Map/jos-msd2features.tbl \

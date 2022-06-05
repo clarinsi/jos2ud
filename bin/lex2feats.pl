@@ -18,7 +18,8 @@ while (<MAP>) {
 close MAP;
 
 while (<>){
-    if (/^#/) {
+    #A line starting with # and no tabs is a comment
+    if (/^#/ and not /\t/) {
 	print;
 	next
     }

@@ -4,6 +4,21 @@ check-feats:
 	cut -f1-4 Origin/sloleks.short.lex | uniq -d
 	cut -f1-4 Origin/ssj500k.short.lex | uniq -d
 	bin/cmpshortlex.pl Origin/ssj500k.short.lex Origin/sloleks.short.lex
+kaja3-test:
+	bin/conllu-senti2tei.pl < Origin/slobench/senticoref_10020.tsv \
+	> Origin/slobench/senticoref_10020.xml
+	${saxon} msd-file=../Origin/ssj500k-en.TEI/ssj500k.back.xml \
+	-xsl:bin/tei2conllu.xsl Origin/slobench/senticoref_10020.xml \
+	> Origin/slobench/senticoref_10020.tbl
+	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
+	< Origin/slobench/senticoref_10020.tbl > Origin/slobench/senticoref_10020.conllu
+kaja3:
+	ls Origin/slobench/senticoref_*.tsv | $P --jobs 10 \
+	'bin/conllu-senti2tei.pl < {} > {.}.xml'
+	ls Origin/slobench/senticoref_*.xml | $P --jobs 10 \
+	'${saxon} msd-file=../Origin/ssj500k-en.TEI/ssj500k.back.xml -xsl:bin/tei2conllu.xsl {} > {.}.tbl'
+	ls Origin/slobench/senticoref_*.tbl | $P --jobs 10 \
+	'LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl < {} > {.}.conllu'
 kaja2:
 	bin/conllu2tei.pl < Origin/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.tsv \
 	> Origin/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.xml
@@ -167,4 +182,7 @@ xget-ssj500k:
 	cd Origin; unzip sloleks-en.tbl_v1.2.zip
 	rm Origin/*.zip
 
+
+#####################################################
 saxon = java -jar /usr/share/java/saxon.jar
+P = parallel --gnu --halt 2

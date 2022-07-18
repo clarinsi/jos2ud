@@ -24,9 +24,10 @@ while (<>) {
     ($s_id) = /# sent_id = (.+)\n/;
     print "<s xml:id=\"$s_id\">\n";
     foreach my $line (split(/\n/, $_)) {
+	next if $line =~ /^#/;
+	next unless $line =~ /^\d+-\d+\t/;
 	chomp $line;
 	s/\cM//; #DOS EOL
-	next unless $line =~ /^\d+-\d+\t/;
  	my ($n, $interval, $token, $lemma, $xpos, $ufeats, $local) 
 	    = split /\t/, $line;
 	if (exists $sl{$xpos}) {}

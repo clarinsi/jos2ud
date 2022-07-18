@@ -12,13 +12,18 @@ kaja3-test:
 	> Origin/slobench/senticoref_10020.tbl
 	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
 	< Origin/slobench/senticoref_10020.tbl > Origin/slobench/senticoref_10020.conllu
+	python3 bin/tools/validate.py --lang sl --level 1 Origin/slobench/senticoref_10020.conllu
+	# python3 bin/tools/validate.py --lang sl --level 2 Origin/slobench/senticoref_10020.conllu
 kaja3:
+	dos2unix Origin/slobench/senticoref_*.tsv
 	ls Origin/slobench/senticoref_*.tsv | $P --jobs 10 \
 	'bin/conllu-senti2tei.pl < {} > {.}.xml'
 	ls Origin/slobench/senticoref_*.xml | $P --jobs 10 \
 	'${saxon} msd-file=../Map/ssj500k.back.xml -xsl:bin/tei2conllu.xsl {} > {.}.tbl'
 	ls Origin/slobench/senticoref_*.tbl | $P --jobs 10 \
 	'LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl < {} > {.}.conllu'
+	python3 bin/tools/validate.py --lang sl --level 1 Origin/slobench/*.conllu
+	# python3 bin/tools/validate.py --lang sl --level 2 Origin/slobench/*.conllu
 kaja2:
 	bin/conllu2tei.pl < Origin/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.tsv \
 	> Origin/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.xml

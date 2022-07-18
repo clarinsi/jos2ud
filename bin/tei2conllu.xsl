@@ -233,6 +233,7 @@
 	<!--xsl:call-template name="NER"/-->
 	<xsl:call-template name="SpaceAfter">
 	  <xsl:with-param name="no">SpaceAfter=No</xsl:with-param>
+	  <xsl:with-param name="yes">_</xsl:with-param>
 	</xsl:call-template>
       </xsl:otherwise>
     </xsl:choose>

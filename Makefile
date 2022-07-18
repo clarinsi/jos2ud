@@ -7,7 +7,7 @@ check-feats:
 kaja3-test:
 	bin/conllu-senti2tei.pl < Origin/slobench/senticoref_10020.tsv \
 	> Origin/slobench/senticoref_10020.xml
-	${saxon} msd-file=../Origin/ssj500k-en.TEI/ssj500k.back.xml \
+	${saxon} msd-file=../Map/ssj500k.back.xml \
 	-xsl:bin/tei2conllu.xsl Origin/slobench/senticoref_10020.xml \
 	> Origin/slobench/senticoref_10020.tbl
 	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
@@ -16,13 +16,13 @@ kaja3:
 	ls Origin/slobench/senticoref_*.tsv | $P --jobs 10 \
 	'bin/conllu-senti2tei.pl < {} > {.}.xml'
 	ls Origin/slobench/senticoref_*.xml | $P --jobs 10 \
-	'${saxon} msd-file=../Origin/ssj500k-en.TEI/ssj500k.back.xml -xsl:bin/tei2conllu.xsl {} > {.}.tbl'
+	'${saxon} msd-file=../Map/ssj500k.back.xml -xsl:bin/tei2conllu.xsl {} > {.}.tbl'
 	ls Origin/slobench/senticoref_*.tbl | $P --jobs 10 \
 	'LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl < {} > {.}.conllu'
 kaja2:
 	bin/conllu2tei.pl < Origin/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.tsv \
 	> Origin/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.xml
-	${saxon} msd-file=../Origin/ssj500k-en.TEI/ssj500k.back.xml \
+	${saxon} msd-file=../Map/ssj500k.back.xml \
 	-xsl:bin/tei2conllu.xsl Origin/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.xml \
 	> Origin/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.tbl
 	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
@@ -30,7 +30,7 @@ kaja2:
 kaja1:
 	bin/conllu2tei.pl < Origin/ELEXIS-WSD-SL_SPACEAFTER_UPOS.tsv \
 	> Origin/ELEXIS-WSD-SL_SPACEAFTER_UPOS.xml
-	${saxon} msd-file=../Origin/ssj500k-en.TEI/ssj500k.back.xml \
+	${saxon} msd-file=../Map/ssj500k.back.xml \
 	-xsl:bin/tei2conllu.xsl Origin/ELEXIS-WSD-SL_SPACEAFTER_UPOS.xml \
 	> Origin/ELEXIS-WSD-SL_SPACEAFTER_UPOS.tbl
 	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \

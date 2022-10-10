@@ -1,3 +1,21 @@
+suk-ambiga:
+	dos2unix Origin/SUK/SUK-Ambiga_MANUAL-LEMMA-MSD_2022-10-04.tsv
+	bin/conllu2ambiga2tei.pl \
+	< Origin/SUK/SUK-Ambiga_MANUAL-LEMMA-MSD_2022-10-04.tsv > Origin/SUK/SUK-Ambiga_UD_2022-10-10.tsv
+	${saxon} msd-file=../Map/ssj500k.back.xml -xsl:bin/tei2conllu.xsl \
+	Origin/SUK/SUK-Ambiga_UD_2022-10-10.tsv > Origin/SUK/SUK-Ambiga_UD_2022-10-10.tbl
+	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
+	< Origin/SUK/SUK-Ambiga_UD_2022-10-10.tbl > Origin/SUK/SUK-Ambiga_UD_2022-10-10.conllu
+	python3 bin/tools/validate.py --lang sl --level 1 Origin/SUK/SUK-Ambiga_UD_2022-10-10.conllu
+suk-ambiga-test:
+	dos2unix Origin/SUK/Ambiga_test.tsv
+	bin/conllu2ambiga2tei.pl < Origin/SUK/Ambiga_test.tsv > Origin/SUK/Ambiga_test.xml
+	${saxon} msd-file=../Map/ssj500k.back.xml -xsl:bin/tei2conllu.xsl \
+	Origin/SUK/Ambiga_test.xml > Origin/SUK/Ambiga_test.tbl
+	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
+	< Origin/SUK/Ambiga_test.tbl > Origin/SUK/Ambiga_test.conllu
+	python3 bin/tools/validate.py --lang sl --level 1 Origin/SUK/Ambiga_test.conllu
+
 check-feats:
 	bin/slolex2shortlex.pl < Origin/sloleks.ud.tbl | sort | uniq > Origin/sloleks.short.lex
 	bin/conllu2shortlex.pl < Origin/manually-corrected_sl_ssj-ud_v2.2_2.5.conllu | sort | uniq > Origin/ssj500k.short.lex

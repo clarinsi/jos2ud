@@ -122,7 +122,9 @@
     <!-- 2/FORM -->
     <xsl:if test="contains(text(),' ')">
       <xsl:message>
-	<xsl:value-of select="concat('ERROR: tokens contains space: ', text())"/>
+	<xsl:value-of select="concat('ERROR: token in ', 
+			      ancestor-or-self::tei:*[@xml:id][1]/@xml:id,' 
+			      contains space: &quot;', text(), '&quot;')"/>
       </xsl:message>
     </xsl:if>
     <xsl:value-of select="text()"/>
@@ -133,13 +135,18 @@
 	<xsl:value-of select="text()"/>
       </xsl:when>
       <xsl:when test="not(@lemma)">
-	<xsl:message terminate="yes">
-	  <xsl:value-of select="concat('ERROR: no lemma for token: ', text())"/>
+	<xsl:message>
+	  <xsl:value-of select="concat('ERROR: no lemma for token ',
+				'&apos;', text()), '&apos;',
+				' in ', 
+				ancestor-or-self::tei:*[@xml:id][1]/@xml:id)"/>
 	</xsl:message>
       </xsl:when>
       <xsl:when test="contains(@lemma,' ')">
-	<xsl:message terminate="yes">
-	  <xsl:value-of select="concat('ERROR: lemma contains space: ', @lemma)"/>
+	<xsl:message terminate="no">
+	<xsl:value-of select="concat('ERROR: lemma in ', 
+			      ancestor-or-self::tei:*[@xml:id][1]/@xml:id,' 
+			      contains space: &apos;', @lemma, '&apos;')"/>
 	</xsl:message>
       </xsl:when>
       <xsl:otherwise>
@@ -169,9 +176,12 @@
         <xsl:value-of select="$punct-tag"/>
       </xsl:when>
       <xsl:when test="not(@ana)">
-      <xsl:message terminate="yes">
-	<xsl:value-of select="concat('ERROR: no msd for token: ', text())"/>
-      </xsl:message>
+	<xsl:message>
+	  <xsl:value-of select="concat('ERROR: no MSD for token ',
+				'&apos;', text()), '&apos;',
+				' in ', 
+				ancestor-or-self::tei:*[@xml:id][1]/@xml:id)"/>
+	</xsl:message>
       </xsl:when>
       <xsl:otherwise>
 	<xsl:value-of select="substring-after($ana,'#')"/>

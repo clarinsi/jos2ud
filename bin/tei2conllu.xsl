@@ -120,16 +120,19 @@
     <xsl:apply-templates mode="number" select="."/>
     <xsl:text>&#9;</xsl:text>
     <!-- 2/FORM -->
+    <xsl:variable name="token" select="normalize-space(text())"/>
     <xsl:if test="contains(text(),' ')">
       <xsl:message>
-	<xsl:value-of select="concat('ERROR: token in ', 
-			      ancestor-or-self::tei:*[@xml:id][1]/@xml:id,' 
-			      contains space: &quot;', text(), '&quot;')"/>
+	<xsl:value-of select="concat('WARNING: token in ', 
+			      ancestor-or-self::tei:*[@xml:id][1]/@xml:id, 
+			      ' contains space: &quot;', text(), '&quot;', 
+			      '; normalizing to &quot;', $token, '&quot;')"/>
       </xsl:message>
     </xsl:if>
-    <xsl:value-of select="text()"/>
+    <xsl:value-of select="$token"/>
     <xsl:text>&#9;</xsl:text>
     <!-- 3/LEMMA -->
+    <xsl:variable name="lemma" select="normalize-space(@lemma)"/>
     <xsl:choose>
       <xsl:when test="self::tei:pc and not(@lemma)">
 	<xsl:value-of select="text()"/>
@@ -144,15 +147,14 @@
       </xsl:when>
       <xsl:when test="contains(@lemma,' ')">
 	<xsl:message terminate="no">
-	<xsl:value-of select="concat('ERROR: lemma in ', 
-			      ancestor-or-self::tei:*[@xml:id][1]/@xml:id,' 
-			      contains space: &apos;', @lemma, '&apos;')"/>
+	<xsl:value-of select="concat('WARNING: lemma in ', 
+			      ancestor-or-self::tei:*[@xml:id][1]/@xml:id, 
+			      ' contains space: &quot;', @lemma, '&quot;', 
+			      '; normalizing to &quot;', $lemma, '&quot;')"/>
 	</xsl:message>
       </xsl:when>
-      <xsl:otherwise>
-	<xsl:value-of select="@lemma"/>
-      </xsl:otherwise>
     </xsl:choose>
+    <xsl:value-of select="$lemma"/>
     <xsl:text>&#9;</xsl:text>
     <xsl:variable name="ana" select="et:prefix-replace(@ana, $prefixes)"/>
     <!-- 4/CPOSTAG -->

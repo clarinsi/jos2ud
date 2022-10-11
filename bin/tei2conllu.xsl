@@ -135,7 +135,7 @@
     <xsl:variable name="lemma" select="normalize-space(@lemma)"/>
     <xsl:choose>
       <xsl:when test="self::tei:pc and not(@lemma)">
-	<xsl:value-of select="text()"/>
+	<xsl:value-of select="$token"/>
       </xsl:when>
       <xsl:when test="not(@lemma)">
 	<xsl:message>

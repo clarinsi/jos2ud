@@ -18,14 +18,14 @@ suk-senticore-test:
 	python3 bin/tools/validate.py --lang sl --level 1 Origin/SUK-SentiCore/SUK-SentiCoref-10009.conllu
 
 suk-ambiga:
-	#dos2unix Origin/SUK-Ambiga/SUK-Ambiga_MANUAL-LEMMA-MSD_2022-10-04.tsv
+	dos2unix Origin/SUK-Ambiga/SUK-Ambiga_MANUAL-LEMMA-MSD_2022-10-10.tsv
 	bin/conllu-ambiga2tei.pl \
-	< Origin/SUK-Ambiga/SUK-Ambiga_MANUAL-LEMMA-MSD_2022-10-04.tsv > Origin/SUK-Ambiga/SUK-Ambiga_UD_2022-10-10.tsv
+	< Origin/SUK-Ambiga/SUK-Ambiga_MANUAL-LEMMA-MSD_2022-10-10.tsv > Origin/SUK-Ambiga/SUK-Ambiga_UD_2022-10-11.tsv
 	${saxon} msd-file=../Map/ssj500k.back.xml -xsl:bin/tei2conllu.xsl \
-	Origin/SUK-Ambiga/SUK-Ambiga_UD_2022-10-10.tsv > Origin/SUK-Ambiga/SUK-Ambiga_UD_2022-10-10.tbl
+	Origin/SUK-Ambiga/SUK-Ambiga_UD_2022-10-11.tsv > Origin/SUK-Ambiga/SUK-Ambiga_UD_2022-10-11.tbl
 	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
-	< Origin/SUK-Ambiga/SUK-Ambiga_UD_2022-10-10.tbl > Origin/SUK-Ambiga/SUK-Ambiga_UD_2022-10-10.conllu
-	python3 bin/tools/validate.py --lang sl --level 1 Origin/SUK-Ambiga/SUK-Ambiga_UD_2022-10-10.conllu
+	< Origin/SUK-Ambiga/SUK-Ambiga_UD_2022-10-11.tbl > Origin/SUK-Ambiga/SUK-Ambiga_UD_2022-10-11.conllu
+	python3 bin/tools/validate.py --lang sl --level 1 Origin/SUK-Ambiga/SUK-Ambiga_UD_2022-10-11.conllu
 suk-ambiga-test:
 	#dos2unix Origin/SUK-Ambiga/Ambiga_test.tsv
 	bin/conllu2ambiga2tei.pl < Origin/SUK-Ambiga/Ambiga_test.tsv > Origin/SUK-Ambiga/Ambiga_test.xml

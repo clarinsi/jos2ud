@@ -6,8 +6,8 @@ suk-senticore:
 	'${saxon} msd-file=../Map/ssj500k.back.xml -xsl:bin/tei2conllu.xsl {} > {.}.tbl'
 	ls Origin/SUK-SentiCore/SUK-SentiCoref-*.tbl | $P --jobs 10 \
 	'LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl < {} > {.}.conllu'
-	python3 bin/tools/validate.py --lang sl --level 1 Origin/slobench/*.conllu
-	# python3 bin/tools/validate.py --lang sl --level 2 Origin/slobench/*.conllu
+	python3 bin/tools/validate.py --lang sl --level 1 Origin/Slobench/*.conllu
+	# python3 bin/tools/validate.py --lang sl --level 2 Origin/Slobench/*.conllu
 suk-senticore-test:
 	#dos2unix Origin/SUK-SentiCore/SUK-SentiCoref-10009.tsv
 	bin/conllu-senti2tei.pl < Origin/SUK-SentiCore/SUK-SentiCoref-10009.tsv > Origin/SUK-SentiCore/SUK-SentiCoref-10009.xml
@@ -36,47 +36,50 @@ suk-ambiga-test:
 	python3 bin/tools/validate.py --lang sl --level 1 Origin/SUK-Ambiga/Ambiga_test.conllu
 
 check-feats:
-	bin/slolex2shortlex.pl < Origin/sloleks.ud.tbl | sort | uniq > Origin/sloleks.short.lex
-	bin/conllu2shortlex.pl < Origin/manually-corrected_sl_ssj-ud_v2.2_2.5.conllu | sort | uniq > Origin/ssj500k.short.lex
-	cut -f1-4 Origin/sloleks.short.lex | uniq -d
-	cut -f1-4 Origin/ssj500k.short.lex | uniq -d
-	bin/cmpshortlex.pl Origin/ssj500k.short.lex Origin/sloleks.short.lex
+	bin/slolex2shortlex.pl < Origin/Sloleks/sloleks.ud.tbl | sort | uniq > Origin/Sloleks/sloleks.short.lex
+	bin/conllu2shortlex.pl < Origin/manually-corrected_sl_ssj-ud_v2.2_2.5.conllu \
+	| sort | uniq > Origin/ssj500k/ssj500k.short.lex
+	cut -f1-4 Origin/Sloleks/sloleks.short.lex | uniq -d
+	cut -f1-4 Origin/ssj500k/ssj500k.short.lex | uniq -d
+	bin/cmpshortlex.pl Origin/ssj500k/ssj500k.short.lex Origin/Sloleks/sloleks.short.lex
 kaja3-test:
-	bin/conllu-senti2tei.pl < Origin/slobench/senticoref_10020.tsv \
-	> Origin/slobench/senticoref_10020.xml
+	bin/conllu-senti2tei.pl < Origin/Slobench/senticoref_10020.tsv \
+	> Origin/Slobench/senticoref_10020.xml
 	${saxon} msd-file=../Map/ssj500k.back.xml \
-	-xsl:bin/tei2conllu.xsl Origin/slobench/senticoref_10020.xml \
-	> Origin/slobench/senticoref_10020.tbl
+	-xsl:bin/tei2conllu.xsl Origin/Slobench/senticoref_10020.xml \
+	> Origin/Slobench/senticoref_10020.tbl
 	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
-	< Origin/slobench/senticoref_10020.tbl > Origin/slobench/senticoref_10020.conllu
-	python3 bin/tools/validate.py --lang sl --level 1 Origin/slobench/senticoref_10020.conllu
-	# python3 bin/tools/validate.py --lang sl --level 2 Origin/slobench/senticoref_10020.conllu
+	< Origin/Slobench/senticoref_10020.tbl > Origin/Slobench/senticoref_10020.conllu
+	python3 bin/tools/validate.py --lang sl --level 1 Origin/Slobench/senticoref_10020.conllu
+	# python3 bin/tools/validate.py --lang sl --level 2 Origin/Slobench/senticoref_10020.conllu
 kaja3:
-	dos2unix Origin/slobench/senticoref_*.tsv
-	ls Origin/slobench/senticoref_*.tsv | $P --jobs 10 \
+	dos2unix Origin/Slobench/senticoref_*.tsv
+	ls Origin/Slobench/senticoref_*.tsv | $P --jobs 10 \
 	'bin/conllu-senti2tei.pl < {} > {.}.xml'
-	ls Origin/slobench/senticoref_*.xml | $P --jobs 10 \
+	ls Origin/Slobench/senticoref_*.xml | $P --jobs 10 \
 	'${saxon} msd-file=../Map/ssj500k.back.xml -xsl:bin/tei2conllu.xsl {} > {.}.tbl'
-	ls Origin/slobench/senticoref_*.tbl | $P --jobs 10 \
+	ls Origin/Slobench/senticoref_*.tbl | $P --jobs 10 \
 	'LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl < {} > {.}.conllu'
-	python3 bin/tools/validate.py --lang sl --level 1 Origin/slobench/*.conllu
-	# python3 bin/tools/validate.py --lang sl --level 2 Origin/slobench/*.conllu
+	python3 bin/tools/validate.py --lang sl --level 1 Origin/Slobench/*.conllu
+	# python3 bin/tools/validate.py --lang sl --level 2 Origin/Slobench/*.conllu
 kaja2:
-	bin/conllu2tei.pl < Origin/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.tsv \
-	> Origin/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.xml
+	bin/conllu2tei.pl < Origin/ELEXIS-WSD/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.tsv \
+	> Origin/ELEXIS-WSD/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.xml
 	${saxon} msd-file=../Map/ssj500k.back.xml \
-	-xsl:bin/tei2conllu.xsl Origin/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.xml \
-	> Origin/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.tbl
+	-xsl:bin/tei2conllu.xsl Origin/ELEXIS-WSD/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.xml \
+	> Origin/ELEXIS-WSD/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.tbl
 	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
-	< Origin/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.tbl > Origin/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.conllu
+	< Origin/ELEXIS-WSD/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.tbl \
+	> Origin/ELEXIS-WSD/ELEXIS-WSD-SL_RSDO_corr-KD_no-UPOS.conllu
 kaja1:
-	bin/conllu2tei.pl < Origin/ELEXIS-WSD-SL_SPACEAFTER_UPOS.tsv \
-	> Origin/ELEXIS-WSD-SL_SPACEAFTER_UPOS.xml
+	bin/conllu2tei.pl < Origin/ELEXIS-WSD/ELEXIS-WSD-SL_SPACEAFTER_UPOS.tsv \
+	> Origin/ELEXIS-WSD/ELEXIS-WSD-SL_SPACEAFTER_UPOS.xml
 	${saxon} msd-file=../Map/ssj500k.back.xml \
-	-xsl:bin/tei2conllu.xsl Origin/ELEXIS-WSD-SL_SPACEAFTER_UPOS.xml \
-	> Origin/ELEXIS-WSD-SL_SPACEAFTER_UPOS.tbl
+	-xsl:bin/tei2conllu.xsl Origin/ELEXIS-WSD/ELEXIS-WSD-SL_SPACEAFTER_UPOS.xml \
+	> Origin/ELEXIS-WSD/ELEXIS-WSD-SL_SPACEAFTER_UPOS.tbl
 	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
-	< Origin/ELEXIS-WSD-SL_SPACEAFTER_UPOS.tbl > Origin/ELEXIS-WSD-SL_SPACEAFTER_UPOS.conllu
+	< Origin/ELEXIS-WSD/ELEXIS-WSD-SL_SPACEAFTER_UPOS.tbl \
+	> Origin/ELEXIS-WSD/ELEXIS-WSD-SL_SPACEAFTER_UPOS.conllu
 
 test-ssj:
 	${saxon} -xi -xsl:bin/tei2conllu.xsl Origin/test.xml > Origin/test.tbl
@@ -86,9 +89,11 @@ test-valid:
 
 ### Testing
 test-janes:
-	${saxon} -xsl:bin/tei2conllu.xsl Origin/test.xml > Origin/test.tbl
-	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl < Origin/test.tbl > Origin/test.ud.tbl
-	bin/add-biti-nosyn.pl Map/JanesTag-biti-as-VERB.txt < Origin/test.ud.tbl > Origin/test.biti.tbl
+	${saxon} -xsl:bin/tei2conllu.xsl Origin/Janes-Tag/test.xml > Origin/Janes-Tag/test.tbl
+	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
+	< Origin/Janes-Tag/test.tbl > Origin/Janes-Tag/test.ud.tbl
+	bin/add-biti-nosyn.pl Map/JanesTag-biti-as-VERB.txt \
+	< Origin/Janes-Tag/test.ud.tbl > Origin/Janes-Tag/test.biti.tbl
 test-dist3:
 	bin/compare2ud.pl Origin/SLV_5000.ud.tbl < Origin/SLV_5000-AB2.txt > Origin/SLV_5000-AB3.txt 
 test-dist2:
@@ -108,10 +113,10 @@ test-kaja:
 test-lex:
 	#grep '	več	Rgc	' < Origin/sloleks-en_v1.2.tbl | bin/lex2feats.pl Map/jos-msd2features.tbl \
 	#> Origin/test.lex.tbl
-	shuf < Origin/sloleks-en_v1.2.tbl | head -1000 | bin/lex2feats.pl Map/jos-msd2features.tbl \
-	> Origin/test.lex.tbl
+	shuf < Origin/Sloleks/sloleks-en_v1.2.tbl | head -1000 | bin/lex2feats.pl Map/jos-msd2features.tbl \
+	> Origin/Sloleks/test.lex.tbl
 	LC_ALL=C bin/jos2ud.pl lexicon Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
-	< Origin/test.lex.tbl > Origin/test.lex.ud.tbl
+	< Origin/Sloleks/test.lex.tbl > Origin/Sloleks/test.lex.ud.tbl
 test-crp:
 	${saxon} -xsl:bin/tei2conllu.xsl Origin/test.xml > Origin/test.tbl
 	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl < Origin/test.tbl > Origin/test.ud.tbl
@@ -134,7 +139,7 @@ xssj:	get-ssj format-ssj ud-mor-ssj ud-biti-ssj ud-syn-ssj ud-split-ssj ud-val-s
 janes:	get-janes format-janes ud-mor-janes
 
 eltec:
-	bin/excel2ud.pl Origin/sloleks-en_v1.2.tbl \
+	bin/excel2ud.pl Origin/Sloleks/sloleks-en_v1.2.tbl \
 	< Origin/SLV_5000-AB2.txt > Origin/SLV_5000.tbl 2> Origin/SLV_5000-err1.txt
 	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
 	< Origin/SLV_5000.tbl > Origin/SLV_5000.ud.tbl
@@ -143,17 +148,17 @@ eltec:
 
 # Process lexicons
 mfidaleks:
-	zcat ~/Project/SSJ/MetaFida/mfida01.wfl.gz | bin/filter-lex.pl > Origin/mfida01-lex.tbl
-	cat < Origin/mfida01-lex.tbl | bin/lex2feats.pl Map/jos-msd2features.tbl \
-	> Origin/mfida-lex.feats.tmp
+	zcat ~/Project/SSJ/MetaFida/mfida01.wfl.gz | bin/filter-lex.pl > Origin/MFida/mfida01-lex.tbl
+	cat < Origin/MFida/mfida01-lex.tbl | bin/lex2feats.pl Map/jos-msd2features.tbl \
+	> Origin/MFida/mfida-lex.feats.tmp
 	LC_ALL=C bin/jos2ud.pl lexicon Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
-	< Origin/mfida-lex.feats.tmp | bin/add-biti-lexicon.pl > Origin/mfida-lex.ud.tbl
+	< Origin/MFida/mfida-lex.feats.tmp | bin/add-biti-lexicon.pl > Origin/MFida/mfida-lex.ud.tbl
 sloleks:
-	cp ~/Project/SSJ/Lexicon/SloLeks-2.0/sloleks_clarin_2.0-en.tbl Origin
-	cat < Origin/sloleks_clarin_2.0-en.tbl | bin/lex2feats.pl Map/jos-msd2features.tbl \
-	> Origin/sloleks.feats.tmp
+	cp ~/Project/SSJ/Lexicon/SloLeks-2.0/sloleks_clarin_2.0-en.tbl Origin/Sloleks
+	cat < Origin/Sloleks/sloleks_clarin_2.0-en.tbl | bin/lex2feats.pl Map/jos-msd2features.tbl \
+	> Origin/Sloleks/sloleks.feats.tmp
 	LC_ALL=C bin/jos2ud.pl lexicon Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
-	< Origin/sloleks.feats.tmp | bin/add-biti-lexicon.pl > Origin/sloleks.ud.tbl
+	< Origin/Sloleks/sloleks.feats.tmp | bin/add-biti-lexicon.pl > Origin/Sloleks/sloleks.ud.tbl
 
 ud-val-ssj:
 	python3 bin/tools/validate.py --lang sl --level 1 Origin/sl_ssj-ud-*.conllu
@@ -161,67 +166,74 @@ ud-val-ssj:
 
 # Split corpus into train, dev, test
 ud-split-ssj:
-	cd Origin; ../bin/ud-data-split.py manually-corrected_sl_ssj-ud_v2.2_2.5.conllu
+	cd Origin/ssj500k; ../bin/ud-data-split.py manually-corrected_sl_ssj-ud_v2.2_2.5.conllu
 
 # Compute UD dependencies
 ud-syn-ssj:
-	cd Origin; ../bin/convert_dependencies.py ssj500k-en.ud.syn.tbl 2.2
-	cd Origin; ../bin/correct_dependencies.py sl_ssj-ud_v2.2.conllu 2.5
+	cd Origin/ssj500k; ../bin/convert_dependencies.py ssj500k-en.ud.syn.tbl 2.2
+	cd Origin/ssj500k; ../bin/correct_dependencies.py sl_ssj-ud_v2.2.conllu 2.5
 
 # Fix "biti" in the both parts of the corpus, the syn. annotated and syn. unannotated one
 ud-biti-ssj:
-	cat < Origin/ssj500k-en.ud.tmp | bin/take-syn.pl only | \
-	bin/add-biti-syn.pl > Origin/ssj500k-en.ud.syn.tbl
-	cat < Origin/ssj500k-en.ud.tmp | bin/take-syn.pl except | \
-	bin/add-biti-nosyn.pl Map/ssj500k-biti-as-VERB.txt > Origin/ssj500k-en.ud.nosyn.tbl
-	cat Origin/ssj500k-en.ud.syn.tbl Origin/ssj500k-en.ud.nosyn.tbl > Origin/ssj500k-en.ud.tbl
+	cat < Origin/ssj500k/ssj500k-en.ud.tmp | bin/take-syn.pl only | \
+	bin/add-biti-syn.pl > Origin/ssj500k/ssj500k-en.ud.syn.tbl
+	cat < Origin/ssj500k/ssj500k-en.ud.tmp | bin/take-syn.pl except | \
+	bin/add-biti-nosyn.pl Map/ssj500k-biti-as-VERB.txt > Origin/ssj500k/ssj500k-en.ud.nosyn.tbl
+	cat Origin/ssj500k/ssj500k-en.ud.syn.tbl Origin/ssj500k/ssj500k-en.ud.nosyn.tbl \
+	> Origin/ssj500k/ssj500k-en.ud.tbl
 
 # Compute UD PoS and features
 ud-mor-janes:
 	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
-	< Origin/janes.tag.tbl > Origin/janes.tag.ud.tmp
-	bin/add-biti-nosyn.pl Map/JanesTag-biti-as-VERB.txt < Origin/janes.tag.ud.tmp > Origin/janes.tag.ud.tbl
+	< Origin/Janes-Tag/janes.tag.tbl > Origin/Janes-Tag/janes.tag.ud.tmp
+	bin/add-biti-nosyn.pl Map/JanesTag-biti-as-VERB.txt \
+	< Origin/Janes-Tag/janes.tag.ud.tmp > Origin/Janes-Tag/janes.tag.ud.tbl
 ud-mor-ssj:
 	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
-	< Origin/ssj500k-en.tbl > Origin/ssj500k-en.ud.tmp
+	< Origin/ssj500k/ssj500k-en.tbl > Origin/ssj500k/ssj500k-en.ud.tmp
 ud-mor-jos:
 	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
-	< Origin/jos1M-en.tbl > Origin/jos1M-en.ud.tbl
+	< Origin/jos1M/jos1M-en.tbl > Origin/jos1M/jos1M-en.ud.tbl
 	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
-	< Origin/jos1M-en_ssj500k_yes.tbl > Origin/jos1M-en_ssj500k_yes.ud.tbl
+	< Origin/jos1M/jos1M-en_ssj500k_yes.tbl > Origin/jos1M/jos1M-en_ssj500k_yes.ud.tbl
 	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
-	< Origin/jos1M-en_ssj500k_no.tbl > Origin/jos1M-en_ssj500k_no.ud.tbl
+	< Origin/jos1M/jos1M-en_ssj500k_no.tbl > Origin/jos1M/jos1M-en_ssj500k_no.ud.tbl
 
 # Format corpus into CONLL-U
 format-janes:
-	${saxon} -xsl:bin/tei2conllu.xsl Origin/janes.tag-single.xml > Origin/janes.tag.tbl
+	${saxon} -xsl:bin/tei2conllu.xsl \
+	Origin/Janes-Tag/janes.tag-single.xml > Origin/Janes-Tag/janes.tag.tbl
 format-ssj:
-	${saxon} -xi -xsl:bin/tei2conllu.xsl Origin/ssj500k-en.TEI/ssj500k-en.xml > Origin/ssj500k-en.tbl
+	${saxon} -xi -xsl:bin/tei2conllu.xsl \
+	Origin/ssj500k/ssj500k-en.TEI/ssj500k-en.xml > Origin/ssj500k/ssj500k-en.tbl
 format-jos:
-	${saxon} -xi -xsl:bin/tei2conllu.xsl Origin/jos1M-en.xml > Origin/jos1M-en.tbl
-	${saxon} -xi -xsl:bin/tei2conllu.xsl Origin/jos1M-en_ssj500k_yes.xml > Origin/jos1M-en_ssj500k_yes.tbl
-	${saxon} -xi -xsl:bin/tei2conllu.xsl Origin/jos1M-en_ssj500k_no.xml  > Origin/jos1M-en_ssj500k_no.tbl
+	${saxon} -xi -xsl:bin/tei2conllu.xsl \
+	Origin/jos1M/jos1M-en.xml > Origin/jos1M/jos1M-en.tbl
+	${saxon} -xi -xsl:bin/tei2conllu.xsl \
+	Origin/jos1M/jos1M-en_ssj500k_yes.xml > Origin/jos1M/jos1M-en_ssj500k_yes.tbl
+	${saxon} -xi -xsl:bin/tei2conllu.xsl \
+	Origin/jos1M/jos1M-en_ssj500k_no.xml  > Origin/jos1M/jos1M-en_ssj500k_no.tbl
 
 JANES = /home/tomaz/Resources/JANES/Janes/Originsets/Janes-Tag_2.1
 get-janes:
-	cp ${JANES}/TEI/janes.tag-single.xml Origin/
+	cp ${JANES}/TEI/janes.tag-single.xml Origin/Janes-Tag/
 	cp ${JANES}/UD/janes.biti.tbl Map/JanesTag-biti-as-VERB.txt
 
 CLARIN.SI = https://www.clarin.si/repository/xmlui/bitstream/handle
 get-ssj:
 	#cp /home/tomaz/Project/SSJ/Ucni/ssj500k.2.2/Master/ssj500k.all.xml Origin
-	rm -f Origin/ssj500k-en.TEI.zip; rm -fr Origin/ssj500k-en.TEI/
-	cd Origin/; wget ${CLARIN.SI}/11356/1210/ssj500k-en.TEI.zip
-	cd Origin/; unzip ssj500k-en.TEI.zip; rm ssj500k-en.TEI.zip
+	rm -f Origin/ssj500k/ssj500k-en.TEI.zip; rm -fr Origin/ssj500k/ssj500k-en.TEI/
+	cd Origin/ssj500k/; wget ${CLARIN.SI}/11356/1210/ssj500k-en.TEI.zip
+	cd Origin/ssj500k/; unzip ssj500k-en.TEI.zip; rm ssj500k-en.TEI.zip
 
 get-jos:
-	cp /home/tomaz/Resources/CLARIN/jos1M/Fix/jos1M-en.xml Origin
-	cp /home/tomaz/Resources/CLARIN/jos1M/Fix/jos1M-en_ssj500k_yes.xml Origin
-	cp /home/tomaz/Resources/CLARIN/jos1M/Fix/jos1M-en_ssj500k_no.xml Origin
+	cp /home/tomaz/Resources/CLARIN/jos1M/Fix/jos1M-en.xml Origin/jos1M
+	cp /home/tomaz/Resources/CLARIN/jos1M/Fix/jos1M-en_ssj500k_yes.xml Origin/jos1M
+	cp /home/tomaz/Resources/CLARIN/jos1M/Fix/jos1M-en_ssj500k_no.xml Origin/jos1M
 
 xget-ssj500k:
 	cd Origin; wget ${CLARIN.SI}/11356/1039/sloleks-en.tbl_v1.2.zip
-	cd Origin; unzip sloleks-en.tbl_v1.2.zip
+	cd Origin/Sloleks/; unzip sloleks-en.tbl_v1.2.zip
 	rm Origin/*.zip
 
 

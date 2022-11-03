@@ -60,17 +60,20 @@ if ($type eq 'corpus') {
                 $head = $lines[$dep+$comments-1];
             }
             else {$head = ''}
-            if ($feats eq '_') {$feats = ''};
-            #Convert PoS & feats
-            $ud_cat = pos_jos2ud($lemma, $cat, $feats, $rel, $head);
-            if ($ud_cat) {
-                $ud_feats = feats_jos2ud($lemma, $cat, $feats, $ud_cat);
-            }
-            else {
-                print STDERR "ERROR: Cat mapping fail: $lemma + $msd ($cat|$feats)\n";
-                $ud_cat = '_';
-                $ud_feats = '_';
-            }
+            if ($feats eq '_') {$feats = ''}
+            if ($n =~ /-/ and $lemma eq '_' and $cat eq '_' and $msd eq '_') {}
+	    else {
+		#Convert PoS & feats
+		$ud_cat = pos_jos2ud($lemma, $cat, $feats, $rel, $head);
+		if ($ud_cat) {
+		    $ud_feats = feats_jos2ud($lemma, $cat, $feats, $ud_cat);
+		}
+		else {
+		    print STDERR "ERROR: Cat mapping fail: $n + $tok + $lemma + $msd ($cat|$feats)\n";
+		    $ud_cat = '_';
+		    $ud_feats = '_';
+		}
+	    }
             if ($dep eq '-1') {
                 $ud_head = -1;
                 $ud_deprel = '_';

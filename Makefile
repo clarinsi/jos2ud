@@ -1,5 +1,4 @@
 suk-tweets:
-	#rename 's/\.conllu/.tbl/' Origin/SUK-Tweets/*
 	ls Origin/SUK-Tweets/*.tbl | $P --jobs 10 \
 	'LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl < {} > {.}.conllu'
 	python3 bin/tools/validate.py --lang sl --level 1 Origin/Slobench/*.conllu

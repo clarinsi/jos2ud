@@ -16,7 +16,7 @@ In short:
 
 2. `jos2ud.pl`: conversion from CONLL-U with JOS features to UD PoS and features. The program has two modes "corpus" and "lexicon", depending on what we are converting. It also makes use of two rule files, as explained below. 
 
-3. `add-biti-*.pl`: this set of scripts addresses the word-forms of lemma "biti", which is the only case where syntactic structure must be taken into account for determining the UD PoS (either AUX or VERB). 
+3. `add-biti-*.pl`: this set of scripts addresses the word-forms of lemma "biti", which is the only case where syntactic structure must be taken into account for determining the UD PoS (either AUX or VERB, see instructions in [UD_biti_anno_navodila_v2.docx](Map/UD_biti_anno_navodila_v02.docx)). 
 
 4. `convert_dependencies.py`: conversion of JOS syntactic dependencies to UD ones.
 

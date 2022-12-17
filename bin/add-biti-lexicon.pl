@@ -7,8 +7,9 @@ binmode STDERR,":utf8";
 while (<>){
     next unless /\t/;
     chomp;
-    my ($word, $lemma, $msd, $freq, $std, $feats, $ud_feats) = split /\t/;
-    if ($lemma eq 'biti' and $feats =~ /Verb Type=auxiliary/) {
+    my ($word, $lemma, $msd_en, $msd_sl, $freq, $std, $id, $status, $mte_feats,
+	$ufeats) = split /\t/;
+    if ($lemma eq 'biti' and $mte_feats =~ /Verb Type=auxiliary/) {
 	print;
 	print "\n";
 	s/\tAUX /\tVERB /;

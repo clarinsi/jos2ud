@@ -1,3 +1,22 @@
+test-lex:
+	cat < Origin/Sloleks.3.0/sloleks_clarin_3.0-test.tbl | bin/msd_sl2en.pl \
+	| bin/lex2feats.pl Map/jos-msd2features.tbl \
+	> Origin/Sloleks.3.0/test.lex.tbl
+	LC_ALL=C bin/jos2ud.pl lexicon Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
+	< Origin/Sloleks.3.0/test.lex.tbl | bin/add-biti-lexicon.pl \
+	> Origin/Sloleks.3.0/test.lex.ud.tbl
+	bin/polish-sloleks30.pl < Origin/Sloleks.3.0/test.lex.ud.tbl > Origin/Sloleks.3.0/test.lex.ok.tbl
+
+sloleks30:
+	#guzip /project/rsdo/Sloleks/sloleks_clarin_3.0-sl.tbl.gz \
+	#> Origin/Sloleks.3.0/sloleks_clarin_3.0-sl.tbl
+	cat < Origin/Sloleks.3.0/sloleks_clarin_3.0-sl.tbl | bin/msd_sl2en.pl \
+	| bin/lex2feats.pl Map/jos-msd2features.tbl \
+	> Origin/Sloleks.3.0/sloleks.feats.tmp
+	LC_ALL=C bin/jos2ud.pl lexicon Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
+	< Origin/Sloleks.3.0/sloleks.feats.tmp | bin/add-biti-lexicon.pl | bin/polish-sloleks30.pl \
+	> Origin/Sloleks.3.0/sloleks_clarin_3.0.tbl
+
 suk-tweets:
 	ls Origin/SUK-Tweets/*.tbl | $P --jobs 10 \
 	'LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl < {} > {.}.conllu'
@@ -41,12 +60,12 @@ suk-ambiga-test:
 	python3 bin/tools/validate.py --lang sl --level 1 Origin/SUK-Ambiga/Ambiga_test.conllu
 
 check-feats:
-	bin/slolex2shortlex.pl < Origin/Sloleks/sloleks.ud.tbl | sort | uniq > Origin/Sloleks/sloleks.short.lex
+	bin/slolex2shortlex.pl < Origin/Sloleks.2.0/sloleks.ud.tbl | sort | uniq > Origin/Sloleks.2.0/sloleks.short.lex
 	bin/conllu2shortlex.pl < Origin/manually-corrected_sl_ssj-ud_v2.2_2.5.conllu \
 	| sort | uniq > Origin/ssj500k/ssj500k.short.lex
-	cut -f1-4 Origin/Sloleks/sloleks.short.lex | uniq -d
+	cut -f1-4 Origin/Sloleks.2.0/sloleks.short.lex | uniq -d
 	cut -f1-4 Origin/ssj500k/ssj500k.short.lex | uniq -d
-	bin/cmpshortlex.pl Origin/ssj500k/ssj500k.short.lex Origin/Sloleks/sloleks.short.lex
+	bin/cmpshortlex.pl Origin/ssj500k/ssj500k.short.lex Origin/Sloleks.2.0/sloleks.short.lex
 kaja3-test:
 	bin/conllu-senti2tei.pl < Origin/Slobench/senticoref_10020.tsv \
 	> Origin/Slobench/senticoref_10020.xml
@@ -115,13 +134,13 @@ test-biti:
 test-kaja:
 	cat < Origin/ssj500k-en.ud.tbl | bin/take-syn.pl > Origin/ssj500k-en.ud.synonly.tbl
 	cd Origin; python ../bin/convert_dependencies.py Origin/ssj500k-en.ud.synonly.tbl 2.2
-test-lex:
+test-lex20:
 	#grep '	več	Rgc	' < Origin/sloleks-en_v1.2.tbl | bin/lex2feats.pl Map/jos-msd2features.tbl \
 	#> Origin/test.lex.tbl
-	shuf < Origin/Sloleks/sloleks-en_v1.2.tbl | head -1000 | bin/lex2feats.pl Map/jos-msd2features.tbl \
-	> Origin/Sloleks/test.lex.tbl
+	shuf < Origin/Sloleks.2.0/sloleks-en_v1.2.tbl | head -1000 | bin/lex2feats.pl Map/jos-msd2features.tbl \
+	> Origin/Sloleks.2.0/test.lex.tbl
 	LC_ALL=C bin/jos2ud.pl lexicon Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
-	< Origin/Sloleks/test.lex.tbl > Origin/Sloleks/test.lex.ud.tbl
+	< Origin/Sloleks.2.0/test.lex.tbl > Origin/Sloleks.2.0/test.lex.ud.tbl
 test-crp:
 	${saxon} -xsl:bin/tei2conllu.xsl Origin/test.xml > Origin/test.tbl
 	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl < Origin/test.tbl > Origin/test.ud.tbl
@@ -135,7 +154,7 @@ nohup:
 	date > nohup.all
 	nohup time make all >> nohup.all &
 all:	ssj
-xall:	ssj sloleks jos janes
+xall:	ssj sloleks20 jos janes
 
 dist:	get-dist format-dist ud-mor-dist
 jos:	get-jos format-jos ud-mor-jos
@@ -144,7 +163,7 @@ xssj:	get-ssj format-ssj ud-mor-ssj ud-biti-ssj ud-syn-ssj ud-split-ssj ud-val-s
 janes:	get-janes format-janes ud-mor-janes
 
 eltec:
-	bin/excel2ud.pl Origin/Sloleks/sloleks-en_v1.2.tbl \
+	bin/excel2ud.pl Origin/Sloleks.2.0/sloleks-en_v1.2.tbl \
 	< Origin/SLV_5000-AB2.txt > Origin/SLV_5000.tbl 2> Origin/SLV_5000-err1.txt
 	LC_ALL=C bin/jos2ud.pl corpus Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
 	< Origin/SLV_5000.tbl > Origin/SLV_5000.ud.tbl
@@ -158,13 +177,12 @@ mfidaleks:
 	> Origin/MFida/mfida-lex.feats.tmp
 	LC_ALL=C bin/jos2ud.pl lexicon Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
 	< Origin/MFida/mfida-lex.feats.tmp | bin/add-biti-lexicon.pl > Origin/MFida/mfida-lex.ud.tbl
-sloleks:
-	cp ~/Project/SSJ/Lexicon/SloLeks-2.0/sloleks_clarin_2.0-en.tbl Origin/Sloleks
-	cat < Origin/Sloleks/sloleks_clarin_2.0-en.tbl | bin/lex2feats.pl Map/jos-msd2features.tbl \
-	> Origin/Sloleks/sloleks.feats.tmp
+sloleks20:
+	cp ~/Project/SSJ/Lexicon/SloLeks-2.0/sloleks_clarin_2.0-en.tbl Origin/Sloleks.2.0
+	cat < Origin/Sloleks.2.0/sloleks_clarin_2.0-en.tbl | bin/lex2feats.pl Map/jos-msd2features.tbl \
+	> Origin/Sloleks.2.0/sloleks.feats.tmp
 	LC_ALL=C bin/jos2ud.pl lexicon Map/jos2ud-pos.tbl Map/jos2ud-features.tbl \
-	< Origin/Sloleks/sloleks.feats.tmp | bin/add-biti-lexicon.pl > Origin/Sloleks/sloleks.ud.tbl
-
+	< Origin/Sloleks.2.0/sloleks.feats.tmp | bin/add-biti-lexicon.pl > Origin/Sloleks.2.0/sloleks.ud.tbl
 ud-val-ssj:
 	python3 bin/tools/validate.py --lang sl --level 1 Origin/sl_ssj-ud-*.conllu
 	python3 bin/tools/validate.py --lang sl --level 2 Origin/sl_ssj-ud-*.conllu
@@ -238,7 +256,7 @@ get-jos:
 
 xget-ssj500k:
 	cd Origin; wget ${CLARIN.SI}/11356/1039/sloleks-en.tbl_v1.2.zip
-	cd Origin/Sloleks/; unzip sloleks-en.tbl_v1.2.zip
+	cd Origin/Sloleks.2.0/; unzip sloleks-en.tbl_v1.2.zip
 	rm Origin/*.zip
 
 

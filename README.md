@@ -6,6 +6,8 @@ Conversion between JOS-style annotations and UD focused on:
 
 2. Morphological lexicon Sloleks 1.2 in tabular format (PoS tags in English), http://hdl.handle.net/11356/1039
 
+3. And some other resources.
+
 The Makefile specifies how to directly download the source data and covert them to UD.
 
 In short:
